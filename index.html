@@ -34,13 +34,43 @@
     <link rel="icon" type="image/svg" href="/assets/img/pc-logo-white.svg" />
   </head>
   <body>
-    <!-- HEADER: PHAT -->
-    <header class="fixed bg-[#d72c2c] w-full">
+    <!-- Top Ads -->
+    <div class="w-full">
+      <!-- Ads by banner -->
+      <div class="lg:block hidden w-full bg-[#3dae3a]">
+        <div class="mx-auto max-w-screen-2xl">
+          <img
+            class="object-cover w-full"
+            src="/assets/img/ads_banner/ads_banner_1.webp"
+            alt="Ads Banner"
+          />
+        </div>
+      </div>
+      <!-- Ads by Text -->
       <div
-        class="py-2 lg:px-6 px-3 mx-auto max-w-screen-2xl flex justify-between items-center gap-2"
+        class="lg:hidden px-5 flex items-center justify-center w-full text-center py-2 bg-white"
+      >
+        <span class="inline-flex items-center h-8 bg-white">
+          <img
+            class="w-auto h-full"
+            src="/assets/img/icons8-pumpkin.gif"
+            alt="Halloween pumpkin gif"
+          />
+          <p
+            class="mx-2 font-WorkSans font-semibold text-lg text-violet-500 leading-none line-clamp-2"
+          >
+            HALLOWEEN cùng SHOPPC.VN giảm tới 75%
+          </p>
+        </span>
+      </div>
+    </div>
+    <!-- HEADER: PHAT -->
+    <header class="fixed w-full bg-[#d72c2c]">
+      <div
+        class="py-2 lg:px-6 px-3 mx-auto max-w-screen-2xl flex justify-between items-center gap-2 bg-[#d72c2c]"
       >
         <!-- logo & menu -->
-        <div class="flex items-center">
+        <div class="flex items-center gap-2">
           <!-- main menu btn -->
           <button
             title="Menu"
@@ -49,7 +79,7 @@
             <i class="leading-none bi bi-list text-white text-xl"></i>
           </button>
           <!-- logo icon -->
-          <a href="#home" class="inline-flex px-2 py-1 items-center gap-1">
+          <a href="#home" class="inline-flex px-2 items-center gap-1">
             <!-- logo -->
             <svg
               class="w-12 h-12"
@@ -247,6 +277,104 @@
               class="font-WorkSans text-white font-medium break-words leading-none text-sm md:block hidden"
             >
               Đăng nhập
+            </p>
+          </a>
+        </div>
+      </div>
+      <div
+        class="bg-white shadow-md mx-auto flex flex-col justify-between items-center"
+      >
+        <!-- Top Products Nav -->
+        <div
+          class="bg-[#D72C2C] flex flex-wrap font-WorkSans lg:text-xs text-sm text-white pb-2 w-full justify-center"
+        >
+          <a href="#" class="outline-none focus:underline hover:underline px-2"
+            >Laptop</a
+          >
+          <a href="#" class="outline-none focus:underline hover:underline px-2"
+            >Macbook</a
+          >
+          <a href="#" class="outline-none focus:underline hover:underline px-2"
+            >Laptop Gaming</a
+          >
+          <a href="#" class="outline-none focus:underline hover:underline px-2"
+            >Laptop văn phòng</a
+          >
+          <a href="#" class="outline-none focus:underline hover:underline px-2"
+            >Linh kiện PC</a
+          >
+          <a href="#" class="outline-none focus:underline hover:underline px-2"
+            >Card đồ họa</a
+          >
+          <a href="#" class="outline-none focus:underline hover:underline px-2"
+            >Màn hình LED</a
+          >
+          <a href="#" class="outline-none focus:underline hover:underline px-2"
+            >Bàn phìm</a
+          >
+          <a href="#" class="outline-none focus:underline hover:underline px-2"
+            >Chuột</a
+          >
+          <a href="#" class="outline-none focus:underline hover:underline px-2"
+            >Tai nghe</a
+          >
+        </div>
+        <!-- Help & Policy nav -->
+        <div class="lg:flex hidden justify-center mx-auto gap-4">
+          <a
+            title="Chương trình khuyến mãi"
+            href="#Sales"
+            class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+          >
+            <i class="leading-none bi bi-tags text-xl"></i>
+            <p
+              class="font-WorkSans font-bold leading-none text-sm block text-[#d72c2c] uppercase"
+            >
+              Khuyến mãi
+            </p>
+          </a>
+
+          <a
+            title="Hướng dẫn trả góp"
+            href="#help/installment"
+            class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+          >
+            <i class="leading-none bi bi-cash-coin text-xl"></i>
+            <p class="font-WorkSans font-medium leading-none text-sm block">
+              Hướng dẫn trả góp
+            </p>
+          </a>
+
+          <a
+            title="Hướng dẫn thanh toán"
+            href="#help/payment"
+            class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+          >
+            <i class="leading-none bi bi-credit-card text-xl"></i>
+            <p class="font-WorkSans font-medium leading-none text-sm block">
+              Hướng dẫn thanh toán
+            </p>
+          </a>
+
+          <a
+            title="Chính sách bảo hành"
+            href="#policy/warranty"
+            class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+          >
+            <i class="leading-none bi bi-shield-check text-xl"></i>
+            <p class="font-WorkSans font-medium leading-none text-sm block">
+              Chính sách bảo hành
+            </p>
+          </a>
+
+          <a
+            title="Thông tin liên lạc"
+            href="#help/contact"
+            class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+          >
+            <i class="leading-none bi bi-telephone text-xl"></i>
+            <p class="font-WorkSans font-medium leading-none text-sm block">
+              Thông tin liên lạc
             </p>
           </a>
         </div>
