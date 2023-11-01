@@ -7,21 +7,19 @@ html {
 
 /* Style the navigation bar links */
 .navbar .navigation {
-  float: left;
-  display: block;
+  font-family: "Work Sans", sans-serif;
   color: rgb(0, 0, 0); /* Text color */
   text-align: center;
   padding: 12px 12px;
   text-decoration: none;
-  margin-left: 7rem;
   font-size: 16px;
-  font-weight: bolder;
+  font-weight: 500;
 }
 
-.navbar .navbar .hotline-button {
+.navbar .hotline-button {
+  font-family: "Work Sans", sans-serif;
   text-align: center;
   text-decoration: none;
-  margin-left: 7rem;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 

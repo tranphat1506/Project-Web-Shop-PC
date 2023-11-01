@@ -25,7 +25,9 @@
   </head>
   <body>
     <!-- Navigation Bar -->
-    <div class="navbar overflow-hidden from-white">
+    <div
+      class="navbar overflow-hidden from-white flex flex-wrap items-center justify-center gap-2 py-2"
+    >
       <a href="#" class="navigation">Hệ thống showroom</a> |
       <a href="#" class="navigation">Trả góp</a> |
       <a href="#" class="navigation">Bảo hành</a>
@@ -34,33 +36,33 @@
       <img
         src="/assets/img/theme-icon/facebook.png"
         alt=""
-        class="w-8 h-8 m-2 inline-block transform scale-100 hover:scale-110 transition-transform"
+        class="w-8 h-8 m-2 min-[380px]:inline-block hidden transform scale-100 hover:scale-110 transition-transform"
       />
       <img
         src="/assets/img/theme-icon/youtube.png"
         alt=""
-        class="w-8 h-8 m-2 inline-block transform scale-100 hover:scale-110 transition-transform"
+        class="w-8 h-8 m-2 min-[380px]:inline-block hidden transform scale-100 hover:scale-110 transition-transform"
       />
       <img
         src="/assets/img/theme-icon/twitter.png"
         alt=""
-        class="w-8 h-8 m-2 inline-block transform scale-100 hover:scale-110 transition-transform"
+        class="w-8 h-8 m-2 min-[380px]:inline-block hidden transform scale-100 hover:scale-110 transition-transform"
       />
       <img
         src="/assets/img/theme-icon/instagram.png"
         alt=""
-        class="w-8 h-8 m-2 inline-block transform scale-100 hover:scale-110 transition-transform"
+        class="w-8 h-8 m-2 min-[380px]:inline-block hidden transform scale-100 hover:scale-110 transition-transform"
       />
       <a
         href="tel:YOUR_PHONE_NUMBER"
-        class="navbar hotline-button bg-white text-red-500 border-2 py-3 px-10 font-bold rounded-full hover:bg-red-500 hover:border-2 hover:border-red-600 hover:text-white ml-7 float-left text-base inline-block"
+        class="hotline-button bg-white text-red-500 border-2 py-1 px-2 font-bold rounded-full hover:bg-red-500 hover:border-2 hover:border-red-600 hover:text-white text-base inline-flex"
       >
         <img
           src="/assets/img/theme-icon/contact-mail.png"
           alt="Hotline Icon"
           class="w-6 h-6 mr-2 inline-block"
         />
-        Hotline 0795174080
+        <p>Hotline 0795174080</p>
       </a>
     </div>
 
@@ -68,24 +70,26 @@
     <!-- Product Section -->
     <div class="product-section bg-purple-950 py-10">
       <div class="container mx-auto">
+        <!-- Banner Quang Cao -->
         <div class="flex items-center justify-center mb-4">
           <img
             src="/assets/img/img_phanloai/List_6.png"
             alt="Laptop"
-            class="w-4/6"
+            class="lg:w-4/6 w-full"
           />
         </div>
+        <!-- Laptop Title -->
         <div class="flex items-center justify-center mb-4">
           <img
             src="/assets/img/img_phanloai/Phanloai_Laptop_1.png"
             alt="Laptop"
-            class="w-1/4"
+            class="lg:w-1/4 w-1/2"
           />
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Products Card Container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-5">
           <!-- Product 1 -->
-          <div class="product-card rounded-lg shadow-md p-4">
+          <div class="product-card rounded-lg bg-purple-800 p-4">
             <img
               src="/assets/img/img_laptop/Acer_Predator_2.png"
               alt="Product 1"
@@ -94,7 +98,7 @@
           </div>
 
           <!-- Product 2 -->
-          <div class="product-card rounded-lg shadow-md p-4">
+          <div class="product-card rounded-lg bg-purple-800 p-4">
             <img
               src="/assets/img/img_laptop/Asus_Tuf_3.png"
               alt="Product 2"
@@ -103,7 +107,7 @@
           </div>
 
           <!-- Product 3 -->
-          <div class="product-card rounded-lg shadow-md p-4">
+          <div class="product-card rounded-lg bg-purple-800 p-4">
             <img
               src="/assets/img/img_laptop/Asus_Vivobook_1.png"
               alt="Product 3"
@@ -111,7 +115,7 @@
             />
           </div>
           <!-- Product 4-->
-          <div class="product-card rounded-lg shadow-md p-4">
+          <div class="product-card rounded-lg bg-purple-800 p-4">
             <img
               src="/assets/img/img_laptop/Msi_Gf63_12uc_4.png"
               alt="Product 3"
@@ -119,7 +123,7 @@
             />
           </div>
           <!-- Product 5 -->
-          <div class="product-card rounded-lg shadow-md p-4">
+          <div class="product-card rounded-lg bg-purple-800 p-4">
             <img
               src="/assets/img/img_laptop/Gigabyte_G5_5.png"
               alt="Product 3"
@@ -127,7 +131,7 @@
             />
           </div>
           <!-- Product 6 -->
-          <div class="product-card rounded-lg shadow-md p-4">
+          <div class="product-card rounded-lg bg-purple-800 p-4">
             <img
               src="/assets/img/img_laptop/Msi_Gf63_Thin_6.png"
               alt="Product 3"
