@@ -12,8 +12,9 @@ html {
   text-align: center;
   padding: 12px 12px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 500;
+  z-index: 1000;
 }
 
 .navbar .hotline-button {
@@ -44,7 +45,6 @@ html {
   transition: transform 0.3s ease;
 }
 
-
 /* Tệp CSS của bạn */
 .img-container {
   position: relative;
@@ -52,7 +52,7 @@ html {
 }
 
 .img-container:hover::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -67,7 +67,9 @@ html {
   transform: scale(1.1); /* Phóng to hình ảnh khi hover */
   transition: transform 0.3s;
 }
-
-
-
+.flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
 
