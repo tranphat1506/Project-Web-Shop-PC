@@ -11,6 +11,9 @@ body {
     background: #dddddd;
     box-sizing: border-box;
 }
+.swiper-pagination-bullet {
+    background-color: #fff !important;
+}
 .swiper-pagination-bullet-active {
     background-color: #fff !important;
 }
