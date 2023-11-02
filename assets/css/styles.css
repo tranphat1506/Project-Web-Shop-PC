@@ -12,9 +12,8 @@ html {
   text-align: center;
   padding: 12px 12px;
   text-decoration: none;
-  font-size: 24px;
+
   font-weight: 500;
-  z-index: 1000;
 }
 
 .navbar .hotline-button {
