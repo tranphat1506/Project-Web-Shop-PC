@@ -86,23 +86,3 @@ html {
   background-color: gray;
   transform: scale(1.05);
 }
-
-/* Media queries for responsiveness */
-@media (min-width: 768px) {
-  /* For tablets and larger screens, display 2 columns */
-  .grid-cols-2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  /* For larger screens, display 3 columns */
-  .grid-cols-3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* For extra-large screens, display 4 columns */
-  .grid-cols-4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
