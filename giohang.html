@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Giỏ hàng</title>
+    <style>
+        /* CSS cho trang và giỏ hàng */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .cart {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        /* CSS cho danh sách sản phẩm trong giỏ hàng */
+        .product {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+
+        .product img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+
+        /* CSS cho nút Xóa sản phẩm */
+        .remove-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        /* CSS cho tổng giá sản phẩm và nút Đặt hàng */
+        .checkout {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Giỏ hàng</h1>
+        <div class="cart">
+            <div class="product">
+                <img src="product1.jpg" alt="Sản phẩm 1">
+                <div>
+                    <h3>Sản phẩm 1</h3>
+                    <p>Giá: $10</p>
+                </div>
+                <button class="remove-button">Xóa</button>
+            </div>
+
+            <div class="product">
+                <img src="product2.jpg" alt="Sản phẩm 2">
+                <div>
+                    <h3>Sản phẩm 2</h3>
+                    <p>Giá: $15</p>
+                </div>
+                <button class="remove-button">Xóa</button>
+            </div>
+        </div>
+
+        <div class="checkout">
+            <div>
+                <strong>Tổng giá:</strong>
+                <span id="total-amount">$25</span>
+            </div>
+            <button id="order-button">Đặt hàng ngay</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript để tính toán tổng giá sản phẩm và xử lý sự kiện xóa sản phẩm
+        const orderButton = document.getElementById("order-button");
+        const totalAmount = document.getElementById("total-amount");
+        const removeButtons = document.querySelectorAll(".remove-button");
+
+        // Sử dụng một biến để lưu trữ tổng giá
+        let totalPrice = 25;
+
+        // Xử lý sự kiện khi nút "Đặt hàng ngay" được nhấn
+        orderButton.addEventListener("click", function() {
+            alert("Đã đặt hàng thành công!");
+        });
+
+        // Xử lý sự kiện khi nút Xóa sản phẩm được nhấn
+        removeButtons.forEach(function(button) {
+            button.addEventListener("click", function() {
+                const product = button.parentElement;
+                const priceText = product.querySelector("p").textContent;
+                const price = parseFloat(priceText.replace("$", ""));
+                totalPrice -= price;
+                product.remove();
+                totalAmount.textContent = "$" + totalPrice;
+            });
+        });
+    </script>
+</body>
+</html>
