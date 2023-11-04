@@ -1,386 +1,2554 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CSS Tag (Ver.01) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              WorkSans: ["Work Sans", "sans-serif"],
-              Righteous: ["Righteous", "sans-serif"],
-            },
-            colors: {},
-          },
-        },
-        darkMode: "class",
-      };
-    </script>
-    <link rel="stylesheet" href="/assets/css/styles.css" />
-    <link rel="stylesheet" href="/assets/css/reset.css" />
-    <!-- Bootstrap Icon -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
-      integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
-      crossorigin="anonymous"
-    />
-    <!-- Title -->
-    <title>HUYPC - Trang chủ</title>
-    <!-- Icon -->
-    <link rel="icon" type="image/svg" href="/assets/img/pc-logo-white.svg" />
-  </head>
-  <body>
-    <!-- Top Ads -->
-    <div class="w-full">
-      <!-- Ads by banner -->
-      <div class="lg:block hidden w-full bg-[#3dae3a]">
-        <div class="mx-auto max-w-screen-2xl">
-          <img
-            class="object-cover w-full"
-            src="/assets/img/ads_banner/ads_banner_1.webp"
-            alt="Ads Banner"
-          />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- CSS Tag (Ver.01) -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            WorkSans: ['Work Sans', 'sans-serif'],
+                            Righteous: ['Righteous', 'sans-serif'],
+                        },
+                        colors: {},
+                    },
+                },
+                darkMode: 'class',
+            };
+        </script>
+        <link rel="stylesheet" href="/assets/css/styles.css" />
+        <link rel="stylesheet" href="/assets/css/reset.css" />
+        <!-- Bootstrap Icon -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+            integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+            crossorigin="anonymous"
+        />
+        <!-- Swiper -->
+        <link
+            rel="stylesheet"
+            href="/assets/utils/swiper-11.0.3/package/swiper-bundle.min.css"
+        />
+        <script src="/assets/utils/swiper-11.0.3/package/swiper-bundle.min.js"></script>
+        <!-- Title -->
+        <title>HUYPC - Trang chủ</title>
+        <!-- Icon -->
+        <link
+            rel="icon"
+            type="image/svg"
+            href="/assets/img/pc-logo-white.svg"
+        />
+    </head>
+    <body>
+        <!-- Top Ads -->
+        <div class="w-full">
+            <!-- Ads by banner -->
+            <div class="lg:block hidden w-full bg-[#3dae3a]">
+                <div class="mx-auto max-w-screen-2xl">
+                    <img
+                        class="object-cover w-full"
+                        src="/assets/img/ads_banner/ads_banner_1.webp"
+                        alt="Ads Banner"
+                    />
+                </div>
+            </div>
+            <!-- Ads by Text -->
+            <div
+                class="lg:hidden px-5 flex items-center justify-center w-full text-center py-2 bg-white"
+            >
+                <span class="inline-flex items-center h-8 bg-white">
+                    <img
+                        class="w-auto h-full"
+                        src="/assets/img/icons8-pumpkin.gif"
+                        alt="Halloween pumpkin gif"
+                    />
+                    <p
+                        class="mx-2 font-WorkSans font-semibold text-lg text-violet-500 leading-none line-clamp-2"
+                    >
+                        HALLOWEEN cùng SHOPPC.VN giảm tới 75%
+                    </p>
+                </span>
+            </div>
         </div>
-      </div>
-      <!-- Ads by Text -->
-      <div
-        class="lg:hidden px-5 flex items-center justify-center w-full text-center py-2 bg-white"
-      >
-        <span class="inline-flex items-center h-8 bg-white">
-          <img
-            class="w-auto h-full"
-            src="/assets/img/icons8-pumpkin.gif"
-            alt="Halloween pumpkin gif"
-          />
-          <p
-            class="mx-2 font-WorkSans font-semibold text-lg text-violet-500 leading-none line-clamp-2"
-          >
-            HALLOWEEN cùng SHOPPC.VN giảm tới 75%
-          </p>
-        </span>
-      </div>
-    </div>
-    <!-- HEADER: PHAT -->
-    <header class="fixed w-full bg-[#d72c2c]">
-      <div
-        class="py-2 lg:px-6 px-3 mx-auto max-w-screen-2xl flex justify-between items-center gap-2 bg-[#d72c2c]"
-      >
-        <!-- logo & menu -->
-        <div class="flex items-center gap-2">
-          <!-- main menu btn -->
-          <button
-            title="Menu"
-            class="sm:hidden inline-flex items-center gap-2 w-min hover:bg-[#00000068] active:bg-[#00000030] p-2 rounded-xl"
-          >
-            <i class="leading-none bi bi-list text-white text-xl"></i>
-          </button>
-          <!-- logo icon -->
-          <a href="#home" class="inline-flex px-2 items-center gap-1">
-            <!-- logo -->
-            <svg
-              class="w-12 h-12"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 32 32"
+        <!-- HEADER: PHAT -->
+        <header class="w-full bg-[#d72c2c]">
+            <div
+                class="py-2 lg:px-6 px-3 mx-auto max-w-screen-2xl flex justify-between items-center gap-2 bg-[#d72c2c]"
             >
-              <defs>
-                <style>
-                  .cls-1 {
-                    fill: #e6e6e6;
-                  }
-                  .cls-2 {
-                    fill: #ccc;
-                  }
-                  .cls-3 {
-                    fill: #3f464d;
-                  }
-                  .cls-4 {
-                    fill: #363f47;
-                  }
-                </style>
-              </defs>
-              <g id="_01" data-name="01">
-                <polygon
-                  class="cls-1"
-                  points="19.67 25 19 23 13 23 12.33 25 11 29 21 29 19.67 25"
-                  id="id_101"
-                  style="fill: rgb(255, 255, 255)"
-                ></polygon>
-                <polygon
-                  class="cls-2"
-                  points="19.67 25 12.33 25 13 23 19 23 19.67 25"
-                  id="id_102"
-                  style="fill: rgb(255, 255, 255)"
-                ></polygon>
-                <path
-                  class="cls-1"
-                  d="M27.93,5.07A1.251,1.251,0,0,0,27.5,5H4.5A1.5,1.5,0,0,0,3,6.5v16A1.5,1.5,0,0,0,4.5,24h23a1.386,1.386,0,0,0,.5-.09,1.5,1.5,0,0,0,1-1.41V6.5A1.485,1.485,0,0,0,27.93,5.07Z"
-                  id="id_103"
-                  style="fill: rgb(255, 255, 255)"
-                ></path>
-                <path
-                  class="cls-3"
-                  d="M3,20v2.5A1.5,1.5,0,0,0,4.5,24h23A1.5,1.5,0,0,0,29,22.5V20Z"
-                  id="id_104"
-                ></path>
-                <rect
-                  class="cls-2"
-                  x="16"
-                  y="4"
-                  width="13"
-                  height="25"
-                  rx="1.5"
-                  ry="1.5"
-                  id="id_105"
-                ></rect>
-                <path
-                  class="cls-2"
-                  d="M27.93,5.07A1.251,1.251,0,0,0,27.5,5H14.09a1.386,1.386,0,0,0-.09.5v22A1.5,1.5,0,0,0,15.5,29h11A1.5,1.5,0,0,0,28,27.5V5.5A1.251,1.251,0,0,0,27.93,5.07Z"
-                  id="id_106"
-                ></path>
-                <rect
-                  class="cls-1"
-                  x="15"
-                  y="4"
-                  width="14"
-                  height="25"
-                  rx="1.5"
-                  ry="1.5"
-                  id="id_107"
-                  style="fill: rgb(255, 255, 255)"
-                ></rect>
-                <rect
-                  class="cls-3"
-                  x="18"
-                  y="9"
-                  width="9"
-                  height="1"
-                  id="id_108"
-                ></rect>
-                <rect
-                  class="cls-3"
-                  x="18"
-                  y="12"
-                  width="9"
-                  height="1"
-                  id="id_109"
-                ></rect>
-                <circle
-                  class="cls-3"
-                  cx="19"
-                  cy="25"
-                  r="1"
-                  id="id_110"
-                ></circle>
-                <rect
-                  class="cls-4"
-                  x="14"
-                  y="20"
-                  width="1"
-                  height="4"
-                  id="id_111"
-                ></rect>
-              </g>
-            </svg>
-            <h1
-              class="lg:block hidden font-Righteous font-black text-white text-3xl uppercase"
+                <!-- logo & menu -->
+                <div class="flex items-center gap-2">
+                    <!-- main menu btn -->
+                    <button
+                        title="Menu"
+                        class="sm:hidden inline-flex items-center gap-2 w-min hover:bg-[#00000068] active:bg-[#00000030] p-2 rounded-xl"
+                    >
+                        <i
+                            class="leading-none bi bi-list text-white text-xl"
+                        ></i>
+                    </button>
+                    <!-- logo icon -->
+                    <a
+                        href="#home"
+                        class="min-[400px]:inline-flex hidden px-2 items-center gap-1"
+                    >
+                        <!-- logo -->
+                        <svg
+                            class="w-12 h-12"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 32 32"
+                        >
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #e6e6e6;
+                                    }
+                                    .cls-2 {
+                                        fill: #ccc;
+                                    }
+                                    .cls-3 {
+                                        fill: #3f464d;
+                                    }
+                                    .cls-4 {
+                                        fill: #363f47;
+                                    }
+                                </style>
+                            </defs>
+                            <g id="_01" data-name="01">
+                                <polygon
+                                    class="cls-1"
+                                    points="19.67 25 19 23 13 23 12.33 25 11 29 21 29 19.67 25"
+                                    id="id_101"
+                                    style="fill: rgb(255, 255, 255)"
+                                ></polygon>
+                                <polygon
+                                    class="cls-2"
+                                    points="19.67 25 12.33 25 13 23 19 23 19.67 25"
+                                    id="id_102"
+                                    style="fill: rgb(255, 255, 255)"
+                                ></polygon>
+                                <path
+                                    class="cls-1"
+                                    d="M27.93,5.07A1.251,1.251,0,0,0,27.5,5H4.5A1.5,1.5,0,0,0,3,6.5v16A1.5,1.5,0,0,0,4.5,24h23a1.386,1.386,0,0,0,.5-.09,1.5,1.5,0,0,0,1-1.41V6.5A1.485,1.485,0,0,0,27.93,5.07Z"
+                                    id="id_103"
+                                    style="fill: rgb(255, 255, 255)"
+                                ></path>
+                                <path
+                                    class="cls-3"
+                                    d="M3,20v2.5A1.5,1.5,0,0,0,4.5,24h23A1.5,1.5,0,0,0,29,22.5V20Z"
+                                    id="id_104"
+                                ></path>
+                                <rect
+                                    class="cls-2"
+                                    x="16"
+                                    y="4"
+                                    width="13"
+                                    height="25"
+                                    rx="1.5"
+                                    ry="1.5"
+                                    id="id_105"
+                                ></rect>
+                                <path
+                                    class="cls-2"
+                                    d="M27.93,5.07A1.251,1.251,0,0,0,27.5,5H14.09a1.386,1.386,0,0,0-.09.5v22A1.5,1.5,0,0,0,15.5,29h11A1.5,1.5,0,0,0,28,27.5V5.5A1.251,1.251,0,0,0,27.93,5.07Z"
+                                    id="id_106"
+                                ></path>
+                                <rect
+                                    class="cls-1"
+                                    x="15"
+                                    y="4"
+                                    width="14"
+                                    height="25"
+                                    rx="1.5"
+                                    ry="1.5"
+                                    id="id_107"
+                                    style="fill: rgb(255, 255, 255)"
+                                ></rect>
+                                <rect
+                                    class="cls-3"
+                                    x="18"
+                                    y="9"
+                                    width="9"
+                                    height="1"
+                                    id="id_108"
+                                ></rect>
+                                <rect
+                                    class="cls-3"
+                                    x="18"
+                                    y="12"
+                                    width="9"
+                                    height="1"
+                                    id="id_109"
+                                ></rect>
+                                <circle
+                                    class="cls-3"
+                                    cx="19"
+                                    cy="25"
+                                    r="1"
+                                    id="id_110"
+                                ></circle>
+                                <rect
+                                    class="cls-4"
+                                    x="14"
+                                    y="20"
+                                    width="1"
+                                    height="4"
+                                    id="id_111"
+                                ></rect>
+                            </g>
+                        </svg>
+                        <h1
+                            class="lg:block hidden font-Righteous font-black text-white text-3xl uppercase"
+                        >
+                            shoppc.vn
+                        </h1>
+                    </a>
+                    <!-- category menu btn -->
+                    <button
+                        title="Danh mục sản phẩm"
+                        class="sm:inline-flex hidden items-center gap-2 w-min hover:bg-[#00000068] active:bg-[#00000030] p-2 rounded-xl"
+                    >
+                        <i
+                            class="leading-none bi bi-list text-white text-xl"
+                        ></i>
+                    </button>
+                </div>
+                <!-- search -->
+                <div class="flex bg-white rounded-2xl px-2 items-center w-full">
+                    <input
+                        class="w-full bg-transparent text-[#444] outline-none py-2 px-3 font-WorkSans leading-none text-sm placeholder:text-sm"
+                        placeholder="Bạn cần tìm gì?"
+                        id="search-input"
+                        name="searchValue"
+                        type="text"
+                    />
+                    <span class="px-2 cursor-pointer">
+                        <i class="leading-none bi bi-search"></i>
+                    </span>
+                </div>
+                <!-- nav -->
+                <div class="flex gap-2 items-center justify-center">
+                    <!-- hotline btn -->
+                    <a
+                        title="Hotline"
+                        href="tel:+84000000000"
+                        class="sm:inline-flex hidden items-center gap-2 w-min py-1 px-2 rounded"
+                    >
+                        <i
+                            class="leading-none bi bi-headset text-white text-2xl"
+                        ></i>
+                        <p
+                            class="font-WorkSans text-white font-medium break-words leading-none text-sm md:block hidden"
+                        >
+                            Hotline 1800.xxxx
+                        </p>
+                    </a>
+                    <!-- showroom btn -->
+                    <a
+                        title="Cửa hàng"
+                        href="#showrooms"
+                        class="sm:inline-flex hidden items-center gap-2 w-min hover:bg-[#00000068] p-2 px-3 rounded-xl"
+                    >
+                        <i
+                            class="leading-none bi bi-pin-map text-white text-xl"
+                        ></i>
+                        <p
+                            class="font-WorkSans text-white font-medium break-words leading-none text-sm md:block hidden"
+                        >
+                            Cửa hàng
+                        </p>
+                    </a>
+                    <!-- lookup order btn -->
+                    <a
+                        title="Tra cứu đơn hàng"
+                        href="#lookup-orders"
+                        class="relative sm:inline-flex hidden items-center gap-2 p-2 rounded-xl"
+                    >
+                        <i
+                            class="leading-none bi bi-truck text-white text-2xl"
+                        ></i>
+                        <p
+                            class="absolute right-0 top-0 font-WorkSans text-[#d72c2c] bg-white text-[10px] rounded-lg font-medium p-[2px] min-w-[1.25rem] inline-flex justify-center items-center"
+                        >
+                            0
+                        </p>
+                    </a>
+                    <!-- cart btn -->
+                    <a
+                        title="Giỏ hàng"
+                        href="#cart"
+                        class="relative inline-flex items-center gap-2 p-2 rounded-xl"
+                    >
+                        <i
+                            class="leading-none bi bi-cart text-white text-2xl"
+                        ></i>
+                        <p
+                            class="absolute right-0 top-0 font-WorkSans text-[#d72c2c] bg-white text-[10px] rounded-lg font-medium p-[2px] min-w-[1.25rem] inline-flex justify-center items-center"
+                        >
+                            0
+                        </p>
+                    </a>
+                    <!-- login btn -->
+                    <a
+                        title="Đăng nhập"
+                        href="#dang-nhap"
+                        class="sm:inline-flex hidden items-center gap-2 w-min hover:bg-[#00000068] p-2 px-3 rounded-xl"
+                    >
+                        <i
+                            class="leading-none bi bi-person-fill text-white text-2xl"
+                        ></i>
+                        <p
+                            class="font-WorkSans text-white font-medium break-words leading-none text-sm md:block hidden"
+                        >
+                            Đăng nhập
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div
+                class="bg-white shadow-md mx-auto flex flex-col justify-between items-center"
             >
-              shoppc.vn
-            </h1>
-          </a>
-          <!-- category menu btn -->
-          <button
-            title="Danh mục sản phẩm"
-            class="sm:inline-flex hidden items-center gap-2 w-min hover:bg-[#00000068] active:bg-[#00000030] p-2 rounded-xl"
-          >
-            <i class="leading-none bi bi-list text-white text-xl"></i>
-          </button>
-        </div>
-        <!-- search -->
-        <div class="flex bg-white rounded-2xl px-2 items-center w-full">
-          <input
-            class="w-full bg-transparent text-[#444] outline-none py-2 px-3 font-WorkSans leading-none placeholder:text-sm"
-            placeholder="Bạn cần tìm gì?"
-            id="search-input"
-            name="searchValue"
-            type="text"
-          />
-          <span class="px-2 cursor-pointer">
-            <i class="leading-none bi bi-search"></i>
-          </span>
-        </div>
-        <!-- nav -->
-        <div class="flex gap-2 items-center justify-center">
-          <!-- hotline btn -->
-          <a
-            title="Hotline"
-            href="tel:+84000000000"
-            class="sm:inline-flex hidden items-center gap-2 w-min py-1 px-2 rounded"
-          >
-            <i class="leading-none bi bi-headset text-white text-2xl"></i>
-            <p
-              class="font-WorkSans text-white font-medium break-words leading-none text-sm md:block hidden"
-            >
-              Hotline 1800.xxxx
-            </p>
-          </a>
-          <!-- showroom btn -->
-          <a
-            title="Cửa hàng"
-            href="#showrooms"
-            class="sm:inline-flex hidden items-center gap-2 w-min hover:bg-[#00000068] p-2 px-3 rounded-xl"
-          >
-            <i class="leading-none bi bi-pin-map text-white text-xl"></i>
-            <p
-              class="font-WorkSans text-white font-medium break-words leading-none text-sm md:block hidden"
-            >
-              Cửa hàng
-            </p>
-          </a>
-          <!-- lookup order btn -->
-          <a
-            title="Tra cứu đơn hàng"
-            href="#lookup-orders"
-            class="relative sm:inline-flex hidden items-center gap-2 p-2 rounded-xl"
-          >
-            <i class="leading-none bi bi-truck text-white text-2xl"></i>
-            <p
-              class="absolute right-0 top-0 font-WorkSans text-[#d72c2c] bg-white text-[10px] rounded-lg font-medium p-[2px] min-w-[1.25rem] inline-flex justify-center items-center"
-            >
-              0
-            </p>
-          </a>
-          <!-- cart btn -->
-          <a
-            title="Giỏ hàng"
-            href="#cart"
-            class="relative inline-flex items-center gap-2 p-2 rounded-xl"
-          >
-            <i class="leading-none bi bi-cart text-white text-2xl"></i>
-            <p
-              class="absolute right-0 top-0 font-WorkSans text-[#d72c2c] bg-white text-[10px] rounded-lg font-medium p-[2px] min-w-[1.25rem] inline-flex justify-center items-center"
-            >
-              0
-            </p>
-          </a>
-          <!-- login btn -->
-          <a
-            title="Đăng nhập"
-            href="#dang-nhap"
-            class="sm:inline-flex hidden items-center gap-2 w-min hover:bg-[#00000068] p-2 px-3 rounded-xl"
-          >
-            <i class="leading-none bi bi-person-fill text-white text-2xl"></i>
-            <p
-              class="font-WorkSans text-white font-medium break-words leading-none text-sm md:block hidden"
-            >
-              Đăng nhập
-            </p>
-          </a>
-        </div>
-      </div>
-      <div
-        class="bg-white shadow-md mx-auto flex flex-col justify-between items-center"
-      >
-        <!-- Top Products Nav -->
-        <div
-          class="bg-[#D72C2C] flex flex-wrap font-WorkSans lg:text-xs text-sm text-white pb-2 w-full justify-center"
-        >
-          <a href="#" class="outline-none focus:underline hover:underline px-2"
-            >Laptop</a
-          >
-          <a href="#" class="outline-none focus:underline hover:underline px-2"
-            >Macbook</a
-          >
-          <a href="#" class="outline-none focus:underline hover:underline px-2"
-            >Laptop Gaming</a
-          >
-          <a href="#" class="outline-none focus:underline hover:underline px-2"
-            >Laptop văn phòng</a
-          >
-          <a href="#" class="outline-none focus:underline hover:underline px-2"
-            >Linh kiện PC</a
-          >
-          <a href="#" class="outline-none focus:underline hover:underline px-2"
-            >Card đồ họa</a
-          >
-          <a href="#" class="outline-none focus:underline hover:underline px-2"
-            >Màn hình LED</a
-          >
-          <a href="#" class="outline-none focus:underline hover:underline px-2"
-            >Bàn phìm</a
-          >
-          <a href="#" class="outline-none focus:underline hover:underline px-2"
-            >Chuột</a
-          >
-          <a href="#" class="outline-none focus:underline hover:underline px-2"
-            >Tai nghe</a
-          >
-        </div>
-        <!-- Help & Policy nav -->
-        <div class="lg:flex hidden justify-center mx-auto gap-4">
-          <a
-            title="Chương trình khuyến mãi"
-            href="#Sales"
-            class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
-          >
-            <i class="leading-none bi bi-tags text-xl"></i>
-            <p
-              class="font-WorkSans font-bold leading-none text-sm block text-[#d72c2c] uppercase"
-            >
-              Khuyến mãi
-            </p>
-          </a>
+                <!-- Top Products Nav -->
+                <div
+                    class="bg-[#D72C2C] max-[425px]:hidden flex flex-wrap font-WorkSans lg:text-xs text-sm text-white pb-2 w-full justify-center"
+                >
+                    <a
+                        href="#"
+                        class="outline-none focus:underline hover:underline px-2"
+                        >Laptop</a
+                    >
+                    <a
+                        href="#"
+                        class="outline-none focus:underline hover:underline px-2"
+                        >Macbook</a
+                    >
+                    <a
+                        href="#"
+                        class="outline-none focus:underline hover:underline px-2"
+                        >Laptop Gaming</a
+                    >
+                    <a
+                        href="#"
+                        class="outline-none focus:underline hover:underline px-2"
+                        >Laptop văn phòng</a
+                    >
+                    <a
+                        href="#"
+                        class="outline-none focus:underline hover:underline px-2"
+                        >Linh kiện PC</a
+                    >
+                    <a
+                        href="#"
+                        class="outline-none focus:underline hover:underline px-2"
+                        >Card đồ họa</a
+                    >
+                    <a
+                        href="#"
+                        class="outline-none focus:underline hover:underline px-2"
+                        >Màn hình LED</a
+                    >
+                    <a
+                        href="#"
+                        class="outline-none focus:underline hover:underline px-2"
+                        >Bàn phìm</a
+                    >
+                    <a
+                        href="#"
+                        class="outline-none focus:underline hover:underline px-2"
+                        >Chuột</a
+                    >
+                    <a
+                        href="#"
+                        class="outline-none focus:underline hover:underline px-2"
+                        >Tai nghe</a
+                    >
+                </div>
+                <!-- Help & Policy nav -->
+                <div class="lg:flex hidden justify-center mx-auto gap-4">
+                    <a
+                        title="Chương trình khuyến mãi"
+                        href="#Sales"
+                        class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+                    >
+                        <i class="leading-none bi bi-tags text-xl"></i>
+                        <p
+                            class="font-WorkSans font-bold leading-none text-sm block text-[#d72c2c] uppercase"
+                        >
+                            Khuyến mãi
+                        </p>
+                    </a>
 
-          <a
-            title="Hướng dẫn trả góp"
-            href="#help/installment"
-            class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
-          >
-            <i class="leading-none bi bi-cash-coin text-xl"></i>
-            <p class="font-WorkSans font-medium leading-none text-sm block">
-              Hướng dẫn trả góp
-            </p>
-          </a>
+                    <a
+                        title="Hướng dẫn trả góp"
+                        href="#help/installment"
+                        class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+                    >
+                        <i class="leading-none bi bi-cash-coin text-xl"></i>
+                        <p
+                            class="font-WorkSans font-medium leading-none text-sm block"
+                        >
+                            Hướng dẫn trả góp
+                        </p>
+                    </a>
 
-          <a
-            title="Hướng dẫn thanh toán"
-            href="#help/payment"
-            class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
-          >
-            <i class="leading-none bi bi-credit-card text-xl"></i>
-            <p class="font-WorkSans font-medium leading-none text-sm block">
-              Hướng dẫn thanh toán
-            </p>
-          </a>
+                    <a
+                        title="Hướng dẫn thanh toán"
+                        href="#help/payment"
+                        class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+                    >
+                        <i class="leading-none bi bi-credit-card text-xl"></i>
+                        <p
+                            class="font-WorkSans font-medium leading-none text-sm block"
+                        >
+                            Hướng dẫn thanh toán
+                        </p>
+                    </a>
 
-          <a
-            title="Chính sách bảo hành"
-            href="#policy/warranty"
-            class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
-          >
-            <i class="leading-none bi bi-shield-check text-xl"></i>
-            <p class="font-WorkSans font-medium leading-none text-sm block">
-              Chính sách bảo hành
-            </p>
-          </a>
+                    <a
+                        title="Chính sách bảo hành"
+                        href="#policy/warranty"
+                        class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+                    >
+                        <i class="leading-none bi bi-shield-check text-xl"></i>
+                        <p
+                            class="font-WorkSans font-medium leading-none text-sm block"
+                        >
+                            Chính sách bảo hành
+                        </p>
+                    </a>
 
-          <a
-            title="Thông tin liên lạc"
-            href="#help/contact"
-            class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
-          >
-            <i class="leading-none bi bi-telephone text-xl"></i>
-            <p class="font-WorkSans font-medium leading-none text-sm block">
-              Thông tin liên lạc
-            </p>
-          </a>
+                    <a
+                        title="Thông tin liên lạc"
+                        href="#help/contact"
+                        class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+                    >
+                        <i class="leading-none bi bi-telephone text-xl"></i>
+                        <p
+                            class="font-WorkSans font-medium leading-none text-sm block"
+                        >
+                            Thông tin liên lạc
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="h-auto mx-auto max-w-[1200px] xl:px-0 px-2 py-2">
+            <!-- Main Section -->
+            <div class="flex items-start gap-2 mb-4">
+                <!-- Danh mục -->
+                <div
+                    class="xl:flex hidden flex-col py-1 justify-between rounded min-w-[14rem] bg-white shadow-md h-full"
+                >
+                    <!-- Laptop -->
+                    <a
+                        href="#"
+                        class="flex items-center px-4 justify-between hover:bg-[#d72c2c] hover:text-white text-[#444] relative"
+                    >
+                        <div class="inline-flex gap-2 items-center">
+                            <i class="bi bi-laptop text-xl"></i>
+                            <p class="font-WorkSans leading-none text-sm">
+                                Laptop
+                            </p>
+                        </div>
+                        <i class="bi bi-caret-right-fill text-xs"></i>
+                    </a>
+                    <!-- Laptop Gaming -->
+                    <a
+                        href="#"
+                        class="flex items-center px-4 justify-between hover:bg-[#d72c2c] hover:text-white text-[#444] relative"
+                    >
+                        <div class="inline-flex gap-2 items-center">
+                            <svg
+                                class="w-5 h-7"
+                                version="1.1"
+                                id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                x="0px"
+                                y="0px"
+                                viewBox="0 0 512 512"
+                                style="enable-background: new 0 0 512 512"
+                                xml:space="preserve"
+                            >
+                                <g>
+                                    <path
+                                        style="fill: #38454f"
+                                        d="M185.379,384v17.655h141.241V384H476.69V101.517c0-9.754-7.901-17.655-17.655-17.655H52.966
+ c-9.754,0-17.655,7.901-17.655,17.655V384H185.379z"
+                                    />
+                                    <path
+                                        style="fill: #b0b6bb"
+                                        d="M326.621,384v17.655H185.379V384H0v26.483c0,9.754,7.901,17.655,17.655,17.655h476.69
+ c9.754,0,17.655-7.901,17.655-17.655V384H326.621z"
+                                    />
+                                    <polygon
+                                        style="fill: #546a79"
+                                        points="52.966,366.345 459.034,366.345 459.034,101.517 52.966,101.517 	"
+                                    />
+                                    <g>
+                                        <path
+                                            style="fill: #ea6148"
+                                            d="M432.552,348.69H300.138c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h132.414
+   c4.882,0,8.828,3.955,8.828,8.828S437.433,348.69,432.552,348.69"
+                                        />
+                                        <path
+                                            style="fill: #ea6148"
+                                            d="M167.724,295.724H79.448c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h88.276
+   c4.882,0,8.828,3.955,8.828,8.828S172.606,295.724,167.724,295.724"
+                                        />
+                                        <path
+                                            style="fill: #ea6148"
+                                            d="M388.414,295.724H256c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h132.414
+   c4.882,0,8.828,3.955,8.828,8.828S393.295,295.724,388.414,295.724"
+                                        />
+                                        <path
+                                            style="fill: #ea6148"
+                                            d="M211.862,295.724c-2.295,0-4.599-0.971-6.268-2.56c-1.598-1.677-2.56-3.972-2.56-6.268
+   c0-1.148,0.265-2.295,0.706-3.354c0.441-1.148,1.059-2.119,1.854-2.913c3.266-3.266,9.181-3.266,12.535,0
+   c1.589,1.677,2.56,3.972,2.56,6.268s-0.971,4.59-2.56,6.268c-0.441,0.353-0.892,0.794-1.412,1.059
+   c-0.441,0.353-0.98,0.618-1.501,0.794c-0.538,0.265-1.059,0.441-1.686,0.53C213.01,295.636,212.392,295.724,211.862,295.724"
+                                        />
+                                        <path
+                                            style="fill: #ea6148"
+                                            d="M256,348.69H123.586c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828H256
+   c4.882,0,8.828,3.955,8.828,8.828S260.882,348.69,256,348.69"
+                                        />
+                                        <path
+                                            style="fill: #ea6148"
+                                            d="M79.448,348.69c-1.148,0-2.295-0.265-3.354-0.706c-1.059-0.441-2.03-1.059-2.913-1.854
+   c-1.598-1.677-2.56-3.884-2.56-6.268c0-1.148,0.265-2.295,0.706-3.354c0.441-1.148,1.059-2.03,1.854-2.913
+   c2.119-2.03,5.12-2.913,7.936-2.383c0.627,0.088,1.148,0.265,1.686,0.53c0.521,0.177,1.059,0.441,1.501,0.794
+   c0.521,0.353,0.971,0.706,1.412,1.059c0.794,0.883,1.412,1.766,1.854,2.913c0.441,1.059,0.706,2.207,0.706,3.354
+   c0,2.383-0.971,4.59-2.56,6.268c-0.441,0.353-0.892,0.706-1.412,1.059c-0.441,0.353-0.98,0.618-1.501,0.794
+   c-0.538,0.265-1.059,0.441-1.686,0.53C80.596,348.601,79.978,348.69,79.448,348.69"
+                                        />
+                                        <path
+                                            style="fill: #ea6148"
+                                            d="M432.552,295.724c-0.538,0-1.148-0.088-1.677-0.177c-0.618-0.088-1.148-0.265-1.677-0.53
+   c-0.53-0.177-1.059-0.441-1.598-0.794c-0.433-0.353-0.874-0.706-1.315-1.059c-1.598-1.677-2.56-3.972-2.56-6.268
+   s0.962-4.59,2.56-6.268l1.315-1.059c0.539-0.353,1.068-0.618,1.598-0.794c0.53-0.265,1.059-0.441,1.677-0.53
+   c2.825-0.618,5.906,0.353,7.945,2.383c0.353,0.441,0.706,0.883,1.059,1.412c0.353,0.441,0.609,0.971,0.794,1.501
+   c0.265,0.53,0.441,1.059,0.521,1.677c0.097,0.53,0.185,1.148,0.185,1.677c0,0.53-0.088,1.148-0.185,1.766
+   c-0.079,0.53-0.256,1.059-0.521,1.589c-0.185,0.53-0.441,1.059-0.794,1.589c-0.353,0.441-0.706,0.883-1.059,1.324
+   c-0.441,0.353-0.892,0.706-1.324,1.059c-0.53,0.353-1.068,0.618-1.589,0.794c-0.538,0.265-1.059,0.441-1.686,0.53
+   C433.699,295.636,433.081,295.724,432.552,295.724"
+                                        />
+                                        <path
+                                            style="fill: #ea6148"
+                                            d="M432.552,189.793H300.138c-4.882,0-8.828-3.955-8.828-8.828s3.946-8.828,8.828-8.828h132.414
+   c4.882,0,8.828,3.955,8.828,8.828S437.433,189.793,432.552,189.793"
+                                        />
+                                        <path
+                                            style="fill: #ea6148"
+                                            d="M432.552,242.759h-88.276c-4.882,0-8.828-3.955-8.828-8.828c0-4.873,3.946-8.828,8.828-8.828
+   h88.276c4.882,0,8.828,3.955,8.828,8.828C441.379,238.804,437.433,242.759,432.552,242.759"
+                                        />
+                                        <path
+                                            style="fill: #ea6148"
+                                            d="M273.655,242.759H256c-4.882,0-8.828-3.955-8.828-8.828c0-4.873,3.946-8.828,8.828-8.828h17.655
+   c4.882,0,8.828,3.955,8.828,8.828C282.483,238.804,278.537,242.759,273.655,242.759"
+                                        />
+                                        <path
+                                            style="fill: #ea6148"
+                                            d="M388.414,136.828H256c-4.882,0-8.828-3.955-8.828-8.828c0-4.873,3.946-8.828,8.828-8.828h132.414
+   c4.882,0,8.828,3.955,8.828,8.828C397.241,132.873,393.295,136.828,388.414,136.828"
+                                        />
+                                        <path
+                                            style="fill: #ea6148"
+                                            d="M432.552,136.828c-0.538,0-1.148-0.088-1.677-0.177c-0.618-0.088-1.148-0.265-1.677-0.53
+   c-0.53-0.177-1.059-0.441-1.598-0.794c-0.433-0.353-0.874-0.706-1.315-1.059c-1.598-1.677-2.56-3.972-2.56-6.268
+   c0-2.295,0.962-4.59,2.56-6.268l1.315-1.059c0.539-0.353,1.068-0.618,1.598-0.794c0.53-0.265,1.059-0.441,1.677-0.53
+   c2.825-0.618,5.906,0.353,7.945,2.383c0.353,0.441,0.706,0.883,1.059,1.412c0.353,0.441,0.609,0.971,0.794,1.501
+   c0.265,0.53,0.441,1.059,0.521,1.677c0.097,0.53,0.185,1.148,0.185,1.677c0,0.53-0.088,1.148-0.185,1.766
+   c-0.079,0.53-0.256,1.059-0.521,1.589c-0.185,0.53-0.441,1.059-0.794,1.589c-0.353,0.441-0.706,0.883-1.059,1.324
+   c-0.441,0.353-0.892,0.706-1.324,1.059c-0.53,0.353-1.068,0.618-1.589,0.794c-0.538,0.265-1.059,0.441-1.686,0.53
+   C433.699,136.739,433.081,136.828,432.552,136.828"
+                                        />
+                                        <path
+                                            style="fill: #ea6148"
+                                            d="M264.828,189.793c-2.392,0-4.599-0.971-6.268-2.56c-1.598-1.677-2.56-3.884-2.56-6.268
+   c0-2.295,0.962-4.59,2.56-6.268c2.03-2.03,5.12-3.001,7.936-2.383c0.627,0.088,1.148,0.265,1.686,0.53
+   c0.521,0.177,1.059,0.441,1.501,0.794c0.521,0.265,0.971,0.706,1.324,1.059c1.677,1.677,2.648,3.972,2.648,6.268
+   c0,2.383-0.971,4.59-2.648,6.268C269.418,188.822,267.211,189.793,264.828,189.793"
+                                        />
+                                        <path
+                                            style="fill: #ea6148"
+                                            d="M308.966,242.759c-0.618,0-1.148-0.088-1.766-0.177c-0.53-0.088-1.059-0.265-1.589-0.53
+   c-0.53-0.177-1.059-0.441-1.598-0.794c-0.433-0.353-0.874-0.706-1.315-1.059c-1.598-1.677-2.56-3.884-2.56-6.268
+   c0-2.295,0.962-4.59,2.56-6.268c3.266-3.266,9.269-3.266,12.535,0c1.589,1.677,2.56,3.972,2.56,6.268
+   c0,0.618-0.088,1.148-0.185,1.766c-0.079,0.53-0.256,1.059-0.521,1.589c-0.185,0.53-0.441,1.059-0.794,1.589
+   c-0.353,0.441-0.706,0.883-1.059,1.324C313.556,241.788,311.261,242.759,308.966,242.759"
+                                        />
+                                    </g>
+                                    <polygon
+                                        style="fill: #ecba16"
+                                        points="79.448,242.759 203.034,242.759 203.034,119.172 79.448,119.172 	"
+                                    />
+                                </g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                                <g></g>
+                            </svg>
+                            <p class="font-WorkSans leading-none text-sm">
+                                Laptop Gaming
+                            </p>
+                        </div>
+                        <i class="bi bi-caret-right-fill text-xs"></i>
+                    </a>
+                    <!-- PC Gaming -->
+                    <a
+                        href="#"
+                        class="flex items-center px-4 justify-between hover:bg-[#d72c2c] hover:text-white text-[#444] relative"
+                    >
+                        <div class="inline-flex gap-2 items-center">
+                            <i class="bi bi-pc-display text-xl"></i>
+                            <p class="font-WorkSans leading-none text-sm">
+                                PC Gaming
+                            </p>
+                        </div>
+                        <i class="bi bi-caret-right-fill text-xs"></i>
+                    </a>
+                    <!-- PC Van Phong -->
+                    <a
+                        href="#"
+                        class="flex items-center px-4 justify-between hover:bg-[#d72c2c] hover:text-white text-[#444] relative"
+                    >
+                        <div class="inline-flex gap-2 items-center">
+                            <i class="bi bi-pc-display text-xl"></i>
+                            <p class="font-WorkSans leading-none text-sm">
+                                PC Văn phòng
+                            </p>
+                        </div>
+                        <i class="bi bi-caret-right-fill text-xs"></i>
+                    </a>
+                    <!-- Bộ nhớ lưu trữ -->
+                    <a
+                        href="#"
+                        class="flex items-center px-4 justify-between hover:bg-[#d72c2c] hover:text-white text-[#444] relative"
+                    >
+                        <div class="inline-flex gap-2 items-center">
+                            <i class="bi bi-memory text-xl"></i>
+                            <p class="font-WorkSans leading-none text-sm">
+                                Bộ nhớ lưu trữ
+                            </p>
+                        </div>
+                        <i class="bi bi-caret-right-fill text-xs"></i>
+                    </a>
+                    <!-- Linh kiện PC -->
+                    <a
+                        href="#"
+                        class="flex items-center px-4 justify-between hover:bg-[#d72c2c] hover:text-white text-[#444] relative"
+                    >
+                        <div class="inline-flex gap-2 items-center">
+                            <i class="bi bi-cpu text-xl"></i>
+                            <p class="font-WorkSans leading-none text-sm">
+                                Linh kiện PC
+                            </p>
+                        </div>
+                        <i class="bi bi-caret-right-fill text-xs"></i>
+                    </a>
+                    <!-- Card cũ còn tốt -->
+                    <a
+                        href="#"
+                        class="flex items-center px-4 justify-between hover:bg-[#d72c2c] hover:text-white text-[#444] relative"
+                    >
+                        <div class="inline-flex gap-2 items-center">
+                            <i class="bi bi-pci-card text-xl"></i>
+                            <p class="font-WorkSans leading-none text-sm">
+                                Card cũ còn tốt
+                            </p>
+                        </div>
+                        <i class="bi bi-caret-right-fill text-xs"></i>
+                    </a>
+                    <!-- Apple -->
+                    <a
+                        href="#"
+                        class="flex items-center px-4 justify-between hover:bg-[#d72c2c] hover:text-white text-[#444] relative"
+                    >
+                        <div class="inline-flex gap-2 items-center">
+                            <i class="bi bi-apple text-xl"></i>
+                            <p class="font-WorkSans leading-none text-sm">
+                                Apple
+                            </p>
+                        </div>
+                        <i class="bi bi-caret-right-fill text-xs"></i>
+                    </a>
+                    <!-- Màn hình -->
+                    <a
+                        href="#"
+                        class="flex items-center px-4 justify-between hover:bg-[#d72c2c] hover:text-white text-[#444] relative"
+                    >
+                        <div class="inline-flex gap-2 items-center">
+                            <i class="bi bi-tv text-xl"></i>
+                            <p class="font-WorkSans leading-none text-sm">
+                                Màn hình
+                            </p>
+                        </div>
+                        <i class="bi bi-caret-right-fill text-xs"></i>
+                    </a>
+                    <!-- Chuột - Lót chuột -->
+                    <a
+                        href="#"
+                        class="flex items-center px-4 justify-between hover:bg-[#d72c2c] hover:text-white text-[#444] relative"
+                    >
+                        <div class="inline-flex gap-2 items-center">
+                            <i class="bi bi-mouse text-xl"></i>
+                            <p class="font-WorkSans leading-none text-sm">
+                                Chuột - Lót chuột
+                            </p>
+                        </div>
+                        <i class="bi bi-caret-right-fill text-xs"></i>
+                    </a>
+                    <!-- Bàn phím -->
+                    <a
+                        href="#"
+                        class="flex items-center px-4 justify-between hover:bg-[#d72c2c] hover:text-white text-[#444] relative"
+                    >
+                        <div class="inline-flex gap-2 items-center">
+                            <i class="bi bi-keyboard text-xl"></i>
+                            <p class="font-WorkSans leading-none text-sm">
+                                Bàn phím
+                            </p>
+                        </div>
+                        <i class="bi bi-caret-right-fill text-xs"></i>
+                    </a>
+                    <!-- Tai nghe - Loa -->
+                    <a
+                        href="#"
+                        class="flex items-center px-4 justify-between hover:bg-[#d72c2c] hover:text-white text-[#444] relative"
+                    >
+                        <div class="inline-flex gap-2 items-center">
+                            <i class="bi bi-headphones text-xl"></i>
+                            <p class="font-WorkSans leading-none text-sm">
+                                Tai nghe - Loa
+                            </p>
+                        </div>
+                        <i class="bi bi-caret-right-fill text-xs"></i>
+                    </a>
+                    <!-- Bàn - Ghế -->
+                    <a
+                        href="#"
+                        class="flex items-center px-4 justify-between hover:bg-[#d72c2c] hover:text-white text-[#444] relative"
+                    >
+                        <div class="inline-flex gap-2 items-center">
+                            <svg
+                                class="w-5 h-7"
+                                version="1.1"
+                                id="Layer_1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                x="0px"
+                                y="0px"
+                                viewBox="0 0 252.6988 208.1012"
+                                enable-background="new 0 0 252.6988 208.1012"
+                                xml:space="preserve"
+                            >
+                                <g>
+                                    <path
+                                        d="M201.1827,108.1703c3.626,0.7328,7.3503,1.1917,11.0161,1.1917c1.5391,0,3.0957-0.0068,4.6563-0.0137
+		c13.6543-0.0654,27.7725-0.1235,32.3672,4.4502c0.6619,0.6595,1.0767,1.4061,1.2935,2.2415
+		c-0.4495,2.5465-1.7388,4.9383-3.3091,7.8137c-3.5898,6.5747-8.5078,15.5791-8.5078,34.8057
+		c0,16.6144-1.6434,25.4975-5.1494,30.1025v-61.6166h5.417v-8.8333h7.333v-5H117.8729v5h7.3335v8.8333h5.4165V207.44h6.5v-12.17
+		h9.4572v-55.4442h81.333v52.7911c-0.9359,0.2788-1.9337,0.4703-2.9999,0.5867v-50.3778h-75.3333v64.6666h75.3333v-7.3022
+		c1.0618-0.1169,2.0638-0.2938,2.9999-0.5449v7.7948h5.6364v-10.8251c5.2793-4.8951,7.1494-15.1229,7.1494-33.7529
+		c0-19.1445,4.7783-28.0898,8.2676-34.6221c2.085-3.9033,3.7324-6.9863,3.7324-10.8779c0-0.4944-0.0464-0.9711-0.1362-1.4302
+		c0.0801-0.5784,0.1362-1.1658,0.1362-1.7787c0-1.8784-0.6768-3.5044-2.0107-4.833c-5.1299-5.1084-19.0752-5.0469-33.8418-4.9839
+		c-1.5576,0.0068-3.1113,0.0137-4.6475,0.0137c-4.3789,0-8.8907-0.6821-13.2173-1.7116l-17.2529-43.3597l8.2837-45.8003
+		l-6.3962-1.1569l-16.196,89.5471l6.3962,1.1569l0.8513-4.7076c3.052,1.6314,9.3293,4.7581,16.9155,7.2723h-27.5337v4h37.6982
+		L201.1827,108.1703z M187.9966,165.1969c1.2767,0.095,2.4833,0.43,3.5817,0.9595l-3.5817,6.2036V165.1969z M186.4966,172.3599
+		l-3.5817-6.2036c1.0984-0.5295,2.3049-0.8645,3.5817-0.9595V172.3599z M184.4476,175.909l-6.2036,3.5816
+		c-0.5295-1.0983-0.8645-2.3049-0.9595-3.5816H184.4476z M177.2845,174.409c0.095-1.2767,0.4299-2.4833,0.9595-3.5816l6.2036,3.5816
+		H177.2845z M185.1975,177.2081l-3.5856,6.2104c-1.0299-0.7039-1.9209-1.595-2.6249-2.6249L185.1975,177.2081z M186.4966,177.9581
+		v7.163c-1.2767-0.095-2.4833-0.43-3.5817-0.9595L186.4966,177.9581z M187.9966,177.9581l3.5817,6.2036
+		c-1.0984,0.5295-2.3049,0.8645-3.5817,0.9595V177.9581z M192.8812,183.4186l-3.5856-6.2105l6.2106,3.5856
+		C194.8022,181.8236,193.9111,182.7147,192.8812,183.4186z M196.2491,179.4906l-6.2035-3.5816h7.163
+		C197.1136,177.1857,196.7787,178.3923,196.2491,179.4906z M190.0456,174.409l6.2035-3.5816
+		c0.5295,1.0983,0.8645,2.3049,0.9595,3.5816H190.0456z M195.5062,169.5243l-6.2106,3.5856l3.5856-6.2105
+		C193.9111,167.6033,194.8022,168.4945,195.5062,169.5243z M181.6119,166.8994l3.5856,6.2104l-6.2104-3.5856
+		C179.691,168.4945,180.582,167.6033,181.6119,166.8994z M224.9132,198.1875v-2.9937c1.0618-0.1144,2.0638-0.2875,2.9999-0.5333
+		v2.8922C226.9754,197.8536,225.977,198.0608,224.9132,198.1875z M233.5494,193.4546v-1.76
+		c0.8428-0.7648,1.5977-1.6656,2.2727-2.7089C235.1756,190.7815,234.4185,192.2548,233.5494,193.4546z M212.1988,106.3497
+		c1.5391,0,3.0957-0.0068,4.6563-0.0137c13.707-0.0605,27.8799-0.1211,32.4219,4.4014c0.3917,0.39,0.6802,0.8156,0.9088,1.2651
+		c-5.4858-4.7635-19.0134-4.7175-33.3395-4.6542c-1.5576,0.0068-3.1113,0.0137-4.6475,0.0137c-3.9395,0-7.988-0.5621-11.9114-1.4416
+		l-0.3984-1.0013C203.9181,105.7917,208.0959,106.3497,212.1988,106.3497z M194.1576,101.3339
+		c-8.3704-2.5245-15.4695-5.9656-18.657-7.6211l4.8826-26.996L194.1576,101.3339z M175.1261,95.7831
+		c3.703,1.9101,11.2292,5.4852,19.9841,7.9445l0.3783,0.951c-9.3796-2.7318-17.3816-6.7873-20.4452-8.4382L175.1261,95.7831z"
+                                    />
+                                    <path
+                                        d="M140.936,109.59h16.3634v-4h-13.3572C143.2805,107.1592,142.2393,108.5294,140.936,109.59z"
+                                    />
+                                    <path
+                                        d="M50.8924,141.0946c1.0375,0.3346,2.136,0.5267,3.2722,0.5776c1.9258,0.226,3.8558,0.2779,5.7095,0.2542
+		c1.6772-0.0211,3.1824-0.0723,4.5205-0.2256H91.941l4.3984,54.8979c0.5244,6.5425,5.9951,11.5029,12.4463,11.5024
+		c0.335,0,0.6729-0.0132,1.0117-0.0405c6.8818-0.5513,12.0137-6.5767,11.4619-13.458l-5.3193-66.3999
+		c-0.5205-6.4956-5.9434-11.502-12.46-11.502H71.7035c0.0386-6.4716,0.7739-13.0898,1.7744-19.4437L55.0077,76.8074
+		c-1.8438-2.0415-2.7832-4.6792-2.6426-7.4272c0.1396-2.7476,1.3408-5.2764,3.3818-7.1201
+		c1.8975-1.7129,4.3477-2.6563,6.9023-2.6563c2.9102,0,5.6963,1.2378,7.6455,3.396l8.0541,8.9172
+		c1.1301-9.0093-2.6761-18.4288-10.174-20.2972c-8.5371-2.129-20.9121,2.5078-25.9473,17.1503
+		c-6.8047,20.1739-8.2676,33.3047-5.6816,55.5196C38.6815,135.2787,44.4998,139.5352,50.8924,141.0946z"
+                                    />
+                                    <path
+                                        d="M1.6217,92.6329c-1.2925,0.4854-1.9468,1.9268-1.4614,3.2192l20.8574,55.5464c0.0571,0.1521,0.1312,0.2919,0.213,0.4255
+		c1.9545,4.2905,12.3107,7.7271,25.6613,8.6071v1.77h4.2498v21.0529l-29.25,9v3.684c-1.874,0.9244-3.1665,2.8486-3.1665,5.0795
+		c0,3.1296,2.5371,5.6666,5.6667,5.6666s5.6666-2.537,5.6666-5.6666c0-2.2266-1.2872-4.1478-3.1554-5.0742l24.2385-7.4579v7.4526
+		c-1.874,0.9244-3.1665,2.8486-3.1665,5.0795c0,3.1296,2.5371,5.6666,5.6667,5.6666s5.6666-2.537,5.6666-5.6666
+		c0-2.2309-1.2924-4.1551-3.1664-5.0795v-7.4521l24.2378,7.4577c-1.8677,0.9266-3.1548,2.8475-3.1548,5.0739
+		c0,3.1296,2.5371,5.6666,5.6667,5.6666s5.6666-2.537,5.6666-5.6666c0-2.2309-1.2924-4.1551-3.1664-5.0795v-3.6841l-29.25-8.9997
+		v-21.0532h4.2498v-1.77c14.8481-0.9787,26-5.1194,26-10.0803c0-4.8072-46.7695-5.5518-61.266-2.2346l-11.2106-29.8555
+		c4.78,7.4578,9.7061,11.6867,13.0234,10.441c5.3257-1.9998-17.6995-63.3193-23.0251-61.3196
+		c-4.3408,1.6299-4.5863,12.128-1.0864,25.1235C2.4322,92.4529,2.0211,92.4827,1.6217,92.6329z"
+                                    />
+                                    <path
+                                        d="M57.2889,63.9666c-3.2783,2.9614-3.5361,8.0205-0.5742,11.2993l28.6289,31.6973c1.5166,1.6792,3.6738,2.6377,5.9365,2.6377
+		h43.167c4.418,0,8-3.5815,8-8s-3.582-8-8-8H94.8348L68.5877,64.5413C65.6278,61.2635,60.5682,61.0057,57.2889,63.9666z"
+                                    />
+                                    <path
+                                        d="M75.7616,35.3033c0,4.5339-2.2244,8.4835-5.4897,10.4999c4.0836,4.1651,9.7708,6.7521,16.0642,6.7521
+		c12.4277,0,22.5-10.0733,22.5-22.5c0-12.4268-10.0723-22.5-22.5-22.5c-10.1116,0-18.665,6.671-21.5006,15.8522
+		c0.1674-0.0092,0.3322-0.0291,0.5013-0.0291C71.0848,23.3785,75.7616,28.7281,75.7616,35.3033z M103.2237,35.322
+		c0,0-7.979,18.9366-22.3441,3.985C80.8796,39.307,94.8568,41.2409,103.2237,35.322z"
+                                    />
+                                    <path
+                                        d="M63.3109,23.6085c0.359-2.4274,1.0956-4.8062,2.2389-7.0552c0.0262-0.0516,0.0453-0.1057,0.0719-0.1572
+		c2.8184-5.4424,7.5869-9.4619,13.4277-11.3174c9.2061-2.9258,18.9141,0.2892,24.6982,7.3378
+		c4.5574,4.4993,7.3879,10.7437,7.3879,17.6387c0,0.6739-0.0347,1.3395-0.0876,2c2.6863-1.5704,4.5388-4.8383,4.5388-8.627
+		c0-4.3839-2.4766-8.0764-5.8608-9.2386C103.7132,2.9962,90.379-2.7165,77.8385,1.2662c-6.8594,2.1792-12.46,6.8994-15.7686,13.291
+		c-1.8357,3.545-2.8411,7.3691-3.0037,11.2424C60.2992,24.7324,61.739,23.9643,63.3109,23.6085z"
+                                    />
+                                    <path
+                                        d="M65.3368,44.9283c4.4873,0,8.125-4.3093,8.125-9.625s-3.6377-9.625-8.125-9.625s-8.125,4.3093-8.125,9.625
+		S60.8495,44.9283,65.3368,44.9283z M64.9618,30.1783c2.2782,0,4.125,2.0987,4.125,4.6875c0,2.5889-1.8468,4.6875-4.125,4.6875
+		c-2.2781,0-4.125-2.0986-4.125-4.6875C60.8368,32.277,62.6837,30.1783,64.9618,30.1783z"
+                                    />
+                                </g>
+                            </svg>
+
+                            <p class="font-WorkSans leading-none text-sm">
+                                Bàn - Ghế
+                            </p>
+                        </div>
+                        <i class="bi bi-caret-right-fill text-xs"></i>
+                    </a>
+                    <!-- Phụ kiện -->
+                    <a
+                        href="#"
+                        class="flex items-center px-4 justify-between hover:bg-[#d72c2c] hover:text-white text-[#444] relative"
+                    >
+                        <div class="inline-flex gap-2 items-center">
+                            <i class="bi bi-controller text-xl"></i>
+                            <p class="font-WorkSans leading-none text-sm">
+                                Phụ kiện
+                            </p>
+                        </div>
+                        <i class="bi bi-caret-right-fill text-xs"></i>
+                    </a>
+                </div>
+                <!-- middle banner -->
+                <div
+                    class="flex flex-col lg:flex-row gap-2 basis-full min-w-0 h-full"
+                >
+                    <div class="flex flex-col w-full min-w-0">
+                        <!-- Slider -->
+                        <div
+                            class="swiper main-slider basis-full w-full bg-white rounded"
+                        >
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img
+                                            class="w-full h-full object-contain rounded"
+                                            src="/assets/img/ads_banner/ads_banner_3.webp"
+                                            alt=""
+                                        />
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <img
+                                            class="w-full h-full object-contain rounded"
+                                            src="/assets/img/ads_banner/ads_banner_2.webp"
+                                            alt=""
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                            <div
+                                class="swiper-button-next text-white bg-[#d72c2c] font-black rounded-full after:!text-xl after:content-['next']"
+                            ></div>
+                            <div
+                                class="swiper-button-prev text-white bg-[#d72c2c] font-black rounded-full after:!text-xl after:content-['prev']"
+                            ></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <!-- bottom banner -->
+                        <div class="flex gap-2 lg:min-h-[170px]">
+                            <div class="basis-1/2 min-h-0">
+                                <a href="#">
+                                    <img
+                                        class="w-full h-full"
+                                        src="/assets/img/ads_banner/ads_banner_4.webp"
+                                        alt=""
+                                    />
+                                </a>
+                            </div>
+                            <div class="basis-1/2 min-h-0">
+                                <a href="#">
+                                    <img
+                                        class="w-full h-full"
+                                        src="/assets/img/ads_banner/ads_banner_4.webp"
+                                        alt=""
+                                    />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right banner -->
+                    <div
+                        class="flex lg:flex-col flex-row lg:min-w-[300px] max-lg:max-w-none"
+                    >
+                        <div class="basis-1/3 min-h-0">
+                            <a href="#">
+                                <img
+                                    class="w-full h-full"
+                                    src="/assets/img/ads_banner/ads_banner_4.webp"
+                                    alt=""
+                                />
+                            </a>
+                        </div>
+                        <div class="basis-1/3 min-h-0">
+                            <a href="#">
+                                <img
+                                    class="w-full h-full"
+                                    src="/assets/img/ads_banner/ads_banner_4.webp"
+                                    alt=""
+                                />
+                            </a>
+                        </div>
+                        <div class="basis-1/3 min-h-0">
+                            <a href="#">
+                                <img
+                                    class="w-full h-full"
+                                    src="/assets/img/ads_banner/ads_banner_4.webp"
+                                    alt=""
+                                />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Banner -->
+            <div class="py-0 grid lg:grid-cols-4 grid-cols-2 gap-1 w-full mb-4">
+                <a href="#">
+                    <img
+                        class="w-full"
+                        src="/assets/img/ads_banner/ads_banner_7.webp"
+                        alt=""
+                    />
+                </a>
+                <a href="#">
+                    <img
+                        class="w-full"
+                        src="/assets/img/ads_banner/ads_banner_8.webp"
+                        alt=""
+                    />
+                </a>
+                <a href="#">
+                    <img
+                        class="w-full"
+                        src="/assets/img/ads_banner/ads_banner_11.webp"
+                        alt=""
+                    />
+                </a>
+                <a href="#">
+                    <img
+                        class="w-full"
+                        src="/assets/img/ads_banner/ads_banner_9.webp"
+                        alt=""
+                    />
+                </a>
+            </div>
+
+            <!-- Sale Slider 1 (Without sale img) -->
+            <div class="bg-purple-500 rounded-lg mb-4">
+                <!-- Header -->
+                <div class="flex py-2 px-5 items-end justify-between flex-wrap">
+                    <div class="flex items-center flex-wrap">
+                        <!-- Title -->
+                        <h1
+                            class="font-WorkSans font-black text-4xl italic uppercase p-2 text-yellow-300 leading-none"
+                        >
+                            Sản phẩm bán chạy
+                        </h1>
+                        <!-- Time left -->
+                        <div
+                            class="inline-flex items-center gap-2 font-Righteous p-2"
+                        >
+                            <p
+                                class="bg-black text-white font-medium rounded-md px-2"
+                            >
+                                01
+                            </p>
+                            <p
+                                class="bg-black text-white font-medium rounded-md px-2"
+                            >
+                                01
+                            </p>
+                            <p
+                                class="bg-black text-white font-medium rounded-md px-2"
+                            >
+                                01
+                            </p>
+                        </div>
+                    </div>
+                    <a
+                        href="#"
+                        class="hover:underline inline-flex items-center font-medium font-WorkSans text-white leading-none p-2"
+                    >
+                        <p class="w-max">Xem tất cả</p>
+                        <i class="bi bi-caret-right-fill"></i>
+                    </a>
+                </div>
+                <!-- Product sales -->
+                <div class="flex p-2 lg:flex-row flex-col">
+                    <div
+                        class="sales-slider swiper p-2 w-full relative h-[300px]"
+                    >
+                        <div class="swiper-wrapper h-full">
+                            <a
+                                class="swiper-slide bg-white rounded-md block h-full"
+                                href="#"
+                            >
+                                <img
+                                    class="h-[160px] w-full p-1 object-contain object-center"
+                                    src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                    alt=""
+                                />
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-3"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Thanh Progress -->
+                                    <div
+                                        class="mt-1 h-6 w-full bg-red-200 rounded-3xl flex"
+                                    >
+                                        <i
+                                            class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"
+                                        ></i>
+                                        <span
+                                            class="w-1/2 text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none"
+                                            >Đã bán: 5</span
+                                        >
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white rounded-md block h-full"
+                                href="#"
+                            >
+                                <img
+                                    class="h-[160px] w-full p-1 object-contain object-center"
+                                    src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                    alt=""
+                                />
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-3"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Thanh Progress -->
+                                    <div
+                                        class="mt-1 h-6 w-full bg-red-200 rounded-3xl flex"
+                                    >
+                                        <i
+                                            class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"
+                                        ></i>
+                                        <span
+                                            class="w-1/2 text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none"
+                                            >Đã bán: 5</span
+                                        >
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white rounded-md block h-full"
+                                href="#"
+                            >
+                                <img
+                                    class="h-[160px] w-full p-1 object-contain object-center"
+                                    src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                    alt=""
+                                />
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-3"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Thanh Progress -->
+                                    <div
+                                        class="mt-1 h-6 w-full bg-red-200 rounded-3xl flex"
+                                    >
+                                        <i
+                                            class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"
+                                        ></i>
+                                        <span
+                                            class="w-1/2 text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none"
+                                            >Đã bán: 5</span
+                                        >
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white rounded-md block h-full"
+                                href="#"
+                            >
+                                <img
+                                    class="h-[160px] w-full p-1 object-contain object-center"
+                                    src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                    alt=""
+                                />
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-3"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Thanh Progress -->
+                                    <div
+                                        class="mt-1 h-6 w-full bg-red-200 rounded-3xl flex"
+                                    >
+                                        <i
+                                            class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"
+                                        ></i>
+                                        <span
+                                            class="w-1/2 text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none"
+                                            >Đã bán: 5</span
+                                        >
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white rounded-md block h-full"
+                                href="#"
+                            >
+                                <img
+                                    class="h-[160px] w-full p-1 object-contain object-center"
+                                    src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                    alt=""
+                                />
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-3"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Thanh Progress -->
+                                    <div
+                                        class="mt-1 h-6 w-full bg-red-200 rounded-3xl flex"
+                                    >
+                                        <i
+                                            class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"
+                                        ></i>
+                                        <span
+                                            class="w-1/2 text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none"
+                                            >Đã bán: 5</span
+                                        >
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white rounded-md block h-full"
+                                href="#"
+                            >
+                                <img
+                                    class="h-[160px] w-full p-1 object-contain object-center"
+                                    src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                    alt=""
+                                />
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-3"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Thanh Progress -->
+                                    <div
+                                        class="mt-1 h-6 w-full bg-red-200 rounded-3xl flex"
+                                    >
+                                        <i
+                                            class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"
+                                        ></i>
+                                        <span
+                                            class="w-1/2 text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none"
+                                            >Đã bán: 5</span
+                                        >
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white rounded-md block h-full"
+                                href="#"
+                            >
+                                <img
+                                    class="h-[160px] w-full p-1 object-contain object-center"
+                                    src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                    alt=""
+                                />
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-3"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Thanh Progress -->
+                                    <div
+                                        class="mt-1 h-6 w-full bg-red-200 rounded-3xl flex"
+                                    >
+                                        <i
+                                            class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"
+                                        ></i>
+                                        <span
+                                            class="w-1/2 text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none"
+                                            >Đã bán: 5</span
+                                        >
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white rounded-md block h-full"
+                                href="#"
+                            >
+                                <img
+                                    class="h-[160px] w-full p-1 object-contain object-center"
+                                    src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                    alt=""
+                                />
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-3"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Thanh Progress -->
+                                    <div
+                                        class="mt-1 h-6 w-full bg-red-200 rounded-3xl flex"
+                                    >
+                                        <i
+                                            class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"
+                                        ></i>
+                                        <span
+                                            class="w-1/2 text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none"
+                                            >Đã bán: 5</span
+                                        >
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white rounded-md block h-full"
+                                href="#"
+                            >
+                                <img
+                                    class="h-[160px] w-full p-1 object-contain object-center"
+                                    src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                    alt=""
+                                />
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-3"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Thanh Progress -->
+                                    <div
+                                        class="mt-1 h-6 w-full bg-red-200 rounded-3xl flex"
+                                    >
+                                        <i
+                                            class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"
+                                        ></i>
+                                        <span
+                                            class="w-1/2 text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none"
+                                            >Đã bán: 5</span
+                                        >
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white rounded-md block h-full"
+                                href="#"
+                            >
+                                <img
+                                    class="h-[160px] w-full p-1 object-contain object-center"
+                                    src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                    alt=""
+                                />
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-3"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Thanh Progress -->
+                                    <div
+                                        class="mt-1 h-6 w-full bg-red-200 rounded-3xl flex"
+                                    >
+                                        <i
+                                            class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"
+                                        ></i>
+                                        <span
+                                            class="w-1/2 text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none"
+                                            >Đã bán: 5</span
+                                        >
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div
+                            class="swiper-button-prev text-white bg-[#d72c2c] font-black rounded-full after:!text-xl after:content-['prev']"
+                        ></div>
+                        <div
+                            class="swiper-button-next text-white bg-[#d72c2c] font-black rounded-full after:!text-xl after:content-['next']"
+                        ></div>
+                        <div class="swiper-pagination static"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sale Slider 2  -->
+            <div class="bg-violet-400 rounded-lg mb-4">
+                <!-- Header -->
+                <div class="flex py-2 px-5 items-end justify-between flex-wrap">
+                    <div class="flex items-center flex-wrap">
+                        <!-- Title -->
+                        <h1
+                            class="font-WorkSans font-black text-4xl italic uppercase p-2 text-yellow-300 leading-none"
+                        >
+                            Màn hình gaming lenovo giảm tới 38%
+                        </h1>
+                        <!-- Time left -->
+                        <div
+                            class="inline-flex items-center gap-2 font-Righteous p-2"
+                        >
+                            <p
+                                class="bg-black text-white font-medium rounded-md px-2"
+                            >
+                                23
+                            </p>
+                            <p
+                                class="bg-black text-white font-medium rounded-md px-2"
+                            >
+                                59
+                            </p>
+                            <p
+                                class="bg-black text-white font-medium rounded-md px-2"
+                            >
+                                30
+                            </p>
+                        </div>
+                    </div>
+                    <a
+                        href="#"
+                        class="hover:underline inline-flex items-center font-medium font-WorkSans text-white leading-none p-2"
+                    >
+                        <p class="w-max">Xem tất cả</p>
+                        <i class="bi bi-caret-right-fill"></i>
+                    </a>
+                </div>
+                <!-- Product sales -->
+                <div class="flex p-2 lg:flex-row flex-col">
+                    <!-- Product sale img -->
+                    <span class="p-2 mx-auto">
+                        <img
+                            class="h-full rounded-md"
+                            src="/assets/img/img_sales/screen_sales.webp"
+                            alt="Sreen sales"
+                        />
+                    </span>
+                    <div
+                        class="sales-slider swiper p-2 w-full relative h-[300px]"
+                    >
+                        <div class="swiper-wrapper h-full">
+                            <a
+                                class="swiper-slide bg-white rounded-md block h-full"
+                                href="#"
+                            >
+                                <img
+                                    class="h-[160px] w-full p-1 object-contain object-center"
+                                    src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                    alt=""
+                                />
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-3"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Thanh Progress -->
+                                    <div
+                                        class="mt-1 h-6 w-full bg-red-200 rounded-3xl flex"
+                                    >
+                                        <i
+                                            class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"
+                                        ></i>
+                                        <span
+                                            class="w-1/2 text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none"
+                                            >Đã bán: 5</span
+                                        >
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white rounded-md block h-full"
+                                href="#"
+                            >
+                                <img
+                                    class="h-[160px] w-full p-1 object-contain object-center"
+                                    src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                    alt=""
+                                />
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-3"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Thanh Progress -->
+                                    <div
+                                        class="mt-1 h-6 w-full bg-red-200 rounded-3xl flex"
+                                    >
+                                        <i
+                                            class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"
+                                        ></i>
+                                        <span
+                                            class="w-1/2 text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none"
+                                            >Đã bán: 5</span
+                                        >
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white rounded-md block h-full"
+                                href="#"
+                            >
+                                <img
+                                    class="h-[160px] w-full p-1 object-contain object-center"
+                                    src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                    alt=""
+                                />
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-3"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Thanh Progress -->
+                                    <div
+                                        class="mt-1 h-6 w-full bg-red-200 rounded-3xl flex"
+                                    >
+                                        <i
+                                            class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"
+                                        ></i>
+                                        <span
+                                            class="w-1/2 text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none"
+                                            >Đã bán: 5</span
+                                        >
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white rounded-md block h-full"
+                                href="#"
+                            >
+                                <img
+                                    class="h-[160px] w-full p-1 object-contain object-center"
+                                    src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                    alt=""
+                                />
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-3"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Thanh Progress -->
+                                    <div
+                                        class="mt-1 h-6 w-full bg-red-200 rounded-3xl flex"
+                                    >
+                                        <i
+                                            class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"
+                                        ></i>
+                                        <span
+                                            class="w-1/2 text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none"
+                                            >Đã bán: 5</span
+                                        >
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white rounded-md block h-full"
+                                href="#"
+                            >
+                                <img
+                                    class="h-[160px] w-full p-1 object-contain object-center"
+                                    src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                    alt=""
+                                />
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-3"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Thanh Progress -->
+                                    <div
+                                        class="mt-1 h-6 w-full bg-red-200 rounded-3xl flex"
+                                    >
+                                        <i
+                                            class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"
+                                        ></i>
+                                        <span
+                                            class="w-1/2 text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none"
+                                            >Đã bán: 5</span
+                                        >
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white rounded-md block h-full"
+                                href="#"
+                            >
+                                <img
+                                    class="h-[160px] w-full p-1 object-contain object-center"
+                                    src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                    alt=""
+                                />
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-3"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Thanh Progress -->
+                                    <div
+                                        class="mt-1 h-6 w-full bg-red-200 rounded-3xl flex"
+                                    >
+                                        <i
+                                            class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"
+                                        ></i>
+                                        <span
+                                            class="w-1/2 text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none"
+                                            >Đã bán: 5</span
+                                        >
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white rounded-md block h-full"
+                                href="#"
+                            >
+                                <img
+                                    class="h-[160px] w-full p-1 object-contain object-center"
+                                    src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                    alt=""
+                                />
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-3"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Thanh Progress -->
+                                    <div
+                                        class="mt-1 h-6 w-full bg-red-200 rounded-3xl flex"
+                                    >
+                                        <i
+                                            class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"
+                                        ></i>
+                                        <span
+                                            class="w-1/2 text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none"
+                                            >Đã bán: 5</span
+                                        >
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white rounded-md block h-full"
+                                href="#"
+                            >
+                                <img
+                                    class="h-[160px] w-full p-1 object-contain object-center"
+                                    src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                    alt=""
+                                />
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-3"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Thanh Progress -->
+                                    <div
+                                        class="mt-1 h-6 w-full bg-red-200 rounded-3xl flex"
+                                    >
+                                        <i
+                                            class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"
+                                        ></i>
+                                        <span
+                                            class="w-1/2 text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none"
+                                            >Đã bán: 5</span
+                                        >
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white rounded-md block h-full"
+                                href="#"
+                            >
+                                <img
+                                    class="h-[160px] w-full p-1 object-contain object-center"
+                                    src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                    alt=""
+                                />
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-3"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Thanh Progress -->
+                                    <div
+                                        class="mt-1 h-6 w-full bg-red-200 rounded-3xl flex"
+                                    >
+                                        <i
+                                            class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"
+                                        ></i>
+                                        <span
+                                            class="w-1/2 text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none"
+                                            >Đã bán: 5</span
+                                        >
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white rounded-md block h-full"
+                                href="#"
+                            >
+                                <img
+                                    class="h-[160px] w-full p-1 object-contain object-center"
+                                    src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                    alt=""
+                                />
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-3"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Thanh Progress -->
+                                    <div
+                                        class="mt-1 h-6 w-full bg-red-200 rounded-3xl flex"
+                                    >
+                                        <i
+                                            class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"
+                                        ></i>
+                                        <span
+                                            class="w-1/2 text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none"
+                                            >Đã bán: 5</span
+                                        >
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div
+                            class="swiper-button-prev text-white bg-[#d72c2c] font-black rounded-full after:!text-xl after:content-['prev']"
+                        ></div>
+                        <div
+                            class="swiper-button-next text-white bg-[#d72c2c] font-black rounded-full after:!text-xl after:content-['next']"
+                        ></div>
+                        <div class="swiper-pagination static"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 Ads Banner -->
+            <div class="flex gap-2 md:flex-row flex-col mb-4">
+                <a href="#" class="md:basis-1/2 basis-full">
+                    <img
+                        class="w-full rounded"
+                        src="/assets/img/ads_banner/ads_banner_12.webp"
+                        alt=""
+                    />
+                </a>
+                <a href="#" class="md:basis-1/2 basis-full">
+                    <img
+                        class="w-full rounded"
+                        src="/assets/img/ads_banner/ads_banner_13.webp"
+                        alt=""
+                    />
+                </a>
+            </div>
+
+            <!-- Suggest other slider -->
+            <!-- Sale Slider 1 (Without sale img) -->
+            <div class="bg-white rounded-lg mb-4">
+                <!-- Header -->
+                <div class="flex py-2 px-5 items-end justify-between flex-wrap">
+                    <div class="flex items-center flex-wrap">
+                        <!-- Title -->
+                        <h1
+                            class="font-WorkSans font-black text-3xl uppercase p-2 text-[#222] leading-none"
+                        >
+                            PC bán chạy
+                        </h1>
+                        <!-- Free ship icon -->
+                        <div
+                            class="pl-4 ml-4 border-l border-[#444] inline-flex items-center"
+                        >
+                            <i class="bi bi-truck text-2xl text-red-500"></i>
+                            <p class="font-medium text-xl mx-4">
+                                Freeship toàn quốc
+                            </p>
+                        </div>
+                    </div>
+                    <a
+                        href="#"
+                        class="hover:underline inline-flex items-center font-medium font-WorkSans text-[#444] leading-none p-2"
+                    >
+                        <p class="w-max">Xem tất cả</p>
+                        <i class="bi bi-caret-right-fill"></i>
+                    </a>
+                </div>
+                <!-- Product sales -->
+                <div class="flex p-2 lg:flex-row flex-col">
+                    <div class="sales-slider swiper p-2 w-full relative">
+                        <div class="swiper-wrapper h-full">
+                            <a
+                                class="swiper-slide bg-white border border-[#ccc] rounded-md block h-full"
+                                href="#"
+                            >
+                                <div class="p-2">
+                                    <div
+                                        class="h-8 pb-3 w-full flex justify-between text-red-500"
+                                    >
+                                        <i
+                                            class="bi bi-gift-fill text-xl px-2 leading-none"
+                                        ></i>
+                                    </div>
+                                    <img
+                                        class="max-h-[200px] w-full object-contain object-center"
+                                        src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                        alt=""
+                                    />
+                                    <div class="h-8 pb-3 w-full flex"></div>
+                                </div>
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-2"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Rating -->
+                                    <div
+                                        class="p-2 inline-flex text-xs gap-1 text-yellow-400"
+                                    >
+                                        <p class="font-medium">5.0</p>
+                                        <i class="bi bi-star-fill"></i>
+                                        <p class="text-[#888]">
+                                            (100 đánh giá)
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white border border-[#ccc] rounded-md block h-full"
+                                href="#"
+                            >
+                                <div class="p-2">
+                                    <div
+                                        class="h-8 pb-3 w-full flex justify-between text-red-500"
+                                    >
+                                        <i
+                                            class="bi bi-gift-fill text-xl px-2 leading-none"
+                                        ></i>
+                                    </div>
+                                    <img
+                                        class="max-h-[200px] w-full object-contain object-center"
+                                        src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                        alt=""
+                                    />
+                                    <div class="h-8 pb-3 w-full flex"></div>
+                                </div>
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-2"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Rating -->
+                                    <div
+                                        class="p-2 inline-flex text-xs gap-1 text-yellow-400"
+                                    >
+                                        <p class="font-medium">5.0</p>
+                                        <i class="bi bi-star-fill"></i>
+                                        <p class="text-[#888]">
+                                            (100 đánh giá)
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white border border-[#ccc] rounded-md block h-full"
+                                href="#"
+                            >
+                                <div class="p-2">
+                                    <div
+                                        class="h-8 pb-3 w-full flex justify-between text-red-500"
+                                    >
+                                        <i
+                                            class="bi bi-gift-fill text-xl px-2 leading-none"
+                                        ></i>
+                                    </div>
+                                    <img
+                                        class="max-h-[200px] w-full object-contain object-center"
+                                        src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                        alt=""
+                                    />
+                                    <div class="h-8 pb-3 w-full flex"></div>
+                                </div>
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-2"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Rating -->
+                                    <div
+                                        class="p-2 inline-flex text-xs gap-1 text-yellow-400"
+                                    >
+                                        <p class="font-medium">5.0</p>
+                                        <i class="bi bi-star-fill"></i>
+                                        <p class="text-[#888]">
+                                            (100 đánh giá)
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white border border-[#ccc] rounded-md block h-full"
+                                href="#"
+                            >
+                                <div class="p-2">
+                                    <div
+                                        class="h-8 pb-3 w-full flex justify-between text-red-500"
+                                    >
+                                        <i
+                                            class="bi bi-gift-fill text-xl px-2 leading-none"
+                                        ></i>
+                                    </div>
+                                    <img
+                                        class="max-h-[200px] w-full object-contain object-center"
+                                        src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                        alt=""
+                                    />
+                                    <div class="h-8 pb-3 w-full flex"></div>
+                                </div>
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-2"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Rating -->
+                                    <div
+                                        class="p-2 inline-flex text-xs gap-1 text-yellow-400"
+                                    >
+                                        <p class="font-medium">5.0</p>
+                                        <i class="bi bi-star-fill"></i>
+                                        <p class="text-[#888]">
+                                            (100 đánh giá)
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white border border-[#ccc] rounded-md block h-full"
+                                href="#"
+                            >
+                                <div class="p-2">
+                                    <div
+                                        class="h-8 pb-3 w-full flex justify-between text-red-500"
+                                    >
+                                        <i
+                                            class="bi bi-gift-fill text-xl px-2 leading-none"
+                                        ></i>
+                                    </div>
+                                    <img
+                                        class="max-h-[200px] w-full object-contain object-center"
+                                        src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                        alt=""
+                                    />
+                                    <div class="h-8 pb-3 w-full flex"></div>
+                                </div>
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-2"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Rating -->
+                                    <div
+                                        class="p-2 inline-flex text-xs gap-1 text-yellow-400"
+                                    >
+                                        <p class="font-medium">5.0</p>
+                                        <i class="bi bi-star-fill"></i>
+                                        <p class="text-[#888]">
+                                            (100 đánh giá)
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a
+                                class="swiper-slide bg-white border border-[#ccc] rounded-md block h-full"
+                                href="#"
+                            >
+                                <div class="p-2">
+                                    <div
+                                        class="h-8 pb-3 w-full flex justify-between text-red-500"
+                                    >
+                                        <i
+                                            class="bi bi-gift-fill text-xl px-2 leading-none"
+                                        ></i>
+                                    </div>
+                                    <img
+                                        class="max-h-[200px] w-full object-contain object-center"
+                                        src="/assets/img/img_phukien/cong_chuyen_doi.webp"
+                                        alt=""
+                                    />
+                                    <div class="h-8 pb-3 w-full flex"></div>
+                                </div>
+                                <div class="p-2 font-WorkSans w-full">
+                                    <!-- Tên sp -->
+                                    <p
+                                        class="text-sm font-medium leading-none line-clamp-2"
+                                    >
+                                        Tên sản phẩm dài ơi là dài asdasd Tên
+                                        sản phẩm dài ơi là dài asdasd Tên sản
+                                        phẩm dài ơi là dài asdasd
+                                    </p>
+                                    <!-- Giá gốc -->
+                                    <p
+                                        class="text-sm line-through text-[#676767] leading-none mt-1"
+                                    >
+                                        1.000.000đ
+                                    </p>
+                                    <!-- Giá sales -->
+                                    <div class="flex gap-2 items-center mt-1">
+                                        <p
+                                            class="text-base font-medium text-red-500 leading-none"
+                                        >
+                                            800.000đ
+                                        </p>
+                                        <span
+                                            class="text-xs leading-none border-red-700 border-[1px] bg-red-200 rounded text-red-500 p-[2px]"
+                                            >-14%</span
+                                        >
+                                    </div>
+                                    <!-- Rating -->
+                                    <div
+                                        class="p-2 inline-flex text-xs gap-1 text-yellow-400"
+                                    >
+                                        <p class="font-medium">5.0</p>
+                                        <i class="bi bi-star-fill"></i>
+                                        <p class="text-[#888]">
+                                            (100 đánh giá)
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div
+                            class="swiper-button-prev text-[#d72c2c] bg-[#fff] font-black rounded-full after:!text-xl after:content-['prev']"
+                        ></div>
+                        <div
+                            class="swiper-button-next text-[#d72c2c] bg-[#fff] font-black rounded-full after:!text-xl after:content-['next']"
+                        ></div>
+                        <div class="swiper-pagination static"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 sections Ads Banner -->
+            <div class="flex gap-4 md:flex-row flex-col mb-4">
+                <div class="basis-4/6">
+                    <a href="#">
+                        <img
+                            class="h-full w-full rounded"
+                            src="/assets/img/ads_banner/ads_banner_14.webp"
+                            alt=""
+                        />
+                    </a>
+                </div>
+                <div class="basis-2/6 flex-col flex gap-4">
+                    <a href="#">
+                        <img
+                            class="h-full rounded"
+                            src="/assets/img/ads_banner/ads_banner_15.webp"
+                            alt=""
+                        />
+                    </a>
+                    <a href="#">
+                        <img
+                            class="h-full rounded"
+                            src="/assets/img/ads_banner/ads_banner_16.webp"
+                            alt=""
+                        />
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-    </header>
-
-    <p>SUA~</p>
-  </body>
+    </body>
+    <script src="/assets/js/main.js"></script>
 </html>
