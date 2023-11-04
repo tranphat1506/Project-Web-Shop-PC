@@ -66,11 +66,6 @@ html {
   transform: scale(1.1); /* Phóng to hình ảnh khi hover */
   transition: transform 0.3s;
 }
-.flex {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
 
 /* Define styles for product items */
 .product-item {
@@ -86,4 +81,3 @@ html {
   background-color: gray;
   transform: scale(1.05);
 }
-
