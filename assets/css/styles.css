@@ -99,3 +99,8 @@ body {
 .swiper-pagination-bullet-active {
     background-color: #ff3939 !important;
 }
+
+.bi.bi-gift-fill:hover + .gift-display,
+.gift-display:hover {
+    display: block;
+}
