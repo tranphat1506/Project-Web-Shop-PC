@@ -27,7 +27,6 @@ const saleSlider = new Swiper('.sales-slider', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    slidesPerView: 'auto',
     slidesPerView: 1,
     spaceBetween: 10,
     breakpoints: {
