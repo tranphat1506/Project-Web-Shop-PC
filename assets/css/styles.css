@@ -104,3 +104,33 @@ body {
 .gift-display:hover {
     display: block;
 }
+
+.ddmenu__title,
+.ddmenu__titleContainer__right-caret {
+    color: #444;
+}
+.ddmenu__container.ddmenu--open > .ddmenu__titleContainer .ddmenu__titleContainer__right-caret {
+    transform: rotate(90deg);
+}
+.ddmenu__container.ddmenu--open > .ddmenu__titleContainer .ddmenu__title,
+.ddmenu__title:hover,
+.ddmenu__item:hover {
+    color: #ef4444;
+}
+.ddmenu__container.ddmenu--open > .ddmenu__drop-menu {
+    display: flex;
+}
+.ddmenu__drop-menu .ddmenu__container {
+    margin-bottom: 0.5rem;
+}
+.ddmenu__drop-menu .ddmenu__container:last-of-type {
+    margin-bottom: 0;
+}
+
+.top-menu__container.top-menu--open {
+    visibility: visible;
+    opacity: 100;
+}
+.top-menu__container.top-menu--open > div {
+    transform: translateX(0);
+}
