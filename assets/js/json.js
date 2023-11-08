@@ -124,3 +124,27 @@ let json2 = {
     selling: "65",
   },
 };
+
+
+let json3 = {
+  1 : {
+      tensp: "",
+      link_anh: ""
+  },
+  2 : {
+      tensp: "",
+      link_anh: ""
+  },
+  3 : {
+      tensp: "",
+      link_anh: ""
+  },
+  4 : {
+      tensp: "",
+      link_anh: ""
+  },
+  5 : {
+      tensp: "",
+      link_anh: ""
+  }
+}
