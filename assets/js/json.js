@@ -1188,7 +1188,7 @@ let json7 = {
     rate: "0",
   },
   11: {
-    name: "",
+    name: "Bàn phím DareU EK87V2 White Blue Switch",
     img: "/assets/img/img_banphim_banchay/banphim_11.webp",
     status: "Bán chạy",
     frame: "",
@@ -1201,7 +1201,7 @@ let json7 = {
     rate: "0",
   },
   12: {
-    name: "",
+    name: "Bàn phím DareU EK87V2 White Brown Switch",
     img: "/assets/img/img_banphim_banchay/banphim_12.webp",
     status: "Bán chạy",
     frame: "",
