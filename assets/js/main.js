@@ -205,6 +205,18 @@ const CategoryMenuApi = [
                                 title: 'LENOVO',
                                 href: '/laptop/lenovo',
                             },
+                            {
+                                title: 'DELL',
+                                href: '/laptop/dell',
+                            },
+                            {
+                                title: 'HP',
+                                href: '/laptop/hp',
+                            },
+                            {
+                                title: 'LG Gram',
+                                href: '/laptop/lggram',
+                            },
                         ],
                     },
                 },
@@ -223,12 +235,192 @@ const CategoryMenuApi = [
                                 href: '/laptop/collection/tu-15-toi-20',
                             },
                             {
-                                title: 'MSI',
+                                title: 'Trên 20 triệu',
                                 href: '/laptop/collection/tren-20',
                             },
+                        ],
+                    },
+                },
+                {
+                    title: 'CPU Intel-AMD',
+                    href: '/laptop',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/collection/tren-50',
+                                title: 'Intel Core i3',
+                                href: '/laptop/chip/i3',
+                            },
+                            {
+                                title: 'Intel Core i5',
+                                href: '/laptop/chip/i5',
+                            },
+                            {
+                                title: 'Intel Core i7',
+                                href: '/laptop/chip/i7',
+                            },
+                            {
+                                title: 'AMD Ryzen',
+                                href: '/laptop/chip/amd-ryzen',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Nhu cầu sử dụng',
+                    href: '/laptop',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Đồ họa - Studio',
+                                href: '/laptop/demand/dohoa-studio',
+                            },
+                            {
+                                title: 'Học sinh - Sinh viên',
+                                href: '/laptop/demand/hocsinh-sinhvien',
+                            },
+                            {
+                                title: 'Mỏng nhẹ cao cấp',
+                                href: '/laptop/demand/mongnhe-caocap',
+                            },
+                            {
+                                title: 'Studio RTX 40 series',
+                                href: '/laptop/demand/studio-rtx40-series',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Linh kiện laptop',
+                    href: '/laptop',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Ram laptop',
+                                href: '/laptop/components/ram',
+                            },
+                            {
+                                title: 'SSD laptop',
+                                href: '/laptop/components/ssd',
+                            },
+                            {
+                                title: 'Ổ cứng di động',
+                                href: '/laptop/components/o-cung-didong',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Phụ kiện laptop',
+                    href: '/laptop',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Balo - Túi chống sốc',
+                                href: '/laptop/accessories/balo-tuichongsoc',
+                            },
+                            {
+                                title: 'Đế tản nhiệt LAPTOP',
+                                href: '/laptop/accessories/ssd',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Laptop ASUS',
+                    href: '/laptop',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'ASUS OLED Series',
+                                href: '/laptop/ASUS/OLED-Series',
+                            },
+                            {
+                                title: 'Vivobook Series',
+                                href: '/laptop/ASUS/Vivobook-Series',
+                            },
+                            {
+                                title: 'ExpertBook Series',
+                                href: '/laptop/ASUS/ExpertBook-Series',
+                            },
+                            {
+                                title: 'ProArt StudioBook Series',
+                                href: '/laptop/ASUS/ProArt-StudioBook-Series',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Laptop ACER',
+                    href: '/laptop',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Aspire Series',
+                                href: '/laptop/ACER/Aspire-Series',
+                            },
+                            {
+                                title: 'Swift Series',
+                                href: '/laptop/ACER/Swift-Series',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Laptop MSI',
+                    href: '/laptop',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Modern Series',
+                                href: '/laptop/MSI/Modern-Series',
+                            },
+                            {
+                                title: 'Prestige Series',
+                                href: '/laptop/MSI/Prestige-Series',
+                            },
+                            {
+                                title: 'Summit Series',
+                                href: '/laptop/MSI/Summit-Series',
+                            },
+                            {
+                                title: 'CREATOR Series',
+                                href: '/laptop/MSI/CREATOR-Series',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Laptop LENOVO',
+                    href: '/laptop',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'ThinkBook Series',
+                                href: '/laptop/LENOVO/ThinkBook-Series',
+                            },
+                            {
+                                title: 'IdeaPad Series',
+                                href: '/laptop/LENOVO/IdeaPad-Series',
+                            },
+                            {
+                                title: 'IdeaPad Pro Series',
+                                href: '/laptop/LENOVO/IdeaPad-Pro-Series',
+                            },
+                            {
+                                title: 'ThinkPad Series',
+                                href: '/laptop/LENOVO/ThinkPad-Series',
+                            },
+                            {
+                                title: 'Yoga Series',
+                                href: '/laptop/LENOVO/Yoga-Series',
                             },
                         ],
                     },
@@ -391,50 +583,308 @@ c-0.353,0.441-0.706,0.883-1.059,1.324C313.556,241.788,311.261,242.759,308.966,24
             value: [
                 {
                     title: 'Thương hiệu',
-                    href: '/laptop',
+                    href: '/laptop-gaming',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'ASUS',
-                                href: '/laptop/asus',
+                                title: 'ASUS / PREDATOR',
+                                href: '/laptop-gaming/asus-predator',
                             },
                             {
-                                title: 'ACER',
-                                href: '/laptop/acer',
+                                title: 'ASUS / ROG',
+                                href: '/laptop-gaming/asus-rog',
                             },
                             {
                                 title: 'MSI',
-                                href: '/laptop/msi',
+                                href: '/laptop-gaming/msi',
                             },
                             {
                                 title: 'LENOVO',
-                                href: '/laptop/lenovo',
+                                href: '/laptop-gaming/lenovo',
+                            },
+                            {
+                                title: 'DELL',
+                                href: '/laptop-gaming/dell',
+                            },
+                            {
+                                title: 'GIGABYTE / AORUS',
+                                href: '/laptop-gaming/gigabyte-aorus',
+                            },
+                            {
+                                title: 'HP',
+                                href: '/laptop-gaming/hp',
                             },
                         ],
                     },
                 },
                 {
                     title: 'Giá bán',
-                    href: '/laptop',
+                    href: '/laptop-gaming',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'Dưới 15 triệu',
-                                href: '/laptop/collection/duoi-15',
+                                title: 'Dưới 20 triệu',
+                                href: '/laptop-gaming/collection/duoi-20',
                             },
                             {
-                                title: 'Từ 15 tới 20 triệu',
-                                href: '/laptop/collection/tu-15-toi-20',
+                                title: 'Từ 20 tới 25 triệu',
+                                href: '/laptop-gaming/collection/tu-20-toi-25',
                             },
                             {
-                                title: 'MSI',
-                                href: '/laptop/collection/tren-20',
+                                title: 'Từ 25 tới 30 triệu',
+                                href: '/laptop-gaming/collection/tu-25-toi-30',
                             },
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/collection/tren-50',
+                                title: 'Trên 30 triệu',
+                                href: '/laptop-gaming/collection/tren-30',
+                            },
+                            {
+                                title: 'Gaming cao cấp',
+                                href: '/laptop-gaming/collection/caocap',
+                            },
+                            {
+                                title: 'Gaming RTX 40 Series',
+                                href: '/laptop-gaming/collection/rtx-40-series',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'ACER | PREDATOR',
+                    href: '/laptop-gaming',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Nitro Series',
+                                href: '/laptop-gaming/ACER-PREDATOR/Nitro-Series',
+                            },
+                            {
+                                title: 'Asphire Series',
+                                href: '/laptop-gaming/ACER-PREDATOR/Asphire-Series',
+                            },
+                            {
+                                title: 'Predator Series',
+                                href: '/laptop-gaming/ACER-PREDATOR/Predator-Series',
+                            },
+                            {
+                                title: 'ACER RTX 40 Series',
+                                href: '/laptop-gaming/ACER-PREDATOR/rtx-40-Series',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'ASUS | ROG Gaming',
+                    href: '/laptop-gaming',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'ROG Series',
+                                href: '/laptop-gaming/ASUS-ROG/ROG-Series',
+                            },
+                            {
+                                title: 'TUF Series',
+                                href: '/laptop-gaming/ASUS-ROG/TUF-Series',
+                            },
+                            {
+                                title: 'Zephyrus Series',
+                                href: '/laptop-gaming/ASUS-ROG/Zephyrus-Series',
+                            },
+                            {
+                                title: 'ROG Strix G',
+                                href: '/laptop-gaming/ASUS-ROG/ROG-Strix-G',
+                            },
+                            {
+                                title: 'ROG Flow Series',
+                                href: '/laptop-gaming/ASUS-ROG/ROG-Flow-Series',
+                            },
+                            {
+                                title: 'TUF RTX 40 Series',
+                                href: '/laptop-gaming/ASUS-ROG/TUF-RTX40-Series',
+                            },
+                            {
+                                title: 'ROG RTX 40 Series',
+                                href: '/laptop-gaming/ASUS-ROG/ROG-RTX40-Series',
+                            },
+                            {
+                                title: 'ROG Ally',
+                                href: '/laptop-gaming/ASUS-ROG/ROG-Ally',
+                            },
+                        ],
+                    },
+                },
+
+                {
+                    title: 'MSI Gaming',
+                    href: '/laptop-gaming',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'GF Series',
+                                href: '/laptop-gaming/MSI-Gaming/GF-Series',
+                            },
+                            {
+                                title: 'GS Series',
+                                href: '/laptop-gaming/MSI-Gaming/GS-Series',
+                            },
+                            {
+                                title: 'Bravo Series',
+                                href: '/laptop-gaming/MSI-Gaming/Bravo-Series',
+                            },
+                            {
+                                title: 'Creator Series',
+                                href: '/laptop-gaming/MSI-Gaming/Creator-Series',
+                            },
+                            {
+                                title: 'MSI AMD Series',
+                                href: '/laptop-gaming/MSI-Gaming/MSI-AMD-Series',
+                            },
+                            {
+                                title: 'MSI RTX 40 Series',
+                                href: '/laptop-gaming/MSI-Gaming/MSI-RTX40-Series',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'LENOVO Gaming',
+                    href: '/laptop-gaming',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Legion Series',
+                                href: '/laptop-gaming/LENOVO-Gaming/GF-Series',
+                            },
+                            {
+                                title: 'IdeaPad Gaming',
+                                href: '/laptop-gaming/LENOVO-Gaming/IdeaPad-Gaming',
+                            },
+                            {
+                                title: 'Lenovo RTX 40 Series',
+                                href: '/laptop-gaming/LENOVO-Gaming/Lenovo-RTX40-Series',
+                            },
+                            {
+                                title: 'LOQ Series',
+                                href: '/laptop-gaming/LENOVO-Gaming/LOQ-Series',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'DELL Gaming',
+                    href: '/laptop-gaming',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Dell Gaming G Series',
+                                href: '/laptop-gaming/DELL-Gaming/Dell-Gaming-G-Series',
+                            },
+                            {
+                                title: 'Alienware Series',
+                                href: '/laptop-gaming/DELL-Gaming/Alienware-Gaming',
+                            },
+                            {
+                                title: 'DELL RTX 40 Series',
+                                href: '/laptop-gaming/DELL-Gaming/Dell-RTX40-Series',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'GIGABYTE Gaming',
+                    href: '/laptop-gaming',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'GIGABYTE G5 | G7',
+                                href: '/laptop-gaming/GIGABYTE-Gaming/GIGABYTE-G5-G7',
+                            },
+                            {
+                                title: 'GIGABYTE AORUS',
+                                href: '/laptop-gaming/GIGABYTE-Gaming/GIGABYTE-AORUS',
+                            },
+                            {
+                                title: 'GIGABYTE AERO',
+                                href: '/laptop-gaming/GIGABYTE-Gaming/GIGABYTE-AERO',
+                            },
+                            {
+                                title: 'GIGABYTE RTX 40 Series',
+                                href: '/laptop-gaming/GIGABYTE-Gaming/GIGABYTE-RTX40-Series',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Card đồ họa ',
+                    href: '/laptop-gaming',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'GTX 1650',
+                                href: '/laptop-gaming/Card/GTX 1650',
+                            },
+                            {
+                                title: 'GTX 3050 / 3050Ti',
+                                href: '/laptop-gaming/Card/GTX-3050-3050Ti',
+                            },
+                            {
+                                title: 'GTX 3060',
+                                href: '/laptop-gaming/Card/GTX-3060',
+                            },
+                            {
+                                title: 'GTX 3070 / 3080',
+                                href: '/laptop-gaming/Card/GTX-3070-3080',
+                            },
+                            {
+                                title: 'AMD Radeon RX',
+                                href: '/laptop-gaming/Card/AMD-Radeon-RX',
+                            },
+                            {
+                                title: 'RTX 40 Series',
+                                href: '/laptop-gaming/Card/RTX40-Series',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Linh kiện laptop',
+                    href: '/laptop-gaming',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Ram laptop',
+                                href: '/laptop-gaming/components/ram',
+                            },
+                            {
+                                title: 'SSD laptop',
+                                href: '/laptop-gaming/components/ssd',
+                            },
+                            {
+                                title: 'Ổ cứng di động',
+                                href: '/laptop-gaming/components/o-cung-didong',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Phụ kiện laptop',
+                    href: '/laptop-gaming',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Đế tản nhiệt LAPTOP',
+                                href: '/laptop/accessories/detan-nhiet',
                             },
                         ],
                     },
@@ -454,51 +904,270 @@ c-0.353,0.441-0.706,0.883-1.059,1.324C313.556,241.788,311.261,242.759,308.966,24
             isOtherDDMenu: true,
             value: [
                 {
-                    title: 'Thương hiệu',
-                    href: '/laptop',
+                    title: 'GVN Gaming - Intel i9',
+                    href: '/pc-gaming',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'ASUS',
-                                href: '/laptop/asus',
+                                title: 'i9 - 14900K / RTX 4090',
+                                href: '/pc-gaming/chip_pc_i9/i9-14900k-RTX-4090',
                             },
                             {
-                                title: 'ACER',
-                                href: '/laptop/acer',
+                                title: 'i9 - 14900K / RTX 4080',
+                                href: '/pc-gaming/chip_pc_i9/i9-14900k-RTX-4080',
                             },
                             {
-                                title: 'MSI',
-                                href: '/laptop/msi',
+                                title: 'i9 - 14900K / RTX 4070 Ti',
+                                href: '/pc-gaming/chip_pc_i9/i9-14900k-RTX-4070Ti',
                             },
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/lenovo',
+                                title: 'i9 - 14900K / RTX 4060 Ti',
+                                href: '/pc-gaming/chip_pc_i9/i9-14900k-RTX-4060Ti',
+                            },
+                            {
+                                title: 'i9 - 14900F / RTX 4060',
+                                href: '/pc-gaming/chip_pc_i9/i9-14900k-RTX-4060',
                             },
                         ],
                     },
                 },
                 {
-                    title: 'Giá bán',
-                    href: '/laptop',
+                    title: 'GVN Gaming - Intel i7',
+                    href: '/pc-gaming',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'Dưới 15 triệu',
-                                href: '/laptop/collection/duoi-15',
+                                title: 'i7 - 13700K / RTX 4080',
+                                href: '/pc-gaming/chip_pc_i7/i7-13700k-RTX-4080',
                             },
                             {
-                                title: 'Từ 15 tới 20 triệu',
-                                href: '/laptop/collection/tu-15-toi-20',
+                                title: 'i7 - 13700F / RTX 4070 Ti',
+                                href: '/pc-gaming/chip_pc_i7/i7-13700f-RTX-4070Ti',
                             },
                             {
-                                title: 'MSI',
-                                href: '/laptop/collection/tren-20',
+                                title: 'i7 - 13700K / RTX 4070 Ti',
+                                href: '/pc-gaming/chip_pc_i7/i7-13700k-RTX-4070Ti',
                             },
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/collection/tren-50',
+                                title: 'i7 - 13700K / RTX 4060 Ti',
+                                href: '/pc-gaming/chip_pc_i7/i7-13700k-RTX-4060Ti',
+                            },
+                            {
+                                title: 'i7 - 13700F / RTX 4070',
+                                href: '/pc-gaming/chip_pc_i7/i7-13700k-RTX-4070',
+                            },
+                            {
+                                title: 'i7 - 13700F / RTX 4060',
+                                href: '/pc-gaming/chip_pc_i7/i7-13700k-RTX-4060',
+                            },
+                            {
+                                title: 'i7 - 13700F / RTX 3060',
+                                href: '/pc-gaming/chip_pc_i7/i7-13700k-RTX-3060',
+                            },
+                            {
+                                title: 'i7 - 13700F / RTX 3050',
+                                href: '/pc-gaming/chip_pc_i7/i7-13700k-RTX-3050',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'GVN Gaming - Intel i5',
+                    href: '/pc-gaming',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'i5 - 13600KF / RTX 4070',
+                                href: '/pc-gaming/chip_pc_i5/i5-13600kf-RTX-4070',
+                            },
+                            {
+                                title: 'i5 - 13600KF / RTX 4060',
+                                href: '/pc-gaming/chip_pc_i5/i5-13600kf-RTX-4060',
+                            },
+                            {
+                                title: 'i5 - 13600KF / RTX 3060',
+                                href: '/pc-gaming/chip_pc_i5/i5-13600kf-RTX-3060',
+                            },
+                            {
+                                title: 'i5 - 13400F / RTX 4060 Ti',
+                                href: '/pc-gaming/chip_pc_i5/i5-13400F-RTX-4060Ti',
+                            },
+                            {
+                                title: 'i5 - 12400F / RTX 4060',
+                                href: '/pc-gaming/chip_pc_i5/i5-12400f-RTX-4060',
+                            },
+                            {
+                                title: 'i5 - 12400F / RTX 3060',
+                                href: '/pc-gaming/chip_pc_i5/i5-12400f-RTX-3060',
+                            },
+                            {
+                                title: 'i5 - 12400F / RTX 3050',
+                                href: '/pc-gaming/chip_pc_i5/i5-12400f-RTX-3050',
+                            },
+                            {
+                                title: 'i5 - 12400F / GTX 1660S',
+                                href: '/pc-gaming/chip_pc_i5/i5-12400f-GTX-1660S',
+                            },
+                            {
+                                title: 'i5 - 12400F / GTX 1650',
+                                href: '/pc-gaming/chip_pc_i5/i5-12400f-GTX-1650',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'GVN Gaming - Intel i5',
+                    href: '/pc-gaming',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'i5 - 13600KF / RTX 4070',
+                                href: '/pc-gaming/chip_pc_i5/i5-13600kf-RTX-4070',
+                            },
+                            {
+                                title: 'i5 - 13600KF / RTX 4060',
+                                href: '/pc-gaming/chip_pc_i5/i5-13600kf-RTX-4060',
+                            },
+                            {
+                                title: 'i5 - 13600KF / RTX 3060',
+                                href: '/pc-gaming/chip_pc_i5/i5-13600kf-RTX-3060',
+                            },
+                            {
+                                title: 'i5 - 13400F / RTX 4060 Ti',
+                                href: '/pc-gaming/chip_pc_i5/i5-13400F-RTX-4060Ti',
+                            },
+                            {
+                                title: 'i5 - 12400F / RTX 4060',
+                                href: '/pc-gaming/chip_pc_i5/i5-12400f-RTX-4060',
+                            },
+                            {
+                                title: 'i5 - 12400F / RTX 3060',
+                                href: '/pc-gaming/chip_pc_i5/i5-12400f-RTX-3060',
+                            },
+                            {
+                                title: 'i5 - 12400F / RTX 3050',
+                                href: '/pc-gaming/chip_pc_i5/i5-12400f-RTX-3050',
+                            },
+                            {
+                                title: 'i5 - 12400F / RTX 1660S',
+                                href: '/pc-gaming/chip_pc_i5/i5-12400f-RTX-1660S',
+                            },
+                            {
+                                title: 'i5 - 12400F / RTX 1650',
+                                href: '/pc-gaming/chip_pc_i5/i5-12400f-RTX-1650',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'GVN Gaming - Intel i3',
+                    href: '/pc-gaming',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'i3 - 12100F / RTX 3050',
+                                href: '/pc-gaming/chip_pc_i3/i3-12100f-RTX-3050',
+                            },
+                            {
+                                title: 'i3 - 12100F / GTX 1660S',
+                                href: '/pc-gaming/chip_pc_i3/i3-12100f-GTX-1660S',
+                            },
+                            {
+                                title: 'i3 - 12100F / RTX 1650',
+                                href: '/pc-gaming/chip_pc_i3/i3-12100f-RTX-1650',
+                            },
+                            {
+                                title: 'i3 - 12100F / GT 1030',
+                                href: '/pc-gaming/chip_pc_i3/i3-12100f-GT-1030',
+                            },
+                            {
+                                title: 'i3 - 12100F / GT 730',
+                                href: '/pc-gaming/chip_pc_i3/i3-12100f-GT-730',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'GVN Gaming - AMD R9',
+                    href: '/pc-gaming',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'R9 - 7950X / RTX 4090',
+                                href: '/pc-gaming/chip_pc_amd_r9/R9-7950X-RTX-4090',
+                            },
+                            {
+                                title: 'R9 - 7900X / RTX 4080',
+                                href: '/pc-gaming/chip_pc_amd_r9/R9-7900X-RTX-4080',
+                            },
+                            {
+                                title: 'R9 - 5950X / RTX 4070 Ti',
+                                href: '/pc-gaming/chip_pc_amd_r9/R9-5950X-RTX-4070Ti',
+                            },
+                            {
+                                title: 'R9-7900 / RTX 3060',
+                                href: '/pc-gaming/chip_pc_amd_r9/R9-7900-RTX-3060',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'GVN Gaming - AMD R7',
+                    href: '/pc-gaming',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'R7 - 7700X / RTX 4080',
+                                href: '/pc-gaming/chip_pc_amd_r7/R7-7700X-RTX-4080',
+                            },
+                            {
+                                title: 'R7 - 7700X / RTX 4070 Ti',
+                                href: '/pc-gaming/chip_pc_amd_r7/R7-7900X-RTX-4070Ti',
+                            },
+                            {
+                                title: 'R7 - 7700 / RTX 3060',
+                                href: '/pc-gaming/chip_pc_amd_r7/R7-5950X-RTX-3060',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'GVN Gaming - AMD R5',
+                    href: '/pc-gaming',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'R5 - 7600 / RTX 4060',
+                                href: '/pc-gaming/chip_pc_amd_R5/R5-7600-RTX-4060',
+                            },
+
+                            {
+                                title: 'R5 - 7600 / RTX 3060',
+                                href: '/pc-gaming/chip_pc_amd_R5/R5-7600-RTX-3060',
+                            },
+                            {
+                                title: 'R5 - 7600 / RX 6600',
+                                href: '/pc-gaming/chip_pc_amd_R5/R5-7900X-RX-6600',
+                            },
+                            {
+                                title: 'R5 - 5600 / RTX 3050',
+                                href: '/pc-gaming/chip_pc_amd_R5/R5-5600-RTX-3050',
+                            },
+                            {
+                                title: 'R5 - 4500 / GTX 1660S',
+                                href: '/pc-gaming/chip_pc_amd_R5/R5-4500-GTX-1660S',
+                            },
+                            {
+                                title: 'R5 - 4500 / GTX 1650',
+                                href: '/pc-gaming/chip_pc_amd_R5/R5-4500-GTX-1650',
                             },
                         ],
                     },
@@ -518,51 +1187,100 @@ c-0.353,0.441-0.706,0.883-1.059,1.324C313.556,241.788,311.261,242.759,308.966,24
             isOtherDDMenu: true,
             value: [
                 {
-                    title: 'Thương hiệu',
-                    href: '/laptop',
+                    title: 'G-Studio đồ họa,thiết kế',
+                    href: '/pc-vp',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'ASUS',
-                                href: '/laptop/asus',
+                                title: 'G-STUDIO 5 i1660S',
+                                href: '/pc-vp/G-Studio-thietke/G-STUDIO-5-i1660S',
                             },
                             {
-                                title: 'ACER',
-                                href: '/laptop/acer',
+                                title: 'G-STUDIO 5 Plus a3050',
+                                href: '/pc-vp/G-Studio-thietke/G-STUDIO-5-Plus-a3050',
                             },
                             {
-                                title: 'MSI',
-                                href: '/laptop/msi',
+                                title: 'G-STUDIO 5 i4060TI',
+                                href: '/pc-vp/G-Studio-thietke/G-STUDIO-5-i4060TI',
                             },
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/lenovo',
+                                title: 'G-STUDIO 7 i3060',
+                                href: '/pc-vp/G-Studio-thietke/G-STUDIO-7-i3060',
+                            },
+                            {
+                                title: 'G-STUDIO 7 a3060',
+                                href: '/pc-vp/G-Studio-thietke/G-STUDIO-7-a3060',
                             },
                         ],
                     },
                 },
                 {
-                    title: 'Giá bán',
-                    href: '/laptop',
+                    title: 'G-Studio Render,dựng phim',
+                    href: '/pc-vp',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'Dưới 15 triệu',
-                                href: '/laptop/collection/duoi-15',
+                                title: 'G-STUDIO 7 Plus i4070Ti',
+                                href: '/pc-vp/G-Studio-render/G-STUDIO-7-Plus-i4070Ti',
                             },
                             {
-                                title: 'Từ 15 tới 20 triệu',
-                                href: '/laptop/collection/tu-15-toi-20',
+                                title: 'G-STUDIO 7 Plus a4070Ti',
+                                href: '/pc-vp/G-Studio-render/G-STUDIO-7-Plus-a4070Ti',
                             },
                             {
-                                title: 'MSI',
-                                href: '/laptop/collection/tren-20',
+                                title: 'G-STUDIO 9 Plus i4070Ti',
+                                href: '/pc-vp/G-Studio-render/G-STUDIO-9-Plus-i4070Ti',
                             },
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/collection/tren-50',
+                                title: 'G-STUDIO 9 Plus a4070Ti',
+                                href: '/pc-vp/G-Studio-render/G-STUDIO-9-Plus-a4070Ti',
+                            },
+                            {
+                                title: 'G-STUDIO 9 Plus i4090',
+                                href: '/pc-vp/G-Studio-render/G-STUDIO-9-Plus-i4090',
+                            },
+                            {
+                                title: 'G-STUDIO 9 Plus a4090',
+                                href: '/pc-vp/G-Studio-render/G-STUDIO-9-Plus-a4090',
+                            },
+                            {
+                                title: 'G-STUDIO 9 Plus a7900XTX',
+                                href: '/pc-vp/G-Studio-render/G-STUDIO-9-Plus-a7900XTX',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'GVN Doanh Nghiệp',
+                    href: '/pc-vp',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Homework R3 4300G',
+                                href: '/pc-vp/GVN-doanhnghiep/Homework-R3-4300G',
+                            },
+                            {
+                                title: 'Homework R5 5600G',
+                                href: '/pc-vp/GVN-doanhnghiep/Homework-R5-5600G',
+                            },
+                            {
+                                title: 'Homework Pentium G6450',
+                                href: '/pc-vp/GVN-doanhnghiep/Homework-Pentium-G6450',
+                            },
+                            {
+                                title: 'Homework i3 10105',
+                                href: '/pc-vp/GVN-doanhnghiep/Homework-i3-10105',
+                            },
+                            {
+                                title: 'Homework i5 12400',
+                                href: '/pc-vp/GVN-doanhnghiep/Homework-i5-12400',
+                            },
+                            {
+                                title: 'Homework i7 12700',
+                                href: '/pc-vp/GVN-doanhnghiep/Homework-i7-12700',
                             },
                         ],
                     },
@@ -582,51 +1300,117 @@ c-0.353,0.441-0.706,0.883-1.059,1.324C313.556,241.788,311.261,242.759,308.966,24
             isOtherDDMenu: true,
             value: [
                 {
-                    title: 'Thương hiệu',
-                    href: '/laptop',
+                    title: 'RAM DDR4',
+                    href: '/linhkien/hdd&ssd',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'ASUS',
-                                href: '/laptop/asus',
+                                title: 'RAM LED RGB',
+                                href: '/linhkien/hdd&ssd/ddr4/ram-led-rgb',
                             },
                             {
-                                title: 'ACER',
-                                href: '/laptop/acer',
+                                title: 'RAM 8GB',
+                                href: '/linhkien/hdd&ssd/ddr4/ram-8gb',
                             },
                             {
-                                title: 'MSI',
-                                href: '/laptop/msi',
+                                title: 'RAM 16 GB',
+                                href: '/linhkien/hdd&ssd/ddr4/ram-16gb',
                             },
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/lenovo',
+                                title: 'RAM Corsair',
+                                href: '/linhkien/hdd&ssd/ddr4/ram-corsair',
+                            },
+                            {
+                                title: 'RAM Kingston',
+                                href: '/linhkien/hdd&ssd/ddr4/ram-kingston',
                             },
                         ],
                     },
                 },
                 {
-                    title: 'Giá bán',
-                    href: '/laptop',
+                    title: 'RAM DDR5',
+                    href: '/linhkien/hdd&ssd',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'Dưới 15 triệu',
-                                href: '/laptop/collection/duoi-15',
+                                title: 'RAM LED RGB',
+                                href: '/linhkien/hdd&ssd/ddr5/ram-led-rgb',
                             },
                             {
-                                title: 'Từ 15 tới 20 triệu',
-                                href: '/laptop/collection/tu-15-toi-20',
+                                title: 'RAM 16GB',
+                                href: '/linhkien/hdd&ssd/ddr5/ram-16gb',
                             },
                             {
-                                title: 'MSI',
-                                href: '/laptop/collection/tren-20',
+                                title: 'RAM 32 GB',
+                                href: '/linhkien/hdd&ssd/ddr5/ram-32gb',
                             },
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/collection/tren-50',
+                                title: 'RAM 64 GB',
+                                href: '/linhkien/hdd&ssd/ddr5/ram-64gb',
+                            },
+                            {
+                                title: 'RAM Corsair',
+                                href: '/linhkien/hdd&ssd/ddr5/ram-corsair',
+                            },
+                            {
+                                title: 'RAM Kingston',
+                                href: '/linhkien/hdd&ssd/ddr5/ram-kingston',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Ổ cứng SSD',
+                    href: '/linhkien/hdd&ssd',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'SSD NVMe Gen 3',
+                                href: '/linhkien/hdd&ssd/SSD/SSD-NVMe-Gen3',
+                            },
+                            {
+                                title: 'SSD NVMe Gen 3',
+                                href: '/linhkien/hdd&ssd/SSD/SSD-NVMe-Gen4',
+                            },
+                            {
+                                title: 'SSD Sata 3',
+                                href: '/linhkien/hdd&ssd/SSD/SSD-Sata-3',
+                            },
+                            {
+                                title: 'SSD Samsung',
+                                href: '/linhkien/hdd&ssd/SSD/ssd-Samsung',
+                            },
+                            {
+                                title: 'SSD Kingston',
+                                href: '/linhkien/hdd&ssd/SSD/ssd-kingston',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Ổ cứng HHD',
+                    href: '/linhkien/hdd&ssd',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'HHD 1 TB',
+                                href: '/linhkien/hdd&ssd/HHD/HHD-NVMe-Gen3',
+                            },
+                            {
+                                title: 'HHD 2 TB',
+                                href: '/linhkien/hdd&ssd/HHD/HHD-NVMe-Gen4',
+                            },
+                            {
+                                title: 'HHD 4TB -6 TB',
+                                href: '/linhkien/hdd&ssd/HHD/HHD-Sata-3',
+                            },
+                            {
+                                title: 'HHD Laptop',
+                                href: '/linhkien/hdd&ssd/HHD/HHD-Samsung',
                             },
                         ],
                     },
@@ -646,51 +1430,88 @@ c-0.353,0.441-0.706,0.883-1.059,1.324C313.556,241.788,311.261,242.759,308.966,24
             isOtherDDMenu: true,
             value: [
                 {
-                    title: 'Thương hiệu',
-                    href: '/laptop',
+                    title: 'Tản nhiệt',
+                    href: '/linhkien',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'ASUS',
-                                href: '/laptop/asus',
+                                title: 'Tản nhiệt khí ',
+                                href: '/linhkien/Tannhiet/tan-nhietkhi',
                             },
                             {
-                                title: 'ACER',
-                                href: '/laptop/acer',
+                                title: 'Tản nhiệt AIO 240mm',
+                                href: '/linhkien/Tannhiet/aio240',
                             },
                             {
-                                title: 'MSI',
-                                href: '/laptop/msi',
+                                title: 'Tản nhiệt AIO 280mm',
+                                href: '/linhkien/Tannhiet/aio280',
                             },
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/lenovo',
+                                title: 'Tản nhiệt AIO 360mm',
+                                href: '/linhkien/Tannhiet/aio360',
+                            },
+                            {
+                                title: 'Tản nhiệt AIO 420mm',
+                                href: '/linhkien/Tannhiet/aio420',
                             },
                         ],
                     },
                 },
                 {
-                    title: 'Giá bán',
-                    href: '/laptop',
+                    title: 'Case - Vỏ Máy Tính',
+                    href: '/linhkien',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'Dưới 15 triệu',
-                                href: '/laptop/collection/duoi-15',
+                                title: 'Case Dưới 1 Triệu ',
+                                href: '/linhkien/Case/duoi1trieu',
                             },
                             {
-                                title: 'Từ 15 tới 20 triệu',
-                                href: '/laptop/collection/tu-15-toi-20',
+                                title: 'Case Từ 1 đến 2 triệu',
+                                href: '/linhkien/Case/1den2trieu',
                             },
                             {
-                                title: 'MSI',
-                                href: '/laptop/collection/tren-20',
+                                title: 'Case trên 2 triệu',
+                                href: '/linhkien/Case/tren2trieu',
                             },
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/collection/tren-50',
+                                title: 'Case NZXT',
+                                href: '/linhkien/Case/nzxt',
+                            },
+                            {
+                                title: 'Case Corsair',
+                                href: '/linhkien/Case/Corsair',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'PSU - Nguồn máy tính',
+                    href: '/linhkien',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Nguồn 550W - 650W',
+                                href: '/linhkien/PSU/550-650w',
+                            },
+                            {
+                                title: 'Nguồn 700 - 850W',
+                                href: '/linhkien/PSU/700-850W',
+                            },
+                            {
+                                title: 'Nguồn trên 1000 W',
+                                href: '/linhkien/PSU/tren1000w',
+                            },
+                            {
+                                title: 'Nguồn NZXT',
+                                href: '/linhkien/PSU/nzxt',
+                            },
+                            {
+                                title: 'Nguồn Corsair',
+                                href: '/linhkien/PSU/Corsair',
                             },
                         ],
                     },
@@ -710,51 +1531,30 @@ c-0.353,0.441-0.706,0.883-1.059,1.324C313.556,241.788,311.261,242.759,308.966,24
             isOtherDDMenu: true,
             value: [
                 {
-                    title: 'Thương hiệu',
-                    href: '/laptop',
+                    title: 'VGA - Card màn hình',
+                    href: '/linhkien/card-mh',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'ASUS',
-                                href: '/laptop/asus',
+                                title: 'RTX Ada 4090',
+                                href: '/linhkien/card-mh/RTX-Ada-4090',
                             },
                             {
-                                title: 'ACER',
-                                href: '/laptop/acer',
+                                title: 'RTX Ada 4080',
+                                href: '/linhkien/card-mh/RTX-Ada-4080',
                             },
                             {
-                                title: 'MSI',
-                                href: '/laptop/msi',
+                                title: 'RTX Ada 4070 Ti',
+                                href: '/linhkien/card-mh/RTX-Ada-4070Ti',
                             },
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/lenovo',
-                            },
-                        ],
-                    },
-                },
-                {
-                    title: 'Giá bán',
-                    href: '/laptop',
-                    dropMenu: {
-                        isOtherDDMenu: false,
-                        value: [
-                            {
-                                title: 'Dưới 15 triệu',
-                                href: '/laptop/collection/duoi-15',
+                                title: 'RTX Ada 4060 Ti (Mới)',
+                                href: '/linhkien/card-mh/RTX-Ada-4060Ti',
                             },
                             {
-                                title: 'Từ 15 tới 20 triệu',
-                                href: '/laptop/collection/tu-15-toi-20',
-                            },
-                            {
-                                title: 'MSI',
-                                href: '/laptop/collection/tren-20',
-                            },
-                            {
-                                title: 'LENOVO',
-                                href: '/laptop/collection/tren-50',
+                                title: 'RTX Ada 4060 (Mới)',
+                                href: '/linhkien/card-mh/RTX-Ada-4060',
                             },
                         ],
                     },
@@ -774,51 +1574,115 @@ c-0.353,0.441-0.706,0.883-1.059,1.324C313.556,241.788,311.261,242.759,308.966,24
             isOtherDDMenu: true,
             value: [
                 {
-                    title: 'Thương hiệu',
-                    href: '/laptop',
+                    title: 'MacBook',
+                    href: '/apple',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'ASUS',
-                                href: '/laptop/asus',
+                                title: 'MacBook Air',
+                                href: '/apple/MacBook/MacBook-Air',
                             },
                             {
-                                title: 'ACER',
-                                href: '/laptop/acer',
-                            },
-                            {
-                                title: 'MSI',
-                                href: '/laptop/msi',
-                            },
-                            {
-                                title: 'LENOVO',
-                                href: '/laptop/lenovo',
+                                title: 'MacBook Pro',
+                                href: '/apple/MacBook/MacBook-Pro',
                             },
                         ],
                     },
                 },
                 {
-                    title: 'Giá bán',
-                    href: '/laptop',
+                    title: 'MacBook Air',
+                    href: '/apple',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'Dưới 15 triệu',
-                                href: '/laptop/collection/duoi-15',
+                                title: 'MacBook Air M1',
+                                href: '/apple/MacBook-air/MacBook-AirM1',
                             },
                             {
-                                title: 'Từ 15 tới 20 triệu',
-                                href: '/laptop/collection/tu-15-toi-20',
+                                title: 'MacBook Air M2',
+                                href: '/apple/MacBook-air/MacBook-ProM2',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'MacBook Pro',
+                    href: '/apple',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'MacBook Pro 13',
+                                href: '/apple/MacBook-pro/MacBook-Air13',
                             },
                             {
-                                title: 'MSI',
-                                href: '/laptop/collection/tren-20',
+                                title: 'MacBook Air 14',
+                                href: '/apple/MacBook-pro/MacBook-Pro14',
                             },
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/collection/tren-50',
+                                title: 'MacBook Air 16',
+                                href: '/apple/MacBook-pro/MacBook-Pro16',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'MacBook Pro 13',
+                    href: '/apple',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                    },
+                },
+
+                {
+                    title: 'MacBook Pro 14',
+                    href: '/apple',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'MBP 14 M2 Pro',
+                                href: '/apple/MacBook-pro14/MBP-14-M2-Pro',
+                            },
+                            {
+                                title: 'MBP 14 M2 Max',
+                                href: '/apple/MacBook-pro14/MBP-14-M2-Max',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'MacBook Pro 16',
+                    href: '/apple',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'MBP 16 M2 Pro',
+                                href: '/apple/MacBook-pro16/MBP-16-M2-Pro',
+                            },
+                            {
+                                title: 'MBP 16 M2 Max',
+                                href: '/apple/MacBook-pro16/MBP-16-M2-Max',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Phụ kiện Apple',
+                    href: '/apple',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Bàn phím,Chuột',
+                                href: '/apple/phukien-apple/chuot-banphim',
+                            },
+                            {
+                                title: 'Thiết bị âm thanh',
+                                href: '/apple/phukien-apple/thietbi-amthanh',
                             },
                         ],
                     },
@@ -838,51 +1702,150 @@ c-0.353,0.441-0.706,0.883-1.059,1.324C313.556,241.788,311.261,242.759,308.966,24
             isOtherDDMenu: true,
             value: [
                 {
-                    title: 'Thương hiệu',
-                    href: '/laptop',
+                    title: 'Hãng sản xuất',
+                    href: '/man-hinh',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
                                 title: 'ASUS',
-                                href: '/laptop/asus',
+                                href: '/man-hinh/asus',
                             },
                             {
                                 title: 'ACER',
-                                href: '/laptop/acer',
+                                href: '/man-hinh/acer',
                             },
                             {
                                 title: 'MSI',
-                                href: '/laptop/msi',
+                                href: '/man-hinh/msi',
                             },
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/lenovo',
+                                title: 'Dell',
+                                href: '/man-hinh/Dell',
+                            },
+                            {
+                                title: 'ViewSonic',
+                                href: '/man-hinh/ViewSonic',
+                            },
+                            {
+                                title: 'HKC',
+                                href: '/man-hinh/HKC',
                             },
                         ],
                     },
                 },
                 {
-                    title: 'Giá bán',
-                    href: '/laptop',
+                    title: 'Giá tiền',
+                    href: '/man-hinh',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'Dưới 15 triệu',
-                                href: '/laptop/collection/duoi-15',
+                                title: 'Dưới 5 triệu',
+                                href: '/man-hinh/collection/duoi-5',
                             },
+
                             {
                                 title: 'Từ 15 tới 20 triệu',
-                                href: '/laptop/collection/tu-15-toi-20',
+                                href: '/man-hinh/collection/tu-15-toi-20',
                             },
                             {
-                                title: 'MSI',
-                                href: '/laptop/collection/tren-20',
+                                title: 'Từ 20 tới 30 triệu',
+                                href: '/man-hinh/collection/tu-20-toi-30',
                             },
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/collection/tren-50',
+                                title: 'Trên 30 triệu',
+                                href: '/man-hinh/collection/tren-30',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Độ Phân giải',
+                    href: '/man-hinh',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'FULL HD 1080p',
+                                href: '/man-hinh/resolution/full-hd-1080p',
+                            },
+
+                            {
+                                title: '2k 1440p',
+                                href: '/man-hinh/resolution/2k-1440p',
+                            },
+                            {
+                                title: 'Màn hình máy tính 4K UHD',
+                                href: '/man-hinh/resolution/4k-uhd',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Độ Phân giải',
+                    href: '/man-hinh',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: '60Hz',
+                                href: '/man-hinh/Hz/60hz',
+                            },
+
+                            {
+                                title: '75Hz',
+                                href: '/man-hinh/Hz/75hz',
+                            },
+                            {
+                                title: '100Hz',
+                                href: '/man-hinh/Hz/100hz',
+                            },
+                            {
+                                title: '144Hz',
+                                href: '/man-hinh/Hz/144Hz',
+                            },
+                            {
+                                title: '240Hz',
+                                href: '/man-hinh/Hz/240hz',
+                            },
+                            {
+                                title: '360Hz',
+                                href: '/man-hinh/Hz/360hz',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Độ Phân giải',
+                    href: '/man-hinh',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Màn hình 22 inch',
+                                href: '/man-hinh/size/22in',
+                            },
+
+                            {
+                                title: 'Màn hình 24 inch',
+                                href: '/man-hinh/size/24in',
+                            },
+                            {
+                                title: 'Màn hình 27 inch',
+                                href: '/man-hinh/size/27in',
+                            },
+                            {
+                                title: 'Màn hình 32 inch',
+                                href: '/man-hinh/size/32in',
+                            },
+                            {
+                                title: 'Màn hình trên 32 inch',
+                                href: '/man-hinh/size/tren-32in',
+                            },
+                            {
+                                title: 'Hỗ trợ giá treo(VESA)',
+                                href: '/man-hinh/size/giatreo-vesa',
                             },
                         ],
                     },
@@ -891,7 +1854,7 @@ c-0.353,0.441-0.706,0.883-1.059,1.324C313.556,241.788,311.261,242.759,308.966,24
         },
     },
     {
-        title: 'Chuột - Lót chuột',
+        title: 'Chuột + Lót chuột',
         icon: {
             isFontIcon: true,
             value: 'bi bi-mouse text-xl',
@@ -902,51 +1865,113 @@ c-0.353,0.441-0.706,0.883-1.059,1.324C313.556,241.788,311.261,242.759,308.966,24
             isOtherDDMenu: true,
             value: [
                 {
-                    title: 'Thương hiệu',
-                    href: '/laptop',
+                    title: 'Chuột theo hãng',
+                    href: '/mouse',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'ASUS',
-                                href: '/laptop/asus',
+                                title: 'Logitech',
+                                href: '/mouse/Logitech',
                             },
                             {
-                                title: 'ACER',
-                                href: '/laptop/acer',
+                                title: 'Razer',
+                                href: '/mouse/Razer',
                             },
                             {
-                                title: 'MSI',
-                                href: '/laptop/msi',
+                                title: 'Microsoft (Mới)',
+                                href: '/mouse/Microsoft',
                             },
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/lenovo',
+                                title: 'HyperX',
+                                href: '/mouse/HyperX',
+                            },
+                            {
+                                title: 'Zowie',
+                                href: '/mouse/Zowie',
+                            },
+                            {
+                                title: 'Asus',
+                                href: '/mouse/Asus',
                             },
                         ],
                     },
                 },
                 {
-                    title: 'Giá bán',
+                    title: 'Chuột theo giá tiền',
                     href: '/laptop',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'Dưới 15 triệu',
-                                href: '/laptop/collection/duoi-15',
+                                title: 'Dưới 500 nghìn',
+                                href: '/mouse/collection/duoi-500',
                             },
                             {
-                                title: 'Từ 15 tới 20 triệu',
-                                href: '/laptop/collection/tu-15-toi-20',
+                                title: 'Từ 500 - 1 triệu',
+                                href: '/mouse/collection/tu-500-toi-1',
                             },
                             {
-                                title: 'MSI',
-                                href: '/laptop/collection/tren-20',
+                                title: 'Từ 1 - 2 triệu',
+                                href: '/mouse/collection/tu-1-den-2',
                             },
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/collection/tren-50',
+                                title: 'Từ 2 - 3 triệu',
+                                href: '/mouse/collection/tu-2-den-3',
+                            },
+                            {
+                                title: 'Trên 3 triệu',
+                                href: '/mouse/collection/tren-3',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Các loại lót chuột',
+                    href: '/laptop',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Mềm',
+                                href: '/mouse/type-pad-mouse/mem',
+                            },
+                            {
+                                title: 'Cứng',
+                                href: '/mouse/type-pad-mouse/cung',
+                            },
+                            {
+                                title: 'Dày',
+                                href: '/mouse/type-pad-mouse/day',
+                            },
+                            {
+                                title: 'Mỏng',
+                                href: '/mouse/type-pad-mouse/mong',
+                            },
+                            {
+                                title: 'Viền có led',
+                                href: '/mouse/type-pad-mouse/vien-coled',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Lót chuột theo size',
+                    href: '/laptop',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Nhỏ',
+                                href: '/mouse/size-pad-mouse/nho',
+                            },
+                            {
+                                title: 'Vừa',
+                                href: '/mouse/size-pad-mouse/vua',
+                            },
+                            {
+                                title: 'Lớn',
+                                href: '/mouse/size-pad-mouse/lon',
                             },
                         ],
                     },
@@ -967,25 +1992,37 @@ c-0.353,0.441-0.706,0.883-1.059,1.324C313.556,241.788,311.261,242.759,308.966,24
             value: [
                 {
                     title: 'Thương hiệu',
-                    href: '/laptop',
+                    href: '/keyboard',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
                                 title: 'ASUS',
-                                href: '/laptop/asus',
+                                href: '/keyboard/asus',
                             },
                             {
                                 title: 'ACER',
-                                href: '/laptop/acer',
+                                href: '/keyboard/acer',
                             },
                             {
                                 title: 'MSI',
-                                href: '/laptop/msi',
+                                href: '/keyboard/msi',
                             },
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/lenovo',
+                                title: 'Akko',
+                                href: '/keyboard/Akko',
+                            },
+                            {
+                                title: 'Razer',
+                                href: '/keyboard/Razer',
+                            },
+                            {
+                                title: 'Mikit (Mới)',
+                                href: '/keyboard/Mikit',
+                            },
+                            {
+                                title: 'Ducky',
+                                href: '/keyboard/Ducky',
                             },
                         ],
                     },
@@ -997,20 +2034,58 @@ c-0.353,0.441-0.706,0.883-1.059,1.324C313.556,241.788,311.261,242.759,308.966,24
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'Dưới 15 triệu',
-                                href: '/laptop/collection/duoi-15',
+                                title: 'Dưới 500 nghìn',
+                                href: '/keyboard/collection/duoi-500',
                             },
                             {
-                                title: 'Từ 15 tới 20 triệu',
-                                href: '/laptop/collection/tu-15-toi-20',
+                                title: 'Từ 500 - 1 triệu',
+                                href: '/keyboard/collection/tu-500-toi-1',
                             },
                             {
-                                title: 'MSI',
-                                href: '/laptop/collection/tren-20',
+                                title: 'Từ 1 - 2 triệu',
+                                href: '/keyboard/collection/tu-1-den-2',
                             },
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/collection/tren-50',
+                                title: 'Từ 2 - 3 triệu',
+                                href: '/keyboard/collection/tu-2-den-3',
+                            },
+                            {
+                                title: 'Trên 4 triệu',
+                                href: '/keyboard/collection/tren-4',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Kết nối',
+                    href: '/laptop',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Bluetooth',
+                                href: '/keyboard/conect/Bluetooth',
+                            },
+                            {
+                                title: 'Wireless',
+                                href: '/keyboard/conect/Wireless',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Phụ kiện bàn phím cơ',
+                    href: '/laptop',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Keycaps',
+                                href: '/keyboard/itemssp/Bluetooth',
+                            },
+                            {
+                                title: 'Kê tay',
+                                href: '/keyboard/itemsp/ketay',
                             },
                         ],
                     },
@@ -1030,51 +2105,125 @@ c-0.353,0.441-0.706,0.883-1.059,1.324C313.556,241.788,311.261,242.759,308.966,24
             isOtherDDMenu: true,
             value: [
                 {
-                    title: 'Thương hiệu',
-                    href: '/laptop',
+                    title: 'Hãng tai nghe',
+                    href: '/sound-device',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
                                 title: 'ASUS',
-                                href: '/laptop/asus',
+                                href: '/sound-device/headphone/asus',
                             },
                             {
                                 title: 'ACER',
-                                href: '/laptop/acer',
+                                href: '/sound-device/headphone/acer',
                             },
                             {
                                 title: 'MSI',
-                                href: '/laptop/msi',
+                                href: '/sound-device/headphone/msi',
                             },
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/lenovo',
+                                title: 'Logitech',
+                                href: '/sound-device/headphone/Logitech',
+                            },
+                            {
+                                title: 'HyperX',
+                                href: '/sound-device/headphone/HyperX',
+                            },
+                            {
+                                title: 'Soundpeats',
+                                href: '/sound-device/headphone/Soundpeats',
+                            },
+                            {
+                                title: 'AOC',
+                                href: '/sound-device/headphone/AOC',
                             },
                         ],
                     },
                 },
                 {
-                    title: 'Giá bán',
-                    href: '/laptop',
+                    title: 'Tai nghe theo giá',
+                    href: '/sound-device',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'Dưới 15 triệu',
-                                href: '/laptop/collection/duoi-15',
+                                title: 'Dưới 500 nghìn',
+                                href: '/sound-device/collection-headphone/duoi-500',
                             },
                             {
-                                title: 'Từ 15 tới 20 triệu',
-                                href: '/laptop/collection/tu-15-toi-20',
+                                title: 'Từ 500 - 1 triệu',
+                                href: '/sound-device/collection-headphone/tu-500-toi-1',
+                            },
+                            {
+                                title: 'Từ 1 - 2 triệu',
+                                href: '/sound-device/collection-headphone/tu-1-den-2',
+                            },
+                            {
+                                title: 'Từ 2 - 3 triệu',
+                                href: '/sound-device/collection-headphone/tu-2-den-3',
+                            },
+                            {
+                                title: 'Trên 4 triệu',
+                                href: '/sound-device/collection-headphone/tren-4',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Loa theo thương hiệu',
+                    href: '/sound-device',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'ASUS',
+                                href: '/sound-device/speaker/asus',
+                            },
+                            {
+                                title: 'ACER',
+                                href: '/sound-device/speaker/acer',
                             },
                             {
                                 title: 'MSI',
-                                href: '/laptop/collection/tren-20',
+                                href: '/sound-device/speaker/msi',
                             },
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/collection/tren-50',
+                                title: 'Logitech',
+                                href: '/sound-device/speaker/Logitech',
+                            },
+                            {
+                                title: 'HyperX',
+                                href: '/sound-device/speaker/HyperX',
+                            },
+                            {
+                                title: 'Soundpeats',
+                                href: '/sound-device/speaker/Soundpeats',
+                            },
+                            {
+                                title: 'AOC',
+                                href: '/sound-device/speaker/AOC',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Chuột theo giá tiền',
+                    href: '/sound-device',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Loa dưới 1 triệu',
+                                href: '/sound-device/speaker/collection/duoi-1',
+                            },
+                            {
+                                title: 'Loa trên 1 triệu',
+                                href: '/sound-device/speaker/collection/tren-1',
+                            },
+                            {
+                                title: 'loa 2 triệu',
+                                href: '/sound-device/speaker/collection/tren-2',
                             },
                         ],
                     },
@@ -1184,53 +2333,90 @@ c-2.2781,0-4.125-2.0986-4.125-4.6875C60.8368,32.277,62.6837,30.1783,64.9618,30.1
             isOtherDDMenu: true,
             value: [
                 {
-                    title: 'Thương hiệu',
-                    href: '/laptop',
+                    title: 'Thương hiệu ghế Gaming',
+                    href: '/ban&ghe',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
                                 title: 'ASUS',
-                                href: '/laptop/asus',
+                                href: '/ban&ghe/chair/asus',
                             },
                             {
                                 title: 'ACER',
-                                href: '/laptop/acer',
+                                href: '/ban&ghe/chair/acer',
                             },
                             {
                                 title: 'MSI',
-                                href: '/laptop/msi',
+                                href: '/ban&ghe/chair/msi',
                             },
                             {
                                 title: 'LENOVO',
-                                href: '/laptop/lenovo',
+                                href: '/ban&ghe/chair/lenovo',
+                            },
+                            {
+                                title: 'Razer',
+                                href: '/ban&ghe/chair/Razer',
+                            },
+                            {
+                                title: 'Cougar',
+                                href: '/ban&ghe/chair/Cougar',
+                            },
+                            {
+                                title: 'Warrior',
+                                href: '/ban&ghe/chair/Warrior',
                             },
                         ],
                     },
                 },
                 {
-                    title: 'Giá bán',
-                    href: '/laptop',
+                    title: 'Bàn Gaming',
+                    href: '/ban&ghe',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'Dưới 15 triệu',
-                                href: '/laptop/collection/duoi-15',
+                                title: 'Bàn Gaming DXRacer',
+                                href: '/ban&ghe/table/DXRacer',
                             },
                             {
-                                title: 'Từ 15 tới 20 triệu',
-                                href: '/laptop/collection/tu-15-toi-20',
+                                title: 'Bàn Gaming E-Dra ',
+                                href: '/ban&ghe/table/E-Dra ',
+                            },
+                            {
+                                title: 'Bàn Gaming Warrior',
+                                href: '/ban&ghe/table/Warrior',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Giá tiền',
+                    href: '/ban&ghe',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Dưới 5 triệu',
+                                href: '/ban&ghe/collection/duoi-5',
+                            },
+                            {
+                                title: 'Từ 5 tới 10 triệu',
+                                href: '/ban&ghe/collection/tu-5-toi-10',
                             },
                             {
                                 title: 'MSI',
-                                href: '/laptop/collection/tren-20',
-                            },
-                            {
-                                title: 'LENOVO',
-                                href: '/laptop/collection/tren-50',
+                                href: '/ban&ghe/collection/tren-10',
                             },
                         ],
+                    },
+                },
+                {
+                    title: 'Phụ kiện trang trí',
+                    href: '/ban&ghe',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [],
                     },
                 },
             ],
@@ -1248,51 +2434,107 @@ c-2.2781,0-4.125-2.0986-4.125-4.6875C60.8368,32.277,62.6837,30.1783,64.9618,30.1
             isOtherDDMenu: true,
             value: [
                 {
-                    title: 'Thương hiệu',
-                    href: '/laptop',
+                    title: 'Webcam',
+                    href: '/phukien',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'ASUS',
-                                href: '/laptop/asus',
+                                title: '720p',
+                                href: '/phukien/webcam/720p',
                             },
                             {
-                                title: 'ACER',
-                                href: '/laptop/acer',
+                                title: '1080p',
+                                href: '/phukien/webcam/1080p',
                             },
                             {
-                                title: 'MSI',
-                                href: '/laptop/msi',
-                            },
-                            {
-                                title: 'LENOVO',
-                                href: '/laptop/lenovo',
+                                title: '4K',
+                                href: '/phukien/webcam/4K',
                             },
                         ],
                     },
                 },
                 {
-                    title: 'Giá bán',
-                    href: '/laptop',
+                    title: 'Đèn Led trang trí',
+                    href: '/phukien',
                     dropMenu: {
                         isOtherDDMenu: false,
                         value: [
                             {
-                                title: 'Dưới 15 triệu',
-                                href: '/laptop/collection/duoi-15',
+                                title: 'Nanoleaf',
+                                href: '/phukien/led/Nanoleaf',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Balo & túi sách',
+                    href: '/phukien',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Asus',
+                                href: '/phukien/Bag/Asus',
                             },
                             {
-                                title: 'Từ 15 tới 20 triệu',
-                                href: '/laptop/collection/tu-15-toi-20',
+                                title: 'Túi chống sốc',
+                                href: '/phukien/Bag/tui-chongsoc',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Camera',
+                    href: '/phukien',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Camera trong nhà',
+                                href: '/phukien/Camera/cam-trongnha',
                             },
                             {
-                                title: 'MSI',
-                                href: '/laptop/collection/tren-20',
+                                title: 'Camera ngoài trời',
+                                href: '/phukien/Camera/cam-ngoaitroi',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Camera',
+                    href: '/phukien',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Camera trong nhà',
+                                href: '/phukien/Camera/cam-trongnha',
                             },
                             {
-                                title: 'LENOVO',
-                                href: '/laptop/collection/tren-50',
+                                title: 'Camera ngoài trời',
+                                href: '/phukien/Camera/cam-ngoaitroi',
+                            },
+                        ],
+                    },
+                },
+                {
+                    title: 'Microphone',
+                    href: '/phukien',
+                    dropMenu: {
+                        isOtherDDMenu: false,
+                        value: [
+                            {
+                                title: 'Razer',
+                                href: '/phukien/Microphone/Razer',
+                            },
+                            {
+                                title: 'HyperX',
+                                href: '/phukien/Microphone/HyperX',
+                            },
+                            {
+                                title: 'Thronmax',
+                                href: '/phukien/Microphone/Thornmax',
                             },
                         ],
                     },
