@@ -1,176 +1,4 @@
-const mainSlider = new Swiper('.main-slider', {
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    slidesPerView: 1,
-});
-
-const saleSlider = new Swiper('.sales-slider', {
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    slidesPerView: 1,
-    spaceBetween: 10,
-    breakpoints: {
-        480: {
-            slidesPerView: 2,
-        },
-        640: {
-            slidesPerView: 3,
-        },
-        768: {
-            slidesPerView: 4,
-        },
-        1024: {
-            slidesPerView: 5,
-        },
-    },
-});
-
-class DropDownMenu {
-    // title: string
-    // class: string
-    // id: string
-    // icon: {isFontIcon: boolean, value: string}
-    // dropMenu : {isOtherDDMenu: boolean, value: []}
-    // parentEl: Node | Element
-    #isAlreadySet = false;
-    #idMenu = Math.random();
-    constructor(
-        params = {
-            containerClassName: undefined,
-            title: '',
-            icon: { isFontIcon: false, value: '' },
-            href: undefined,
-            className: undefined,
-            id: undefined,
-            dropMenu: { isOtherDDMenu: false, value: [] },
-        },
-    ) {
-        this.title = params.title;
-        this.icon = params.icon;
-        this.href = params.href;
-        this.className = params.className;
-        this.id = params.id;
-        this.dropMenu = params.dropMenu;
-        this.containerClassName = params.containerClassName;
-    }
-
-    #createDDMenu() {
-        if (this.dropMenu?.isOtherDDMenu) {
-            const dropMenu = document.createElement('ul');
-            dropMenu.className = 'ddmenu__drop-menu my-2 ml-4 hidden flex-col justify-between';
-            document
-                .querySelector(`.${this.#getMenuIdCSS('cont')}`)
-                .insertAdjacentHTML('beforeend', dropMenu.outerHTML);
-            this.dropMenu.value.map((menu) => {
-                const newDDMenu = new DropDownMenu(menu);
-                newDDMenu.setContainerClassName = `.${this.#getMenuIdCSS('cont')} .ddmenu__drop-menu`;
-                newDDMenu.appendMenu();
-            });
-        } else
-            return document.querySelector(`.${this.#getMenuIdCSS('cont')}`).insertAdjacentHTML(
-                'beforeend',
-                `<ul class="ddmenu__drop-menu my-2 ml-4 hidden flex-col justify-between">
-            
-            ${this.dropMenu.value
-                .map((menu, index) => {
-                    return `<a aria-label="${index}" href="${
-                        menu.href || '#'
-                    }" class="ddmenu__item ml-4 leading-none py-2 text-sm">${menu.title}</a>`;
-                })
-                .join('')}
-        </ul>`,
-            );
-    }
-
-    #createTitleComponent() {
-        const iconEl = this.icon
-            ? this.icon.isFontIcon
-                ? `<i class="${this.icon.value} text-xl ddmenu__title__icon"></i>`
-                : this.icon.value
-            : '';
-        return `<a href="${this.href || '#'}" class="ddmenu__title inline-flex gap-4 items-center">
-            ${iconEl}
-            <p class="ddmenu__title__text leading-none text-sm">${this.title}</p>
-        </a>`;
-    }
-
-    #createMenu() {
-        const ddmenuContainerClassname = 'ddmenu__container flex flex-col' + (` ${this.className}` || '');
-        return `<div data-ddmenuId="${this.#idMenu}" ${
-            this.id ? `id="${this.id}"` : ''
-        } class="${ddmenuContainerClassname}">
-            <div class="ddmenu__titleContainer flex items-center justify-between">
-                ${this.#createTitleComponent()}
-                <i class="ddmenu__titleContainer__right-caret bi bi-caret-right-fill text-xs cursor-pointer leading-none px-2 py-2"></i>
-            </div>
-        </div>`;
-    }
-
-    #getMenuIdCSS(type) {
-        switch (type) {
-            case 'cont':
-                return `ddmenu__container[data-ddmenuId="${this.#idMenu}"]`;
-            default:
-                return `data-ddmenuId="${this.#idMenu}"`;
-        }
-    }
-
-    #startEventOpenMenu() {
-        const el = document.querySelector(`.${this.#getMenuIdCSS('cont')} .ddmenu__titleContainer`);
-        el.addEventListener('click', (e) => {
-            document
-                .querySelector(`${this.containerClassName} .${this.#getMenuIdCSS('cont')}`)
-                .classList.toggle('ddmenu--open');
-        });
-    }
-
-    set setContainerClassName(className) {
-        this.containerClassName = className;
-    }
-
-    get getMenu() {
-        return this.#createMenu();
-    }
-
-    appendMenu() {
-        if (this.#isAlreadySet) return false;
-        this.#isAlreadySet = true;
-        try {
-            document.querySelector(`${this.containerClassName}`).insertAdjacentHTML('beforeend', this.#createMenu());
-            this.appendDropMenu();
-            this.#startEventOpenMenu();
-            return true;
-        } catch (error) {
-            console.error(error);
-            this.#isAlreadySet = false;
-            return false;
-        }
-    }
-
-    appendDropMenu() {
-        this.#createDDMenu();
-    }
-}
+import { initSlider } from './slider.js';
 const CategoryMenuApi = [
     {
         title: 'Laptop',
@@ -1301,13 +1129,140 @@ c-2.2781,0-4.125-2.0986-4.125-4.6875C60.8368,32.277,62.6837,30.1783,64.9618,30.1
         },
     },
 ];
+
+class DropDownMenu {
+    // title: string
+    // class: string
+    // id: string
+    // icon: {isFontIcon: boolean, value: string}
+    // dropMenu : {isOtherDDMenu: boolean, value: []}
+    // parentEl: Node | Element
+    #isAlreadySet = false;
+    #idMenu = Math.random();
+    constructor(
+        params = {
+            containerClassName: undefined,
+            title: '',
+            icon: { isFontIcon: false, value: '' },
+            href: undefined,
+            className: undefined,
+            id: undefined,
+            dropMenu: { isOtherDDMenu: false, value: [] },
+        },
+    ) {
+        this.title = params.title;
+        this.icon = params.icon;
+        this.href = params.href;
+        this.className = params.className;
+        this.id = params.id;
+        this.dropMenu = params.dropMenu;
+        this.containerClassName = params.containerClassName;
+    }
+
+    #createDDMenu() {
+        if (this.dropMenu?.isOtherDDMenu) {
+            const dropMenu = document.createElement('ul');
+            dropMenu.className = 'ddmenu__drop-menu my-2 ml-4 hidden flex-col justify-between';
+            document
+                .querySelector(`.${this.#getMenuIdCSS('cont')}`)
+                .insertAdjacentHTML('beforeend', dropMenu.outerHTML);
+            this.dropMenu.value.map((menu) => {
+                const newDDMenu = new DropDownMenu(menu);
+                newDDMenu.setContainerClassName = `.${this.#getMenuIdCSS('cont')} .ddmenu__drop-menu`;
+                newDDMenu.appendMenu();
+            });
+        } else
+            return document.querySelector(`.${this.#getMenuIdCSS('cont')}`).insertAdjacentHTML(
+                'beforeend',
+                `<ul class="ddmenu__drop-menu my-2 ml-4 hidden flex-col justify-between">
+            
+            ${this.dropMenu.value
+                .map((menu, index) => {
+                    return `<a aria-label="${index}" href="${
+                        menu.href || '#'
+                    }" class="ddmenu__item ml-4 leading-none py-2 text-sm">${menu.title}</a>`;
+                })
+                .join('')}
+        </ul>`,
+            );
+    }
+
+    #createTitleComponent() {
+        const iconEl = this.icon
+            ? this.icon.isFontIcon
+                ? `<i class="${this.icon.value} text-xl ddmenu__title__icon"></i>`
+                : this.icon.value
+            : '';
+        return `<a href="${this.href || '#'}" class="ddmenu__title inline-flex gap-4 items-center">
+            ${iconEl}
+            <p class="ddmenu__title__text leading-none text-sm">${this.title}</p>
+        </a>`;
+    }
+
+    #createMenu() {
+        const ddmenuContainerClassname = 'ddmenu__container flex flex-col' + (` ${this.className}` || '');
+        return `<div data-ddmenuId="${this.#idMenu}" ${
+            this.id ? `id="${this.id}"` : ''
+        } class="${ddmenuContainerClassname}">
+            <div class="ddmenu__titleContainer flex items-center justify-between">
+                ${this.#createTitleComponent()}
+                <i class="ddmenu__titleContainer__right-caret bi bi-caret-right-fill text-xs cursor-pointer leading-none px-2 py-2"></i>
+            </div>
+        </div>`;
+    }
+
+    #getMenuIdCSS(type) {
+        switch (type) {
+            case 'cont':
+                return `ddmenu__container[data-ddmenuId="${this.#idMenu}"]`;
+            default:
+                return `data-ddmenuId="${this.#idMenu}"`;
+        }
+    }
+
+    #startEventOpenMenu() {
+        const el = document.querySelector(`.${this.#getMenuIdCSS('cont')} .ddmenu__titleContainer`);
+        el.addEventListener('click', (e) => {
+            document
+                .querySelector(`${this.containerClassName} .${this.#getMenuIdCSS('cont')}`)
+                .classList.toggle('ddmenu--open');
+        });
+    }
+
+    set setContainerClassName(className) {
+        this.containerClassName = className;
+    }
+
+    get getMenu() {
+        return this.#createMenu();
+    }
+
+    appendMenu() {
+        if (this.#isAlreadySet) return false;
+        this.#isAlreadySet = true;
+        try {
+            document.querySelector(`${this.containerClassName}`).insertAdjacentHTML('beforeend', this.#createMenu());
+            this.appendDropMenu();
+            this.#startEventOpenMenu();
+            return true;
+        } catch (error) {
+            console.error(error);
+            this.#isAlreadySet = false;
+            return false;
+        }
+    }
+
+    appendDropMenu() {
+        this.#createDDMenu();
+    }
+}
+
 const renderCategoryMenu = (contEl, menuArr = []) => {
     if (!contEl || contEl === '') throw new Error('Container element invalid!');
     return menuArr.map((menu) => {
         return new DropDownMenu({ ...menu, containerClassName: contEl }).appendMenu();
     });
 };
-renderCategoryMenu('.category-container', CategoryMenuApi);
 
 const handleOpenMainMenu = () => {
     const mainMenu = document.querySelector('.top-menu__container') || undefined;
@@ -1320,3 +1275,9 @@ const handleOpenMainMenu = () => {
         mainMenu.classList.add('top-menu--open');
     }
 };
+
+const App = () => {
+    initSlider(); //Start
+    renderCategoryMenu('.category-container', CategoryMenuApi);
+};
+App();
