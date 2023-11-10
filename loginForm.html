@@ -30,18 +30,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
-    <body style="background-color: #fff">
+    <body>
         <!-- close btn -->
-        <a
-            href="/index.html"
-            id="closeButton"
-            tabindex="1"
-            class="w-1/2 sm:w-full"
-        >
-            <i
-                class="bi bi-x-lg text-4xl fixed top-16 left-10 ml-2 transition-transform hover:scale-110"
-            ></i>
-        </a>
+        <button id="closeButton" tabindex="1" class="w-1/2 sm:w-full">
+            <i class="bi bi-x-lg text-4xl fixed top-16 left-10 ml-2 transition-transform hover:scale-110"></i>
+        </button>
 
         <!-- top btn -->
         <button
@@ -59,24 +52,13 @@
             Đăng nhập
         </button>
         <!-- container form sign in -->
-        <div
-            id="loginContainer"
-            class="flex justify-center items-center min-h-screen font-WorkSans"
-        >
+        <div id="loginContainer" class="flex justify-center items-center min-h-screen font-WorkSans">
             <div class="bg-white p-8 rounded w-96 lg:w-1/3 xl:w-1/3">
-                <h1
-                    class="text-5xl font-semibold text-center mb-4 text-red-600"
-                >
-                    Đăng nhập
-                </h1>
+                <h1 class="text-5xl font-semibold text-center mb-4 text-red-600">Đăng nhập</h1>
                 <!-- login form -->
                 <form id="loginForm">
                     <div class="mb-4">
-                        <label
-                            for="email"
-                            class="block text-xl font-medium text-gray-600"
-                            >Email</label
-                        >
+                        <label for="email" class="block text-xl font-medium text-gray-600">Email</label>
                         <input
                             autocomplete="email"
                             type="text"
@@ -88,11 +70,7 @@
                         />
                     </div>
                     <div class="mb-4">
-                        <label
-                            for="password"
-                            class="block text-xl font-medium text-gray-600"
-                            >Mật khẩu</label
-                        >
+                        <label for="password" class="block text-xl font-medium text-gray-600">Mật khẩu</label>
                         <input
                             type="password"
                             id="password"
@@ -110,9 +88,7 @@
                             Đăng nhập
                         </button>
                     </div>
-                    <div
-                        class="mb-4 text-center text-gray-600 flex w-full items-center gap-2"
-                    >
+                    <div class="mb-4 text-center text-gray-600 flex w-full items-center gap-2">
                         <span class="w-1/5 border-t border-gray-400"></span>
                         <p>Hoặc đăng nhập bằng</p>
                         <span class="w-1/5 border-t border-gray-400"></span>
@@ -122,11 +98,7 @@
                             href="#"
                             class="w-1/2 text-[#222] text-lg font-semibold py-2 rounded focus:outline-none justify-center transition-colors hover:bg-gray-100 border border-gray-300 p-4 shadow-lg mb-4 flex items-center"
                         >
-                            <img
-                                src="/assets/img/theme-icon/facebook.png"
-                                alt="Facebook Icon"
-                                class="w-8 h-8 mr-2"
-                            />
+                            <img src="/assets/img/theme-icon/facebook.png" alt="Facebook Icon" class="w-8 h-8 mr-2" />
                             Facebook
                         </a>
 
@@ -134,11 +106,7 @@
                             href="#"
                             class="w-1/2 text-[#222] text-lg font-semibold py-2 rounded focus:outline-none flex items-center justify-center transition-colors hover:bg-gray-100 border border-gray-300 p-4 shadow-lg mb-4"
                         >
-                            <img
-                                src="/assets/img/theme-icon/google.png"
-                                alt="Facebook Icon"
-                                class="w-8 h-8 mr-2"
-                            />
+                            <img src="/assets/img/theme-icon/google.png" alt="Facebook Icon" class="w-8 h-8 mr-2" />
                             Google
                         </a>
                     </div>
@@ -146,52 +114,32 @@
                 <div class="text-center text-base text-gray-600">
                     <p>
                         Chưa có tài khoản?
-                        <a href="#" class="text-indigo-500 hover:underline"
-                            >Đăng ký ngay</a
-                        >
+                        <a href="#" class="text-indigo-500 hover:underline">Đăng ký ngay</a>
                     </p>
                     <p>
                         Quên mật khẩu?
-                        <a href="#" class="text-indigo-500 hover:underline"
-                            >Khôi phục mật khẩu</a
-                        >
+                        <a href="#" class="text-indigo-500 hover:underline">Khôi phục mật khẩu</a>
                     </p>
                 </div>
 
                 <div class="text-center text-sm text-gray-600 mt-4">
                     <span
                         >Khi đăng ký trên SHOPPC bạn đã đồng ý với
-                        <a href="#" class="text-red-400 underline"
-                            >Các chính sách</a
-                        >
-                        và
-                        <a href="#" class="text-red-400 underline"
-                            >Chính sách bảo mật</a
-                        >
+                        <a href="#" class="text-red-400 underline">Các chính sách</a> và
+                        <a href="#" class="text-red-400 underline">Chính sách bảo mật</a>
                         của chúng tôi.</span
                     >
                 </div>
             </div>
         </div>
         <!-- Register Container -->
-        <div
-            id="registerContainer"
-            class="justify-center items-center min-h-screen font-WorkSans hidden"
-        >
+        <div id="registerContainer" class="justify-center items-center min-h-screen font-WorkSans hidden">
             <div class="bg-white p-8 rounded w-96 lg:w-1/3 xl:w-1/3">
-                <h1
-                    class="text-5xl font-semibold text-center mb-4 text-blue-500"
-                >
-                    Đăng ký
-                </h1>
+                <h1 class="text-5xl font-semibold text-center mb-4 text-blue-500">Đăng ký</h1>
                 <!-- registerForm -->
                 <form id="registerForm">
                     <div class="mb-4">
-                        <label
-                            for="full-name"
-                            class="block text-xl font-medium text-gray-600"
-                            >Họ tên</label
-                        >
+                        <label for="full-name" class="block text-xl font-medium text-gray-600">Họ tên</label>
                         <input
                             autocomplete="cc-family-name"
                             type="text"
@@ -203,11 +151,7 @@
                         />
                     </div>
                     <div class="mb-4">
-                        <label
-                            for="email"
-                            class="block text-xl font-medium text-gray-600"
-                            >Email</label
-                        >
+                        <label for="email" class="block text-xl font-medium text-gray-600">Email</label>
                         <input
                             autocomplete="email"
                             type="text"
@@ -219,11 +163,7 @@
                         />
                     </div>
                     <div class="mb-4">
-                        <label
-                            for="password"
-                            class="block text-xl font-medium text-gray-600"
-                            >Mật khẩu</label
-                        >
+                        <label for="password" class="block text-xl font-medium text-gray-600">Mật khẩu</label>
                         <input
                             autocomplete="new-password"
                             type="password"
@@ -235,11 +175,7 @@
                         />
                     </div>
                     <div class="mb-4">
-                        <label
-                            for="password"
-                            class="block text-xl font-medium text-gray-600"
-                            >Nhập lại mật khẩu</label
-                        >
+                        <label for="password" class="block text-xl font-medium text-gray-600">Nhập lại mật khẩu</label>
                         <input
                             autocomplete="new-password"
                             type="password"
@@ -258,9 +194,7 @@
                             Đăng ký
                         </button>
                     </div>
-                    <div
-                        class="mb-4 text-center text-gray-600 flex w-full items-center gap-2"
-                    >
+                    <div class="mb-4 text-center text-gray-600 flex w-full items-center gap-2">
                         <span class="w-1/5 border-t border-gray-400"></span>
                         <p>Hoặc đăng nhập bằng</p>
                         <span class="w-1/5 border-t border-gray-400"></span>
@@ -270,11 +204,7 @@
                             href="#"
                             class="w-1/2 text-[#222] text-lg font-semibold py-2 rounded focus:outline-none justify-center transition-colors hover:bg-gray-100 border border-gray-300 p-4 shadow-lg mb-4 flex items-center"
                         >
-                            <img
-                                src="/assets/img/theme-icon/facebook.png"
-                                alt="Facebook Icon"
-                                class="w-8 h-8 mr-2"
-                            />
+                            <img src="/assets/img/theme-icon/facebook.png" alt="Facebook Icon" class="w-8 h-8 mr-2" />
                             Facebook
                         </a>
 
@@ -282,11 +212,7 @@
                             href="#"
                             class="w-1/2 text-[#222] text-lg font-semibold py-2 rounded focus:outline-none flex items-center justify-center transition-colors hover:bg-gray-100 border border-gray-300 p-4 shadow-lg mb-4"
                         >
-                            <img
-                                src="/assets/img/theme-icon/google.png"
-                                alt="Facebook Icon"
-                                class="w-8 h-8 mr-2"
-                            />
+                            <img src="/assets/img/theme-icon/google.png" alt="Facebook Icon" class="w-8 h-8 mr-2" />
                             Google
                         </a>
                     </div>
@@ -294,28 +220,19 @@
                 <div class="text-center text-base text-gray-600">
                     <p>
                         Chưa có tài khoản?
-                        <a href="#" class="text-indigo-500 hover:underline"
-                            >Đăng ký ngay</a
-                        >
+                        <a href="#" class="text-indigo-500 hover:underline">Đăng ký ngay</a>
                     </p>
                     <p>
                         Quên mật khẩu?
-                        <a href="#" class="text-indigo-500 hover:underline"
-                            >Khôi phục mật khẩu</a
-                        >
+                        <a href="#" class="text-indigo-500 hover:underline">Khôi phục mật khẩu</a>
                     </p>
                 </div>
 
                 <div class="text-center text-sm text-gray-600 mt-4">
                     <span
                         >Khi đăng ký trên SHOPPC bạn đã đồng ý với
-                        <a href="#" class="text-red-400 underline"
-                            >Các chính sách</a
-                        >
-                        và
-                        <a href="#" class="text-red-400 underline"
-                            >Chính sách bảo mật</a
-                        >
+                        <a href="#" class="text-red-400 underline">Các chính sách</a> và
+                        <a href="#" class="text-red-400 underline">Chính sách bảo mật</a>
                         của chúng tôi.</span
                     >
                 </div>
