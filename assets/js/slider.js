@@ -1,4 +1,5 @@
 import { Nums2MoneyString, ReducePercentFrom2Nums } from '../utils/formatV1.js';
+import { MostSale, ScreenMostSale } from './productApi.js';
 export const initSlider = () => {
     const path = window.location.pathname.split('.html')[0];
     switch (path) {
@@ -168,8 +169,8 @@ class ProductCard {
             prodName: 'Product name',
             prodHref: '#',
             prodImg: '#',
-            oPrice: 0,
-            sPrice: 0,
+            oPrice: undefined,
+            sPrice: undefined,
             countSold: undefined,
             isSales: false,
             prodDetail: {
@@ -202,15 +203,41 @@ class ProductCard {
             },
         },
     ) {
-        this.prodName = params.prodName;
-        this.prodHref = params.prodHref;
-        this.prodImg = params.prodImg;
-        this.isSales = params.isSales;
-        this.oPrice = params.oPrice; // Original Price
-        this.sPrice = params.sPrice; // Sale Price
-        this.countSold = params.countSold;
-        this.prodDetail = params.prodDetail;
-        this.voteRate = params.voteRate;
+        this.prodName = params.prodName || 'Product name';
+        this.prodHref = params.prodHref || '#';
+        this.prodImg = params.prodImg || '#';
+        this.isSales = params.isSales || false;
+        this.oPrice = params.oPrice || undefined; // Original Price
+        this.sPrice = params.sPrice || undefined; // Sale Price
+        this.countSold = params.countSold || undefined;
+        this.prodDetail = params.prodDetail || {
+            show: false,
+            details: {
+                chip: undefined,
+                card: undefined,
+                memory: undefined,
+                storage: undefined,
+                screen: undefined,
+                panelType: undefined,
+                screenResolution: undefined,
+                hz: undefined,
+                mainboard: undefined,
+                mouseBattery: undefined,
+                mouseDPI: undefined,
+                mouseLED: undefined,
+                deviceConnect: undefined,
+                kbSize: undefined,
+                kbSwitch: undefined,
+                gift: [],
+                prodDeal: undefined,
+                prodStatus: undefined,
+            },
+        };
+        this.voteRate = params.voteRate || {
+            show: false,
+            total: 0,
+            star: 0,
+        };
     }
     #createTitleElement() {
         const el = document.createElement('a');
@@ -296,12 +323,22 @@ class ProductCard {
         }
         return detailContainerEl;
     }
+    #createTotalSoldProgressElement() {
+        const contEl = document.createElement('div');
+        if (this.countSold === undefined) return contEl;
+        contEl.className = 'mt-1 h-6 w-full bg-red-200 rounded-3xl flex';
+        const statusText = this.countSold === 0 ? 'Vừa mở bán' : `Đã bán: ${this.countSold}`;
+        contEl.innerHTML += `<i class="bi bi-fire text-base rounded-l-3xl text-yellow-300 bg-red-500 px-2"></i>
+        <span class="min-w-[50%] text-xs text-white bg-red-500 px-2 h-full inline-flex items-center rounded-r-3xl leading-none">${statusText}</span>`;
+        return contEl;
+    }
     #createMainCard() {
         const el = document.createElement('div');
         el.className = 'p-2 font-WorkSans w-full';
         el.appendChild(this.#createTitleElement());
         el.appendChild(this.#createDetailElement());
         el.appendChild(this.#createPriceElement());
+        el.appendChild(this.#createTotalSoldProgressElement());
         el.appendChild(this.#createRatingElement());
         return el;
     }
@@ -442,4 +479,19 @@ const fakeProduct = {
         star: 5,
     },
 };
-new ProductCard(fakeProduct).appendTo('body');
+const prods = Object.keys(MostSale).map((key) => {
+    const data = MostSale[key];
+    const prodApi = {
+        prodName: data.name,
+        prodHref: data.href,
+        prodImg: data.img,
+        isSales: data.origin_price !== 0,
+        oPrice: data.origin_price,
+        sPrice: data.reduce_price,
+        countSold: data.selling,
+    };
+    const prodCard = new ProductCard(prodApi);
+    prodCard.appendTo('body');
+    return prodCard;
+});
+console.log(prods);
