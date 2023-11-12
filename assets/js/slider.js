@@ -342,8 +342,8 @@ class ProductCard {
     }
 
     #createGift() {
+        if (!this.prodDetail.details.gift?.length) return false;
         const contEl = document.createElement('span');
-        if (this.prodDetail.details.gift.length <= 0) return contEl;
         contEl.innerHTML += '<i class="bi bi-gift-fill text-xl px-2 leading-none"></i>';
         const giftDisplayEl = document.createElement('div');
         giftDisplayEl.className = 'gift-display hidden absolute w-full left-0 top-0 border-red-200 rounded-md border';
@@ -386,17 +386,17 @@ class ProductCard {
         return iconEl;
     };
     #createDealsElement() {
+        if (DealsDetail[this.prodDetail.details.prodDeal] === undefined) return false;
         const contEl = document.createElement('div');
         contEl.className = 'inline-flex gap-1';
-        if (DealsDetail[this.prodDetail.details.prodDeal] === undefined) return contEl;
         const tagEl = this.#createTagV2(DealsDetail[this.prodDetail.details.prodDeal]);
         contEl.appendChild(tagEl);
         return contEl;
     }
     #createTagsElement() {
+        if (StatusDetail[this.prodDetail.details.prodStatus] === undefined) return false;
         const contEl = document.createElement('div');
         contEl.className = 'h-full py-3 w-full flex justify-between items-center flex-wrap gap-1';
-        if (StatusDetail[this.prodDetail.details.prodStatus] === undefined) return contEl;
         const tagEl = this.#createTagV2(StatusDetail[this.prodDetail.details.prodStatus]);
         contEl.appendChild(tagEl);
         return contEl;
@@ -415,18 +415,18 @@ class ProductCard {
         const contEl = document.createElement('div');
         contEl.className = 'p-2';
 
+        const deal = this.#createDealsElement();
+        const gift = this.#createGift();
         const contTopEl = document.createElement('div');
-        contTopEl.className = 'h-8 pb-3 w-full flex justify-between text-red-500 relative items-center';
-        contTopEl.appendChild(this.#createDealsElement());
-        contTopEl.appendChild(this.#createGift());
+        contTopEl.className = 'h-full pb-3 w-full flex justify-between relative items-center';
+        deal && contTopEl.appendChild(deal);
+        gift && contTopEl.appendChild(gift);
 
-        const contBottomEl = document.createElement('div');
-        contBottomEl.className = 'h-full py-3 w-full flex justify-between items-center flex-wrap gap-1';
-        contBottomEl.appendChild(this.#createTagsElement());
+        const contBottomEl = this.#createTagsElement();
 
-        contEl.appendChild(contTopEl);
+        (deal || gift) && contEl.appendChild(contTopEl);
         contEl.appendChild(this.#createImageElement());
-        contEl.appendChild(contBottomEl);
+        contBottomEl && contEl.appendChild(contBottomEl);
         return contEl;
     }
     #createProductCard(className = '') {

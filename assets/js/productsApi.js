@@ -1,5 +1,5 @@
 // JSON Sp bán chạy
-let json1 = {
+let MostSale = {
     1: {
         name: 'Cổng chuyển HyperDrive PRO 8-in-2 Hub for USB-C MacBook Pro - GN28D GREY',
         img: '/assets/img/img_sp/sp1.webp',
@@ -66,7 +66,7 @@ let json1 = {
 };
 
 // JSON màn hình gaming lenovo giảm 38%
-let json2 = {
+let LenovoScreenSale = {
     1: {
         name: 'Màn hình cong Lenovo G27C-30 27 165Hz chuyên game',
         img: '/assets/img/img_sp/sp_10.webp',
@@ -126,7 +126,7 @@ let json2 = {
 };
 
 // JSON PC bán chạy
-let json3 = {
+let PCMostSale = {
     1: {
         name: 'PC GVN x ASUS EVANGELION 2',
         img: '/assets/img/img_PC_banchay/pc_1.webp',
@@ -378,7 +378,7 @@ let json3 = {
 };
 
 // JSON laptopgaming bán chạy
-let json4 = {
+let LaptopGamingMostSale = {
     1: {
         name: 'Laptop gaming Lenovo Legion 9 16IRX8 83AG0047VN',
         pay: 'Pre-order',
@@ -652,7 +652,7 @@ let json4 = {
 };
 
 // JSON laptop văn phòng bán chạy
-let json5 = {
+let LaptopVPMostSale = {
     1: {
         name: 'Laptop Asus Vivobook 15 OLED A1505VA L1114W',
         pay: '',
@@ -908,7 +908,7 @@ let json5 = {
 };
 
 // JSON Chuột bán chạy
-let json6 = {
+let MouseMostSale = {
     1: {
         name: 'Chuột Pulsar X2 Super Clear Edition',
         img: '/assets/img/img_chuot_banchay/chuot_1.webp',
@@ -1107,7 +1107,7 @@ let json6 = {
 };
 
 // JSON bàn phím bán chạy
-let json7 = {
+let KeyboardMostSale = {
     1: {
         name: 'Bàn phím cơ DareU EK75 Pro Triple Mode Black Firefly switch',
         img: '/assets/img/img_banphim_banchay/banphim_1.webp',
@@ -1281,7 +1281,7 @@ let json7 = {
 };
 
 // JSON màn hình bán chạy
-let json8 = {
+let ScreenMostSale = {
     1: {
         name: 'Màn hình ViewSonic VX2428J 24" Fast IPS 180Hz Gsync chuyên game',
         img: '/assets/img/img_manhinh_banchay/man_1.webp',

@@ -2487,7 +2487,7 @@ class DropDownMenu {
             this.#startEventOpenMenu();
             return true;
         } catch (error) {
-            console.error(error);
+            //console.error(error);
             this.#isAlreadySet = false;
             return false;
         }
