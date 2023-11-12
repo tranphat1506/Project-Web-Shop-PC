@@ -587,7 +587,7 @@ class SliderCard {
 
         // Append element to header right container
         const rightContItem = this.#createItemHeader();
-        this.suggestNav.forEach((nav) => {
+        this.suggestNav?.forEach((nav) => {
             const a = this.#createLinkButton(nav);
             a && rightContItem.appendChild(a);
         });
@@ -612,10 +612,13 @@ class SliderCard {
         contEl.appendChild(this.#createContainerSlider());
         return contEl;
     }
-    appendTo(query = '') {
-        document.querySelector(query).appendChild(this.#createSliderCard());
+    #appendTo(query) {
+        const where = document.querySelector(query) || false;
+        if (!where) return false;
+        where.appendChild(this.#createSliderCard());
+        return true;
     }
-    loadProduct2Slider() {
+    #loadProduct2Slider() {
         if (this.prodArr && typeof this.prodArr == 'object') {
             this.prodCards = Object.keys(this.prodArr).map((key) => {
                 const data = this.prodArr[key];
@@ -636,39 +639,51 @@ class SliderCard {
             });
             return this.prodCards;
         }
-        return 'Fail to load product to slider! Please check again.';
+        return false;
     }
-    startSlider() {
-        this.swiper = new Swiper(`#${this.sliderName} .${this.sliderName}`, {
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            slidesPerView: 1,
-            spaceBetween: 10,
-            breakpoints: {
-                480: {
-                    slidesPerView: 2,
-                },
-                640: {
-                    slidesPerView: 3,
-                },
-                768: {
-                    slidesPerView: 4,
-                },
-                1024: {
-                    slidesPerView: 5,
-                },
-            },
-        });
+    #removeSliderFromDOM() {
+        return document.querySelector(`#${this.sliderName}`).remove() ? true : false;
+    }
+    startSlider(where = 'body') {
+        if (this.#appendTo(where)) {
+            if (this.#loadProduct2Slider()) {
+                this.swiper = new Swiper(`#${this.sliderName} .${this.sliderName}`, {
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                    breakpoints: {
+                        480: {
+                            slidesPerView: 2,
+                        },
+                        640: {
+                            slidesPerView: 3,
+                        },
+                        768: {
+                            slidesPerView: 4,
+                        },
+                        1024: {
+                            slidesPerView: 5,
+                        },
+                    },
+                });
+                return true;
+            }
+            // remove slider
+            this.#removeSliderFromDOM();
+            return false;
+        }
+        return false;
     }
 }
 const fakeProduct = {
@@ -719,10 +734,7 @@ let fakeSlider = {
         m: 0,
         s: 0,
     },
-    saleImg: '/assets/img/img_sales/screen_sales.webp   ',
     prodArr: MostSale,
-    suggestNav: [{ title: 'Test 1' }, { title: 'Test 2' }, { title: 'Test 3' }, { title: 'Test 4' }],
 };
 let testSlider = new SliderCard(fakeSlider);
-testSlider.appendTo('body');
-testSlider.loadProduct2Slider();
+console.log(testSlider.startSlider('asd'));
