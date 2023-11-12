@@ -439,7 +439,10 @@ class ProductCard {
         return contEl;
     }
     appendTo(query = '', className = 'bg-white border border-[#ccc]') {
-        document.querySelector(query).appendChild(this.#createProductCard(className));
+        const el = document.querySelector(query);
+        if (!el) return false;
+        el.appendChild(this.#createProductCard(className));
+        return true;
     }
 }
 const TypeSliderCard = {
@@ -447,7 +450,6 @@ const TypeSliderCard = {
         bgColor: '#fff',
         className: 'rounded-lg mb-4',
         titleClassName: 'font-black text-2xl uppercase p-2 text-[#222] leading-none',
-        linkButtonClassName: 'text-black',
         moreButtonClassName: 'text-blue-600',
     },
     bestSeller: {
@@ -470,10 +472,10 @@ class SliderCard {
         className,
         bgColor,
         titleClassName,
-        linkButtonClassName,
         moreButtonClassName,
+        moreHref = '#',
         type = 'default',
-        cardStyle = {},
+        sliderStyle = {},
         coutDown = {
             show: false,
             h: 0,
@@ -481,7 +483,12 @@ class SliderCard {
             s: 0,
         },
         saleImg = '',
+        prodArr = undefined,
+        suggestNav = undefined,
     }) {
+        this.moreHref = moreHref;
+        this.prodArr = prodArr;
+        this.suggestNav = suggestNav;
         this.saleImg = saleImg;
         (this.sliderName = sliderName), (this.coutDown = coutDown);
         this.title = title;
@@ -489,15 +496,9 @@ class SliderCard {
         if (className) this.style.className = className;
         if (titleClassName) this.style.titleClassName = titleClassName;
         if (bgColor) this.style.bgColor = bgColor;
-        if (linkButtonClassName) this.style.linkButtonClassName = linkButtonClassName;
         if (moreButtonClassName) this.style.moreButtonClassName = moreButtonClassName;
-        if (cardStyle && typeof cardStyle == 'object' && Object.keys(cardStyle).length !== 0)
-            this.style = { ...cardStyle };
-    }
-    #createHeaderElement() {
-        const contEl = document.createElement('div');
-        contEl.className = 'flex py-2 px-5 items-end justify-between flex-wrap';
-        //
+        if (sliderStyle && typeof sliderStyle == 'object' && Object.keys(sliderStyle).length !== 0)
+            this.style = { ...sliderStyle };
     }
     #createItemHeader(nodeEl) {
         const contEl = document.createElement('div');
@@ -518,20 +519,21 @@ class SliderCard {
         contEl.textContent = this.title;
         return contEl;
     }
-    #createLinkButton({ isFontIcon = false, value = undefined, title = '', className = '' }) {
-        if (title) return false;
+    #createLinkButton({ isFontIcon = false, value = undefined, title = '', className = '', href = '#' }) {
+        if (!title) return false;
         const a = document.createElement('a');
+        a.href = href;
         a.className = 'hover:underline font-medium leading-none p-2' + ` ${className}`;
         if (isFontIcon && value) {
-            a.className += 'inline-flex items-center';
-            a.innerText = `<p class="w-max">${title}</p>
+            a.className += ' inline-flex items-center';
+            a.innerHTML = `<p class="w-max">${title}</p>
             <i class="${value}"></i>`;
         } else if (!isFontIcon && value) {
-            a.className += 'inline-flex items-center';
-            a.innerText = `<p class="w-max">${title}</p>
+            a.className += ' inline-flex items-center';
+            a.innerHTML = `<p class="w-max">${title}</p>
             ${value}`;
         } else {
-            a.innerText = `<p class="w-max">${title}</p>`;
+            a.innerHTML = `<p class="w-max">${title}</p>`;
         }
         return a;
     }
@@ -544,12 +546,6 @@ class SliderCard {
         <p class="bg-black text-white font-medium rounded-md px-2">${this.coutDown.s}</p>`;
         return contEl;
     }
-
-    #createContainerSlider() {
-        const contEl = document.createElement('div');
-        contEl.className = 'flex p-2 lg:flex-row flex-col';
-    }
-
     #createSaleImg() {
         if (!this.saleImg) return false;
         const contEl = document.createElement('span');
@@ -571,6 +567,78 @@ class SliderCard {
             <div class="swiper-pagination static"></div>
         `;
         return contEl;
+    }
+    // Main
+    #createContainerSlider() {
+        const contEl = document.createElement('div');
+        contEl.className = 'flex p-2 lg:flex-row flex-col';
+        const saleImg = this.#createSaleImg();
+        const mainSlider = this.#createMainSlider();
+        saleImg && contEl.appendChild(saleImg);
+        mainSlider && contEl.appendChild(mainSlider);
+        return contEl;
+    }
+    #createHeaderElement() {
+        const contEl = document.createElement('div');
+        contEl.className = 'flex py-2 px-5 items-end justify-between flex-wrap';
+        // Append element to header left container
+        const leftContItem = this.#createItemHeader();
+        leftContItem.appendChild(this.#createTitle());
+        const cdEl = this.#createCountDown();
+        cdEl && leftContItem.appendChild(cdEl);
+
+        // Append element to header right container
+        const rightContItem = this.#createItemHeader();
+        this.suggestNav.forEach((nav) => {
+            const a = this.#createLinkButton(nav);
+            a && rightContItem.appendChild(a);
+        });
+        const more = this.#createLinkButton({
+            isFontIcon: true,
+            value: 'bi bi-caret-right-fill',
+            title: 'Xem tất cả',
+            className: this.style.moreButtonClassName || '',
+            href: this.moreHref,
+        });
+        more && rightContItem.appendChild(more);
+        // Append two cont 2 main cont
+        contEl.appendChild(leftContItem);
+        contEl.appendChild(rightContItem);
+        return contEl;
+    }
+    #createSliderCard() {
+        const contEl = document.createElement('div');
+        contEl.id = this.sliderName;
+        contEl.className = this.style.className + ` bg-[${this.style.bgColor}]`;
+        contEl.appendChild(this.#createHeaderElement());
+        contEl.appendChild(this.#createContainerSlider());
+        return contEl;
+    }
+    appendTo(query = '') {
+        document.querySelector(query).appendChild(this.#createSliderCard());
+    }
+    loadProduct2Slider() {
+        if (this.prodArr && typeof this.prodArr == 'object') {
+            this.prodCards = Object.keys(this.prodArr).map((key) => {
+                const data = this.prodArr[key];
+                const prodApi = {
+                    prodName: data.name,
+                    prodHref: data.href,
+                    prodImg: data.img,
+                    isSales: data.origin_price !== 0,
+                    oPrice: data.origin_price,
+                    sPrice: data.reduce_price,
+                    countSold: data.selling,
+                };
+                const prodCard = new ProductCard(prodApi);
+                if (prodCard.appendTo(`#${this.sliderName} .${this.sliderName} .swiper-wrapper`)) {
+                    return prodCard; // if append success
+                }
+                return false; // if false
+            });
+            return this.prodCards;
+        }
+        return 'Fail to load product to slider! Please check again.';
     }
 }
 const fakeProduct = {
@@ -610,19 +678,37 @@ const fakeProduct = {
         star: 5,
     },
 };
-const prods = Object.keys(MostSale).map((key) => {
-    const data = MostSale[key];
-    const prodApi = {
-        prodName: data.name,
-        prodHref: data.href,
-        prodImg: data.img,
-        isSales: data.origin_price !== 0,
-        oPrice: data.origin_price,
-        sPrice: data.reduce_price,
-        countSold: data.selling,
-    };
-    const prodCard = new ProductCard(prodApi);
-    prodCard.appendTo('body');
-    return prodCard;
-});
-console.log(prods);
+// const prods = Object.keys(MostSale).map((key) => {
+//     const data = MostSale[key];
+//     const prodApi = {
+//         prodName: data.name,
+//         prodHref: data.href,
+//         prodImg: data.img,
+//         isSales: data.origin_price !== 0,
+//         oPrice: data.origin_price,
+//         sPrice: data.reduce_price,
+//         countSold: data.selling,
+//     };
+//     const prodCard = new ProductCard(prodApi);
+//     prodCard.appendTo('body');
+//     return prodCard;
+// });
+// console.log(prods);
+let fakeSlider = {
+    title: 'Sản phẩm bán chạy',
+    sliderName: 'fakeSlider',
+    className: '',
+    type: 'bestSeller',
+    coutDown: {
+        show: true,
+        h: 0,
+        m: 0,
+        s: 0,
+    },
+    saleImg: '/assets/img/img_sales/screen_sales.webp   ',
+    prodArr: MostSale,
+    suggestNav: [{ title: 'Test 1' }, { title: 'Test 2' }, { title: 'Test 3' }, { title: 'Test 4' }],
+};
+let testSlider = new SliderCard(fakeSlider);
+testSlider.appendTo('body');
+console.log(testSlider.loadProduct2Slider());
