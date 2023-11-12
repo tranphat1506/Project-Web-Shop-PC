@@ -1,5 +1,5 @@
 // JSON Sp bán chạy
-export let MostSale = {
+let MostSale = {
     1: {
         name: 'Cổng chuyển HyperDrive PRO 8-in-2 Hub for USB-C MacBook Pro - GN28D GREY',
         img: '/assets/img/img_sp/sp1.webp',
@@ -66,7 +66,7 @@ export let MostSale = {
 };
 
 // JSON màn hình bán chạy
-export let ScreenMostSale = {
+let ScreenMostSale = {
     1: {
         name: 'Màn hình cong Lenovo G27C-30 27 165Hz chuyên game',
         img: '/assets/img/img_sp/sp_10.webp',

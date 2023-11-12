@@ -1,4 +1,3 @@
-import { initSlider } from './slider.js';
 const CategoryMenuApi = [
     {
         title: 'Laptop',

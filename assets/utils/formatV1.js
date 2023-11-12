@@ -10,4 +10,3 @@ const ReducePercentFrom2Nums = (num1 = 0, num2 = 0) => {
     const min = num1 + num2 - max;
     return (max - min) / max;
 };
-export { Nums2MoneyString, ReducePercentFrom2Nums, findMaxFrom2Nums };

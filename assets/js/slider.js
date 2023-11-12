@@ -1,6 +1,4 @@
-import { Nums2MoneyString, ReducePercentFrom2Nums } from '../utils/formatV1.js';
-import { MostSale, ScreenMostSale } from './productApi.js';
-export const initSlider = () => {
+const initSlider = () => {
     const path = window.location.pathname.split('.html')[0];
     switch (path) {
         case '/index':
@@ -640,6 +638,38 @@ class SliderCard {
         }
         return 'Fail to load product to slider! Please check again.';
     }
+    startSlider() {
+        this.swiper = new Swiper(`#${this.sliderName} .${this.sliderName}`, {
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            slidesPerView: 1,
+            spaceBetween: 10,
+            breakpoints: {
+                480: {
+                    slidesPerView: 2,
+                },
+                640: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 4,
+                },
+                1024: {
+                    slidesPerView: 5,
+                },
+            },
+        });
+    }
 }
 const fakeProduct = {
     prodName: 'Test',
@@ -678,22 +708,6 @@ const fakeProduct = {
         star: 5,
     },
 };
-// const prods = Object.keys(MostSale).map((key) => {
-//     const data = MostSale[key];
-//     const prodApi = {
-//         prodName: data.name,
-//         prodHref: data.href,
-//         prodImg: data.img,
-//         isSales: data.origin_price !== 0,
-//         oPrice: data.origin_price,
-//         sPrice: data.reduce_price,
-//         countSold: data.selling,
-//     };
-//     const prodCard = new ProductCard(prodApi);
-//     prodCard.appendTo('body');
-//     return prodCard;
-// });
-// console.log(prods);
 let fakeSlider = {
     title: 'Sản phẩm bán chạy',
     sliderName: 'fakeSlider',
@@ -711,4 +725,4 @@ let fakeSlider = {
 };
 let testSlider = new SliderCard(fakeSlider);
 testSlider.appendTo('body');
-console.log(testSlider.loadProduct2Slider());
+testSlider.loadProduct2Slider();
