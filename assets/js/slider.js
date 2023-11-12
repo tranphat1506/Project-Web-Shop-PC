@@ -686,55 +686,75 @@ class SliderCard {
         return false;
     }
 }
-const fakeProduct = {
-    prodName: 'Test',
-    prodHref: '#test',
-    prodImg: '/assets/img/img_pc/Gearvn_Gaming_2.png',
-    isSales: true,
-    oPrice: 100000000,
-    sPrice: 85000000,
-    countSold: undefined,
-    prodDetail: {
-        show: true,
-        details: {
-            chip: 'i9 19KF',
-            card: 'RTX 4090',
-            memory: undefined,
-            storage: '1TB (SSD)',
-            screen: undefined,
-            panelType: undefined,
-            screenResolution: undefined,
-            hz: undefined,
-            mainboard: undefined,
-            mouseBattery: undefined,
-            mouseDPI: undefined,
-            mouseLED: undefined,
-            deviceConnect: 'test',
-            kbSize: 'test',
-            kbSwitch: 'test',
-            gift: ['asdasd', 'adsasd'],
-            prodDeal: 'qua-tang-hot',
-            prodStatus: 'best-seller',
+// const fakeProduct = {
+//     prodName: 'Test',
+//     prodHref: '#test',
+//     prodImg: '/assets/img/img_pc/Gearvn_Gaming_2.png',
+//     isSales: true,
+//     oPrice: 100000000,
+//     sPrice: 85000000,
+//     countSold: undefined,
+//     prodDetail: {
+//         show: true,
+//         details: {
+//             chip: 'i9 19KF',
+//             card: 'RTX 4090',
+//             memory: undefined,
+//             storage: '1TB (SSD)',
+//             screen: undefined,
+//             panelType: undefined,
+//             screenResolution: undefined,
+//             hz: undefined,
+//             mainboard: undefined,
+//             mouseBattery: undefined,
+//             mouseDPI: undefined,
+//             mouseLED: undefined,
+//             deviceConnect: 'test',
+//             kbSize: 'test',
+//             kbSwitch: 'test',
+//             gift: ['asdasd', 'adsasd'],
+//             prodDeal: 'qua-tang-hot',
+//             prodStatus: 'best-seller',
+//         },
+//     },
+//     voteRate: {
+//         show: true,
+//         total: 10,
+//         star: 5,
+//     },
+// };
+const SliderApi = {
+    MostSaleSliderApi: {
+        container: '.most-sale__slider-container',
+        title: 'Sản phẩm bán chạy',
+        sliderName: 'MostSaleSlider',
+        className: '',
+        type: 'bestSeller',
+        coutDown: {
+            show: true,
+            h: 0,
+            m: 0,
+            s: 0,
         },
+        prodArr: MostSale,
     },
-    voteRate: {
-        show: true,
-        total: 10,
-        star: 5,
+    LenovoScreenSaleApi: {
+        container: '.lenovo-sale__slider-container',
+        title: 'MÀN HÌNH GAMING LENOVO GIẢM TỚI 38%',
+        sliderName: 'LenovoScreenSale',
+        saleImg: '/assets/img/img_sales/screen_sales.webp',
+        className: '',
+        type: 'lenovoSale38',
+        coutDown: {
+            show: true,
+            h: 23,
+            m: 59,
+            s: 59,
+        },
+        prodArr: LenovoScreenSale,
     },
 };
-let fakeSlider = {
-    title: 'Sản phẩm bán chạy',
-    sliderName: 'fakeSlider',
-    className: '',
-    type: 'bestSeller',
-    coutDown: {
-        show: true,
-        h: 0,
-        m: 0,
-        s: 0,
-    },
-    prodArr: MostSale,
-};
-let testSlider = new SliderCard(fakeSlider);
-console.log(testSlider.startSlider('asd'));
+const sliders = Object.keys(SliderApi).map((key) => {
+    const slider = new SliderCard(SliderApi[key]);
+    return { slider, error: !slider.startSlider(SliderApi[key].container) };
+});
