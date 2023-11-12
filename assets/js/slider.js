@@ -442,6 +442,137 @@ class ProductCard {
         document.querySelector(query).appendChild(this.#createProductCard(className));
     }
 }
+const TypeSliderCard = {
+    default: {
+        bgColor: '#fff',
+        className: 'rounded-lg mb-4',
+        titleClassName: 'font-black text-2xl uppercase p-2 text-[#222] leading-none',
+        linkButtonClassName: 'text-black',
+        moreButtonClassName: 'text-blue-600',
+    },
+    bestSeller: {
+        bgColor: '#a855f7',
+        className: 'rounded-lg mb-4',
+        titleClassName: 'font-black text-4xl italic uppercase p-2 text-yellow-300 leading-none',
+        moreButtonClassName: 'text-white',
+    },
+    lenovoSale38: {
+        bgColor: '#a78bfa',
+        className: 'rounded-lg mb-4',
+        titleClassName: 'font-black text-4xl italic uppercase p-2 text-yellow-300 leading-none',
+        moreButtonClassName: 'text-white',
+    },
+};
+class SliderCard {
+    constructor({
+        title,
+        sliderName,
+        className,
+        bgColor,
+        titleClassName,
+        linkButtonClassName,
+        moreButtonClassName,
+        type = 'default',
+        cardStyle = {},
+        coutDown = {
+            show: false,
+            h: 0,
+            m: 0,
+            s: 0,
+        },
+        saleImg = '',
+    }) {
+        this.saleImg = saleImg;
+        (this.sliderName = sliderName), (this.coutDown = coutDown);
+        this.title = title;
+        this.style = TypeSliderCard[type] ? { ...TypeSliderCard[type] } : { ...TypeSliderCard['default'] };
+        if (className) this.style.className = className;
+        if (titleClassName) this.style.titleClassName = titleClassName;
+        if (bgColor) this.style.bgColor = bgColor;
+        if (linkButtonClassName) this.style.linkButtonClassName = linkButtonClassName;
+        if (moreButtonClassName) this.style.moreButtonClassName = moreButtonClassName;
+        if (cardStyle && typeof cardStyle == 'object' && Object.keys(cardStyle).length !== 0)
+            this.style = { ...cardStyle };
+    }
+    #createHeaderElement() {
+        const contEl = document.createElement('div');
+        contEl.className = 'flex py-2 px-5 items-end justify-between flex-wrap';
+        //
+    }
+    #createItemHeader(nodeEl) {
+        const contEl = document.createElement('div');
+        contEl.className = 'flex items-center flex-wrap';
+        if (typeof nodeEl === typeof contEl) {
+            contEl.appendChild(nodeEl);
+            return contEl;
+        }
+        if (typeof nodeEl === 'string') {
+            contEl.insertAdjacentHTML('beforeend', nodeEl);
+            return contEl;
+        }
+        return contEl;
+    }
+    #createTitle() {
+        const contEl = document.createElement('h1');
+        contEl.className = this.style.titleClassName;
+        contEl.textContent = this.title;
+        return contEl;
+    }
+    #createLinkButton({ isFontIcon = false, value = undefined, title = '', className = '' }) {
+        if (title) return false;
+        const a = document.createElement('a');
+        a.className = 'hover:underline font-medium leading-none p-2' + ` ${className}`;
+        if (isFontIcon && value) {
+            a.className += 'inline-flex items-center';
+            a.innerText = `<p class="w-max">${title}</p>
+            <i class="${value}"></i>`;
+        } else if (!isFontIcon && value) {
+            a.className += 'inline-flex items-center';
+            a.innerText = `<p class="w-max">${title}</p>
+            ${value}`;
+        } else {
+            a.innerText = `<p class="w-max">${title}</p>`;
+        }
+        return a;
+    }
+    #createCountDown() {
+        if (!this.coutDown.show) return false;
+        const contEl = document.createElement('div');
+        contEl.className = 'inline-flex items-center gap-2 font-Righteous p-2';
+        contEl.innerHTML = `<p class="bg-black text-white font-medium rounded-md px-2">${this.coutDown.h}</p>
+        <p class="bg-black text-white font-medium rounded-md px-2">${this.coutDown.m}</p>
+        <p class="bg-black text-white font-medium rounded-md px-2">${this.coutDown.s}</p>`;
+        return contEl;
+    }
+
+    #createContainerSlider() {
+        const contEl = document.createElement('div');
+        contEl.className = 'flex p-2 lg:flex-row flex-col';
+    }
+
+    #createSaleImg() {
+        if (!this.saleImg) return false;
+        const contEl = document.createElement('span');
+        contEl.className = 'p-2 mx-auto';
+        contEl.innerHTML += `<img
+            class="h-full rounded-md"
+            src="${this.saleImg}"
+            alt="Slide sale image"
+        />`;
+        return contEl;
+    }
+    #createMainSlider() {
+        if (!this.sliderName) return false;
+        const contEl = document.createElement('div');
+        contEl.className = `${this.sliderName} swiper p-2 w-full relative`;
+        contEl.innerHTML += `<div class="swiper-wrapper h-max"></div>
+            <div class="swiper-button-prev text-white bg-[#d72c2c] font-black rounded-full after:!text-xl after:content-['prev']"></div>
+            <div class="swiper-button-next text-white bg-[#d72c2c] font-black rounded-full after:!text-xl after:content-['next']"></div>
+            <div class="swiper-pagination static"></div>
+        `;
+        return contEl;
+    }
+}
 const fakeProduct = {
     prodName: 'Test',
     prodHref: '#test',
