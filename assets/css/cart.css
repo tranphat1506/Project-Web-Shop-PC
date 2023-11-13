@@ -1,10 +1,3 @@
-.ajaxcart .btn-style-2.checkout {
-    display: inline-block;
-    padding: 10px 0px;
-    width: 47%;
-    margin-right: 0;
-}
-
 .btn-outline:hover,
 .btn-outline:focus,
 .btn-outline.btn-buyNow,
@@ -15,11 +8,10 @@
 
 .btn-outline {
     position: relative;
-    z-index: 0;
     border: 1px solid;
     border-color: #e02027;
     white-space: nowrap;
-    margin-bottom: 0;
+
     text-align: center;
     text-transform: uppercase;
     vertical-align: middle;
