@@ -40,3 +40,11 @@ p {
 .pd_saler p {
     background: url(//theme.hstatic.net/200000420363/1001162486/14/check-ser.png?v=285) left 2px no-repeat;
 }
+input.ajaxcart__qty-num {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #7b7b7b;
+    color: #222;
+    padding: 0;
+}
