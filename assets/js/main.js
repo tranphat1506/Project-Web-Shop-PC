@@ -2581,7 +2581,47 @@ const handleOpenMainMenu = () => {
         mainMenu.classList.add('top-menu--open');
     }
 };
-
+const initSlider = () => {
+    const path = window.location.pathname.split('.html')[0];
+    switch (path) {
+        case '/index':
+            new Swiper('.main-slider', {
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                slidesPerView: 1,
+            });
+            return;
+        case '/':
+            new Swiper('.main-slider', {
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                slidesPerView: 1,
+            });
+            return;
+        default:
+            throw new Error('Invalid location!');
+    }
+};
 const App = () => {
     initSlider(); //Start
     renderCategoryMenu('.category-container', CategoryMenuApi);

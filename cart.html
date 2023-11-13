@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/png" href="/sent-icon-32x32.png" />
+        <link rel="icon" type="image/png" href="/assets/img/pc-logo-white.svg" />
         <link rel="stylesheet" href="assets/css/cart.css" />
+        <link rel="stylesheet" href="assets/css/styles.css" />
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
@@ -30,7 +31,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
-    <body>
+    <body class="bg-white">
         <header id="header" class="w-full bg-[#d72c2c]">
             <div
                 class="py-2 lg:px-6 px-3 mx-auto max-w-screen-2xl flex justify-between items-center gap-2 bg-[#d72c2c]"
@@ -358,192 +359,157 @@
                 </div>
             </div>
         </header>
-        <div class="insMain mb-40 h-auto mx-auto max-w-[1200px] xl:px-0 px-2 py-2 font-WorkSans">
+        <div class="insMain mb-10 h-auto mx-auto max-w-[1200px] px-5 py-2 font-WorkSans">
             <section id="insCartPage" class="bg_w ajax-cart-popup">
-                <div class="container">
-                    <div class="content">
-                        <div id="AjaxifyCart" class="ajaxcart">
-                            <div class="page-header mt-4 ml-4 font-semibold text-xl">
-                                <h1 class="page-header">GIỎ HÀNG</h1>
-                            </div>
-                            <div class="page-content flex flex-row">
-                                <div class="row w-screen">
-                                    <div class="boxCart leftCart flex flex-col px-3 w-11/12">
-                                        <div
-                                            class="cart_header_labels hidden-xs clearfix my-3 mb-15 text-center border-b border-t border-e5e5e5 py-3 flex flex-row"
-                                        >
-                                            <div class="label_item whitespace-no-wrap text-center w-2/12">
-                                                <div class="cart_product">Sản phẩm</div>
-                                            </div>
-                                            <div class="label_item whitespace-no-wrap text-center w-1/4">
-                                                <div class="cart_description">Mô Tả</div>
-                                            </div>
-                                            <div class="label_item whitespace-no-wrap text-center w-2/12">
-                                                <div class="cart_price">Giá</div>
-                                            </div>
-                                            <div class="label_item whitespace-no-wrap text-center w-2/12">
-                                                <div class="cart_quantity">Số Lượng</div>
-                                            </div>
-                                            <div class="label_item whitespace-no-wrap text-center w-2/12">
-                                                <div class="cart_total">Tổng</div>
-                                            </div>
-                                            <div class="label_item whitespace-no-wrap text-center w-1/12">
-                                                <div class="cart_delete">Xóa</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="ajax_content_cart">
-                                            <div
-                                                class="line-item list_product_cart clearfix flex flex-row"
-                                                data-handle="man-hinh-gaming-samsung-odyssey-lc27g55tqbexxv-27-inch-2k-va-144hz-1ms-cong-1000r"
-                                                data-id="1110996207"
-                                            >
-                                                <div class="cpro_item image w-2/12 px-4">
-                                                    <div class="cpro_item_inner">
-                                                        <a
-                                                            href="/products/man-hinh-gaming-samsung-odyssey-lc27g55tqbexxv-27-inch-2k-va-144hz-1ms-cong-1000r"
-                                                            class="cart__image"
-                                                        >
-                                                            <img
-                                                                class="img-responsive"
-                                                                src="//product.hstatic.net/200000420363/product/man-hinh-gaming-samsung-odyssey-lc27g55tqbexxv_6c28b700f4c04bf7858e2136071e10f0_small.jpg"
-                                                                alt="Màn hình Gaming Samsung Odyssey G5 LC27G55TQBEXXV | 27 inch, 2K, VA, 144Hz, 1ms, cong 1000R"
-                                                            />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="cpro_item text-left title w-1/4 px-4">
-                                                    <div class="cpro_item_inner">
-                                                        <a
-                                                            href="/products/man-hinh-gaming-samsung-odyssey-lc27g55tqbexxv-27-inch-2k-va-144hz-1ms-cong-1000r"
-                                                            class="product_name"
-                                                        >
-                                                            Màn hình Gaming Samsung Odyssey G5 LC27G55TQBEXXV | 27 inch,
-                                                            2K, VA, 144Hz, 1ms, cong 1000R
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="cpro_item price w-2/12 text-center px-4">
-                                                    <div class="cpro_item_inner">
-                                                        <span class="price product-price"
-                                                            ><span class="money">5,070,000₫</span></span
-                                                        >
-                                                    </div>
-                                                </div>
-                                                <div class="cpro_item qty text-center w-2/12 px-4">
-                                                    <div class="cpro_item_inner">
-                                                        <div class="ajaxcart__qty quantity-partent">
-                                                            <input
-                                                                type="number"
-                                                                class="ajaxcart__qty-num line-item-qty w-6"
-                                                                data-title="Màn hình Gaming Samsung Odyssey G5 LC27G55TQBEXXV | 27 inch, 2K, VA, 144Hz, 1ms, cong 1000R"
-                                                                min="1"
-                                                                value="1"
-                                                                data-id="1110996207"
-                                                                aria-label="quantity"
-                                                                pattern="[0-9]*"
-                                                                data-buyone="True"
-                                                                data-max="6"
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="cpro_item line-price w-2/12 text-center px-4">
-                                                    <div class="cpro_item_inner">
-                                                        <span class="price product-price money_line"
-                                                            ><span class="money">5,070,000₫</span></span
-                                                        >
-                                                        <input
-                                                            type="hidden"
-                                                            value="5,070,000₫"
-                                                            data-id="1110996207"
-                                                            class="line_money_temp"
-                                                        />
-                                                    </div>
-                                                </div>
-                                                <div class="cpro_item remove w-1/12 text-center px-4">
-                                                    <div class="cpro_item_inner">
-                                                        <a
-                                                            href="/cart/change?line=1&amp;quantity=0"
-                                                            class="cart__remove ajaxcart__remove"
-                                                            data-id="1110996207"
-                                                        >
-                                                            <i
-                                                                class="bi bi-trash hover:text-red-500"
-                                                                aria-hidden="true"
-                                                            ></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                <div class="content">
+                    <div id="AjaxifyCart" class="ajaxcart">
+                        <div class="page-header mt-4 ml-4 font-semibold text-4xl">
+                            <h1 class="page-header">GIỎ HÀNG</h1>
+                        </div>
+                        <div class="page-content flex flex-col gap-4 items-start xl:flex-row">
+                            <div class="boxCart leftCart flex flex-col w-full">
+                                <div
+                                    class="cart_header_labels hidden-xs clearfix my-3 mb-15 text-center border-b border-t border-e5e5e5 py-3 flex flex-row"
+                                >
+                                    <div class="label_item whitespace-no-wrap text-center basis-[47%]">
+                                        <div class="cart_product">Sản phẩm</div>
+                                    </div>
+                                    <div class="label_item whitespace-no-wrap text-center basis-[30%]">
+                                        <div class="cart_price">Giá</div>
+                                    </div>
+                                    <div class="label_item whitespace-no-wrap text-center basis-[9%]">
+                                        <div class="cart_quantity">SL</div>
+                                    </div>
+                                    <div class="label_item whitespace-no-wrap text-center basis-[14%]">
+                                        <div class="cart_delete">Xóa</div>
                                     </div>
                                 </div>
-                                <div class="boxCart-rightCart">
-                                    <div class="list_button_cart clearfix">
-                                        <div class="actionCart clearfix text-right">
-                                            <div class="mb-6">
-                                                <p>
-                                                    <span class="cart__subtotal-title text-left">Tổng</span>
-                                                    <span class="h3 cart__subtotal"
-                                                        ><span class="money float-right">5,070,000₫</span></span
-                                                    >
-                                                </p>
+
+                                <div class="ajax_content_cart">
+                                    <div
+                                        class="line-item list_product_cart clearfix flex flex-row"
+                                        data-handle="man-hinh-gaming-samsung-odyssey-lc27g55tqbexxv-27-inch-2k-va-144hz-1ms-cong-1000r"
+                                        data-id="1110996207"
+                                    >
+                                        <div class="cpro_item image basis-[47%] px-2">
+                                            <div class="cpro_item_inner">
+                                                <a
+                                                    href="/products/man-hinh-gaming-samsung-odyssey-lc27g55tqbexxv-27-inch-2k-va-144hz-1ms-cong-1000r"
+                                                    class="cart__image"
+                                                >
+                                                    <img
+                                                        class="img-responsive w-full max-h-[150px] object-contain"
+                                                        src="/assets/img/img_manhinh_banchay/man_1.webp"
+                                                        alt="Màn hình Gaming Samsung Odyssey G5 LC27G55TQBEXXV | 27 inch, 2K, VA, 144Hz, 1ms, cong 1000R"
+                                                    />
+                                                </a>
+                                                <a
+                                                    href="/products/man-hinh-gaming-samsung-odyssey-lc27g55tqbexxv-27-inch-2k-va-144hz-1ms-cong-1000r"
+                                                    class="product_name line-clamp-3 text-sm mt-2 sm:w-[70%] w-full sm:mx-auto"
+                                                >
+                                                    Màn hình Gaming Samsung Odyssey G5 LC27G55TQBEXXV | 27 inch, 2K, VA,
+                                                    144Hz, 1ms, cong 1000R
+                                                </a>
                                             </div>
-                                            <!--<p><em>Đã bao gồm thuế và phí Shipping</em></p>-->
-                                            <div class="btn-checkout-continute-shopping flex flex-row">
-                                                <div>
-                                                    <a
-                                                        class="btn con-ajax-cart btn-outline align-middle py-2.5 mr-6 checkout inline-block px-5 font-medium"
-                                                        href="/"
-                                                        title="Tiếp Tục Mua Sắm"
-                                                        >Tiếp Tục Mua Sắm</a
-                                                    >
-                                                </div>
-                                                <div>
+                                        </div>
+                                        <div class="cpro_item price basis-[30%] text-center px-2">
+                                            <div class="cpro_item_inner">
+                                                <span class="price product-price"
+                                                    ><span class="money">5,070,000₫</span></span
+                                                >
+                                            </div>
+                                        </div>
+                                        <div class="cpro_item qty text-center basis-[9%] px-2">
+                                            <div class="cpro_item_inner">
+                                                <div class="ajaxcart__qty quantity-partent">
                                                     <input
-                                                        type="button"
-                                                        id="checkout-cart"
-                                                        name="checkout"
-                                                        class="btn btn-outline checkout btn-style-2 checkout py-2.5 px-10"
-                                                        value="Thanh Toán"
+                                                        type="number"
+                                                        class="ajaxcart__qty-num line-item-qty w-6"
+                                                        data-title="Màn hình Gaming Samsung Odyssey G5 LC27G55TQBEXXV | 27 inch, 2K, VA, 144Hz, 1ms, cong 1000R"
+                                                        min="1"
+                                                        value="1"
+                                                        data-id="1110996207"
+                                                        aria-label="quantity"
+                                                        pattern="[0-9]*"
+                                                        data-buyone="True"
+                                                        data-max="6"
                                                     />
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="note_item">
-                                            <div class="note_cart">
-                                                <label class="control-label m-3 block" for="CartSpecialInstructions"
-                                                    >Chú Thích</label
+                                        <div class="cpro_item remove basis-[14%] text-center px-2">
+                                            <div class="cpro_item_inner">
+                                                <a
+                                                    href="/cart/change?line=1&amp;quantity=0"
+                                                    class="cart__remove ajaxcart__remove"
+                                                    data-id="1110996207"
                                                 >
-                                                <textarea
-                                                    name="note"
-                                                    class="form-control"
-                                                    placeholder="Bạn muốn mô tả rõ hơn về đơn hàng..."
-                                                    id="CartSpecialInstructions"
-                                                ></textarea>
+                                                    <i class="bi bi-trash hover:text-red-500" aria-hidden="true"></i>
+                                                </a>
                                             </div>
                                         </div>
-
-                                        <div class="pd_saler">
-                                            <h3 class="text-base text-gray-500 pb-5 border-b border-gray-300 my-4">
-                                                MUA TRẢ GÓP QUA THẺ TÍN DỤNG
-                                            </h3>
-
-                                            <p class="block w-full pl-6 bg-left-2px bg-no-repeat">
-                                                Ấn Thanh Toán, nhập thông tin
-                                            </p>
-
-                                            <p class="block w-full pl-6 bg-left-2px bg-no-repeat">
-                                                Chọn hình thức: Thanh toán thẻ - Trả góp. Lưu ý: LH nhân viên để kiểm
-                                                tra tồn kho sản phẩm trước khi thanh toán
-                                            </p>
-
-                                            <p class="block w-full pl-6 bg-left-2px bg-no-repeat">
-                                                Chọn loại thẻ phù hợp với nhu cầu, nhập thông tin, sau đó tiến hành
-                                                thanh toán
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="boxCart-rightCart xl:w-1/3 w-full">
+                                <div class="list_button_cart clearfix">
+                                    <div class="actionCart clearfix text-right">
+                                        <div class="mb-6">
+                                            <p>
+                                                <span class="cart__subtotal-title text-left">Tổng:</span>
+                                                <span class="h3 cart__subtotal"
+                                                    ><span class="money float-right">5,070,000₫</span></span
+                                                >
                                             </p>
                                         </div>
+                                        <div
+                                            class="btn-checkout-continute-shopping flex flex-row gap-x-6 gap-y-2 justify-end flex-wrap xl:flex-nowrap"
+                                        >
+                                            <a
+                                                class="btn con-ajax-cart btn-outline align-middle py-2.5 font-medium checkout inline-block px-5"
+                                                href="/"
+                                                title="Tiếp Tục Mua Sắm"
+                                                >Tiếp Tục Mua Sắm</a
+                                            >
+                                            <button
+                                                id="checkout-cart"
+                                                name="checkout"
+                                                class="btn btn-outline checkout btn-style-2 font-medium checkout py-2.5 px-10"
+                                            >
+                                                Thanh Toán
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="note_cart mt-3 flex w-full flex-col xl:items-start items-end">
+                                        <label class="control-label block" for="CartSpecialInstructions"
+                                            >*Ghi chú:
+                                        </label>
+                                        <textarea
+                                            name="note"
+                                            class="form-control max-w-lg w-full"
+                                            placeholder="Ghi chú cho đơn hàng của bạn..."
+                                            id="CartSpecialInstructions"
+                                        ></textarea>
+                                    </div>
+
+                                    <div class="pd_saler">
+                                        <h3 class="text-base text-gray-500 pb-5 border-b border-gray-300 my-4">
+                                            MUA TRẢ GÓP QUA THẺ TÍN DỤNG
+                                        </h3>
+
+                                        <p class="block w-full pl-6 bg-left-2px bg-no-repeat">
+                                            Ấn Thanh Toán, nhập thông tin
+                                        </p>
+
+                                        <p class="block w-full pl-6 bg-left-2px bg-no-repeat">
+                                            Chọn hình thức: Thanh toán thẻ - Trả góp. Lưu ý: LH nhân viên để kiểm tra
+                                            tồn kho sản phẩm trước khi thanh toán
+                                        </p>
+
+                                        <p class="block w-full pl-6 bg-left-2px bg-no-repeat">
+                                            Chọn loại thẻ phù hợp với nhu cầu, nhập thông tin, sau đó tiến hành thanh
+                                            toán
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -551,144 +517,9 @@
                     </div>
                 </div>
             </section>
-            <script>
-                $(document).on('keypress change', 'textarea#CartSpecialInstructions', function () {
-                    $.ajax({
-                        type: 'POST',
-                        url: '/cart/update.js',
-                        data: { note: $(this).val() },
-                        dataType: 'json',
-                        success: function () {},
-                    });
-                });
-                $(document).on('change', '.ajaxcart__qty-num', function () {
-                    debugger;
-                    var $this = $(this);
-                    var qty = $this.val();
-                    var id = $this.data('id');
-                    var databuyone = $this.attr('data-buyone');
-                    var datamax = $this.attr('data-max');
-                    if (databuyone == 'True' && qty > 1) {
-                        alert('Sản phẩm chỉ được phép mua tối đa 1');
-                        $this.val(1);
-                    } else {
-                        if (qty > datamax) {
-                            alert('Sản phẩm chỉ được phép mua tối đa ' + datamax);
-                            $this.val(datamax);
-                        } else {
-                            if (qty == 0) {
-                                $this.val(1);
-                                qty = 1;
-                            } else {
-                                $this.val(qty);
-                            }
-                            updateCart(id, qty);
-                        }
-                    }
-                });
-                var updateCart = function (id, qty) {
-                    var params = {
-                        type: 'POST',
-                        url: '/cart/change.js',
-                        data: 'quantity=' + qty + '&id=' + id,
-                        dataType: 'json',
-                        success: function (cart) {
-                            updateMoney(id);
-                            $('.cartCount').html(cart.item_count);
-                            if (cart.item_count == 0) {
-                                getCartView();
-                            }
-                        },
-                    };
-                    jQuery.ajax(params);
-                };
-                var updateMoney = function (id) {
-                    $.ajax({
-                        url: '/cart?view=mini',
-                        success: function (data) {
-                            var parsed = $.parseHTML(data);
-                            $('.cartCount').attr('data-price', $(parsed).filter('.moneyNotF').val());
-                            $('.ajaxcart .list_button_cart p span.money').html(
-                                $(parsed).filter('.wrap__total_money').val(),
-                            );
-                            $('.list_product_cart[data-id="' + id + '"] .cpro_item_inner .money_line span.money').html(
-                                $(parsed)
-                                    .filter('.line_money_temp[data-id="' + id + '"]')
-                                    .val(),
-                            );
-                        },
-                    });
-                };
-                var getCartView = function () {
-                    $.ajax({
-                        url: '/cart?view=mini',
-                        success: function (data) {
-                            $('#AjaxifyCart').html(data);
-                        },
-                    });
-                };
-            </script>
-            <script>
-                $(document).ready(function () {
-                    var jsonData = '';
-                    $.ajax({
-                        type: 'GET',
-                        url: '/?view=flashsale-json',
-                        async: false,
-                        cache: true,
-                        success: function (data) {
-                            jsonData = JSON.parse(data);
-                            console.log(jsonData.flashsale);
-                            var checkhasfirst = false;
-                            $.each(jsonData.flashsale, function (i, v) {
-                                $('.line-item').each(function () {
-                                    var that = $(this);
-                                    var handlepro = $(this).attr('data-handle');
-                                    if (v.handle == handlepro && v.is_active == 'True') {
-                                        that.find('.quantity-partent')
-                                            .find('.line-item-qty')
-                                            .attr('data-buyone', v.is_buyone);
-                                        that.find('.quantity-partent')
-                                            .find('.line-item-qty')
-                                            .attr('data-max', v.quantity);
-                                    }
-                                });
-                            });
-                        },
-                    });
-                    $('#checkout-cart').click(function () {
-                        var title = '';
-                        var checkbuyone = false;
-                        var checkmax = false;
-                        var valmax = 0;
-                        $('.line-item').each(function () {
-                            var that = $(this);
-                            var isbuyone = that.find('.quantity-partent .line-item-qty').attr('data-buyone');
-                            var valu = that.find('.quantity-partent .line-item-qty').val();
-                            var datamax = that.find('.quantity-partent .line-item-qty').attr('data-max');
-                            if (isbuyone != undefined && valu > isbuyone) {
-                                checkbuyone = true;
-                                title = that.find('.quantity-partent .line-item-qty').attr('data-title');
-                            }
-                            if (valu > datamax) {
-                                checkmax = true;
-                                valmax = datamax;
-                                title = that.find('.quantity-partent .line-item-qty').attr('data-title');
-                            }
-                        });
-                        if (checkbuyone == true) {
-                            alert('Sản phẩm ' + title + ' chỉ được phép mua tối đa 1');
-                        } else if (checkmax == true) {
-                            alert('Sản phẩm ' + title + ' chỉ được phép mua tối đa ' + valmax);
-                        } else {
-                            window.location = '/checkout';
-                        }
-                    });
-                });
-            </script>
         </div>
 
-        <footer id="footer" class="w-full min-h-[500px] bg-white text-[#444]">
+        <footer id="footer" class="w-full min-h-[500px] bg-white text-[#444] border-t">
             <div class="h-auto mx-auto max-w-[1200px] xl:px-0 px-2 py-2">
                 <!-- Member Container -->
                 <div
@@ -863,4 +694,6 @@
             </div>
         </footer>
     </body>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/slider.js"></script>
 </html>
