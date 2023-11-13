@@ -112,12 +112,12 @@ body {
 .ddmenu__container.ddmenu--open > .ddmenu__titleContainer .ddmenu__titleContainer__right-caret {
     transform: rotate(90deg);
 }
-.ddmenu__container:not(.ddmenu--open) > .ddmenu__titleContainer .ddmenu__title,
+.ddmenu__container.ddmenu--card-menu.ddmenu--open .ddmenu__drop-menu .ddmenu__title,
 .ddmenu__title:hover,
 .ddmenu__item:hover {
     color: #ef4444;
 }
-.ddmenu__container.ddmenu--open > .ddmenu__drop-menu {
+.ddmenu__container:not(.ddmenu--card-menu).ddmenu--open > .ddmenu__drop-menu {
     display: flex;
 }
 .ddmenu__drop-menu .ddmenu__container {

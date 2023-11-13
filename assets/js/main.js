@@ -2418,7 +2418,7 @@ class DropDownMenu {
             dropMenu.className = 'ddmenu__drop-menu hidden absolute h-full z-10' + ` ${this.cardContainerClassName}`;
             dropMenu.insertAdjacentHTML(
                 'beforeend',
-                `<div class="dd__menu-content bg-white w-full h-full ml-1 shadow-md rounded text-[#444] overflow-x-auto ${this.cardContentClassName}"></div>`,
+                `<div class="ddmenu__menu-content bg-white w-full h-full ml-1 shadow-md rounded text-[#444] overflow-x-auto ${this.cardContentClassName}"></div>`,
             );
             document
                 .querySelector(`.${this.#getMenuIdCSS('cont')}`)
@@ -2428,6 +2428,7 @@ class DropDownMenu {
                 newDDMenu.setContainerClassName = `.${this.#getMenuIdCSS(
                     'cont',
                 )} .ddmenu__drop-menu .ddmenu__menu-content`;
+                console.log(newDDMenu.containerClassName);
                 newDDMenu.appendMenu();
             });
         } else if (this.dropMenu?.isOtherDDMenu) {
