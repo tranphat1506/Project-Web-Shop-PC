@@ -2389,8 +2389,20 @@ class DropDownMenu {
             className: undefined,
             id: undefined,
             dropMenu: { isOtherDDMenu: false, value: [] },
+            fixed: false,
+            withCardMenu: false,
+            cardContentClassName: '',
+            cardContainerClassName: '',
+            titleContainerClassName: '',
+            hideCaretIcon: false,
         },
     ) {
+        this.hideCaretIcon = params.hideCaretIcon;
+        this.withCardMenu = params.withCardMenu;
+        this.cardContentClassName = params.cardContentClassName;
+        this.titleContainerClassName = params.titleContainerClassName;
+        this.cardContainerClassName = params.cardContainerClassName;
+        this.fixed = params.fixed;
         this.title = params.title;
         this.icon = params.icon;
         this.href = params.href;
@@ -2401,7 +2413,24 @@ class DropDownMenu {
     }
 
     #createDDMenu() {
-        if (this.dropMenu?.isOtherDDMenu) {
+        if (this.withCardMenu) {
+            const dropMenu = document.createElement('div');
+            dropMenu.className = 'ddmenu__drop-menu hidden absolute h-full z-10' + ` ${this.cardContainerClassName}`;
+            dropMenu.insertAdjacentHTML(
+                'beforeend',
+                `<div class="dd__menu-content bg-white w-full h-full ml-1 shadow-md rounded text-[#444] overflow-x-auto ${this.cardContentClassName}"></div>`,
+            );
+            document
+                .querySelector(`.${this.#getMenuIdCSS('cont')}`)
+                .insertAdjacentHTML('beforeend', dropMenu.outerHTML);
+            this.dropMenu.value.map((menu) => {
+                const newDDMenu = new DropDownMenu(menu);
+                newDDMenu.setContainerClassName = `.${this.#getMenuIdCSS(
+                    'cont',
+                )} .ddmenu__drop-menu .ddmenu__menu-content`;
+                newDDMenu.appendMenu();
+            });
+        } else if (this.dropMenu?.isOtherDDMenu) {
             const dropMenu = document.createElement('ul');
             dropMenu.className = 'ddmenu__drop-menu my-2 ml-4 hidden flex-col justify-between';
             document
@@ -2434,20 +2463,30 @@ class DropDownMenu {
                 ? `<i class="${this.icon.value} text-xl ddmenu__title__icon"></i>`
                 : this.icon.value
             : '';
-        return `<a href="${this.href || '#'}" class="ddmenu__title inline-flex gap-4 items-center">
+        return `<a href="${this.href || '#'}" class="ddmenu__title inline-flex gap-4 items-center w-full">
             ${iconEl}
             <p class="ddmenu__title__text leading-none text-sm">${this.title}</p>
         </a>`;
     }
 
     #createMenu() {
-        const ddmenuContainerClassname = 'ddmenu__container flex flex-col' + (` ${this.className}` || '');
+        const ddmenuContainerClassname =
+            'ddmenu__container flex flex-col' +
+            (` ${this.className}` || '') +
+            `${this.fixed ? ' ddmenu--open' : ''}` +
+            `${this.withCardMenu ? ' ddmenu--card-menu' : ''}`;
         return `<div data-ddmenuId="${this.#idMenu}" ${
             this.id ? `id="${this.id}"` : ''
         } class="${ddmenuContainerClassname}">
-            <div class="ddmenu__titleContainer flex items-center justify-between">
+            <div class="ddmenu__titleContainer flex items-center justify-between ${this.titleContainerClassName}">
                 ${this.#createTitleComponent()}
-                <i class="ddmenu__titleContainer__right-caret bi bi-caret-right-fill text-xs cursor-pointer leading-none px-2 py-2"></i>
+                ${
+                    !this.hideCaretIcon
+                        ? `<i class="ddmenu__titleContainer__right-caret bi bi-caret-right-fill text-xs cursor-pointer leading-none px-2 py-2 ${
+                              this.fixed ? '!rotate-0' : ''
+                          }"></i>`
+                        : ''
+                }
             </div>
         </div>`;
     }
@@ -2484,7 +2523,7 @@ class DropDownMenu {
         try {
             document.querySelector(`${this.containerClassName}`).insertAdjacentHTML('beforeend', this.#createMenu());
             this.appendDropMenu();
-            this.#startEventOpenMenu();
+            !this.fixed && this.#startEventOpenMenu();
             return true;
         } catch (error) {
             //console.error(error);
@@ -2498,11 +2537,37 @@ class DropDownMenu {
     }
 }
 
-const renderCategoryMenu = (contEl, menuArr = []) => {
+const renderCategoryMenu = (contEl, menuArr = [], type = 'default') => {
     if (!contEl || contEl === '') throw new Error('Container element invalid!');
-    return menuArr.map((menu) => {
-        return new DropDownMenu({ ...menu, containerClassName: contEl }).appendMenu();
-    });
+    switch (type) {
+        case 'default':
+            return menuArr?.map((menu) => {
+                const menuEle = new DropDownMenu({ ...menu, containerClassName: contEl });
+                return { element: menuEle, status: menuEle.appendMenu() };
+            });
+        case 'with-card-menu':
+            return menuArr?.map((menu) => {
+                const menuFilter = {
+                    ...menu,
+                    containerClassName: contEl,
+                    withCardMenu: true,
+                    className: 'px-4 hover:bg-[#d72c2c] text-[#444]',
+                    cardContainerClassName: 'w-[950px] h-full z-10 left-[15.5rem] top-0',
+                    cardContentClassName: 'py-5 px-6 flex flex-wrap gap-x-16 gap-y-3',
+                    fixed: true,
+                    dropMenu: {
+                        ...menu.dropMenu,
+                        value: menu.dropMenu.value?.map((menu) => {
+                            return { ...menu, fixed: true, hideCaretIcon: true };
+                        }),
+                    },
+                };
+                const menuEle = new DropDownMenu(menuFilter);
+                return { element: menuEle, status: menuEle.appendMenu() };
+            });
+        default:
+            throw new Error('Type render invalid!');
+    }
 };
 
 const handleOpenMainMenu = () => {
@@ -2520,5 +2585,10 @@ const handleOpenMainMenu = () => {
 const App = () => {
     initSlider(); //Start
     renderCategoryMenu('.category-container', CategoryMenuApi);
+    console.log(renderCategoryMenu('.category-container--main', CategoryMenuApi, 'with-card-menu'));
 };
 App();
+
+// const test = CategoryMenuApi[0].dropMenu.value.map((menu)=>{
+//     return {...menu, fixed: true}
+// })
