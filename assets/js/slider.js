@@ -17,37 +17,6 @@ const initSlider = () => {
                 },
                 slidesPerView: 1,
             });
-
-            new Swiper('.sales-slider', {
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                slidesPerView: 1,
-                spaceBetween: 10,
-                breakpoints: {
-                    480: {
-                        slidesPerView: 2,
-                    },
-                    640: {
-                        slidesPerView: 3,
-                    },
-                    768: {
-                        slidesPerView: 4,
-                    },
-                    1024: {
-                        slidesPerView: 5,
-                    },
-                },
-            });
             return;
         case '/':
             new Swiper('.main-slider', {
@@ -64,37 +33,6 @@ const initSlider = () => {
                     prevEl: '.swiper-button-prev',
                 },
                 slidesPerView: 1,
-            });
-
-            new Swiper('.sales-slider', {
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                slidesPerView: 1,
-                spaceBetween: 10,
-                breakpoints: {
-                    480: {
-                        slidesPerView: 2,
-                    },
-                    640: {
-                        slidesPerView: 3,
-                    },
-                    768: {
-                        slidesPerView: 4,
-                    },
-                    1024: {
-                        slidesPerView: 5,
-                    },
-                },
             });
             return;
         default:
@@ -344,7 +282,7 @@ class ProductCard {
     #createGift() {
         if (!this.prodDetail.details.gift?.length) return false;
         const contEl = document.createElement('span');
-        contEl.innerHTML += '<i class="bi bi-gift-fill text-xl px-2 leading-none"></i>';
+        contEl.innerHTML += '<i class="bi text-red-500 bi-gift-fill text-xl px-2 leading-none"></i>';
         const giftDisplayEl = document.createElement('div');
         giftDisplayEl.className = 'gift-display hidden absolute w-full left-0 top-0 border-red-200 rounded-md border';
         giftDisplayEl.innerHTML += `<div class="rounded-t-sm bg-red-200">
@@ -549,7 +487,7 @@ class SliderCard {
         const contEl = document.createElement('span');
         contEl.className = 'p-2 mx-auto';
         contEl.innerHTML += `<img
-            class="h-full rounded-md"
+            class="h-full rounded-md object-contain"
             src="${this.saleImg}"
             alt="Slide sale image"
         />`;
@@ -560,8 +498,8 @@ class SliderCard {
         const contEl = document.createElement('div');
         contEl.className = `${this.sliderName} swiper p-2 w-full relative`;
         contEl.innerHTML += `<div class="swiper-wrapper h-max"></div>
-            <div class="swiper-button-prev text-white bg-[#d72c2c] font-black rounded-full after:!text-xl after:content-['prev']"></div>
-            <div class="swiper-button-next text-white bg-[#d72c2c] font-black rounded-full after:!text-xl after:content-['next']"></div>
+            <div class="swiper-button-prev text-[#d72c2c] font-black rounded-full after:!text-xl after:content-['prev']"></div>
+            <div class="swiper-button-next text-[#d72c2c] font-black rounded-full after:!text-xl after:content-['next']"></div>
             <div class="swiper-pagination static"></div>
         `;
         return contEl;
@@ -630,6 +568,52 @@ class SliderCard {
                     oPrice: data.origin_price,
                     sPrice: data.reduce_price,
                     countSold: data.selling,
+                    prodDetail: {
+                        show:
+                            data.chip ||
+                            data.card ||
+                            data.ram ||
+                            data.capacity ||
+                            data.screen ||
+                            data.panelType ||
+                            data.screenResolution ||
+                            data.hz ||
+                            data.mainboard ||
+                            data.battery ||
+                            data.dpi ||
+                            data.led ||
+                            data.connect ||
+                            data.size ||
+                            data.switch ||
+                            data.gift ||
+                            data.deal ||
+                            data.status,
+                        details: {
+                            chip: data.chip,
+                            card: data.card,
+                            memory: data.ram,
+                            storage: data.capacity,
+                            screen: data.screen,
+                            panelType: data.panelType,
+                            screenResolution: data.screenResolution,
+                            hz: data.hz,
+                            mainboard: data.mainboard,
+                            mouseBattery: data.battery,
+                            mouseDPI: data.dpi,
+                            mouseLED: data.led,
+                            deviceConnect: data.connect,
+                            kbSize: data.size,
+                            kbSwitch: data.switch,
+                            gift: data.gift,
+                            prodDeal: data.deal,
+                            prodStatus: data.status,
+                        },
+                    },
+                    voteRate: {
+                        show: data.star !== undefined && data.rate !== undefined,
+                        total: data.rate,
+                        star: data.star,
+                    },
                 };
                 const prodCard = new ProductCard(prodApi);
                 if (prodCard.appendTo(`#${this.sliderName} .${this.sliderName} .swiper-wrapper`)) {
@@ -728,7 +712,6 @@ const SliderApi = {
         container: '.most-sale__slider-container',
         title: 'Sản phẩm bán chạy',
         sliderName: 'MostSaleSlider',
-        className: '',
         type: 'bestSeller',
         coutDown: {
             show: true,
@@ -743,7 +726,6 @@ const SliderApi = {
         title: 'MÀN HÌNH GAMING LENOVO GIẢM TỚI 38%',
         sliderName: 'LenovoScreenSale',
         saleImg: '/assets/img/img_sales/screen_sales.webp',
-        className: '',
         type: 'lenovoSale38',
         coutDown: {
             show: true,
@@ -752,6 +734,96 @@ const SliderApi = {
             s: 59,
         },
         prodArr: LenovoScreenSale,
+    },
+    PCMostSaleApi: {
+        container: '.pc-mostSale__slider-container',
+        title: 'PC bán chạy',
+        sliderName: 'PCMostSale',
+        type: 'default',
+        prodArr: PCMostSale,
+        suggestNav: [
+            { title: 'PC Gaming', href: '#/pc/gaming' },
+            { title: 'PC Văn phòng', href: '#/pc/vp' },
+            { title: 'PC Đồ họa', href: '#/pc/dohoa' },
+            { title: 'PC Doanh nghiệp', href: '#/pc/workstation' },
+        ],
+    },
+    LaptopGamingMostSaleApi: {
+        container: '.lap-gaming-mostSale__slider-container',
+        title: 'Laptop Gaming bán chạy',
+        sliderName: 'LaptopGamingMostSale',
+        type: 'default',
+        prodArr: LaptopGamingMostSale,
+        suggestNav: [
+            { title: 'ACER', href: '#/pc/acer' },
+            { title: 'ASUS', href: '#/pc/asus' },
+            { title: 'MSI', href: '#/pc/msi' },
+            { title: 'LENOVO', href: '#/pc/lenovo' },
+            { title: 'GIGABYTE', href: '#/pc/gigabyte' },
+            { title: 'DELL', href: '#/pc/dell' },
+        ],
+    },
+    LaptopVPMostSaleApi: {
+        container: '.lap-vp-mostSale__slider-container',
+        title: 'Laptop Văn phòng bán chạy',
+        sliderName: 'LaptopVPMostSale',
+        type: 'default',
+        prodArr: LaptopVPMostSale,
+        suggestNav: [
+            { title: 'ASUS', href: '#/pc/asus' },
+            { title: 'MSI', href: '#/pc/msi' },
+            { title: 'LENOVO', href: '#/pc/lenovo' },
+            { title: 'DELL', href: '#/pc/dell' },
+            { title: 'LG', href: '#/pc/lg' },
+            { title: 'ACER', href: '#/pc/acer' },
+        ],
+    },
+    MouseMostSaleApi: {
+        container: '.mouse-mostSale__slider-container',
+        title: 'Chuột bán chạy',
+        sliderName: 'MouseMostSale',
+        type: 'default',
+        prodArr: MouseMostSale,
+        suggestNav: [
+            { title: 'Logitech', href: '#/mouse/logitech' },
+            { title: 'Razer', href: '#/mouse/razer' },
+            { title: 'Corsair', href: '#/mouse/corsair' },
+            { title: 'DareU', href: '#/mouse/dareU' },
+            { title: 'Glorious', href: '#/mouse/glorious' },
+            { title: 'Asus', href: '#/mouse/asus' },
+        ],
+    },
+    KeyboardMostSaleApi: {
+        container: '.keyboard-mostSale__slider-container',
+        title: 'Bàn phím bán chạy',
+        sliderName: 'KeyboardMostSale',
+        type: 'default',
+        prodArr: KeyboardMostSale,
+        suggestNav: [
+            { title: 'Akko', href: '#/keyboard/akko' },
+            { title: 'Asus', href: '#/keyboard/asus' },
+            { title: 'Razer', href: '#/keyboard/razer' },
+            { title: 'Logitech', href: '#/keyboard/logitech' },
+            { title: 'Leopold', href: '#/keyboard/leopold' },
+            { title: 'DareU', href: '#/keyboard/dareU' },
+        ],
+    },
+    ScreenMostSaleApi: {
+        container: '.screen-mostSale__slider-container',
+        title: 'Màn chính hãng',
+        sliderName: 'ScreenMostSale',
+        type: 'default',
+        prodArr: ScreenMostSale,
+        suggestNav: [
+            { title: 'LG', href: '#/screen/lg' },
+            { title: 'Asus', href: '#/screen/asus' },
+            { title: 'Viewsonic', href: '#/screen/viewsonic' },
+            { title: 'Dell', href: '#/screen/dell' },
+            { title: 'Gigabyte', href: '#/screen/gigabyte' },
+            { title: 'AOC', href: '#/screen/aoc' },
+            { title: 'Acer', href: '#/screen/acer' },
+            { title: 'HKC', href: '#/screen/hkc' },
+        ],
     },
 };
 const sliders = Object.keys(SliderApi).map((key) => {
