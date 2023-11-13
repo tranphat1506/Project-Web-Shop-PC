@@ -1,5 +1,5 @@
-// JSON Sp bán chạy
-let json1 = {
+// JSON Sp best-seller
+let MostSale = {
     1: {
         name: 'Cổng chuyển HyperDrive PRO 8-in-2 Hub for USB-C MacBook Pro - GN28D GREY',
         img: '/assets/img/img_sp/sp1.webp',
@@ -66,7 +66,7 @@ let json1 = {
 };
 
 // JSON màn hình gaming lenovo giảm 38%
-let json2 = {
+let LenovoScreenSale = {
     1: {
         name: 'Màn hình cong Lenovo G27C-30 27 165Hz chuyên game',
         img: '/assets/img/img_sp/sp_10.webp',
@@ -125,8 +125,8 @@ let json2 = {
     },
 };
 
-// JSON PC bán chạy
-let json3 = {
+// JSON PC best-seller
+let PCMostSale = {
     1: {
         name: 'PC GVN x ASUS EVANGELION 2',
         img: '/assets/img/img_PC_banchay/pc_1.webp',
@@ -135,8 +135,8 @@ let json3 = {
             'Giá đỡ VGA ASUS ROG Herculx EVA-02 Edition GRAPHICS CARD HOLDER',
             'Áo khoác (Premium 2 mặt)',
         ],
-        hot_gift: 'Quà tặng HOT',
-        status: 'Sản phẩm mới',
+        deal: 'qua-tang-hot',
+        status: 'new-product',
         chip: 'i9 14900K',
         card: 'RTX 4090',
         mainboard: 'Z790',
@@ -151,8 +151,8 @@ let json3 = {
         name: 'PC GVN Gaming Intel i7-13700F/ VGA RTX 4060 Ti',
         img: '/assets/img/img_PC_banchay/pc_2.png',
         gift: ['Tản nhiệt nước Corsair H100i ELITE CAPELLIX XT WHITE (CW-9060072-WW)', 'Áo khoác (Premium 2 mặt)'],
-        hot_gift: 'Quà tặng HOT',
-        status: 'Bán chạy',
+        deal: 'qua-tang-hot',
+        status: 'best-seller',
         chip: 'i7 13700F',
         card: '4060 Ti',
         mainboard: 'B760',
@@ -167,8 +167,8 @@ let json3 = {
         name: 'PC GVN Gaming Intel i5-13600KF/ VGA RTX 3060',
         img: '/assets/img/img_PC_banchay/pc_3.webp',
         gift: ['Áo khoác (bomber)'],
-        hot_gift: 'Quà tặng HOT',
-        status: 'Bán chạy',
+        deal: 'qua-tang-hot',
+        status: 'best-seller',
         chip: 'i5 13600KF',
         card: 'RTX 3060',
         mainboard: 'B760',
@@ -183,8 +183,8 @@ let json3 = {
         name: 'PC GVN Gaming Intel i7-13700F/ VGA RTX 4070',
         img: '/assets/img/img_PC_banchay/pc_4.webp',
         gift: ['Áo khoác (Premium 2 mặt)'],
-        hot_gift: 'Quà tặng HOT',
-        status: 'Bán chạy',
+        deal: 'qua-tang-hot',
+        status: 'best-seller',
         chip: 'i7 13700F',
         card: 'RTX 4070',
         mainboard: 'Z790',
@@ -199,8 +199,8 @@ let json3 = {
         name: 'PC GVN Gaming Intel i5-12400F/ VGA RTX 4060',
         img: '/assets/img/img_PC_banchay/pc_5.webp',
         gift: ['Áo khoác (Premium 2 mặt)', 'ản nước AIO Deepcool LT520 Black'],
-        hot_gift: 'Quà tặng HOT',
-        status: 'Bán chạy',
+        deal: 'qua-tang-hot',
+        status: 'best-seller',
         chip: 'i5 12400F',
         card: 'RTX 4060',
         mainboard: 'B760',
@@ -215,8 +215,8 @@ let json3 = {
         name: 'PC GVN Gaming Intel i7-13700K/ VGA RTX 4070 Ti',
         img: '/assets/img/img_PC_banchay/pc_6.webp',
         gift: ['Tản nhiệt nước Corsair H150i ELITE CAPELLIX XT Black', 'Áo khoác (Premium 2 mặt)'],
-        hot_gift: 'Quà tặng HOT',
-        status: 'Bán chạy',
+        deal: 'qua-tang-hot',
+        status: 'best-seller',
         chip: 'i7 13700K',
         card: 'RTX 4070 Ti',
         mainboard: 'Z790',
@@ -231,8 +231,8 @@ let json3 = {
         name: 'PC GVN Gaming Intel i3-12100F/ VGA GTX 1650',
         img: '/assets/img/img_PC_banchay/pc_7.webp',
         gift: ['Chuột DAREU LM103 (USB)', 'Bàn phím Gaming DareU LK185'],
-        hot_gift: 'Quà tặng HOT',
-        status: 'Bán chạy',
+        deal: 'qua-tang-hot',
+        status: 'best-seller',
         chip: 'i3 12100F',
         card: 'GTX 1650',
         mainboard: 'H610',
@@ -247,8 +247,8 @@ let json3 = {
         name: 'PC GVN Homework R3',
         img: '/assets/img/img_PC_banchay/pc_8.webp',
         gift: ['Áo khoác (bomber)'],
-        hot_gift: '',
-        status: 'Bán chạy',
+        deal: '',
+        status: 'best-seller',
         chip: 'R3 4300G',
         card: '',
         mainboard: 'A320',
@@ -267,8 +267,8 @@ let json3 = {
             'Tản nhiệt nước Corsair H100i ELITE CAPELLIX XT BLACK (CW-9060068-WW)',
             'Màn hình cong ASUS TUF GAMING VG34VQL3A 34 2K 180Hz HDR chuyên game',
         ],
-        hot_gift: 'Quà tặng HOT',
-        status: 'Sản phẩm mới',
+        deal: 'qua-tang-hot',
+        status: 'new-product',
         chip: 'i9 14900K',
         card: 'RTX 4090',
         mainboard: 'Z790',
@@ -283,8 +283,8 @@ let json3 = {
         name: 'PC GVN AMD R5-5600X/ VGA RTX 3050',
         img: '/assets/img/img_PC_banchay/pc_10.webp',
         gift: ['Giá đỡ VGA ASUS ROG Herculx EVA-02 Edition GRAPHICS CARD HOLDER'],
-        hot_gift: 'Quà tặng HOT',
-        status: 'Bán chạy',
+        deal: 'qua-tang-hot',
+        status: 'best-seller',
         chip: 'R5 5600X',
         card: 'RTX 3050',
         mainboard: 'B550',
@@ -299,8 +299,8 @@ let json3 = {
         name: 'PC GVN Gaming Intel i9-14900KF/ VGA RTX 4060 Ti',
         img: '/assets/img/img_PC_banchay/pc_11.webp',
         gift: ['Tản nhiệt nước Corsair H150i ELITE CAPELLIX XT Black'],
-        hot_gift: '',
-        status: 'Bán chạy',
+        deal: '',
+        status: 'best-seller',
         chip: 'i9 14900KF',
         card: 'RTX 4060 Ti',
         mainboard: 'Z790',
@@ -315,8 +315,8 @@ let json3 = {
         name: 'PC GVN Gaming Intel i5-13600KF/ VGA RTX 4060',
         img: '/assets/img/img_PC_banchay/pc_12.webp',
         gift: ['Bàn phím Gaming DareU LK185'],
-        hot_gift: 'Quà tặng HOT',
-        status: 'Bán chạy',
+        deal: 'qua-tang-hot',
+        status: 'best-seller',
         chip: 'i5 13600KF',
         card: 'RTX 4060',
         mainboard: 'B760',
@@ -331,7 +331,7 @@ let json3 = {
         name: 'PC GVN Gaming Intel i5-12400F/ VGA GTX 1660 Super (H610)',
         img: '/assets/img/img_PC_banchay/pc_13.webp',
         gift: ['Áo khoác (bomber)'],
-        hot_gift: 'Quà tặng HOT',
+        deal: 'qua-tang-hot',
         status: '',
         chip: 'i5 12400F',
         card: 'GTX 1660S',
@@ -347,7 +347,7 @@ let json3 = {
         name: 'PC GVN Gaming Intel i5-13400F/ VGA RTX 4060 Ti',
         img: '/assets/img/img_PC_banchay/pc_14.webp',
         gift: ['Áo khoác (bomber)'],
-        hot_gift: 'Quà tặng HOT',
+        deal: 'qua-tang-hot',
         status: '',
         chip: 'i5 13400F',
         card: 'RTX 4060 Ti',
@@ -363,8 +363,8 @@ let json3 = {
         name: 'PC GVN AMD R5-7600/ VGA RTX 4060',
         img: '/assets/img/img_PC_banchay/pc_15.webp',
         gift: ['Áo khoác (bomber)'],
-        hot_gift: 'Quà tặng HOT',
-        status: 'Bán chạy',
+        deal: 'qua-tang-hot',
+        status: 'best-seller',
         chip: 'R5 7600',
         card: 'RTX 4060',
         mainboard: 'B650',
@@ -377,14 +377,14 @@ let json3 = {
     },
 };
 
-// JSON laptopgaming bán chạy
-let json4 = {
+// JSON laptopgaming best-seller
+let LaptopGamingMostSale = {
     1: {
         name: 'Laptop gaming Lenovo Legion 9 16IRX8 83AG0047VN',
-        pay: 'Pre-order',
+        deal: 'pre-order',
         gift: ['Móc khóa Keycap GearVN'],
-        img: '/assets/img/img_laptop_gaming_banchay/lap_gaming_1.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/bonus_1.webp',
+        img: '/assets/img/img_laptop_banchay/lap_gaming_1.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/bonus_1.webp',
         status: '',
         chip: '9-13980HX',
         card: 'RTX 4090',
@@ -400,9 +400,9 @@ let json4 = {
     2: {
         name: 'Laptop gaming Acer Predator Helios Neo PHN16 71 779X',
         gift: ['Móc khóa Keycap GearVN'],
-        pay: '',
-        img: '/assets/img/img_laptop_gaming_banchay/lap_gaming_2.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/bonus_2.webp',
+        deal: '',
+        img: '/assets/img/img_laptop_banchay/lap_gaming_2.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/bonus_2.webp',
         status: '',
         chip: 'i7-13700HX',
         card: 'RTX 4060',
@@ -418,9 +418,9 @@ let json4 = {
     3: {
         name: 'Laptop gaming Acer Predator Helios Neo PHN16 71 547E',
         gift: ['Đế Tản Nhiệt Cooler Master X-Slim II', 'Móc khóa Keycap GearVN'],
-        pay: '',
-        img: '/assets/img/img_laptop_gaming_banchay/lap_gaming_3.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/bonus_3.webp',
+        deal: '',
+        img: '/assets/img/img_laptop_banchay/lap_gaming_3.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/bonus_3.webp',
         status: '',
         chip: 'i5-13500HX',
         card: 'RTX 4060',
@@ -436,10 +436,10 @@ let json4 = {
     4: {
         name: 'Laptop gaming Lenovo LOQ 15IRH8 82XV00QPVN',
         gift: ['Móc khóa Keycap GearVN'],
-        pay: '',
-        img: '/assets/img/img_laptop_gaming_banchay/lap_gaming_4.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/bonus_4.webp',
-        status: 'Sản phẩm mới',
+        deal: '',
+        img: '/assets/img/img_laptop_banchay/lap_gaming_4.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/bonus_4.webp',
+        status: 'new-product',
         chip: 'i5-12450H',
         card: 'RTX 2050',
         ram: '16 GB',
@@ -454,8 +454,8 @@ let json4 = {
     5: {
         name: 'Laptop gaming ASUS TUF Gaming A15 FA507NU LP034W',
         gift: ['Móc khóa Keycap GearVN'],
-        pay: '',
-        img: '/assets/img/img_laptop_gaming_banchay/lap_gaming_5.webp',
+        deal: '',
+        img: '/assets/img/img_laptop_banchay/lap_gaming_5.webp',
         img_bonus: '',
         status: '',
         chip: 'R7-7735HS',
@@ -472,8 +472,8 @@ let json4 = {
     6: {
         name: 'Laptop gaming Lenovo LOQ 15IRH8 82XV00QQVN',
         gift: ['Móc khóa Keycap GearVN'],
-        pay: '',
-        img: '/assets/img/img_laptop_gaming_banchay/lap_gaming_6.webp',
+        deal: '',
+        img: '/assets/img/img_laptop_banchay/lap_gaming_6.webp',
         img_bonus: '',
         status: '',
         chip: 'i5-12450H',
@@ -490,9 +490,9 @@ let json4 = {
     7: {
         name: 'Laptop gaming Acer Predator Helios 300 PH315 55 76KG',
         gift: ['Móc khóa Keycap GearVN'],
-        pay: 'Trả góp 0%',
-        img: '/assets/img/img_laptop_gaming_banchay/lap_gaming_7.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/bonus_7.webp',
+        deal: 'tra-gop-0%',
+        img: '/assets/img/img_laptop_banchay/lap_gaming_7.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/bonus_7.webp',
         status: '',
         chip: 'i7-12700H',
         card: 'RTX 3060',
@@ -508,9 +508,9 @@ let json4 = {
     8: {
         name: 'Laptop gaming MSI GF63 12UC 887VN',
         gift: ['Móc khóa Keycap GearVN'],
-        pay: 'Trả góp 0%',
-        img: '/assets/img/img_laptop_gaming_banchay/lap_gaming_8.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/bonus_8.webp',
+        deal: 'tra-gop-0%',
+        img: '/assets/img/img_laptop_banchay/lap_gaming_8.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/bonus_8.webp',
         status: '',
         chip: 'i7-12650H',
         card: 'RTX 3050',
@@ -526,10 +526,10 @@ let json4 = {
     9: {
         name: 'Laptop gaming MSI GF63 12UCX 841VN',
         gift: ['Móc khóa Keycap GearVN'],
-        pay: 'Trả góp 0%',
-        img: '/assets/img/img_laptop_gaming_banchay/lap_gaming_9.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/bonus_9.webp',
-        status: 'Sản phẩm mới',
+        deal: 'tra-gop-0%',
+        img: '/assets/img/img_laptop_banchay/lap_gaming_9.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/bonus_9.webp',
+        status: 'new-product',
         chip: 'i5-12450H',
         card: 'RTX 2050',
         ram: '8 GB',
@@ -544,8 +544,8 @@ let json4 = {
     10: {
         name: 'Laptop gaming ASUS TUF A15 FA507NU LP031W',
         gift: ['Móc khóa Keycap GearVN'],
-        pay: '',
-        img: '/assets/img/img_laptop_gaming_banchay/lap_gaming_10.webp',
+        deal: '',
+        img: '/assets/img/img_laptop_banchay/lap_gaming_10.webp',
         img_bonus: '',
         status: '',
         chip: 'R7-7735HS',
@@ -562,9 +562,9 @@ let json4 = {
     11: {
         name: 'Laptop gaming MSI Stealth GS77 12UHS 250VN',
         gift: ['Móc khóa Keycap GearVN', 'Đế Tản Nhiệt Cooler Master X-Slim II'],
-        pay: '',
-        img: '/assets/img/img_laptop_gaming_banchay/lap_gaming_11.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/bonus_11.webp',
+        deal: '',
+        img: '/assets/img/img_laptop_banchay/lap_gaming_11.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/bonus_11.webp',
         status: '',
         chip: 'i9-12900H',
         card: 'RTX 3080Ti',
@@ -580,9 +580,9 @@ let json4 = {
     12: {
         name: 'Laptop gaming Acer Predator Helios Neo 16 PHN16 71 53M7',
         gift: ['Móc khóa Keycap GearVN'],
-        pay: '',
-        img: '/assets/img/img_laptop_gaming_banchay/lap_gaming_12.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/bonus_12.webp',
+        deal: '',
+        img: '/assets/img/img_laptop_banchay/lap_gaming_12.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/bonus_12.webp',
         status: '',
         chip: '',
         card: '',
@@ -598,9 +598,9 @@ let json4 = {
     13: {
         name: 'Laptop gaming ASUS ROG Zephyrus G15 GA503RS LN892W',
         gift: ['Móc khóa Keycap GearVN'],
-        pay: '',
-        img: '/assets/img/img_laptop_gaming_banchay/lap_gaming_13.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/bonus_13.webp',
+        deal: '',
+        img: '/assets/img/img_laptop_banchay/lap_gaming_13.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/bonus_13.webp',
         status: '',
         chip: 'R9-6900HS',
         card: 'RTX 3080',
@@ -616,8 +616,8 @@ let json4 = {
     14: {
         name: 'Laptop gaming ASUS TUF Gaming F15 FX507VV4 LP382W',
         gift: ['Móc khóa Keycap GearVN'],
-        pay: '',
-        img: '/assets/img/img_laptop_gaming_banchay/lap_gaming_14.webp',
+        deal: '',
+        img: '/assets/img/img_laptop_banchay/lap_gaming_14.webp',
         img_bonus: '',
         status: '',
         chip: 'i9-13900H',
@@ -634,10 +634,10 @@ let json4 = {
     15: {
         name: 'Laptop gaming MSI GF63 Thin 12VE 460VN',
         gift: ['Móc khóa Keycap GearVN'],
-        pay: 'Trả góp 0%',
-        img: '/assets/img/img_laptop_gaming_banchay/lap_gaming_15.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/bonus_15.webp',
-        status: 'Sản phẩm mới',
+        deal: 'tra-gop-0%',
+        img: '/assets/img/img_laptop_banchay/lap_gaming_15.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/bonus_15.webp',
+        status: 'new-product',
         chip: 'i5-12450H',
         card: 'RTX 4050',
         ram: '8 GB',
@@ -651,15 +651,15 @@ let json4 = {
     },
 };
 
-// JSON laptop văn phòng bán chạy
-let json5 = {
+// JSON laptop văn phòng best-seller
+let LaptopVPMostSale = {
     1: {
         name: 'Laptop Asus Vivobook 15 OLED A1505VA L1114W',
-        pay: '',
+        deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
-        img: '/assets/img/img_laptop_gaming_banchay/laptop_vanphong_1.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/Bonus__1.webp',
-        status: 'Sản phẩm mới',
+        img: '/assets/img/img_laptop_banchay/laptop_vanphong_1.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/Bonus__1.webp',
+        status: 'new-product',
         chip: 'i5-13500H',
         card: 'Onboard',
         ram: '16 GB',
@@ -673,10 +673,10 @@ let json5 = {
     },
     2: {
         name: 'Laptop LG Gram Style 14Z90RS GAH54A5',
-        pay: '',
+        deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
-        img: '/assets/img/img_laptop_gaming_banchay/laptop_vanphong_2.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/Bonus__2.webp',
+        img: '/assets/img/img_laptop_banchay/laptop_vanphong_2.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/Bonus__2.webp',
         status: '',
         chip: 'i5-1340P',
         card: 'Onboard',
@@ -691,10 +691,10 @@ let json5 = {
     },
     3: {
         name: 'Laptop Asus VivoBook 14 OLED M1405YA KM047W',
-        pay: 'Trả góp 0%',
+        deal: 'tra-gop-0%',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
-        img: '/assets/img/img_laptop_gaming_banchay/laptop_vanphong_3.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/Bonus__3.webp',
+        img: '/assets/img/img_laptop_banchay/laptop_vanphong_3.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/Bonus__3.webp',
         status: '',
         chip: 'R5-7530U',
         card: 'Onboard',
@@ -709,10 +709,10 @@ let json5 = {
     },
     4: {
         name: 'Laptop Lenovo Yoga Slim 6 14IRH8 83E0000VVN',
-        pay: '',
+        deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
-        img: '/assets/img/img_laptop_gaming_banchay/laptop_vanphong_4.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/Bonus__4.webp',
+        img: '/assets/img/img_laptop_banchay/laptop_vanphong_4.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/Bonus__4.webp',
         status: '',
         chip: 'i7-13700H',
         card: 'Onboard',
@@ -727,10 +727,10 @@ let json5 = {
     },
     5: {
         name: 'Laptop ASUS Zenbook 14 OLED UX3402VA KM068W',
-        pay: '',
+        deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
-        img: '/assets/img/img_laptop_gaming_banchay/laptop_vanphong_5.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/Bonus__5.webp',
+        img: '/assets/img/img_laptop_banchay/laptop_vanphong_5.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/Bonus__5.webp',
         status: '',
         chip: 'i7-1360P',
         card: 'Onboard',
@@ -745,10 +745,10 @@ let json5 = {
     },
     6: {
         name: 'Laptop ASUS Vivobook 15 OLED A1505ZA L1245W',
-        pay: '',
+        deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
-        img: '/assets/img/img_laptop_gaming_banchay/laptop_vanphong_6.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/Bonus__6.webp',
+        img: '/assets/img/img_laptop_banchay/laptop_vanphong_6.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/Bonus__6.webp',
         status: '',
         chip: 'i5-12500H',
         card: 'Onboard',
@@ -763,10 +763,10 @@ let json5 = {
     },
     7: {
         name: 'Laptop ASUS Vivobook 14 OLED A1405VA KM095W',
-        pay: '',
+        deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
-        img: '/assets/img/img_laptop_gaming_banchay/laptop_vanphong_7.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/Bonus__7.webp',
+        img: '/assets/img/img_laptop_banchay/laptop_vanphong_7.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/Bonus__7.webp',
         status: '',
         chip: 'i5-13500H',
         card: 'Onboard',
@@ -781,10 +781,10 @@ let json5 = {
     },
     8: {
         name: 'Laptop Asus ZenBook Flip OLED UP3404VA KN038W',
-        pay: '',
+        deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
-        img: '/assets/img/img_laptop_gaming_banchay/laptop_vanphong_8.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/Bonus__8.webp',
+        img: '/assets/img/img_laptop_banchay/laptop_vanphong_8.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/Bonus__8.webp',
         status: '',
         chip: 'i5-1340P',
         card: 'Onboard',
@@ -799,10 +799,10 @@ let json5 = {
     },
     9: {
         name: 'Laptop ASUS Zenbook 14 OLED UX3402VA KM203W',
-        pay: '',
+        deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
-        img: '/assets/img/img_laptop_gaming_banchay/laptop_vanphong_9.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/Bonus__9.webp',
+        img: '/assets/img/img_laptop_banchay/laptop_vanphong_9.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/Bonus__9.webp',
         status: '',
         chip: 'i5-1340P',
         card: 'Onboard',
@@ -817,10 +817,10 @@ let json5 = {
     },
     10: {
         name: 'Laptop Asus VivoBook 15X OLED S3504VA L1226W',
-        pay: '',
+        deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
-        img: '/assets/img/img_laptop_gaming_banchay/laptop_vanphong_10.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/Bonus__10.webp',
+        img: '/assets/img/img_laptop_banchay/laptop_vanphong_10.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/Bonus__10.webp',
         status: '',
         chip: 'i5-1340P',
         card: 'Onboard',
@@ -835,10 +835,10 @@ let json5 = {
     },
     11: {
         name: 'Laptop MSI Modern 14 C11M 011VN',
-        pay: '',
+        deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
-        img: '/assets/img/img_laptop_gaming_banchay/laptop_vanphong_11.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/Bonus__11.webp',
+        img: '/assets/img/img_laptop_banchay/laptop_vanphong_11.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/Bonus__11.webp',
         status: '',
         chip: 'i3-1115G4',
         card: 'Onboard',
@@ -853,10 +853,10 @@ let json5 = {
     },
     12: {
         name: 'Laptop Asus Vivobook 14X OLED K3405ZF KM086W',
-        pay: '',
+        deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
-        img: '/assets/img/img_laptop_gaming_banchay/laptop_vanphong_12.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/Bonus__12.webp',
+        img: '/assets/img/img_laptop_banchay/laptop_vanphong_12.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/Bonus__12.webp',
         status: '',
         chip: 'i5-12450H',
         card: 'RTX 2050',
@@ -871,10 +871,10 @@ let json5 = {
     },
     13: {
         name: 'Laptop Dell Vostro 13 5320 V3I7005W Gray',
-        pay: '',
+        deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
-        img: '/assets/img/img_laptop_gaming_banchay/laptop_vanphong_13.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/Bonus__13.webp',
+        img: '/assets/img/img_laptop_banchay/laptop_vanphong_13.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/Bonus__13.webp',
         status: '',
         chip: 'i7-1260P',
         card: 'Onboard',
@@ -889,10 +889,10 @@ let json5 = {
     },
     14: {
         name: 'Laptop LG Gram 2023 14Z90R GAH53A5',
-        pay: '',
+        deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
-        img: '/assets/img/img_laptop_gaming_banchay/laptop_vanphong_14.webp',
-        img_bonus: '/assets/img/img_laptop_gaming_banchay/Bonus__14.webp',
+        img: '/assets/img/img_laptop_banchay/laptop_vanphong_14.webp',
+        img_bonus: '/assets/img/img_laptop_banchay/Bonus__14.webp',
         status: '',
         chip: 'i5-1340P',
         card: 'Onboard',
@@ -907,12 +907,12 @@ let json5 = {
     },
 };
 
-// JSON Chuột bán chạy
-let json6 = {
+// JSON Chuột best-seller
+let MouseMostSale = {
     1: {
         name: 'Chuột Pulsar X2 Super Clear Edition',
         img: '/assets/img/img_chuot_banchay/chuot_1.webp',
-        status: 'Bán chạy',
+        status: 'best-seller',
         battery: 'Pin sạc',
         connect: 'Không dây',
         led: '',
@@ -925,7 +925,7 @@ let json6 = {
     2: {
         name: 'Chuột Asus TUF Gaming M3 Gen II',
         img: '/assets/img/img_chuot_banchay/chuot_2.webp',
-        status: 'Bán chạy',
+        status: 'best-seller',
         battery: 'Không',
         connect: 'Có dây',
         led: 'Led RGB',
@@ -938,7 +938,7 @@ let json6 = {
     3: {
         name: 'Chuột Logitech G102 LightSync White',
         img: '/assets/img/img_chuot_banchay/chuot_3.webp',
-        status: 'Bán chạy',
+        status: 'best-seller',
         battery: 'Không',
         connect: 'Có dây',
         led: 'Led RGB',
@@ -951,7 +951,7 @@ let json6 = {
     4: {
         name: 'Chuột Logitech G102 LightSync Black',
         img: '/assets/img/img_chuot_banchay/chuot_4.webp',
-        status: 'Bán chạy',
+        status: 'best-seller',
         battery: 'Không',
         connect: 'Có dây',
         led: 'Led RGB',
@@ -964,7 +964,7 @@ let json6 = {
     5: {
         name: 'Chuột Razer DeathAdder Essential (RZ01-03850100-R3M1)',
         img: '/assets/img/img_chuot_banchay/chuot_5.webp',
-        status: 'Bán chạy',
+        status: 'best-seller',
         battery: 'Không',
         connect: 'Có dây',
         led: 'Led RGB',
@@ -977,7 +977,7 @@ let json6 = {
     6: {
         name: 'Chuột Razer Deathadder Essential White',
         img: '/assets/img/img_chuot_banchay/chuot_6.webp',
-        status: 'Bán chạy',
+        status: 'best-seller',
         battery: 'Không',
         connect: 'Có dây',
         led: 'Led RGB',
@@ -990,7 +990,7 @@ let json6 = {
     7: {
         name: 'Chuột DareU EM901X RGB Superlight Wireless White Blue',
         img: '/assets/img/img_chuot_banchay/chuot_7.webp',
-        status: 'Bán chạy',
+        status: 'best-seller',
         battery: 'Pin sạc',
         connect: 'Không dây',
         led: 'Led RGB',
@@ -1003,7 +1003,7 @@ let json6 = {
     8: {
         name: 'Chuột DareU EM901X RGB Superlight Wireless Black',
         img: '/assets/img/img_chuot_banchay/chuot_8.webp',
-        status: 'Bán chạy',
+        status: 'best-seller',
         battery: 'Pin sạc',
         connect: 'Không dây',
         led: 'Led RGB',
@@ -1016,7 +1016,7 @@ let json6 = {
     9: {
         name: 'Chuột DareU EM901X RGB Superlight Wireless Pink',
         img: '/assets/img/img_chuot_banchay/chuot_9.webp',
-        status: 'Bán chạy',
+        status: 'best-seller',
         battery: 'Pin sạc',
         connect: 'Không dây',
         led: 'Led RGB',
@@ -1029,7 +1029,7 @@ let json6 = {
     10: {
         name: 'Chuột Logitech G502 Hero Gaming',
         img: '/assets/img/img_chuot_banchay/chuot_10.webp',
-        status: 'Bán chạy',
+        status: 'best-seller',
         battery: 'Không',
         connect: 'Có dây',
         led: 'Led RGB',
@@ -1042,7 +1042,7 @@ let json6 = {
     11: {
         name: 'Chuột gaming Rapoo VT200 Wireless',
         img: '/assets/img/img_chuot_banchay/chuot_11.webp',
-        status: 'Bán chạy',
+        status: 'best-seller',
         battery: 'Pin sạc',
         connect: 'Không dây',
         led: 'Led RGB',
@@ -1055,7 +1055,7 @@ let json6 = {
     12: {
         name: 'Chuột Logitech G502 X Plus LightSpeed White',
         img: '/assets/img/img_chuot_banchay/chuot_12.webp',
-        status: 'Bán chạy',
+        status: 'best-seller',
         battery: 'Pin sạc',
         connect: 'Không dây',
         led: 'Led RGB',
@@ -1068,7 +1068,7 @@ let json6 = {
     13: {
         name: 'Chuột Gaming Havit MS878',
         img: '/assets/img/img_chuot_banchay/chuot_13.webp',
-        status: 'Bán chạy',
+        status: 'best-seller',
         battery: '',
         connect: 'Có dây',
         led: 'Led RGB',
@@ -1081,7 +1081,7 @@ let json6 = {
     14: {
         name: '',
         img: '/assets/img/img_chuot_banchay/chuot_14.webp',
-        status: 'Bán chạy',
+        status: 'best-seller',
         battery: 'Pin sạc',
         connect: 'Không dây',
         led: 'Led RGB',
@@ -1094,7 +1094,7 @@ let json6 = {
     15: {
         name: 'Chuột Steelseries Prime Wireless',
         img: '/assets/img/img_chuot_banchay/chuot_15.webp',
-        status: 'Bán chạy',
+        status: 'best-seller',
         battery: 'Pin sạc',
         connect: 'Không dây',
         led: '',
@@ -1106,8 +1106,8 @@ let json6 = {
     },
 };
 
-// JSON bàn phím bán chạy
-let json7 = {
+// JSON bàn phím best-seller
+let KeyboardMostSale = {
     1: {
         name: 'Bàn phím cơ DareU EK75 Pro Triple Mode Black Firefly switch',
         img: '/assets/img/img_banphim_banchay/banphim_1.webp',
@@ -1124,7 +1124,7 @@ let json7 = {
     2: {
         name: 'Bàn phím MonsGeek M1 QMK Black AKKO Switch v3 Cream Yellow Pro',
         img: '/assets/img/img_banphim_banchay/banphim_2.webp',
-        status: 'Sản phẩm mới',
+        status: 'new-product',
         frame: 'Khung kim loại',
         connect: '',
         size: 'TKL',
@@ -1137,7 +1137,7 @@ let json7 = {
     3: {
         name: 'Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro',
         img: '/assets/img/img_banphim_banchay/banphim_3.webp',
-        status: 'Sản phẩm mới',
+        status: 'new-product',
         frame: 'Khung kim loại',
         connect: 'Không dây',
         size: 'TKL',
@@ -1163,7 +1163,7 @@ let json7 = {
     5: {
         name: 'Bàn phím E-Dra EK387L RGB Blue Switch',
         img: '/assets/img/img_banphim_banchay/banphim_5.webp',
-        status: 'Sản phẩm mới',
+        status: 'new-product',
         frame: '',
         connect: 'Có dây',
         size: 'TKL',
@@ -1176,7 +1176,7 @@ let json7 = {
     6: {
         name: 'Bàn phím E-Dra EK387L RGB Brown Switch',
         img: '/assets/img/img_banphim_banchay/banphim_6.webp',
-        status: 'Sản phẩm mới',
+        status: 'new-product',
         frame: '',
         connect: 'Có dây',
         size: 'TKL',
@@ -1189,7 +1189,7 @@ let json7 = {
     7: {
         name: 'Bàn phím cơ DareU EK75 Pro Triple Mode Black Golden Dream switch',
         img: '/assets/img/img_banphim_banchay/banphim_7.webp',
-        status: 'Sản phẩm mới',
+        status: 'new-product',
         frame: '',
         connect: 'Có dây',
         size: 'TKL',
@@ -1203,7 +1203,7 @@ let json7 = {
     8: {
         name: 'Bàn phím cơ DareU EK75 Pro Triple Mode Black Golden',
         img: '/assets/img/img_banphim_banchay/banphim_8.webp',
-        status: 'Sản phẩm mới',
+        status: 'new-product',
         frame: '',
         connect: 'Không dây',
         size: 'TKL',
@@ -1216,7 +1216,7 @@ let json7 = {
     9: {
         name: 'Bàn phím DareU EK87V2 Black Brown Switch',
         img: '/assets/img/img_banphim_banchay/banphim_9.webp',
-        status: 'Sản phẩm mới',
+        status: 'new-product',
         frame: '',
         connect: 'Có dây',
         size: 'TKL',
@@ -1229,7 +1229,7 @@ let json7 = {
     10: {
         name: 'Bàn phím DareU EK87V2 White Red Switch',
         img: '/assets/img/img_banphim_banchay/banphim_10.webp',
-        status: 'Bán chạy',
+        status: 'best-seller',
         frame: '',
         connect: 'Có dây',
         size: 'TKL',
@@ -1242,7 +1242,7 @@ let json7 = {
     11: {
         name: 'Bàn phím DareU EK87V2 White Blue Switch',
         img: '/assets/img/img_banphim_banchay/banphim_11.webp',
-        status: 'Bán chạy',
+        status: 'best-seller',
         frame: '',
         connect: 'Có dây',
         size: 'TKL',
@@ -1255,7 +1255,7 @@ let json7 = {
     12: {
         name: 'Bàn phím DareU EK87V2 White Brown Switch',
         img: '/assets/img/img_banphim_banchay/banphim_12.webp',
-        status: 'Bán chạy',
+        status: 'best-seller',
         frame: '',
         connect: 'Có dây',
         size: 'TKL',
@@ -1268,7 +1268,7 @@ let json7 = {
     13: {
         name: 'Bàn phím cơ DareU EK1280 V2 RGB Blue Switch',
         img: '/assets/img/img_banphim_banchay/banphim_13.webp',
-        status: 'Bán chạy',
+        status: 'best-seller',
         frame: '',
         connect: 'Có dây',
         size: 'Full Size',
@@ -1280,8 +1280,8 @@ let json7 = {
     },
 };
 
-// JSON màn hình bán chạy
-let json8 = {
+// JSON màn hình best-seller
+let ScreenMostSale = {
     1: {
         name: 'Màn hình ViewSonic VX2428J 24" Fast IPS 180Hz Gsync chuyên game',
         img: '/assets/img/img_manhinh_banchay/man_1.webp',

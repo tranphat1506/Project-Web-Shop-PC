@@ -1,176 +1,3 @@
-const mainSlider = new Swiper('.main-slider', {
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    slidesPerView: 1,
-});
-
-const saleSlider = new Swiper('.sales-slider', {
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    slidesPerView: 1,
-    spaceBetween: 10,
-    breakpoints: {
-        480: {
-            slidesPerView: 2,
-        },
-        640: {
-            slidesPerView: 3,
-        },
-        768: {
-            slidesPerView: 4,
-        },
-        1024: {
-            slidesPerView: 5,
-        },
-    },
-});
-
-class DropDownMenu {
-    // title: string
-    // class: string
-    // id: string
-    // icon: {isFontIcon: boolean, value: string}
-    // dropMenu : {isOtherDDMenu: boolean, value: []}
-    // parentEl: Node | Element
-    #isAlreadySet = false;
-    #idMenu = Math.random();
-    constructor(
-        params = {
-            containerClassName: undefined,
-            title: '',
-            icon: { isFontIcon: false, value: '' },
-            href: undefined,
-            className: undefined,
-            id: undefined,
-            dropMenu: { isOtherDDMenu: false, value: [] },
-        },
-    ) {
-        this.title = params.title;
-        this.icon = params.icon;
-        this.href = params.href;
-        this.className = params.className;
-        this.id = params.id;
-        this.dropMenu = params.dropMenu;
-        this.containerClassName = params.containerClassName;
-    }
-
-    #createDDMenu() {
-        if (this.dropMenu?.isOtherDDMenu) {
-            const dropMenu = document.createElement('ul');
-            dropMenu.className = 'ddmenu__drop-menu my-2 ml-4 hidden flex-col justify-between';
-            document
-                .querySelector(`.${this.#getMenuIdCSS('cont')}`)
-                .insertAdjacentHTML('beforeend', dropMenu.outerHTML);
-            this.dropMenu.value.map((menu) => {
-                const newDDMenu = new DropDownMenu(menu);
-                newDDMenu.setContainerClassName = `.${this.#getMenuIdCSS('cont')} .ddmenu__drop-menu`;
-                newDDMenu.appendMenu();
-            });
-        } else
-            return document.querySelector(`.${this.#getMenuIdCSS('cont')}`).insertAdjacentHTML(
-                'beforeend',
-                `<ul class="ddmenu__drop-menu my-2 ml-4 hidden flex-col justify-between">
-            
-            ${this.dropMenu.value
-                .map((menu, index) => {
-                    return `<a aria-label="${index}" href="${
-                        menu.href || '#'
-                    }" class="ddmenu__item ml-4 leading-none py-2 text-sm">${menu.title}</a>`;
-                })
-                .join('')}
-        </ul>`,
-            );
-    }
-
-    #createTitleComponent() {
-        const iconEl = this.icon
-            ? this.icon.isFontIcon
-                ? `<i class="${this.icon.value} text-xl ddmenu__title__icon"></i>`
-                : this.icon.value
-            : '';
-        return `<a href="${this.href || '#'}" class="ddmenu__title inline-flex gap-4 items-center">
-            ${iconEl}
-            <p class="ddmenu__title__text leading-none text-sm">${this.title}</p>
-        </a>`;
-    }
-
-    #createMenu() {
-        const ddmenuContainerClassname = 'ddmenu__container flex flex-col' + (` ${this.className}` || '');
-        return `<div data-ddmenuId="${this.#idMenu}" ${
-            this.id ? `id="${this.id}"` : ''
-        } class="${ddmenuContainerClassname}">
-            <div class="ddmenu__titleContainer flex items-center justify-between">
-                ${this.#createTitleComponent()}
-                <i class="ddmenu__titleContainer__right-caret bi bi-caret-right-fill text-xs cursor-pointer leading-none px-2 py-2"></i>
-            </div>
-        </div>`;
-    }
-
-    #getMenuIdCSS(type) {
-        switch (type) {
-            case 'cont':
-                return `ddmenu__container[data-ddmenuId="${this.#idMenu}"]`;
-            default:
-                return `data-ddmenuId="${this.#idMenu}"`;
-        }
-    }
-
-    #startEventOpenMenu() {
-        const el = document.querySelector(`.${this.#getMenuIdCSS('cont')} .ddmenu__titleContainer`);
-        el.addEventListener('click', (e) => {
-            document
-                .querySelector(`${this.containerClassName} .${this.#getMenuIdCSS('cont')}`)
-                .classList.toggle('ddmenu--open');
-        });
-    }
-
-    set setContainerClassName(className) {
-        this.containerClassName = className;
-    }
-
-    get getMenu() {
-        return this.#createMenu();
-    }
-
-    appendMenu() {
-        if (this.#isAlreadySet) return false;
-        this.#isAlreadySet = true;
-        try {
-            document.querySelector(`${this.containerClassName}`).insertAdjacentHTML('beforeend', this.#createMenu());
-            this.appendDropMenu();
-            this.#startEventOpenMenu();
-            return true;
-        } catch (error) {
-            console.error(error);
-            this.#isAlreadySet = false;
-            return false;
-        }
-    }
-
-    appendDropMenu() {
-        this.#createDDMenu();
-    }
-}
 const CategoryMenuApi = [
     {
         title: 'Laptop',
@@ -2543,13 +2370,205 @@ c-2.2781,0-4.125-2.0986-4.125-4.6875C60.8368,32.277,62.6837,30.1783,64.9618,30.1
         },
     },
 ];
-const renderCategoryMenu = (contEl, menuArr = []) => {
+
+class DropDownMenu {
+    // title: string
+    // class: string
+    // id: string
+    // icon: {isFontIcon: boolean, value: string}
+    // dropMenu : {isOtherDDMenu: boolean, value: []}
+    // parentEl: Node | Element
+    #isAlreadySet = false;
+    #idMenu = Math.random();
+    constructor(
+        params = {
+            containerClassName: undefined,
+            title: '',
+            icon: { isFontIcon: false, value: '' },
+            href: undefined,
+            className: undefined,
+            id: undefined,
+            dropMenu: { isOtherDDMenu: false, value: [] },
+            fixed: false,
+            withCardMenu: false,
+            cardContentClassName: '',
+            cardContainerClassName: '',
+            titleContainerClassName: '',
+            hideCaretIcon: false,
+        },
+    ) {
+        this.hideCaretIcon = params.hideCaretIcon;
+        this.withCardMenu = params.withCardMenu;
+        this.cardContentClassName = params.cardContentClassName;
+        this.titleContainerClassName = params.titleContainerClassName;
+        this.cardContainerClassName = params.cardContainerClassName;
+        this.fixed = params.fixed;
+        this.title = params.title;
+        this.icon = params.icon;
+        this.href = params.href;
+        this.className = params.className;
+        this.id = params.id;
+        this.dropMenu = params.dropMenu;
+        this.containerClassName = params.containerClassName;
+    }
+
+    #createDDMenu() {
+        if (this.withCardMenu) {
+            const dropMenu = document.createElement('div');
+            dropMenu.className = 'ddmenu__drop-menu hidden absolute h-full z-10' + ` ${this.cardContainerClassName}`;
+            dropMenu.insertAdjacentHTML(
+                'beforeend',
+                `<div class="ddmenu__menu-content bg-white w-full h-full ml-1 shadow-md rounded text-[#444] overflow-x-auto ${this.cardContentClassName}"></div>`,
+            );
+            document
+                .querySelector(`.${this.#getMenuIdCSS('cont')}`)
+                .insertAdjacentHTML('beforeend', dropMenu.outerHTML);
+            this.dropMenu.value.map((menu) => {
+                const newDDMenu = new DropDownMenu(menu);
+                newDDMenu.setContainerClassName = `.${this.#getMenuIdCSS(
+                    'cont',
+                )} .ddmenu__drop-menu .ddmenu__menu-content`;
+                newDDMenu.appendMenu();
+            });
+        } else if (this.dropMenu?.isOtherDDMenu) {
+            const dropMenu = document.createElement('ul');
+            dropMenu.className = 'ddmenu__drop-menu my-2 ml-4 hidden flex-col justify-between';
+            document
+                .querySelector(`.${this.#getMenuIdCSS('cont')}`)
+                .insertAdjacentHTML('beforeend', dropMenu.outerHTML);
+            this.dropMenu.value.map((menu) => {
+                const newDDMenu = new DropDownMenu(menu);
+                newDDMenu.setContainerClassName = `.${this.#getMenuIdCSS('cont')} .ddmenu__drop-menu`;
+                newDDMenu.appendMenu();
+            });
+        } else
+            return document.querySelector(`.${this.#getMenuIdCSS('cont')}`).insertAdjacentHTML(
+                'beforeend',
+                `<ul class="ddmenu__drop-menu my-2 ml-4 hidden flex-col justify-between">
+            
+            ${this.dropMenu.value
+                .map((menu, index) => {
+                    return `<a aria-label="${index}" href="${
+                        menu.href || '#'
+                    }" class="ddmenu__item ml-4 leading-none py-2 text-sm">${menu.title}</a>`;
+                })
+                .join('')}
+        </ul>`,
+            );
+    }
+
+    #createTitleComponent() {
+        const iconEl = this.icon
+            ? this.icon.isFontIcon
+                ? `<i class="${this.icon.value} text-xl ddmenu__title__icon"></i>`
+                : this.icon.value
+            : '';
+        return `<a href="${this.href || '#'}" class="ddmenu__title inline-flex gap-4 items-center w-full">
+            ${iconEl}
+            <p class="ddmenu__title__text leading-none text-sm">${this.title}</p>
+        </a>`;
+    }
+
+    #createMenu() {
+        const ddmenuContainerClassname =
+            'ddmenu__container flex flex-col' +
+            (` ${this.className}` || '') +
+            `${this.fixed ? ' ddmenu--open' : ''}` +
+            `${this.withCardMenu ? ' ddmenu--card-menu' : ''}`;
+        return `<div data-ddmenuId="${this.#idMenu}" ${
+            this.id ? `id="${this.id}"` : ''
+        } class="${ddmenuContainerClassname}">
+            <div class="ddmenu__titleContainer flex items-center justify-between ${this.titleContainerClassName}">
+                ${this.#createTitleComponent()}
+                ${
+                    !this.hideCaretIcon
+                        ? `<i class="ddmenu__titleContainer__right-caret bi bi-caret-right-fill text-xs cursor-pointer leading-none px-2 py-2 ${
+                              this.fixed ? '!rotate-0' : ''
+                          }"></i>`
+                        : ''
+                }
+            </div>
+        </div>`;
+    }
+
+    #getMenuIdCSS(type) {
+        switch (type) {
+            case 'cont':
+                return `ddmenu__container[data-ddmenuId="${this.#idMenu}"]`;
+            default:
+                return `data-ddmenuId="${this.#idMenu}"`;
+        }
+    }
+
+    #startEventOpenMenu() {
+        const el = document.querySelector(`.${this.#getMenuIdCSS('cont')} .ddmenu__titleContainer`);
+        el.addEventListener('click', (e) => {
+            document
+                .querySelector(`${this.containerClassName} .${this.#getMenuIdCSS('cont')}`)
+                .classList.toggle('ddmenu--open');
+        });
+    }
+
+    set setContainerClassName(className) {
+        this.containerClassName = className;
+    }
+
+    get getMenu() {
+        return this.#createMenu();
+    }
+
+    appendMenu() {
+        if (this.#isAlreadySet) return false;
+        this.#isAlreadySet = true;
+        try {
+            document.querySelector(`${this.containerClassName}`).insertAdjacentHTML('beforeend', this.#createMenu());
+            this.appendDropMenu();
+            !this.fixed && this.#startEventOpenMenu();
+            return true;
+        } catch (error) {
+            //console.error(error);
+            this.#isAlreadySet = false;
+            return false;
+        }
+    }
+
+    appendDropMenu() {
+        this.#createDDMenu();
+    }
+}
+
+const renderCategoryMenu = (contEl, menuArr = [], type = 'default') => {
     if (!contEl || contEl === '') throw new Error('Container element invalid!');
-    return menuArr.map((menu) => {
-        return new DropDownMenu({ ...menu, containerClassName: contEl }).appendMenu();
-    });
+    switch (type) {
+        case 'default':
+            return menuArr?.map((menu) => {
+                const menuEle = new DropDownMenu({ ...menu, containerClassName: contEl });
+                return { element: menuEle, status: menuEle.appendMenu() };
+            });
+        case 'with-card-menu':
+            return menuArr?.map((menu) => {
+                const menuFilter = {
+                    ...menu,
+                    containerClassName: contEl,
+                    withCardMenu: true,
+                    className: 'px-4 hover:bg-[#d72c2c] text-[#444]',
+                    cardContainerClassName: 'w-[950px] h-full z-10 left-[15.5rem] top-0',
+                    cardContentClassName: 'py-5 px-6 flex flex-wrap gap-x-16 gap-y-3',
+                    fixed: true,
+                    dropMenu: {
+                        ...menu.dropMenu,
+                        value: menu.dropMenu.value?.map((menu) => {
+                            return { ...menu, fixed: true, hideCaretIcon: true };
+                        }),
+                    },
+                };
+                const menuEle = new DropDownMenu(menuFilter);
+                return { element: menuEle, status: menuEle.appendMenu() };
+            });
+        default:
+            throw new Error('Type render invalid!');
+    }
 };
-renderCategoryMenu('.category-container', CategoryMenuApi);
 
 const handleOpenMainMenu = () => {
     const mainMenu = document.querySelector('.top-menu__container') || undefined;
@@ -2562,3 +2581,170 @@ const handleOpenMainMenu = () => {
         mainMenu.classList.add('top-menu--open');
     }
 };
+
+const App = () => {
+    initSlider(); //Start
+    renderCategoryMenu('.category-container', CategoryMenuApi);
+    renderCategoryMenu('.category-container--main', CategoryMenuApi, 'with-card-menu');
+    // const fakeProduct = {
+    //     prodName: 'Test',
+    //     prodHref: '#test',
+    //     prodImg: '/assets/img/img_pc/Gearvn_Gaming_2.png',
+    //     isSales: true,
+    //     oPrice: 100000000,
+    //     sPrice: 85000000,
+    //     countSold: undefined,
+    //     prodDetail: {
+    //         show: true,
+    //         details: {
+    //             chip: 'i9 19KF',
+    //             card: 'RTX 4090',
+    //             memory: undefined,
+    //             storage: '1TB (SSD)',
+    //             screen: undefined,
+    //             panelType: undefined,
+    //             screenResolution: undefined,
+    //             hz: undefined,
+    //             mainboard: undefined,
+    //             mouseBattery: undefined,
+    //             mouseDPI: undefined,
+    //             mouseLED: undefined,
+    //             deviceConnect: 'test',
+    //             kbSize: 'test',
+    //             kbSwitch: 'test',
+    //             gift: ['asdasd', 'adsasd'],
+    //             prodDeal: 'qua-tang-hot',
+    //             prodStatus: 'best-seller',
+    //         },
+    //     },
+    //     voteRate: {
+    //         show: true,
+    //         total: 10,
+    //         star: 5,
+    //     },
+    // };
+    const SliderApi = {
+        MostSaleSliderApi: {
+            container: '.most-sale__slider-container',
+            title: 'Sản phẩm bán chạy',
+            sliderName: 'MostSaleSlider',
+            type: 'bestSeller',
+            coutDown: {
+                show: true,
+                h: 0,
+                m: 0,
+                s: 0,
+            },
+            prodArr: MostSale,
+        },
+        LenovoScreenSaleApi: {
+            container: '.lenovo-sale__slider-container',
+            title: 'MÀN HÌNH GAMING LENOVO GIẢM TỚI 38%',
+            sliderName: 'LenovoScreenSale',
+            saleImg: '/assets/img/img_sales/screen_sales.webp',
+            type: 'lenovoSale38',
+            coutDown: {
+                show: true,
+                h: 23,
+                m: 59,
+                s: 59,
+            },
+            prodArr: LenovoScreenSale,
+        },
+        PCMostSaleApi: {
+            container: '.pc-mostSale__slider-container',
+            title: 'PC bán chạy',
+            sliderName: 'PCMostSale',
+            type: 'default',
+            prodArr: PCMostSale,
+            suggestNav: [
+                { title: 'PC Gaming', href: '#/pc/gaming' },
+                { title: 'PC Văn phòng', href: '#/pc/vp' },
+                { title: 'PC Đồ họa', href: '#/pc/dohoa' },
+                { title: 'PC Doanh nghiệp', href: '#/pc/workstation' },
+            ],
+        },
+        LaptopGamingMostSaleApi: {
+            container: '.lap-gaming-mostSale__slider-container',
+            title: 'Laptop Gaming bán chạy',
+            sliderName: 'LaptopGamingMostSale',
+            type: 'default',
+            prodArr: LaptopGamingMostSale,
+            suggestNav: [
+                { title: 'ACER', href: '#/pc/acer' },
+                { title: 'ASUS', href: '#/pc/asus' },
+                { title: 'MSI', href: '#/pc/msi' },
+                { title: 'LENOVO', href: '#/pc/lenovo' },
+                { title: 'GIGABYTE', href: '#/pc/gigabyte' },
+                { title: 'DELL', href: '#/pc/dell' },
+            ],
+        },
+        LaptopVPMostSaleApi: {
+            container: '.lap-vp-mostSale__slider-container',
+            title: 'Laptop Văn phòng bán chạy',
+            sliderName: 'LaptopVPMostSale',
+            type: 'default',
+            prodArr: LaptopVPMostSale,
+            suggestNav: [
+                { title: 'ASUS', href: '#/pc/asus' },
+                { title: 'MSI', href: '#/pc/msi' },
+                { title: 'LENOVO', href: '#/pc/lenovo' },
+                { title: 'DELL', href: '#/pc/dell' },
+                { title: 'LG', href: '#/pc/lg' },
+                { title: 'ACER', href: '#/pc/acer' },
+            ],
+        },
+        MouseMostSaleApi: {
+            container: '.mouse-mostSale__slider-container',
+            title: 'Chuột bán chạy',
+            sliderName: 'MouseMostSale',
+            type: 'default',
+            prodArr: MouseMostSale,
+            suggestNav: [
+                { title: 'Logitech', href: '#/mouse/logitech' },
+                { title: 'Razer', href: '#/mouse/razer' },
+                { title: 'Corsair', href: '#/mouse/corsair' },
+                { title: 'DareU', href: '#/mouse/dareU' },
+                { title: 'Glorious', href: '#/mouse/glorious' },
+                { title: 'Asus', href: '#/mouse/asus' },
+            ],
+        },
+        KeyboardMostSaleApi: {
+            container: '.keyboard-mostSale__slider-container',
+            title: 'Bàn phím bán chạy',
+            sliderName: 'KeyboardMostSale',
+            type: 'default',
+            prodArr: KeyboardMostSale,
+            suggestNav: [
+                { title: 'Akko', href: '#/keyboard/akko' },
+                { title: 'Asus', href: '#/keyboard/asus' },
+                { title: 'Razer', href: '#/keyboard/razer' },
+                { title: 'Logitech', href: '#/keyboard/logitech' },
+                { title: 'Leopold', href: '#/keyboard/leopold' },
+                { title: 'DareU', href: '#/keyboard/dareU' },
+            ],
+        },
+        ScreenMostSaleApi: {
+            container: '.screen-mostSale__slider-container',
+            title: 'Màn chính hãng',
+            sliderName: 'ScreenMostSale',
+            type: 'default',
+            prodArr: ScreenMostSale,
+            suggestNav: [
+                { title: 'LG', href: '#/screen/lg' },
+                { title: 'Asus', href: '#/screen/asus' },
+                { title: 'Viewsonic', href: '#/screen/viewsonic' },
+                { title: 'Dell', href: '#/screen/dell' },
+                { title: 'Gigabyte', href: '#/screen/gigabyte' },
+                { title: 'AOC', href: '#/screen/aoc' },
+                { title: 'Acer', href: '#/screen/acer' },
+                { title: 'HKC', href: '#/screen/hkc' },
+            ],
+        },
+    };
+    const sliders = Object.keys(SliderApi).map((key) => {
+        const slider = new SliderCard(SliderApi[key]);
+        return { slider, error: !slider.startSlider(SliderApi[key].container) };
+    });
+};
+App();
