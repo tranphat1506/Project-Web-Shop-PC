@@ -31,6 +31,333 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
+        <header id="header" class="w-full bg-[#d72c2c]">
+            <div
+                class="py-2 lg:px-6 px-3 mx-auto max-w-screen-2xl flex justify-between items-center gap-2 bg-[#d72c2c]"
+            >
+                <!-- logo & menu -->
+                <div class="flex items-center gap-2 sm:flex-row-reverse">
+                    <!-- main menu btn -->
+                    <button
+                        title="Menu"
+                        onclick="handleOpenMainMenu()"
+                        class="inline-flex items-center gap-2 w-min hover:bg-[#00000068] active:bg-[#00000030] p-2 rounded-xl"
+                    >
+                        <i class="leading-none bi bi-list text-white text-xl"></i>
+                    </button>
+                    <div
+                        class="top-menu__container invisible opacity-0 transition-all duration-300 overflow-x-hidden absolute top-0 left-0 w-full h-screen overflow-auto bg-[#00000049] z-50"
+                    >
+                        <div
+                            class="max-[480px]:w-full w-[320px] min-h-full bg-white float-right translate-x-full transition-transform duration-300"
+                        >
+                            <div class="">
+                                <div class="bg-[#d72c2c] text-white flex items-center px-3 py-3 justify-between">
+                                    <h1 class="uppercase font-medium">Danh mục sản phẩm</h1>
+                                    <button
+                                        onclick="handleOpenMainMenu()"
+                                        class="inline-flex items-center justify-center px-2 py-1"
+                                    >
+                                        <span class="font-black leading-none">&#x2715;</span>
+                                    </button>
+                                </div>
+                                <div class="category-container flex flex-col"></div>
+                            </div>
+                            <div class="text-[#444] font-medium">
+                                <div class="bg-[#d72c2c] text-white flex items-center px-3 py-3 justify-between">
+                                    <h1 class="uppercase">Thông tin</h1>
+                                </div>
+                                <div class="px-5 flex flex-col">
+                                    <a
+                                        title="Hotline"
+                                        href="tel:+84000000000"
+                                        class="flex items-center gap-4 py-3 rounded text-red-500"
+                                    >
+                                        <i class="leading-none bi bi-headset text-2xl"></i>
+                                        <p class="font-WorkSans break-words leading-none text-sm">Hotline 1800.xxxx</p>
+                                    </a>
+                                    <a
+                                        title="Chương trình khuyến mãi"
+                                        href="/sales.html"
+                                        class="flex items-center gap-4 py-3 rounded"
+                                    >
+                                        <i class="leading-none bi bi-tags text-xl"></i>
+                                        <p
+                                            class="font-WorkSans font-bold leading-none text-sm block text-red-500 uppercase"
+                                        >
+                                            Khuyến mãi
+                                        </p>
+                                    </a>
+
+                                    <a
+                                        title="Hướng dẫn trả góp"
+                                        href="#help/installment"
+                                        class="flex items-center gap-4 py-3 rounded"
+                                    >
+                                        <i class="leading-none bi bi-cash-coin text-xl"></i>
+                                        <p class="font-WorkSans leading-none text-sm block">Hướng dẫn trả góp</p>
+                                    </a>
+
+                                    <a
+                                        title="Hướng dẫn thanh toán"
+                                        href="#help/payment"
+                                        class="flex items-center gap-4 py-3 rounded"
+                                    >
+                                        <i class="leading-none bi bi-credit-card text-xl"></i>
+                                        <p class="font-WorkSans leading-none text-sm block">Hướng dẫn thanh toán</p>
+                                    </a>
+
+                                    <a
+                                        title="Chính sách bảo hành"
+                                        href="#policy/warranty"
+                                        class="flex items-center gap-4 py-3 rounded"
+                                    >
+                                        <i class="leading-none bi bi-shield-check text-xl"></i>
+                                        <p class="font-WorkSans leading-none text-sm block">Chính sách bảo hành</p>
+                                    </a>
+
+                                    <a
+                                        title="Thông tin liên lạc"
+                                        href="#help/contact"
+                                        class="flex items-center gap-4 py-3 rounded"
+                                    >
+                                        <i class="leading-none bi bi-telephone text-xl"></i>
+                                        <p class="font-WorkSans leading-none text-sm block">Thông tin liên lạc</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- logo icon -->
+                    <a href="/" class="min-[400px]:inline-flex hidden px-2 items-center gap-1">
+                        <!-- logo -->
+                        <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #e6e6e6;
+                                    }
+                                    .cls-2 {
+                                        fill: #ccc;
+                                    }
+                                    .cls-3 {
+                                        fill: #3f464d;
+                                    }
+                                    .cls-4 {
+                                        fill: #363f47;
+                                    }
+                                </style>
+                            </defs>
+                            <g id="_01" data-name="01">
+                                <polygon
+                                    class="cls-1"
+                                    points="19.67 25 19 23 13 23 12.33 25 11 29 21 29 19.67 25"
+                                    id="id_101"
+                                    style="fill: rgb(255, 255, 255)"
+                                ></polygon>
+                                <polygon
+                                    class="cls-2"
+                                    points="19.67 25 12.33 25 13 23 19 23 19.67 25"
+                                    id="id_102"
+                                    style="fill: rgb(255, 255, 255)"
+                                ></polygon>
+                                <path
+                                    class="cls-1"
+                                    d="M27.93,5.07A1.251,1.251,0,0,0,27.5,5H4.5A1.5,1.5,0,0,0,3,6.5v16A1.5,1.5,0,0,0,4.5,24h23a1.386,1.386,0,0,0,.5-.09,1.5,1.5,0,0,0,1-1.41V6.5A1.485,1.485,0,0,0,27.93,5.07Z"
+                                    id="id_103"
+                                    style="fill: rgb(255, 255, 255)"
+                                ></path>
+                                <path
+                                    class="cls-3"
+                                    d="M3,20v2.5A1.5,1.5,0,0,0,4.5,24h23A1.5,1.5,0,0,0,29,22.5V20Z"
+                                    id="id_104"
+                                ></path>
+                                <rect
+                                    class="cls-2"
+                                    x="16"
+                                    y="4"
+                                    width="13"
+                                    height="25"
+                                    rx="1.5"
+                                    ry="1.5"
+                                    id="id_105"
+                                ></rect>
+                                <path
+                                    class="cls-2"
+                                    d="M27.93,5.07A1.251,1.251,0,0,0,27.5,5H14.09a1.386,1.386,0,0,0-.09.5v22A1.5,1.5,0,0,0,15.5,29h11A1.5,1.5,0,0,0,28,27.5V5.5A1.251,1.251,0,0,0,27.93,5.07Z"
+                                    id="id_106"
+                                ></path>
+                                <rect
+                                    class="cls-1"
+                                    x="15"
+                                    y="4"
+                                    width="14"
+                                    height="25"
+                                    rx="1.5"
+                                    ry="1.5"
+                                    id="id_107"
+                                    style="fill: rgb(255, 255, 255)"
+                                ></rect>
+                                <rect class="cls-3" x="18" y="9" width="9" height="1" id="id_108"></rect>
+                                <rect class="cls-3" x="18" y="12" width="9" height="1" id="id_109"></rect>
+                                <circle class="cls-3" cx="19" cy="25" r="1" id="id_110"></circle>
+                                <rect class="cls-4" x="14" y="20" width="1" height="4" id="id_111"></rect>
+                            </g>
+                        </svg>
+                        <h1 class="lg:block hidden font-Righteous font-black text-white text-3xl uppercase">
+                            shoppc.vn
+                        </h1>
+                    </a>
+                </div>
+                <!-- search -->
+                <div class="flex bg-white rounded-2xl px-2 items-center w-full">
+                    <input
+                        class="w-full bg-transparent text-[#444] outline-none py-2 px-3 font-WorkSans leading-none text-sm placeholder:text-sm"
+                        placeholder="Bạn cần tìm gì?"
+                        id="search-input"
+                        name="searchValue"
+                        type="text"
+                    />
+                    <span class="px-2 cursor-pointer">
+                        <i class="leading-none bi bi-search"></i>
+                    </span>
+                </div>
+                <!-- nav -->
+                <div class="flex gap-2 items-center justify-center">
+                    <!-- hotline btn -->
+                    <a
+                        title="Hotline"
+                        href="tel:+84000000000"
+                        class="sm:inline-flex hidden items-center gap-2 w-min py-1 px-2 rounded"
+                    >
+                        <i class="leading-none bi bi-headset text-white text-2xl"></i>
+                        <p
+                            class="font-WorkSans text-white font-medium break-words leading-none text-sm md:block hidden"
+                        >
+                            Hotline 1800.xxxx
+                        </p>
+                    </a>
+                    <!-- showroom btn -->
+                    <a
+                        title="Cửa hàng"
+                        href="#showrooms"
+                        class="sm:inline-flex hidden items-center gap-2 w-min hover:bg-[#00000068] p-2 px-3 rounded-xl"
+                    >
+                        <i class="leading-none bi bi-pin-map text-white text-xl"></i>
+                        <p
+                            class="font-WorkSans text-white font-medium break-words leading-none text-sm md:block hidden"
+                        >
+                            Cửa hàng
+                        </p>
+                    </a>
+                    <!-- lookup order btn -->
+                    <a
+                        title="Tra cứu đơn hàng"
+                        href="#lookup-orders"
+                        class="relative sm:inline-flex hidden items-center gap-2 p-2 rounded-xl"
+                    >
+                        <i class="leading-none bi bi-truck text-white text-2xl"></i>
+                        <p
+                            class="absolute right-0 top-0 font-WorkSans text-[#d72c2c] bg-white text-[10px] rounded-lg font-medium p-[2px] min-w-[1.25rem] inline-flex justify-center items-center"
+                        >
+                            0
+                        </p>
+                    </a>
+                    <!-- cart btn -->
+                    <a
+                        title="Giỏ hàng"
+                        href="/cart.html"
+                        class="relative inline-flex items-center gap-2 p-2 rounded-xl"
+                    >
+                        <i class="leading-none bi bi-cart text-white text-2xl"></i>
+                        <p
+                            class="absolute right-0 top-0 font-WorkSans text-[#d72c2c] bg-white text-[10px] rounded-lg font-medium p-[2px] min-w-[1.25rem] inline-flex justify-center items-center"
+                        >
+                            0
+                        </p>
+                    </a>
+                    <!-- login btn -->
+                    <a
+                        title="Đăng nhập"
+                        href="/loginForm.html"
+                        class="sm:inline-flex hidden items-center gap-2 w-min hover:bg-[#00000068] p-2 px-3 rounded-xl"
+                    >
+                        <i class="leading-none bi bi-person-fill text-white text-2xl"></i>
+                        <p
+                            class="font-WorkSans text-white font-medium break-words leading-none text-sm md:block hidden"
+                        >
+                            Đăng nhập
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="bg-white shadow-md mx-auto flex flex-col justify-between items-center">
+                <!-- Top Products Nav -->
+                <div
+                    class="bg-[#D72C2C] max-[425px]:hidden flex flex-wrap font-WorkSans lg:text-xs text-sm text-white pb-2 w-full justify-center"
+                >
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Laptop</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Macbook</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Laptop Gaming</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Laptop văn phòng</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Linh kiện PC</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Card đồ họa</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Màn hình LED</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Bàn phìm</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Chuột</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Tai nghe</a>
+                </div>
+                <!-- Help & Policy nav -->
+                <div class="lg:flex hidden justify-center mx-auto gap-4">
+                    <a
+                        title="Chương trình khuyến mãi"
+                        href="/sales.html"
+                        class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+                    >
+                        <i class="leading-none bi bi-tags text-xl"></i>
+                        <p class="font-WorkSans font-bold leading-none text-sm block text-[#d72c2c] uppercase">
+                            Khuyến mãi
+                        </p>
+                    </a>
+
+                    <a
+                        title="Hướng dẫn trả góp"
+                        href="#help/installment"
+                        class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+                    >
+                        <i class="leading-none bi bi-cash-coin text-xl"></i>
+                        <p class="font-WorkSans font-medium leading-none text-sm block">Hướng dẫn trả góp</p>
+                    </a>
+
+                    <a
+                        title="Hướng dẫn thanh toán"
+                        href="#help/payment"
+                        class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+                    >
+                        <i class="leading-none bi bi-credit-card text-xl"></i>
+                        <p class="font-WorkSans font-medium leading-none text-sm block">Hướng dẫn thanh toán</p>
+                    </a>
+
+                    <a
+                        title="Chính sách bảo hành"
+                        href="#policy/warranty"
+                        class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+                    >
+                        <i class="leading-none bi bi-shield-check text-xl"></i>
+                        <p class="font-WorkSans font-medium leading-none text-sm block">Chính sách bảo hành</p>
+                    </a>
+
+                    <a
+                        title="Thông tin liên lạc"
+                        href="#help/contact"
+                        class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+                    >
+                        <i class="leading-none bi bi-telephone text-xl"></i>
+                        <p class="font-WorkSans font-medium leading-none text-sm block">Thông tin liên lạc</p>
+                    </a>
+                </div>
+            </div>
+        </header>
         <div class="insMain mb-40 h-auto mx-auto max-w-[1200px] xl:px-0 px-2 py-2 font-WorkSans">
             <section id="insCartPage" class="bg_w ajax-cart-popup">
                 <div class="container">
