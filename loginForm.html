@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/png" href="/sent-icon-32x32.png" />
+        <link rel="icon" type="image/png" href="/assets/img/pc-logo-white.svg" />
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
@@ -30,16 +30,16 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
-    <body>
+    <body class="bg-white">
         <!-- close btn -->
-        <button id="closeButton" tabindex="1" class="w-1/2 sm:w-full">
+        <a href="/" id="closeButton" tabindex="1" class="w-1/2 sm:w-full">
             <i class="bi bi-x-lg text-4xl fixed top-16 left-10 ml-2 transition-transform hover:scale-110"></i>
-        </button>
+        </a>
 
         <!-- top btn -->
         <button
             id="registerButton"
-            class="fixed top-10 right-10 text-blue-500 text-2xl font-semibold rounded-full focus:outline-none justify-center transition-colors hover:bg-gray-100 border border-gray-300 py-4 px-14 shadow-lg mb-4 flex items-center font-WorkSans md:py-2 md:px-8 md:text-xl md:mb-2 md:shadow-md sm:py-2 sm:px-8 sm:text-lg sm:mb-2 sm:shadow-sm"
+            class="fixed top-10 right-10 bg-white text-blue-500 text-2xl font-semibold rounded-full focus:outline-none justify-center transition-colors hover:bg-gray-100 border border-gray-300 py-4 px-14 shadow-lg mb-4 flex items-center font-WorkSans md:py-2 md:px-8 md:text-xl md:mb-2 md:shadow-md sm:py-2 sm:px-8 sm:text-lg sm:mb-2 sm:shadow-sm"
         >
             Đăng ký
         </button>
@@ -47,7 +47,7 @@
         <!-- top btn -->
         <button
             id="loginButton"
-            class="hidden fixed top-10 right-10 text-red-500 text-2xl font-semibold rounded-full focus:outline-none justify-center transition-colors hover:bg-gray-100 border border-gray-300 py-4 px-14 shadow-lg mb-4 items-center font-WorkSans md:py-2 md:px-8 md:text-xl md:mb-2 md:shadow-md sm:py-2 sm:px-8 sm:text-lg sm:mb-2 sm:shadow-sm"
+            class="hidden fixed top-10 right-10 bg-white text-red-500 text-2xl font-semibold rounded-full focus:outline-none justify-center transition-colors hover:bg-gray-100 border border-gray-300 py-4 px-14 shadow-lg mb-4 items-center font-WorkSans md:py-2 md:px-8 md:text-xl md:mb-2 md:shadow-md sm:py-2 sm:px-8 sm:text-lg sm:mb-2 sm:shadow-sm"
         >
             Đăng nhập
         </button>
@@ -239,5 +239,5 @@
             </div>
         </div>
     </body>
-    <script src="/assets/js/form.js"></script>
+    <script src="/assets/js/loginForm.js"></script>
 </html>
