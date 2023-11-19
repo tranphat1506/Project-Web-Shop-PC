@@ -1,0 +1,2318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="/assets/img/pc-logo-white.svg" />
+        <link rel="stylesheet" href="" />
+        <link rel="stylesheet" href="assets/css/styles.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+            integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+            crossorigin="anonymous"
+        />
+        <!-- css -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            WorkSans: ['Work Sans', 'sans-serif'],
+                        },
+                        colors: {},
+                    },
+                },
+                darkMode: 'class',
+            };
+        </script>
+        <title>SHOPPC.VN</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body class="bg-white">
+        <header id="header" class="w-full bg-[#d72c2c]">
+            <div
+                class="py-2 lg:px-6 px-3 mx-auto max-w-screen-2xl flex justify-between items-center gap-2 bg-[#d72c2c]"
+            >
+                <!-- logo & menu -->
+                <div class="flex items-center gap-2 sm:flex-row-reverse">
+                    <!-- main menu btn -->
+                    <button
+                        title="Menu"
+                        onclick="handleOpenMainMenu()"
+                        class="inline-flex items-center gap-2 w-min hover:bg-[#00000068] active:bg-[#00000030] p-2 rounded-xl"
+                    >
+                        <i class="leading-none bi bi-list text-white text-xl"></i>
+                    </button>
+                    <div
+                        class="top-menu__container invisible opacity-0 transition-all duration-300 overflow-x-hidden absolute top-0 left-0 w-full h-screen overflow-auto bg-[#00000049] z-50"
+                    >
+                        <div
+                            class="max-[480px]:w-full w-[320px] min-h-full bg-white float-right translate-x-full transition-transform duration-300"
+                        >
+                            <div class="">
+                                <div class="bg-[#d72c2c] text-white flex items-center px-3 py-3 justify-between">
+                                    <h1 class="uppercase font-medium">Danh mục sản phẩm</h1>
+                                    <button
+                                        onclick="handleOpenMainMenu()"
+                                        class="inline-flex items-center justify-center px-2 py-1"
+                                    >
+                                        <span class="font-black leading-none">&#x2715;</span>
+                                    </button>
+                                </div>
+                                <div class="category-container flex flex-col"></div>
+                            </div>
+                            <div class="text-[#444] font-medium">
+                                <div class="bg-[#d72c2c] text-white flex items-center px-3 py-3 justify-between">
+                                    <h1 class="uppercase">Thông tin</h1>
+                                </div>
+                                <div class="px-5 flex flex-col">
+                                    <a
+                                        title="Hotline"
+                                        href="tel:+84000000000"
+                                        class="flex items-center gap-4 py-3 rounded text-red-500"
+                                    >
+                                        <i class="leading-none bi bi-headset text-2xl"></i>
+                                        <p class="font-WorkSans break-words leading-none text-sm">Hotline 1800.xxxx</p>
+                                    </a>
+                                    <a
+                                        title="Chương trình khuyến mãi"
+                                        href="/sales.html"
+                                        class="flex items-center gap-4 py-3 rounded"
+                                    >
+                                        <i class="leading-none bi bi-tags text-xl"></i>
+                                        <p
+                                            class="font-WorkSans font-bold leading-none text-sm block text-red-500 uppercase"
+                                        >
+                                            Khuyến mãi
+                                        </p>
+                                    </a>
+
+                                    <a
+                                        title="Hướng dẫn trả góp"
+                                        href="#help/installment"
+                                        class="flex items-center gap-4 py-3 rounded"
+                                    >
+                                        <i class="leading-none bi bi-cash-coin text-xl"></i>
+                                        <p class="font-WorkSans leading-none text-sm block">Hướng dẫn trả góp</p>
+                                    </a>
+
+                                    <a
+                                        title="Hướng dẫn thanh toán"
+                                        href="#help/payment"
+                                        class="flex items-center gap-4 py-3 rounded"
+                                    >
+                                        <i class="leading-none bi bi-credit-card text-xl"></i>
+                                        <p class="font-WorkSans leading-none text-sm block">Hướng dẫn thanh toán</p>
+                                    </a>
+
+                                    <a
+                                        title="Chính sách bảo hành"
+                                        href="#policy/warranty"
+                                        class="flex items-center gap-4 py-3 rounded"
+                                    >
+                                        <i class="leading-none bi bi-shield-check text-xl"></i>
+                                        <p class="font-WorkSans leading-none text-sm block">Chính sách bảo hành</p>
+                                    </a>
+
+                                    <a
+                                        title="Thông tin liên lạc"
+                                        href="#help/contact"
+                                        class="flex items-center gap-4 py-3 rounded"
+                                    >
+                                        <i class="leading-none bi bi-telephone text-xl"></i>
+                                        <p class="font-WorkSans leading-none text-sm block">Thông tin liên lạc</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- logo icon -->
+                    <a href="/" class="min-[400px]:inline-flex hidden px-2 items-center gap-1">
+                        <!-- logo -->
+                        <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #e6e6e6;
+                                    }
+                                    .cls-2 {
+                                        fill: #ccc;
+                                    }
+                                    .cls-3 {
+                                        fill: #3f464d;
+                                    }
+                                    .cls-4 {
+                                        fill: #363f47;
+                                    }
+                                </style>
+                            </defs>
+                            <g id="_01" data-name="01">
+                                <polygon
+                                    class="cls-1"
+                                    points="19.67 25 19 23 13 23 12.33 25 11 29 21 29 19.67 25"
+                                    id="id_101"
+                                    style="fill: rgb(255, 255, 255)"
+                                ></polygon>
+                                <polygon
+                                    class="cls-2"
+                                    points="19.67 25 12.33 25 13 23 19 23 19.67 25"
+                                    id="id_102"
+                                    style="fill: rgb(255, 255, 255)"
+                                ></polygon>
+                                <path
+                                    class="cls-1"
+                                    d="M27.93,5.07A1.251,1.251,0,0,0,27.5,5H4.5A1.5,1.5,0,0,0,3,6.5v16A1.5,1.5,0,0,0,4.5,24h23a1.386,1.386,0,0,0,.5-.09,1.5,1.5,0,0,0,1-1.41V6.5A1.485,1.485,0,0,0,27.93,5.07Z"
+                                    id="id_103"
+                                    style="fill: rgb(255, 255, 255)"
+                                ></path>
+                                <path
+                                    class="cls-3"
+                                    d="M3,20v2.5A1.5,1.5,0,0,0,4.5,24h23A1.5,1.5,0,0,0,29,22.5V20Z"
+                                    id="id_104"
+                                ></path>
+                                <rect
+                                    class="cls-2"
+                                    x="16"
+                                    y="4"
+                                    width="13"
+                                    height="25"
+                                    rx="1.5"
+                                    ry="1.5"
+                                    id="id_105"
+                                ></rect>
+                                <path
+                                    class="cls-2"
+                                    d="M27.93,5.07A1.251,1.251,0,0,0,27.5,5H14.09a1.386,1.386,0,0,0-.09.5v22A1.5,1.5,0,0,0,15.5,29h11A1.5,1.5,0,0,0,28,27.5V5.5A1.251,1.251,0,0,0,27.93,5.07Z"
+                                    id="id_106"
+                                ></path>
+                                <rect
+                                    class="cls-1"
+                                    x="15"
+                                    y="4"
+                                    width="14"
+                                    height="25"
+                                    rx="1.5"
+                                    ry="1.5"
+                                    id="id_107"
+                                    style="fill: rgb(255, 255, 255)"
+                                ></rect>
+                                <rect class="cls-3" x="18" y="9" width="9" height="1" id="id_108"></rect>
+                                <rect class="cls-3" x="18" y="12" width="9" height="1" id="id_109"></rect>
+                                <circle class="cls-3" cx="19" cy="25" r="1" id="id_110"></circle>
+                                <rect class="cls-4" x="14" y="20" width="1" height="4" id="id_111"></rect>
+                            </g>
+                        </svg>
+                        <h1 class="lg:block hidden font-Righteous font-black text-white text-3xl uppercase">
+                            shoppc.vn
+                        </h1>
+                    </a>
+                </div>
+                <!-- search -->
+                <div class="flex bg-white rounded-2xl px-2 items-center w-full">
+                    <input
+                        class="w-full bg-transparent text-[#444] outline-none py-2 px-3 font-WorkSans leading-none text-sm placeholder:text-sm"
+                        placeholder="Bạn cần tìm gì?"
+                        id="search-input"
+                        name="searchValue"
+                        type="text"
+                    />
+                    <span class="px-2 cursor-pointer">
+                        <i class="leading-none bi bi-search"></i>
+                    </span>
+                </div>
+                <!-- nav -->
+                <div class="flex gap-2 items-center justify-center">
+                    <!-- hotline btn -->
+                    <a
+                        title="Hotline"
+                        href="tel:+84000000000"
+                        class="sm:inline-flex hidden items-center gap-2 w-min py-1 px-2 rounded"
+                    >
+                        <i class="leading-none bi bi-headset text-white text-2xl"></i>
+                        <p
+                            class="font-WorkSans text-white font-medium break-words leading-none text-sm md:block hidden"
+                        >
+                            Hotline 1800.xxxx
+                        </p>
+                    </a>
+                    <!-- showroom btn -->
+                    <a
+                        title="Cửa hàng"
+                        href="#showrooms"
+                        class="sm:inline-flex hidden items-center gap-2 w-min hover:bg-[#00000068] p-2 px-3 rounded-xl"
+                    >
+                        <i class="leading-none bi bi-pin-map text-white text-xl"></i>
+                        <p
+                            class="font-WorkSans text-white font-medium break-words leading-none text-sm md:block hidden"
+                        >
+                            Cửa hàng
+                        </p>
+                    </a>
+                    <!-- lookup order btn -->
+                    <a
+                        title="Tra cứu đơn hàng"
+                        href="#lookup-orders"
+                        class="relative sm:inline-flex hidden items-center gap-2 p-2 rounded-xl"
+                    >
+                        <i class="leading-none bi bi-truck text-white text-2xl"></i>
+                        <p
+                            class="absolute right-0 top-0 font-WorkSans text-[#d72c2c] bg-white text-[10px] rounded-lg font-medium p-[2px] min-w-[1.25rem] inline-flex justify-center items-center"
+                        >
+                            0
+                        </p>
+                    </a>
+                    <!-- cart btn -->
+                    <a
+                        title="Giỏ hàng"
+                        href="/cart.html"
+                        class="relative inline-flex items-center gap-2 p-2 rounded-xl"
+                    >
+                        <i class="leading-none bi bi-cart text-white text-2xl"></i>
+                        <p
+                            class="absolute right-0 top-0 font-WorkSans text-[#d72c2c] bg-white text-[10px] rounded-lg font-medium p-[2px] min-w-[1.25rem] inline-flex justify-center items-center"
+                        >
+                            0
+                        </p>
+                    </a>
+                    <!-- login btn -->
+                    <a
+                        title="Đăng nhập"
+                        href="/loginForm.html"
+                        class="sm:inline-flex hidden items-center gap-2 w-min hover:bg-[#00000068] p-2 px-3 rounded-xl"
+                    >
+                        <i class="leading-none bi bi-person-fill text-white text-2xl"></i>
+                        <p
+                            class="font-WorkSans text-white font-medium break-words leading-none text-sm md:block hidden"
+                        >
+                            Đăng nhập
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="bg-white shadow-md mx-auto flex flex-col justify-between items-center">
+                <!-- Top Products Nav -->
+                <div
+                    class="bg-[#D72C2C] max-[425px]:hidden flex flex-wrap font-WorkSans lg:text-xs text-sm text-white pb-2 w-full justify-center"
+                >
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Laptop</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Macbook</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Laptop Gaming</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Laptop văn phòng</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Linh kiện PC</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Card đồ họa</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Màn hình LED</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Bàn phìm</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Chuột</a>
+                    <a href="#" class="outline-none focus:underline hover:underline px-2">Tai nghe</a>
+                </div>
+                <!-- Help & Policy nav -->
+                <div class="lg:flex hidden justify-center mx-auto gap-4">
+                    <a
+                        title="Chương trình khuyến mãi"
+                        href="/sales.html"
+                        class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+                    >
+                        <i class="leading-none bi bi-tags text-xl"></i>
+                        <p class="font-WorkSans font-bold leading-none text-sm block text-[#d72c2c] uppercase">
+                            Khuyến mãi
+                        </p>
+                    </a>
+
+                    <a
+                        title="Hướng dẫn trả góp"
+                        href="#help/installment"
+                        class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+                    >
+                        <i class="leading-none bi bi-cash-coin text-xl"></i>
+                        <p class="font-WorkSans font-medium leading-none text-sm block">Hướng dẫn trả góp</p>
+                    </a>
+
+                    <a
+                        title="Hướng dẫn thanh toán"
+                        href="#help/payment"
+                        class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+                    >
+                        <i class="leading-none bi bi-credit-card text-xl"></i>
+                        <p class="font-WorkSans font-medium leading-none text-sm block">Hướng dẫn thanh toán</p>
+                    </a>
+
+                    <a
+                        title="Chính sách bảo hành"
+                        href="#policy/warranty"
+                        class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+                    >
+                        <i class="leading-none bi bi-shield-check text-xl"></i>
+                        <p class="font-WorkSans font-medium leading-none text-sm block">Chính sách bảo hành</p>
+                    </a>
+
+                    <a
+                        title="Thông tin liên lạc"
+                        href="#help/contact"
+                        class="inline-flex items-center gap-2 py-1 px-2 rounded text-[#444]"
+                    >
+                        <i class="leading-none bi bi-telephone text-xl"></i>
+                        <p class="font-WorkSans font-medium leading-none text-sm block">Thông tin liên lạc</p>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div id="detail-product" class="product-layout mb-10 h-auto mx-auto max-w-[1200px] px-5 py-2 font-WorkSans">
+            <meta itemprop="name" content="Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro" />
+            <div class="breadcrumb-wrap">
+                <div class="container-fluid mx-auto max-w-screen-xl px-3 w-full">
+                    <div class="breadcrumb-list">
+                        <ol class="breadcrumb breadcrumb-arrows flex">
+                            <li class="flex">
+                                <svg
+                                class="mt-1"
+                                    width="16"
+                                    height="14"
+                                    viewBox="0 0 16 14"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path class=""
+                                        d="M6.25895 13.1594V8.95647H9.73718V13.1594C9.73718 13.6217 10.1285 14 10.6067 14H13.2154C13.6937 14 14.085 13.6217 14.085 13.1594V7.27529H15.5632C15.9632 7.27529 16.1545 6.79616 15.8502 6.54398L8.58067 0.21435C8.25024 -0.07145 7.7459 -0.07145 7.41546 0.21435L0.145957 6.54398C-0.149693 6.79616 0.0329144 7.27529 0.432911 7.27529H1.91116V13.1594C1.91116 13.6217 2.30246 14 2.78072 14H5.38939C5.86765 14 6.25895 13.6217 6.25895 13.1594Z"
+                                        fill="#1982F9"
+                                    ></path>
+                                </svg>
+                                <span class="ml-3" itemprop="name">Trang chủ</span>
+                            </li>
+
+                            <li class="ml-6" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                <span itemprop="name">Keyboard - Bàn phím máy tính</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="product-body mb-2">
+                <div class="container-fluid mx-auto max-w-screen-xl px-3 w-full">
+                    <div class="row -mx-2 flex flex-wrap">
+                        <div class="mx-2  relative w-full">
+                            <div class="product-inner bg-white rounded-md">
+                                <div class="product-main mb-4">
+                                    <div class="d-flex flex-wrap flex">
+                                        <div class="col-lg-5 col-md-12 col-12 product-gallery">
+                                            <div class="product-gallery--inner sticky-gallery">
+                                                <div
+                                                    class="product-gallery--slide swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"
+                                                    id="slideProduct"
+                                                >
+                                                    <div
+                                                        class="swiper-wrapper"
+                                                        id="swiper-wrapper-7ecd4dff9ea9f3ed"
+                                                        aria-live="polite"
+                                                        style="transform: translate3d(0px, 0px, 0px)"
+                                                    >
+                                                        <div
+                                                            class="product-gallery--photo swiper-slide swiper-slide-active"
+                                                            data-image="//product.hstatic.net/200000722513/product/thumbphim-_1__458f435a199a4110b3c78215b633dbd8_1024x1024.jpg"
+                                                            role="group"
+                                                            aria-label=" / "
+                                                            style="width: 372px"
+                                                        >
+                                                            <div class="product-gallery--item boxlazy-img">
+                                                                <div class="boxlazy-img--insert lazy-img--prod">
+                                                                    <a
+                                                                        data-fancybox="gallery"
+                                                                        class="boxlazy-img--aspect"
+                                                                        href="//product.hstatic.net/200000722513/product/thumbphim-_1__458f435a199a4110b3c78215b633dbd8_1024x1024.jpg"
+                                                                    >
+                                                                        <img
+                                                                            src="//product.hstatic.net/200000722513/product/thumbphim-_1__458f435a199a4110b3c78215b633dbd8_grande.jpg"
+                                                                            class="gallery-demo swiper-lazy"
+                                                                            alt=" Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro "
+                                                                        />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="product-gallery--photo swiper-slide swiper-slide-next"
+                                                            data-image="//product.hstatic.net/200000722513/product/7-600x600_0144b44341eb4f34be64c5e4916b63d4_1024x1024.jpg"
+                                                            role="group"
+                                                            aria-label=" / "
+                                                            style="width: 372px"
+                                                        >
+                                                            <div class="product-gallery--item boxlazy-img">
+                                                                <div class="boxlazy-img--insert lazy-img--prod">
+                                                                    <a
+                                                                        data-fancybox="gallery"
+                                                                        class="boxlazy-img--aspect"
+                                                                        href="//product.hstatic.net/200000722513/product/7-600x600_0144b44341eb4f34be64c5e4916b63d4_1024x1024.jpg"
+                                                                    >
+                                                                        <img
+                                                                            src="//product.hstatic.net/200000722513/product/7-600x600_0144b44341eb4f34be64c5e4916b63d4_grande.jpg"
+                                                                            class="gallery-demo swiper-lazy"
+                                                                            alt=" Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro "
+                                                                        />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="product-gallery--photo swiper-slide"
+                                                            data-image="//product.hstatic.net/200000722513/product/am-thanh-phan-giai-1-600x600_1f84419d34e14c7d858019cfc5d98a41_1024x1024.jpg"
+                                                            role="group"
+                                                            aria-label=" / "
+                                                            style="width: 372px"
+                                                        >
+                                                            <div class="product-gallery--item boxlazy-img">
+                                                                <div class="boxlazy-img--insert lazy-img--prod">
+                                                                    <a
+                                                                        data-fancybox="gallery"
+                                                                        class="boxlazy-img--aspect"
+                                                                        href="//product.hstatic.net/200000722513/product/am-thanh-phan-giai-1-600x600_1f84419d34e14c7d858019cfc5d98a41_1024x1024.jpg"
+                                                                    >
+                                                                        <img
+                                                                            src="//product.hstatic.net/200000722513/product/am-thanh-phan-giai-1-600x600_1f84419d34e14c7d858019cfc5d98a41_grande.jpg"
+                                                                            class="gallery-demo swiper-lazy"
+                                                                            alt=" Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro "
+                                                                        />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="product-gallery--photo swiper-slide"
+                                                            data-image="//product.hstatic.net/200000722513/product/soundpeats-air4-lite-bluetooth-800x800_a5ee88ef33e9476f8de743188f92a8d8_1024x1024.jpg"
+                                                            role="group"
+                                                            aria-label=" / "
+                                                            style="width: 372px"
+                                                        >
+                                                            <div class="product-gallery--item boxlazy-img">
+                                                                <div class="boxlazy-img--insert lazy-img--prod">
+                                                                    <a
+                                                                        data-fancybox="gallery"
+                                                                        class="boxlazy-img--aspect"
+                                                                        href="//product.hstatic.net/200000722513/product/soundpeats-air4-lite-bluetooth-800x800_a5ee88ef33e9476f8de743188f92a8d8_1024x1024.jpg"
+                                                                    >
+                                                                        <img
+                                                                            src="//product.hstatic.net/200000722513/product/soundpeats-air4-lite-bluetooth-800x800_a5ee88ef33e9476f8de743188f92a8d8_grande.jpg"
+                                                                            class="gallery-demo swiper-lazy"
+                                                                            alt=" Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro "
+                                                                        />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="product-gallery--photo swiper-slide"
+                                                            data-image="//product.hstatic.net/200000722513/product/13_9f1d8b7f2f55459a8a300e7341f655e9_1024x1024.jpg"
+                                                            role="group"
+                                                            aria-label=" / "
+                                                            style="width: 372px"
+                                                        >
+                                                            <div class="product-gallery--item boxlazy-img">
+                                                                <div class="boxlazy-img--insert lazy-img--prod">
+                                                                    <a
+                                                                        data-fancybox="gallery"
+                                                                        class="boxlazy-img--aspect"
+                                                                        href="//product.hstatic.net/200000722513/product/13_9f1d8b7f2f55459a8a300e7341f655e9_1024x1024.jpg"
+                                                                    >
+                                                                        <img
+                                                                            src="//product.hstatic.net/200000722513/product/13_9f1d8b7f2f55459a8a300e7341f655e9_grande.jpg"
+                                                                            class="gallery-demo swiper-lazy"
+                                                                            alt=" Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro "
+                                                                        />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-nav swiper-nav-main">
+                                                        <span
+                                                            class="swiper-button swiper-prev swiper-product-prev swiper-button-disabled"
+                                                            tabindex="-1"
+                                                            role="button"
+                                                            aria-label="Previous slide"
+                                                            aria-controls="swiper-wrapper-7ecd4dff9ea9f3ed"
+                                                            aria-disabled="true"
+                                                        >
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                width="22"
+                                                                height="22"
+                                                                viewBox="0 0 511.993 511.993"
+                                                                style="transform: rotate(180deg)"
+                                                            >
+                                                                <g>
+                                                                    <g>
+                                                                        <g>
+                                                                            <path
+                                                                                d="M487.292,235.408H20.59c-11.372,0-20.59,9.224-20.59,20.59c0,11.366,9.217,20.59,20.59,20.59h466.702 c11.372,0,20.59-9.217,20.59-20.59C507.882,244.625,498.665,235.408,487.292,235.408z"
+                                                                            ></path>
+                                                                        </g>
+                                                                    </g>
+                                                                    <g>
+                                                                        <g>
+                                                                            <path
+                                                                                d="M505.96,241.434L304.187,39.653c-8.044-8.037-21.07-8.037-29.114,0c-8.044,8.044-8.044,21.084,0,29.121l187.216,187.223 L275.073,443.221c-8.044,8.037-8.044,21.077,0,29.114c4.022,4.022,9.286,6.033,14.557,6.033s10.535-2.011,14.557-6.033	l201.773-201.78C514.004,262.511,514.004,249.47,505.96,241.434z"
+                                                                            ></path>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </span>
+                                                        <span
+                                                            class="swiper-button swiper-next swiper-product-next"
+                                                            tabindex="0"
+                                                            role="button"
+                                                            aria-label="Next slide"
+                                                            aria-controls="swiper-wrapper-7ecd4dff9ea9f3ed"
+                                                            aria-disabled="false"
+                                                        >
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                width="22"
+                                                                height="22"
+                                                                viewBox="0 0 511.993 511.993"
+                                                            >
+                                                                <g>
+                                                                    <g>
+                                                                        <g>
+                                                                            <path
+                                                                                d="M487.292,235.408H20.59c-11.372,0-20.59,9.224-20.59,20.59c0,11.366,9.217,20.59,20.59,20.59h466.702 c11.372,0,20.59-9.217,20.59-20.59C507.882,244.625,498.665,235.408,487.292,235.408z"
+                                                                            ></path>
+                                                                        </g>
+                                                                    </g>
+                                                                    <g>
+                                                                        <g>
+                                                                            <path
+                                                                                d="M505.96,241.434L304.187,39.653c-8.044-8.037-21.07-8.037-29.114,0c-8.044,8.044-8.044,21.084,0,29.121l187.216,187.223 L275.073,443.221c-8.044,8.037-8.044,21.077,0,29.114c4.022,4.022,9.286,6.033,14.557,6.033s10.535-2.011,14.557-6.033	l201.773-201.78C514.004,262.511,514.004,249.47,505.96,241.434z"
+                                                                            ></path>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <span
+                                                        class="swiper-notification"
+                                                        aria-live="assertive"
+                                                        aria-atomic="true"
+                                                    ></span>
+                                                </div>
+                                                <div
+                                                    class="product-gallery--thumb swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-free-mode swiper-backface-hidden swiper-thumbs"
+                                                    id="slideThumb"
+                                                >
+                                                    <div
+                                                        class="swiper-wrapper"
+                                                        id="swiper-wrapper-9fad77fa62f4d163"
+                                                        aria-live="polite"
+                                                        style="transform: translate3d(0px, 0px, 0px)"
+                                                    >
+                                                        <div
+                                                            class="product-thumb swiper-slide swiper-slide-visible swiper-slide-active swiper-slide-thumb-active"
+                                                            data-image="//product.hstatic.net/200000722513/product/thumbphim-_1__458f435a199a4110b3c78215b633dbd8_compact.jpg"
+                                                            role="group"
+                                                            aria-label=" / "
+                                                            style="width: 62.4px; margin-right: 15px"
+                                                        >
+                                                            <div class="product-thumb--link boxlazy-img">
+                                                                <div class="boxlazy-img--insert lazy-img--prod">
+                                                                    <span class="boxlazy-img--aspect">
+                                                                        <img
+                                                                            class="product-thumb--photo"
+                                                                            src="//product.hstatic.net/200000722513/product/thumbphim-_1__458f435a199a4110b3c78215b633dbd8_compact.jpg"
+                                                                            alt=" Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro "
+                                                                        />
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="product-thumb swiper-slide swiper-slide-visible swiper-slide-next"
+                                                            data-image="//product.hstatic.net/200000722513/product/7-600x600_0144b44341eb4f34be64c5e4916b63d4_compact.jpg"
+                                                            role="group"
+                                                            aria-label=" / "
+                                                            style="width: 62.4px; margin-right: 15px"
+                                                        >
+                                                            <div class="product-thumb--link boxlazy-img">
+                                                                <div class="boxlazy-img--insert lazy-img--prod">
+                                                                    <span class="boxlazy-img--aspect">
+                                                                        <img
+                                                                            class="product-thumb--photo"
+                                                                            src="//product.hstatic.net/200000722513/product/7-600x600_0144b44341eb4f34be64c5e4916b63d4_compact.jpg"
+                                                                            alt=" Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro "
+                                                                        />
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="product-thumb swiper-slide swiper-slide-visible"
+                                                            data-image="//product.hstatic.net/200000722513/product/am-thanh-phan-giai-1-600x600_1f84419d34e14c7d858019cfc5d98a41_compact.jpg"
+                                                            role="group"
+                                                            aria-label=" / "
+                                                            style="width: 62.4px; margin-right: 15px"
+                                                        >
+                                                            <div class="product-thumb--link boxlazy-img">
+                                                                <div class="boxlazy-img--insert lazy-img--prod">
+                                                                    <span class="boxlazy-img--aspect">
+                                                                        <img
+                                                                            class="product-thumb--photo"
+                                                                            src="//product.hstatic.net/200000722513/product/am-thanh-phan-giai-1-600x600_1f84419d34e14c7d858019cfc5d98a41_compact.jpg"
+                                                                            alt=" Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro "
+                                                                        />
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="product-thumb swiper-slide swiper-slide-visible"
+                                                            data-image="//product.hstatic.net/200000722513/product/soundpeats-air4-lite-bluetooth-800x800_a5ee88ef33e9476f8de743188f92a8d8_compact.jpg"
+                                                            role="group"
+                                                            aria-label=" / "
+                                                            style="width: 62.4px; margin-right: 15px"
+                                                        >
+                                                            <div class="product-thumb--link boxlazy-img">
+                                                                <div class="boxlazy-img--insert lazy-img--prod">
+                                                                    <span class="boxlazy-img--aspect">
+                                                                        <img
+                                                                            class="product-thumb--photo"
+                                                                            src="//product.hstatic.net/200000722513/product/soundpeats-air4-lite-bluetooth-800x800_a5ee88ef33e9476f8de743188f92a8d8_compact.jpg"
+                                                                            alt=" Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro "
+                                                                        />
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="product-thumb swiper-slide swiper-slide-visible"
+                                                            data-image="//product.hstatic.net/200000722513/product/13_9f1d8b7f2f55459a8a300e7341f655e9_compact.jpg"
+                                                            role="group"
+                                                            aria-label=" / "
+                                                            style="width: 62.4px; margin-right: 15px"
+                                                        >
+                                                            <div class="product-thumb--link boxlazy-img">
+                                                                <div class="boxlazy-img--insert lazy-img--prod">
+                                                                    <span class="boxlazy-img--aspect">
+                                                                        <img
+                                                                            class="product-thumb--photo"
+                                                                            src="//product.hstatic.net/200000722513/product/13_9f1d8b7f2f55459a8a300e7341f655e9_compact.jpg"
+                                                                            alt=" Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro "
+                                                                        />
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-nav swiper-nav-thumb">
+                                                        <span
+                                                            class="swiper-button swiper-prev swiper-thumb-prev swiper-button-disabled swiper-button-lock"
+                                                            tabindex="-1"
+                                                            role="button"
+                                                            aria-label="Previous slide"
+                                                            aria-controls="swiper-wrapper-9fad77fa62f4d163"
+                                                            aria-disabled="true"
+                                                        >
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                width="22"
+                                                                height="22"
+                                                                viewBox="0 0 511.993 511.993"
+                                                                style="transform: rotate(180deg)"
+                                                            >
+                                                                <g>
+                                                                    <g>
+                                                                        <g>
+                                                                            <path
+                                                                                d="M487.292,235.408H20.59c-11.372,0-20.59,9.224-20.59,20.59c0,11.366,9.217,20.59,20.59,20.59h466.702 c11.372,0,20.59-9.217,20.59-20.59C507.882,244.625,498.665,235.408,487.292,235.408z"
+                                                                            ></path>
+                                                                        </g>
+                                                                    </g>
+                                                                    <g>
+                                                                        <g>
+                                                                            <path
+                                                                                d="M505.96,241.434L304.187,39.653c-8.044-8.037-21.07-8.037-29.114,0c-8.044,8.044-8.044,21.084,0,29.121l187.216,187.223 L275.073,443.221c-8.044,8.037-8.044,21.077,0,29.114c4.022,4.022,9.286,6.033,14.557,6.033s10.535-2.011,14.557-6.033	l201.773-201.78C514.004,262.511,514.004,249.47,505.96,241.434z"
+                                                                            ></path>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </span>
+                                                        <span
+                                                            class="swiper-button swiper-next swiper-thumb-next swiper-button-disabled swiper-button-lock"
+                                                            tabindex="-1"
+                                                            role="button"
+                                                            aria-label="Next slide"
+                                                            aria-controls="swiper-wrapper-9fad77fa62f4d163"
+                                                            aria-disabled="true"
+                                                        >
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                width="22"
+                                                                height="22"
+                                                                viewBox="0 0 511.993 511.993"
+                                                            >
+                                                                <g>
+                                                                    <g>
+                                                                        <g>
+                                                                            <path
+                                                                                d="M487.292,235.408H20.59c-11.372,0-20.59,9.224-20.59,20.59c0,11.366,9.217,20.59,20.59,20.59h466.702 c11.372,0,20.59-9.217,20.59-20.59C507.882,244.625,498.665,235.408,487.292,235.408z"
+                                                                            ></path>
+                                                                        </g>
+                                                                    </g>
+                                                                    <g>
+                                                                        <g>
+                                                                            <path
+                                                                                d="M505.96,241.434L304.187,39.653c-8.044-8.037-21.07-8.037-29.114,0c-8.044,8.044-8.044,21.084,0,29.121l187.216,187.223 L275.073,443.221c-8.044,8.037-8.044,21.077,0,29.114c4.022,4.022,9.286,6.033,14.557,6.033s10.535-2.011,14.557-6.033	l201.773-201.78C514.004,262.511,514.004,249.47,505.96,241.434z"
+                                                                            ></path>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <span
+                                                        class="swiper-notification"
+                                                        aria-live="assertive"
+                                                        aria-atomic="true"
+                                                    ></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-7 col-md-12 col-12 product-info">
+                                            <div class="info-wrapper">
+                                                <div class="info-header">
+                                                    <div class="info-content">
+                                                        <div class="info-top">
+                                                            <div class="product-name">
+                                                                <h1>
+                                                                    Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream
+                                                                    Yellow Pro
+                                                                </h1>
+                                                            </div>
+                                                            <div class="product-sku d-none">
+                                                                <span id="pro_sku"
+                                                                    >Mã sản phẩm:
+                                                                    <strong
+                                                                        >KB-MGEEK-M1-QMK-SILVER-AKKO-V3-CREAM-YELLOW-PRO</strong
+                                                                    ></span
+                                                                >
+                                                            </div>
+                                                            <div class="product-rating">
+                                                                <span class="number">5.0</span>
+                                                                <span class="icon">
+                                                                    <svg
+                                                                        viewBox="0 0 12 13"
+                                                                        fill="none"
+                                                                        xmlns="http://www.w3.org/2000/svg"
+                                                                    >
+                                                                        <path
+                                                                            d="M2.09627 11.6195L2.82735 8.16864L0.268563 5.80414C0.268563 5.80414 -0.096986 5.48462 0.0248693 5.03728C0.146725 4.58994 0.634105 4.58994 0.634105 4.58994L4.04582 4.27041L5.38614 1.01124C5.38614 1.01124 5.5689 0.5 5.99538 0.5C6.42185 0.5 6.60461 1.01124 6.60461 1.01124L7.94493 4.27041L11.4785 4.58994C11.4785 4.58994 11.844 4.65385 11.9659 5.03728C12.0877 5.42071 11.844 5.67633 11.844 5.67633L9.1634 8.16864L9.89448 11.7473C9.89448 11.7473 10.0163 12.1308 9.71171 12.3864C9.40709 12.642 8.91971 12.3864 8.91971 12.3864L5.99538 10.5331L3.13197 12.3864C3.13197 12.3864 2.70551 12.642 2.33996 12.3864C1.97442 12.1308 2.09627 11.6195 2.09627 11.6195Z"
+                                                                            fill="#FF8A00"
+                                                                        ></path>
+                                                                    </svg>
+                                                                </span>
+                                                                <a
+                                                                    href="#customers-rating"
+                                                                    class="click-scroll js-scroll"
+                                                                    >Xem đánh giá</a
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                        <div class="info-bottom">
+                                                            <div class="product-price" data-tag-price="279900000">
+                                                                <span class="pro-price a">2.590.000₫</span>
+                                                                <del class="">2.799.000₫</del>
+                                                                <span class="pro-percent">-7%</span>
+                                                            </div>
+
+                                                            <div class="product-variants">
+                                                                <form
+                                                                    id="add-item-form"
+                                                                    action="/cart/add"
+                                                                    method="post"
+                                                                    class="variants clearfix"
+                                                                >
+                                                                    <div class="select clearfix">
+                                                                        <div class="selector-wrapper">
+                                                                            <span
+                                                                                class="custom-dropdown custom-dropdown--white"
+                                                                                ><select
+                                                                                    class="single-option-selector custom-dropdown__select custom-dropdown__select--white"
+                                                                                    data-option="option1"
+                                                                                    id="product-select-option-0"
+                                                                                >
+                                                                                    <option
+                                                                                        value="Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro"
+                                                                                    >
+                                                                                        Bàn phím MonsGeek M1 QMK Silver
+                                                                                        AKKO Switch v3 Cream Yellow Pro
+                                                                                    </option>
+                                                                                </select></span
+                                                                            >
+                                                                        </div>
+                                                                        <select
+                                                                            id="product-select"
+                                                                            name="id"
+                                                                            style="display: none"
+                                                                        >
+                                                                            <option
+                                                                                value="1109968058"
+                                                                                data-status="true"
+                                                                                data-class="ban-phim-monsgeek-m1-qmk-silver-akko-switch-v3-cream-yellow-pro"
+                                                                            >
+                                                                                Bàn phím MonsGeek M1 QMK Silver AKKO
+                                                                                Switch v3 Cream Yellow Pro
+                                                                            </option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="select-swatch"></div>
+                                                                </form>
+                                                                <div class="guideColorMix">
+                                                                    <div class="contentMix">
+                                                                        <a
+                                                                            href="/products/ban-phim-monsgeek-m1-qmk-black-akko-switch-v3-cream-yellow-pro"
+                                                                        >
+                                                                            <span class="img"
+                                                                                ><img
+                                                                                    src="//product.hstatic.net/200000722513/product/thumbphim-_1__400bb1d5a7844e7db6bc12f7fd1db4a6_thumb.jpg"
+                                                                                    alt="Bàn phím MonsGeek M1 QMK Black AKKO Switch v3 Cream Yellow Pro"
+                                                                            /></span>
+                                                                            <span class="text">Black</span>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product-quantity d-none">
+                                                                <div class="pro-qty d-flex align-items-center">
+                                                                    <div class="pro-title">Số lượng:</div>
+                                                                    <button
+                                                                        type="button"
+                                                                        onclick="GVN.Helper.minusQuantity()"
+                                                                        aria-label="minus-quantity"
+                                                                        class="qty-btn"
+                                                                    >
+                                                                        <svg
+                                                                            focusable="false"
+                                                                            class="icon icon--minus"
+                                                                            viewBox="0 0 10 2"
+                                                                            role="presentation"
+                                                                        >
+                                                                            <path d="M10 0v2H0V0z"></path>
+                                                                        </svg>
+                                                                    </button>
+                                                                    <input
+                                                                        type="text"
+                                                                        id="quantity"
+                                                                        aria-labelledby="quantity"
+                                                                        name="quantity"
+                                                                        value="1"
+                                                                        min="1"
+                                                                        aria-label="quantity"
+                                                                        class="qty-value"
+                                                                    />
+                                                                    <button
+                                                                        type="button"
+                                                                        onclick="GVN.Helper.plusQuantity()"
+                                                                        aria-label="plus-quantity"
+                                                                        class="qty-btn"
+                                                                    >
+                                                                        <svg
+                                                                            focusable="false"
+                                                                            class="icon icon--plus"
+                                                                            viewBox="0 0 10 10"
+                                                                            role="presentation"
+                                                                        >
+                                                                            <path
+                                                                                d="M6 4h4v2H6v4H4V6H0V4h4V0h2v4z"
+                                                                            ></path>
+                                                                        </svg>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="product-gift-promo-box gift-promo--app d-none"
+                                                                id="gift-promo--app"
+                                                            >
+                                                                <div class="box-header">
+                                                                    <div class="icon">
+                                                                        <svg
+                                                                            width="24"
+                                                                            height="24"
+                                                                            viewBox="0 0 24 24"
+                                                                            fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                        >
+                                                                            <path
+                                                                                d="M4.08 21.2271C4.08 21.6546 4.40175 22 4.8 22H11.235V12.9179H4.08V21.2271ZM12.765 22H19.2C19.5982 22 19.92 21.6546 19.92 21.2271V12.9179H12.765V22ZM20.28 7.12077H16.959C17.265 6.60386 17.445 5.99034 17.445 5.33333C17.445 3.49517 16.0522 2 14.34 2C13.4085 2 12.5693 2.44444 12 3.14493C11.4307 2.44444 10.5915 2 9.66 2C7.94775 2 6.555 3.49517 6.555 5.33333C6.555 5.99034 6.73275 6.60386 7.041 7.12077H3.72C3.32175 7.12077 3 7.46618 3 7.89372V11.2754H11.235V7.12077H12.765V11.2754H21V7.89372C21 7.46618 20.6782 7.12077 20.28 7.12077ZM11.235 7.02415H9.66C8.7915 7.02415 8.085 6.2657 8.085 5.33333C8.085 4.40097 8.7915 3.64251 9.66 3.64251C10.5285 3.64251 11.235 4.40097 11.235 5.33333V7.02415ZM14.34 7.02415H12.765V5.33333C12.765 4.40097 13.4715 3.64251 14.34 3.64251C15.2085 3.64251 15.915 4.40097 15.915 5.33333C15.915 6.2657 15.2085 7.02415 14.34 7.02415Z"
+                                                                                fill="#E30019"
+                                                                            ></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <h2>Quà tặng khuyến mãi</h2>
+                                                                </div>
+                                                                <div
+                                                                    class="box-content product-appgift"
+                                                                    id="gift-promo--product"
+                                                                    data-id="1048707974"
+                                                                    data-vid=""
+                                                                    data-title="Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro"
+                                                                >
+                                                                    <div class="gift-promo--content">
+                                                                        <div class="gift-promo--lists"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="product-actions">
+                                                                <div class="action-buys">
+                                                                    <button
+                                                                        type="submit"
+                                                                        class="button btn-buynow"
+                                                                        name="buy-now"
+                                                                        id="buy-now"
+                                                                    >
+                                                                        <span class="maintext">MUA NGAY</span
+                                                                        ><span class="subtext"
+                                                                            >Giao tận nơi hoặc nhận tại cửa hàng</span
+                                                                        >
+                                                                    </button>
+                                                                </div>
+                                                                <div class="action-installments d-none">
+                                                                    <button
+                                                                        type="submit"
+                                                                        name="installment"
+                                                                        class="button btn-installment"
+                                                                        id="btn-installment-phone"
+                                                                    >
+                                                                        <span class="maintext">MUA TRẢ GÓP 0%</span>
+                                                                        <span class="subtext">Thủ tục đơn giản</span>
+                                                                    </button>
+                                                                    <button
+                                                                        type="submit"
+                                                                        name="installment"
+                                                                        class="button btn-installment"
+                                                                        id="btn-installment-card"
+                                                                    >
+                                                                        <span class="maintext">TRẢ GÓP QUA THẺ </span>
+                                                                        <span class="subtext">Visa, Master, JCB</span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product-desc-short prtab2">
+                                                                <p>
+                                                                    <span style="font-size: 20px"
+                                                                        ><strong>Thông tin chung:&nbsp;</strong></span
+                                                                    >
+                                                                </p>
+                                                                <ul>
+                                                                    <li>
+                                                                        <span style="font-size: 20px"
+                                                                            ><strong>Hãng sản xuất:</strong> Akko</span
+                                                                        >
+                                                                    </li>
+                                                                    <li>
+                                                                        <span style="font-size: 20px"
+                                                                            ><strong>Tình trạng:</strong
+                                                                            >&nbsp;Mới&nbsp;</span
+                                                                        >
+                                                                    </li>
+                                                                    <li>
+                                                                        <span style="font-size: 20px"
+                                                                            ><strong>Bảo hành:</strong> 12 Tháng</span
+                                                                        >
+                                                                    </li>
+                                                                    <li>
+                                                                        <span style="font-size: 20px"
+                                                                            ><strong>Switch:</strong>&nbsp;AKKO Cream
+                                                                            Yellow Pro</span
+                                                                        >
+                                                                    </li>
+                                                                </ul>
+                                                                <p></p>
+                                                                <p>&nbsp;</p>
+                                                                <p></p>
+                                                                <p></p>
+                                                            </div>
+                                                            <div
+                                                                class="product-discount-promo-box discount-promo--app"
+                                                                id="discount-promo--app"
+                                                            >
+                                                                <div class="box-header">
+                                                                    <h2>Khuyến mãi</h2>
+                                                                </div>
+                                                                <div
+                                                                    class="box-content product-appdiscount"
+                                                                    id="discount-promo--product"
+                                                                    data-id="1048707974"
+                                                                    data-vid=""
+                                                                    data-title="Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro"
+                                                                >
+                                                                    <div class="discount-promo--content">
+                                                                        <div class="discount-promo--lists">
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <div class="line-discount">
+                                                                                        <span
+                                                                                            >Mua thêm USB Sandisk Dual
+                                                                                            Drive Luxe TypeC 64GB - DDC4
+                                                                                            giá chỉ 99.000 với bàn phím
+                                                                                            từ 2 đến 3 triệu.</span
+                                                                                        >
+                                                                                        <a
+                                                                                            data-items-id="65322c10304d25001274af88"
+                                                                                            data-itemgroup-id="IG2"
+                                                                                            href="/collections/chuong-trinh-khuyen-mai/?id=65322c10304d25001274af88&amp;item_group_id=IG2"
+                                                                                            >(Xem thêm)</a
+                                                                                        >
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="product-combo-promo-box combo-promo--app d-none"
+                                                                id="combo-promo--app"
+                                                            >
+                                                                <div class="box-header"><h2>Gợi ý mua kèm</h2></div>
+                                                                <div
+                                                                    class="box-content product-appcombo"
+                                                                    id="combo-promo--product"
+                                                                    data-id="1048707974"
+                                                                    data-vid=""
+                                                                    data-title="Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro"
+                                                                >
+                                                                    <div class="combo-promo--content">
+                                                                        <div class="combo-promo--lists less"></div>
+                                                                        <button class="btn-more d-none">
+                                                                            <span>Xem thêm</span>
+                                                                            <svg
+                                                                                version="1.1"
+                                                                                id="Capa_1"
+                                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                                x="0px"
+                                                                                y="0px"
+                                                                                width="454.52px"
+                                                                                height="454.52px"
+                                                                                viewBox="0 0 454.52 454.52"
+                                                                                style="transform: rotate(90deg)"
+                                                                                xml:space="preserve"
+                                                                            >
+                                                                                <g>
+                                                                                    <path
+                                                                                        d="M378.135,227.256L206.224,55.354c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.388-12.359,44.747,0 L445.258,204.89c6.177,6.18,9.262,14.271,9.262,22.366c0,8.098-3.091,16.195-9.262,22.372L250.971,443.91 c-12.359,12.365-32.394,12.365-44.747,0c-12.354-12.354-12.354-32.391,0-44.744L378.135,227.256z M9.265,399.166 c-12.354,12.354-12.354,32.391,0,44.744c12.354,12.365,32.382,12.365,44.748,0l194.287-194.281 c6.177-6.177,9.257-14.274,9.257-22.372c0-8.095-3.086-16.192-9.257-22.366L54.013,10.606c-12.365-12.359-32.394-12.359-44.748,0 c-12.354,12.354-12.354,32.388,0,44.748L181.18,227.256L9.265,399.166z"
+                                                                                    ></path>
+                                                                                </g>
+                                                                                <g></g>
+                                                                                <g></g>
+                                                                                <g></g>
+                                                                                <g></g>
+                                                                                <g></g>
+                                                                                <g></g>
+                                                                                <g></g>
+                                                                                <g></g>
+                                                                                <g></g>
+                                                                                <g></g>
+                                                                                <g></g>
+                                                                                <g></g>
+                                                                                <g></g>
+                                                                                <g></g>
+                                                                                <g></g>
+                                                                            </svg>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
+                            <div class="product-inner">
+                                <div class="product-block product-desc">
+                                    <div class="product-heading"><h2>Mô tả sản phẩm</h2></div>
+                                    <div class="product-wrap">
+                                        <div class="product-desc--content expandable-toggle opened expanded">
+                                            <div class="desc-content">
+                                                <p></p>
+                                                <p>
+                                                    <span style="font-size: 18px"
+                                                        ><strong>Thông số kĩ thuật:</strong></span
+                                                    >
+                                                </p>
+                                                <div class="scroll-table">
+                                                    <table
+                                                        id="tblGeneralAttribute"
+                                                        border="1"
+                                                        cellpadding="3"
+                                                        cellspacing="0"
+                                                        style="
+                                                            background-color: #ffffff;
+                                                            border-collapse: collapse;
+                                                            border-spacing: 0px;
+                                                            border: 1px solid #eeeeee;
+                                                            box-sizing: border-box;
+                                                            color: #333333;
+                                                            font-family: Roboto, sans-serif;
+                                                            font-size: 13px;
+                                                            line-height: 20px;
+                                                            margin-bottom: 20px;
+                                                            margin-left: auto;
+                                                            margin-right: auto;
+                                                            max-width: 100%;
+                                                            min-width: 500px;
+                                                            width: 100%;
+                                                        "
+                                                        class="table table-bordered"
+                                                    >
+                                                        <tbody style="box-sizing: border-box">
+                                                            <tr>
+                                                                <td
+                                                                    style="
+                                                                        background-color: #f7f7f7 !important;
+                                                                        border-color: #eeeeee;
+                                                                        border-style: solid;
+                                                                        border-width: 1px;
+                                                                        box-sizing: border-box;
+                                                                        padding: 8px;
+                                                                        vertical-align: top;
+                                                                        width: 223px;
+                                                                    "
+                                                                >
+                                                                    <strong
+                                                                        ><span style="font-size: 16px"
+                                                                            ><span style="color: #000000"
+                                                                                >Thiết kế:</span
+                                                                            ></span
+                                                                        ></strong
+                                                                    >
+                                                                </td>
+                                                                <td
+                                                                    style="
+                                                                        border-style: solid;
+                                                                        border-width: 1px;
+                                                                        box-sizing: border-box;
+                                                                        color: #eeeeee;
+                                                                        padding: 8px;
+                                                                        vertical-align: top;
+                                                                        width: 612px;
+                                                                    "
+                                                                >
+                                                                    <span style="font-size: 16px"
+                                                                        ><span style="color: #000000"
+                                                                            >75% có núm xoay</span
+                                                                        ></span
+                                                                    >
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td
+                                                                    style="
+                                                                        background-color: #f7f7f7 !important;
+                                                                        border-color: #eeeeee;
+                                                                        border-style: solid;
+                                                                        border-width: 1px;
+                                                                        box-sizing: border-box;
+                                                                        padding: 8px;
+                                                                        vertical-align: top;
+                                                                        width: 223px;
+                                                                    "
+                                                                >
+                                                                    <strong
+                                                                        ><span style="font-size: 16px"
+                                                                            ><span style="color: #000000"
+                                                                                >Kết nối:</span
+                                                                            ></span
+                                                                        ></strong
+                                                                    >
+                                                                </td>
+                                                                <td
+                                                                    style="
+                                                                        border-color: #eeeeee;
+                                                                        border-style: solid;
+                                                                        border-width: 1px;
+                                                                        padding: 8px;
+                                                                        vertical-align: top;
+                                                                        width: 595px;
+                                                                    "
+                                                                >
+                                                                    <span style="font-size: 16px"
+                                                                        >USB Type-C to USB, có thể tháo rời</span
+                                                                    >
+                                                                </td>
+                                                            </tr>
+                                                            <tr style="box-sizing: border- box" class="row-info">
+                                                                <td
+                                                                    style="
+                                                                        background-color: #f7f7f7 !important;
+                                                                        border-color: #eeeeee;
+                                                                        border-style: solid;
+                                                                        border-width: 1px;
+                                                                        box-sizing: border-box;
+                                                                        padding: 8px;
+                                                                        vertical-align: top;
+                                                                        width: 223px;
+                                                                    "
+                                                                >
+                                                                    <strong
+                                                                        ><span style="font-size: 16px"
+                                                                            ><span style="color: #000000"
+                                                                                >Keycap:</span
+                                                                            ></span
+                                                                        ></strong
+                                                                    >
+                                                                </td>
+                                                                <td
+                                                                    style="
+                                                                        border-color: #eeeeee;
+                                                                        border-style: solid;
+                                                                        border-width: 1px;
+                                                                        box-sizing: border-box;
+                                                                        padding: 8px;
+                                                                        width: 612px;
+                                                                    "
+                                                                >
+                                                                    <span style="font-size: 16px"
+                                                                        >Keycap PBT Double-Shot / OEM profile</span
+                                                                    >
+                                                                </td>
+                                                            </tr>
+                                                            <tr style="box-sizing: border-box" class="row-info">
+                                                                <td
+                                                                    style="
+                                                                        background-color: #f7f7f7 !important;
+                                                                        border-color: #eeeeee;
+                                                                        border-style: solid;
+                                                                        border-width: 1px;
+                                                                        padding: 8px;
+                                                                        vertical-align: top;
+                                                                        width: 206px;
+                                                                    "
+                                                                >
+                                                                    <strong
+                                                                        ><span style="font-size: 16px"
+                                                                            ><span style="color: #000000"
+                                                                                >Loại switch:</span
+                                                                            ></span
+                                                                        ></strong
+                                                                    >
+                                                                </td>
+                                                                <td
+                                                                    style="
+                                                                        border-style: solid;
+                                                                        border-width: 1px;
+                                                                        box-sizing: border-box;
+                                                                        color: #eeeeee;
+                                                                        padding: 8px;
+                                                                        vertical-align: top;
+                                                                        width: 612px;
+                                                                    "
+                                                                >
+                                                                    <span style="font-size: 16px"
+                                                                        ><span style="color: #000000"
+                                                                            >AKKO Switch v3 – Cream Yellow Pro</span
+                                                                        ></span
+                                                                    >
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td
+                                                                    style="
+                                                                        background-color: #f7f7f7 !important;
+                                                                        border-color: #eeeeee;
+                                                                        border-style: solid;
+                                                                        border-width: 1px;
+                                                                        box-sizing: border-box;
+                                                                        padding: 8px;
+                                                                        width: 223px;
+                                                                    "
+                                                                >
+                                                                    <strong
+                                                                        ><span style="font-size: 16px"
+                                                                            ><span style="color: #000000"
+                                                                                >Led:</span
+                                                                            ></span
+                                                                        ></strong
+                                                                    >
+                                                                </td>
+                                                                <td
+                                                                    style="
+                                                                        border-color: #eeeeee;
+                                                                        border-style: solid;
+                                                                        box-sizing: border-box;
+                                                                        padding: 8px;
+                                                                        vertical-align: top;
+                                                                        width: 612px;
+                                                                    "
+                                                                >
+                                                                    <span style="font-size: 16px"
+                                                                        >LED nền RGB / South-Facing Mạch Xuôi (Backlit,
+                                                                        4028 SMD LED dạng SMD) với nhiều chế độ<br />Hotswap
+                                                                        5 pin, mạch xuôi (South-Facing) –<br />Hỗ trợ
+                                                                        QMK / VIA</span
+                                                                    >
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td
+                                                                    style="
+                                                                        background-color: #f7f7f7 !important;
+                                                                        border-color: #eeeeee;
+                                                                        border-style: solid;
+                                                                        border-width: 1px;
+                                                                        box-sizing: border-box;
+                                                                        padding: 8px;
+                                                                        width: 223px;
+                                                                    "
+                                                                >
+                                                                    <strong
+                                                                        ><span style="font-size: 16px"
+                                                                            ><span style="color: #000000"
+                                                                                >Hỗ trợ:&nbsp;</span
+                                                                            ></span
+                                                                        ></strong
+                                                                    >
+                                                                </td>
+                                                                <td
+                                                                    style="
+                                                                        border-color: #eeeeee;
+                                                                        border-style: solid;
+                                                                        box-sizing: border-box;
+                                                                        padding: 8px;
+                                                                        vertical-align: top;
+                                                                        width: 612px;
+                                                                    "
+                                                                >
+                                                                    <span style="font-size: 16px"
+                                                                        >NKRO / Multimedia / Macro / Khóa phím
+                                                                        windows</span
+                                                                    >
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td
+                                                                    style="
+                                                                        background-color: #f7f7f7 !important;
+                                                                        border-color: #eeeeee;
+                                                                        border-style: solid;
+                                                                        border-width: 1px;
+                                                                        box-sizing: border-box;
+                                                                        padding: 8px;
+                                                                        width: 223px;
+                                                                    "
+                                                                >
+                                                                    <strong
+                                                                        ><span style="font-size: 16px"
+                                                                            >Phụ kiện:</span
+                                                                        ></strong
+                                                                    >
+                                                                </td>
+                                                                <td
+                                                                    style="
+                                                                        border-color: #eeeeee;
+                                                                        border-style: solid;
+                                                                        box-sizing: border-box;
+                                                                        padding: 8px;
+                                                                        vertical-align: top;
+                                                                        width: 612px;
+                                                                    "
+                                                                >
+                                                                    <span style="font-size: 16px"
+                                                                        >Cover che bụi – Dây cáp – Phụ kiện backup</span
+                                                                    >
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td
+                                                                    style="
+                                                                        background-color: #f7f7f7 !important;
+                                                                        border-color: #eeeeee;
+                                                                        border-style: solid;
+                                                                        border-width: 1px;
+                                                                        box-sizing: border-box;
+                                                                        padding: 8px;
+                                                                        width: 223px;
+                                                                    "
+                                                                >
+                                                                    <strong
+                                                                        ><span style="font-size: 16px"
+                                                                            >Tương thích:</span
+                                                                        ></strong
+                                                                    >
+                                                                </td>
+                                                                <td
+                                                                    style="
+                                                                        border-color: #eeeeee;
+                                                                        border-style: solid;
+                                                                        box-sizing: border-box;
+                                                                        padding: 8px;
+                                                                        vertical-align: top;
+                                                                        width: 612px;
+                                                                    "
+                                                                >
+                                                                    <span style="font-size: 16px"
+                                                                        >Windows / MacOS / Linux</span
+                                                                    >
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td
+                                                                    style="
+                                                                        background-color: #f7f7f7 !important;
+                                                                        border-color: #eeeeee;
+                                                                        border-style: solid;
+                                                                        border-width: 1px;
+                                                                        box-sizing: border-box;
+                                                                        padding: 8px;
+                                                                        width: 223px;
+                                                                    "
+                                                                >
+                                                                    <strong
+                                                                        ><span style="font-size: 16px"
+                                                                            >Kích thước:</span
+                                                                        ></strong
+                                                                    >
+                                                                </td>
+                                                                <td
+                                                                    style="
+                                                                        border-color: #eeeeee;
+                                                                        border-style: solid;
+                                                                        box-sizing: border-box;
+                                                                        padding: 8px;
+                                                                        vertical-align: top;
+                                                                        width: 612px;
+                                                                    "
+                                                                >
+                                                                    <span style="font-size: 16px">332x147x33mm</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td
+                                                                    style="
+                                                                        background-color: #f7f7f7 !important;
+                                                                        border-color: #eeeeee;
+                                                                        border-style: solid;
+                                                                        border-width: 1px;
+                                                                        box-sizing: border-box;
+                                                                        padding: 8px;
+                                                                        width: 223px;
+                                                                    "
+                                                                >
+                                                                    <strong
+                                                                        ><span style="font-size: 16px"
+                                                                            >Trọng lượng:</span
+                                                                        ></strong
+                                                                    >
+                                                                </td>
+                                                                <td
+                                                                    style="
+                                                                        border-color: #eeeeee;
+                                                                        border-style: solid;
+                                                                        box-sizing: border-box;
+                                                                        padding: 8px;
+                                                                        vertical-align: top;
+                                                                        width: 612px;
+                                                                    "
+                                                                >
+                                                                    <span style="font-size: 16px">1.962kg</span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <h2 style="text-align: justify">
+                                                    <strong
+                                                        ><span style="font-size: 22px"
+                                                            >Đánh giá chi tiết bàn phím MonsGeek M1 QMK Silver AKKO
+                                                            Switch v3 Cream Yellow Pro</span
+                                                        ></strong
+                                                    >
+                                                </h2>
+                                                <p style="text-align: justify">
+                                                    <span style="font-size: 18px"
+                                                        ><a
+                                                            target="_blank"
+                                                            href="https://gearvn.com/pages/ban-phim-may-tinh"
+                                                            >Bàn phím cơ</a
+                                                        >
+                                                        là thiết bị ngoại vi không thể thiếu để bạn chiến game
+                                                        hay&nbsp;nhập liệu văn bản hằng ngày. MonsGeek M1 QMK Silver
+                                                        AKKO Switch v3 Cream Yellow Pro mang đến trải nghiệm nhanh và
+                                                        chính xác để bạn duy trì hiệu suất làm việc và giải trí cao. Nếu
+                                                        bạn đang phân vân trong việc lựa chọn một chiếc bàn phím cơ ưng
+                                                        ý thì hãy xem ngay MonsGeek M1 QMK Silver này nhé!&nbsp;</span
+                                                    >
+                                                </p>
+                                                <p style="text-align: center">
+                                                    <img
+                                                        src="//file.hstatic.net/200000722513/file/arvn-ban-phim-monsgeek-m1-qmk-silver-akko-switch-v3-cream-yellow-pro-1_23a6d6a76b2d4e92bd18f9380c191cd4_1024x1024.jpg"
+                                                        alt="GEARVN Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro"
+                                                    />
+                                                </p>
+                                                <h3 style="text-align: justify">
+                                                    <strong
+                                                        ><span style="font-size: 20px"
+                                                            >Ngoại hình chất như nước cất</span
+                                                        ></strong
+                                                    >
+                                                </h3>
+                                                <p style="text-align: justify">
+                                                    <span style="font-size: 18px"
+                                                        >MonsGeek M1 QMK Silver sở hữu ngoại hình với lớp vỏ full nhôm
+                                                        cứng cáp. Lấy màu xám&nbsp;làm chủ đạo để làm tôn thêm vẻ đẹp
+                                                        sang trọng. Tạo hiệu ứng từ đậm đến nhạt dựa vào việc sắp xếp
+                                                        màu sắc của keycaps hồng&nbsp;biến chiếc
+                                                        <a
+                                                            target="_blank"
+                                                            href="https://gearvn.com/collections/ban-phim-may-tinh"
+                                                            >bàn phím máy tính</a
+                                                        >&nbsp;MonsGeek thu hút ngay từ ánh nhìn đầu tiên.&nbsp;</span
+                                                    >
+                                                </p>
+                                                <p style="text-align: center">
+                                                    <img
+                                                        src="//file.hstatic.net/200000722513/file/arvn-ban-phim-monsgeek-m1-qmk-silver-akko-switch-v3-cream-yellow-pro-5_e7aec467be2144779f3e15a84fb6ecd3_1024x1024.jpg"
+                                                        alt="GEARVN Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro"
+                                                    />
+                                                </p>
+                                                <h3 style="text-align: justify">
+                                                    <strong
+                                                        ><span style="font-size: 20px"
+                                                            >Thiết kế TKL tiện lợi&nbsp;</span
+                                                        ></strong
+                                                    >
+                                                </h3>
+                                                <p style="text-align: justify">
+                                                    <span style="font-size: 18px"
+                                                        >MonsGeek M1 QMK Silver sở hữu bố cục
+                                                        <a
+                                                            target="_blank"
+                                                            href="https://gearvn.com/collections/ban-phim-tkl"
+                                                            >bàn&nbsp;phím TKL</a
+                                                        >
+                                                        75%. Thích hợp cho việc chơi game và đánh máy hằng ngày của bạ.
+                                                        Đi kèm là núm xoay tiện lợi để bạn điều chỉnh âm lượng một cách
+                                                        nhanh chóng khi cần.</span
+                                                    >
+                                                </p>
+                                                <p style="text-align: center">
+                                                    <img
+                                                        src="//file.hstatic.net/200000722513/file/arvn-ban-phim-monsgeek-m1-qmk-silver-akko-switch-v3-cream-yellow-pro-4_62509f2ed03943288a08077e5d372799_1024x1024.jpg"
+                                                        alt="GEARVN Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro"
+                                                    />
+                                                </p>
+                                                <h3 style="text-align: justify">
+                                                    <strong
+                                                        ><span style="font-size: 20px"
+                                                            >Rực rỡ với không gian RGB&nbsp;</span
+                                                        ></strong
+                                                    >
+                                                </h3>
+                                                <p style="text-align: justify">
+                                                    <span style="font-size: 18px"
+                                                        >MonsGeek M1 QMK Silver là chiếc
+                                                        <a
+                                                            target="_blank"
+                                                            href="https://gearvn.com/collections/ban-phim-2-den-3-trieu"
+                                                            >bàn phím 2 đến 3 triệu</a
+                                                        >
+                                                        sở hữu đèn LED RGB rực rỡ. Tạo một không gian chiến game đắm
+                                                        chìm hay khơi nguồn cảm hứng cho việc sáng tạo nội dung. Biến
+                                                        không gian làm việc và giải trí thành của riêng bạn.&nbsp;</span
+                                                    >
+                                                </p>
+                                                <p style="text-align: center">
+                                                    <img
+                                                        src="//file.hstatic.net/200000722513/file/arvn-ban-phim-monsgeek-m1-qmk-silver-akko-switch-v3-cream-yellow-pro-3_df0ffcbe3b1a4efea353190ccb0aa8e7_1024x1024.jpg"
+                                                        alt="GEARVN Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro"
+                                                    />
+                                                </p>
+                                                <h3 style="text-align: justify">
+                                                    <strong
+                                                        ><span style="font-size: 20px"
+                                                            >Hỗ trợ phần mềm VIA</span
+                                                        ></strong
+                                                    >
+                                                </h3>
+                                                <p style="text-align: justify">
+                                                    <span style="font-size: 18px"
+                                                        >MonsGeek M1 QMK Silver hỗ trợ VIA để tương thích khi sử dụng
+                                                        cùng các hệ điều hành như LINUX, MAC, WINDOWS. Bạn có thể tùy
+                                                        chỉnh các phím chức năng theo nhu cầu sử dụng để các thao tác
+                                                        trở nên nhanh và tiện lợi hơn.&nbsp;</span
+                                                    >
+                                                </p>
+                                                <p style="text-align: center">
+                                                    <img
+                                                        src="//file.hstatic.net/200000722513/file/arvn-ban-phim-monsgeek-m1-qmk-silver-akko-switch-v3-cream-yellow-pro-2_42f4e752d39345c6a9bf7b05a3500983_1024x1024.jpg"
+                                                        alt="GEARVN Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro"
+                                                    />
+                                                </p>
+                                            </div>
+                                            <div class="desc-btn">
+                                                <button class="expandable-btn button">
+                                                    <span class="expandable-toggle--text more">Đọc tiếp bài viết</span>
+                                                    <span class="expandable-toggle--text less">Thu gọn bài viết</span>
+                                                    <span class="expandable-toggle--icon">
+                                                        <svg
+                                                            width="10"
+                                                            height="10"
+                                                            viewBox="0 0 8 8"
+                                                            fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <path
+                                                                d="M6.5 2.5L4 5.5L1.5 2.5"
+                                                                stroke="#1982F9"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            ></path>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+                            <div class="product-inner">
+                                <div class="product-block product-posts">
+                                    <div class="product-heading"><h2>Tin tức về sản phẩm</h2></div>
+                                    <div class="product-wrap">
+                                        <ul class="list-post">
+                                            <li class="item-post">
+                                                <div class="img-post fade-box">
+                                                    <a
+                                                        class="aspect-ratio"
+                                                        href="/blogs/cong-nghe/youtuber-hardcore-cay-nguyen-khoa-hoc-duolingo-chi-trong-24h"
+                                                        aria-label="YouTuber hardcore cày nguyên khóa học Duolingo chỉ trong 24h"
+                                                    >
+                                                        <img
+                                                            data-src="//file.hstatic.net/200000722513/article/maxresdefault_36d0598bc23743bf85d587e490343ce5_grande.jpg"
+                                                            class="lazyloaded"
+                                                            alt="YouTuber hardcore cày nguyên khóa học Duolingo chỉ trong 24h"
+                                                            src="//file.hstatic.net/200000722513/article/maxresdefault_36d0598bc23743bf85d587e490343ce5_grande.jpg"
+                                                        />
+                                                    </a>
+                                                </div>
+                                                <div class="info-post">
+                                                    <h3>
+                                                        <a
+                                                            href="/blogs/cong-nghe/youtuber-hardcore-cay-nguyen-khoa-hoc-duolingo-chi-trong-24h"
+                                                            >YouTuber hardcore cày nguyên khóa học Duolingo chỉ trong
+                                                            24h</a
+                                                        >
+                                                    </h3>
+                                                </div>
+                                            </li>
+
+                                            <li class="item-post">
+                                                <div class="img-post fade-box">
+                                                    <a
+                                                        class="aspect-ratio"
+                                                        href="/blogs/cong-nghe/tan-nhiet-thu-dong-bang-nuoc-muoi-giup-cpu-manh-hon-30"
+                                                        aria-label="Tản nhiệt thụ động bằng nước muối giúp CPU mạnh hơn 30%"
+                                                    >
+                                                        <img
+                                                            data-src="//file.hstatic.net/200000722513/article/zgkhrmscamrqddhlpnrahi_3d4f30dab8b14277b285464332533ef1_grande.jpg"
+                                                            class="lazyloaded"
+                                                            alt="Tản nhiệt thụ động bằng nước muối giúp CPU mạnh hơn 30%"
+                                                            src="//file.hstatic.net/200000722513/article/zgkhrmscamrqddhlpnrahi_3d4f30dab8b14277b285464332533ef1_grande.jpg"
+                                                        />
+                                                    </a>
+                                                </div>
+                                                <div class="info-post">
+                                                    <h3>
+                                                        <a
+                                                            href="/blogs/cong-nghe/tan-nhiet-thu-dong-bang-nuoc-muoi-giup-cpu-manh-hon-30"
+                                                            >Tản nhiệt thụ động bằng nước muối giúp CPU mạnh hơn 30%</a
+                                                        >
+                                                    </h3>
+                                                </div>
+                                            </li>
+
+                                            <li class="item-post">
+                                                <div class="img-post fade-box">
+                                                    <a
+                                                        class="aspect-ratio"
+                                                        href="/blogs/cong-nghe/ve-oled-burn-in-cach-su-dung-quan-trong-hon-la-tam-nen-cua-hang-nao"
+                                                        aria-label="Về OLED burn-in: Cách sử dụng quan trọng hơn là tấm nền của hãng nào"
+                                                    >
+                                                        <img
+                                                            data-src="//file.hstatic.net/200000722513/article/thumb21_4e3221d816a14791868a5d824ea9e779_grande.jpg"
+                                                            class="lazyloaded"
+                                                            alt="Về OLED burn-in: Cách sử dụng quan trọng hơn là tấm nền của hãng nào"
+                                                            src="//file.hstatic.net/200000722513/article/thumb21_4e3221d816a14791868a5d824ea9e779_grande.jpg"
+                                                        />
+                                                    </a>
+                                                </div>
+                                                <div class="info-post">
+                                                    <h3>
+                                                        <a
+                                                            href="/blogs/cong-nghe/ve-oled-burn-in-cach-su-dung-quan-trong-hon-la-tam-nen-cua-hang-nao"
+                                                            >Về OLED burn-in: Cách sử dụng quan trọng hơn là tấm nền của
+                                                            hãng nào</a
+                                                        >
+                                                    </h3>
+                                                </div>
+                                            </li>
+
+                                            <li class="item-post">
+                                                <div class="img-post fade-box">
+                                                    <a
+                                                        class="aspect-ratio"
+                                                        href="/blogs/cong-nghe/kim-cuong-nhan-tao-va-kinh-sieu-tinh-khiet-co-the-duoc-dung-de-tao-ra"
+                                                        aria-label="Kim cương nhân tạo và kính siêu tinh khiết có thể được dùng để tạo ra CPU nhanh nhất"
+                                                    >
+                                                        <img
+                                                            data-src="//file.hstatic.net/200000722513/article/gukxnkn82caq6sng2cpejw-min_866a2f6ac0fa4b09a37565d49532b029_grande.jpg"
+                                                            class="lazyloaded"
+                                                            alt="Kim cương nhân tạo và kính siêu tinh khiết có thể được dùng để tạo ra CPU nhanh nhất"
+                                                            src="//file.hstatic.net/200000722513/article/gukxnkn82caq6sng2cpejw-min_866a2f6ac0fa4b09a37565d49532b029_grande.jpg"
+                                                        />
+                                                    </a>
+                                                </div>
+                                                <div class="info-post">
+                                                    <h3>
+                                                        <a
+                                                            href="/blogs/cong-nghe/kim-cuong-nhan-tao-va-kinh-sieu-tinh-khiet-co-the-duoc-dung-de-tao-ra"
+                                                            >Kim cương nhân tạo và kính siêu tinh khiết có thể được dùng
+                                                            để tạo ra CPU nhanh nhất</a
+                                                        >
+                                                    </h3>
+                                                </div>
+                                            </li>
+
+                                            <li class="item-post">
+                                                <div class="img-post fade-box">
+                                                    <a
+                                                        class="aspect-ratio"
+                                                        href="/blogs/cong-nghe/du-co-mua-youtube-premium-thi-ban-van-chua-chac-thoat-duoc-quang-cao-d"
+                                                        aria-label="Dù có mua YouTube Premium thì bạn vẫn chưa chắc thoát được quảng cáo đâu"
+                                                    >
+                                                        <img
+                                                            data-src="//file.hstatic.net/200000722513/article/youtubes-new-unskippable-30-second-ctv-ads_4387fc4a6ffc4f498a61bfe6110c5161_grande.png"
+                                                            class="lazyloaded"
+                                                            alt="Dù có mua YouTube Premium thì bạn vẫn chưa chắc thoát được quảng cáo đâu"
+                                                            src="//file.hstatic.net/200000722513/article/youtubes-new-unskippable-30-second-ctv-ads_4387fc4a6ffc4f498a61bfe6110c5161_grande.png"
+                                                        />
+                                                    </a>
+                                                </div>
+                                                <div class="info-post">
+                                                    <h3>
+                                                        <a
+                                                            href="/blogs/cong-nghe/du-co-mua-youtube-premium-thi-ban-van-chua-chac-thoat-duoc-quang-cao-d"
+                                                            >Dù có mua YouTube Premium thì bạn vẫn chưa chắc thoát được
+                                                            quảng cáo đâu</a
+                                                        >
+                                                    </h3>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="product-inner" id="customers-rating">
+                                <div class="product-block product-ratings">
+                                    <div class="product-heading">
+                                        <h2>
+                                            Đánh giá &amp; Nhận xét Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream
+                                            Yellow Pro
+                                        </h2>
+                                    </div>
+                                    <div class="product-wrap">
+                                        <div class="product-rating--wrapper">
+                                            <div class="product-reviews--header">
+                                                <div class="product-reviews--left">
+                                                    <div class="product-reviews--number"><span>5.0/5</span></div>
+                                                    <div class="product-reviews--star">
+                                                        <div class="star-rate">
+                                                            <span class="ic-star"></span>
+                                                            <span class="ic-star"></span>
+                                                            <span class="ic-star"></span>
+                                                            <span class="ic-star"></span>
+                                                            <span class="ic-star"></span>
+                                                        </div>
+                                                        <div
+                                                            class="star-rate star-fill"
+                                                            data-rate=""
+                                                            style="width: 100%"
+                                                        >
+                                                            <span class="ic-star-fill"></span>
+                                                            <span class="ic-star-fill"></span>
+                                                            <span class="ic-star-fill"></span>
+                                                            <span class="ic-star-fill"></span>
+                                                            <span class="ic-star-fill"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-reviews--total">
+                                                        <span><strong>(2)</strong> đánh giá &amp; nhận xét</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-reviews--right">
+                                                    <div class="product-reviews--process">
+                                                        <div data-star="5" class="items-process">
+                                                            <span class="isNumber">5</span>
+                                                            <span class="isProcess">
+                                                                <span class="isLoad" style="width: 100%"></span>
+                                                                <span class="isBG"></span>
+                                                            </span>
+                                                            <span class="isCount">2 đánh giá</span>
+                                                        </div>
+                                                        <div data-star="4" class="items-process">
+                                                            <span class="isNumber">4</span>
+                                                            <span class="isProcess">
+                                                                <span class="isLoad" style="width: 0%"></span>
+                                                                <span class="isBG"></span>
+                                                            </span>
+                                                            <span class="isCount">0 đánh giá</span>
+                                                        </div>
+                                                        <div data-star="3" class="items-process">
+                                                            <span class="isNumber">3</span>
+                                                            <span class="isProcess">
+                                                                <span class="isLoad" style="width: 0%"></span>
+                                                                <span class="isBG"></span>
+                                                            </span>
+                                                            <span class="isCount">0 đánh giá</span>
+                                                        </div>
+                                                        <div data-star="2" class="items-process">
+                                                            <span class="isNumber">2</span>
+                                                            <span class="isProcess">
+                                                                <span class="isLoad" style="width: 0%"></span>
+                                                                <span class="isBG"></span>
+                                                            </span>
+                                                            <span class="isCount">0 đánh giá</span>
+                                                        </div>
+                                                        <div data-star="1" class="items-process">
+                                                            <span class="isNumber">1</span>
+                                                            <span class="isProcess">
+                                                                <span class="isLoad" style="width: 0%"></span>
+                                                                <span class="isBG"></span>
+                                                            </span>
+                                                            <span class="isCount">0 đánh giá</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-reviews--body">
+                                                <div class="product-reviews--status d-none"></div>
+                                                <div class="product-reviews--render">
+                                                    <div class="items-comment">
+                                                        <div class="items-comment-top">
+                                                            <div class="items-comment-name">Vương Vũ</div>
+                                                            <div class="items-comment-date">3-10-2023</div>
+                                                        </div>
+                                                        <div class="items-comment-bottom">
+                                                            <div class="items-comment-left">
+                                                                <div class="items-comment-star">
+                                                                    <div class="items-star active" data-star="1">
+                                                                        <svg
+                                                                            width="16"
+                                                                            height="16"
+                                                                            viewBox="0 0 16 16"
+                                                                            fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                        >
+                                                                            <path
+                                                                                d="M3.12034 14.3994L4.03419 10.0858L0.835704 7.13018C0.835704 7.13018 0.378768 6.73077 0.531087 6.1716C0.683406 5.61243 1.29263 5.61243 1.29263 5.61243L5.55728 5.21302L7.23268 1.13905C7.23268 1.13905 7.46113 0.5 7.99422 0.5C8.52731 0.5 8.75576 1.13905 8.75576 1.13905L10.4312 5.21302L14.8481 5.61243C14.8481 5.61243 15.305 5.69231 15.4574 6.1716C15.6097 6.65089 15.305 6.97041 15.305 6.97041L11.9543 10.0858L12.8681 14.5592C12.8681 14.5592 13.0204 15.0385 12.6396 15.358C12.2589 15.6775 11.6496 15.358 11.6496 15.358L7.99422 13.0414L4.41496 15.358C4.41496 15.358 3.88189 15.6775 3.42495 15.358C2.96802 15.0385 3.12034 14.3994 3.12034 14.3994Z"
+                                                                                stroke="#CFCFCF"
+                                                                                stroke-width="0.9375"
+                                                                            ></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="items-star active" data-star="2">
+                                                                        <svg
+                                                                            width="16"
+                                                                            height="16"
+                                                                            viewBox="0 0 16 16"
+                                                                            fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                        >
+                                                                            <path
+                                                                                d="M3.12034 14.3994L4.03419 10.0858L0.835704 7.13018C0.835704 7.13018 0.378768 6.73077 0.531087 6.1716C0.683406 5.61243 1.29263 5.61243 1.29263 5.61243L5.55728 5.21302L7.23268 1.13905C7.23268 1.13905 7.46113 0.5 7.99422 0.5C8.52731 0.5 8.75576 1.13905 8.75576 1.13905L10.4312 5.21302L14.8481 5.61243C14.8481 5.61243 15.305 5.69231 15.4574 6.1716C15.6097 6.65089 15.305 6.97041 15.305 6.97041L11.9543 10.0858L12.8681 14.5592C12.8681 14.5592 13.0204 15.0385 12.6396 15.358C12.2589 15.6775 11.6496 15.358 11.6496 15.358L7.99422 13.0414L4.41496 15.358C4.41496 15.358 3.88189 15.6775 3.42495 15.358C2.96802 15.0385 3.12034 14.3994 3.12034 14.3994Z"
+                                                                                stroke="#CFCFCF"
+                                                                                stroke-width="0.9375"
+                                                                            ></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="items-star active" data-star="3">
+                                                                        <svg
+                                                                            width="16"
+                                                                            height="16"
+                                                                            viewBox="0 0 16 16"
+                                                                            fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                        >
+                                                                            <path
+                                                                                d="M3.12034 14.3994L4.03419 10.0858L0.835704 7.13018C0.835704 7.13018 0.378768 6.73077 0.531087 6.1716C0.683406 5.61243 1.29263 5.61243 1.29263 5.61243L5.55728 5.21302L7.23268 1.13905C7.23268 1.13905 7.46113 0.5 7.99422 0.5C8.52731 0.5 8.75576 1.13905 8.75576 1.13905L10.4312 5.21302L14.8481 5.61243C14.8481 5.61243 15.305 5.69231 15.4574 6.1716C15.6097 6.65089 15.305 6.97041 15.305 6.97041L11.9543 10.0858L12.8681 14.5592C12.8681 14.5592 13.0204 15.0385 12.6396 15.358C12.2589 15.6775 11.6496 15.358 11.6496 15.358L7.99422 13.0414L4.41496 15.358C4.41496 15.358 3.88189 15.6775 3.42495 15.358C2.96802 15.0385 3.12034 14.3994 3.12034 14.3994Z"
+                                                                                stroke="#CFCFCF"
+                                                                                stroke-width="0.9375"
+                                                                            ></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="items-star active" data-star="4">
+                                                                        <svg
+                                                                            width="16"
+                                                                            height="16"
+                                                                            viewBox="0 0 16 16"
+                                                                            fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                        >
+                                                                            <path
+                                                                                d="M3.12034 14.3994L4.03419 10.0858L0.835704 7.13018C0.835704 7.13018 0.378768 6.73077 0.531087 6.1716C0.683406 5.61243 1.29263 5.61243 1.29263 5.61243L5.55728 5.21302L7.23268 1.13905C7.23268 1.13905 7.46113 0.5 7.99422 0.5C8.52731 0.5 8.75576 1.13905 8.75576 1.13905L10.4312 5.21302L14.8481 5.61243C14.8481 5.61243 15.305 5.69231 15.4574 6.1716C15.6097 6.65089 15.305 6.97041 15.305 6.97041L11.9543 10.0858L12.8681 14.5592C12.8681 14.5592 13.0204 15.0385 12.6396 15.358C12.2589 15.6775 11.6496 15.358 11.6496 15.358L7.99422 13.0414L4.41496 15.358C4.41496 15.358 3.88189 15.6775 3.42495 15.358C2.96802 15.0385 3.12034 14.3994 3.12034 14.3994Z"
+                                                                                stroke="#CFCFCF"
+                                                                                stroke-width="0.9375"
+                                                                            ></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="items-star active" data-star="5">
+                                                                        <svg
+                                                                            width="16"
+                                                                            height="16"
+                                                                            viewBox="0 0 16 16"
+                                                                            fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                        >
+                                                                            <path
+                                                                                d="M3.12034 14.3994L4.03419 10.0858L0.835704 7.13018C0.835704 7.13018 0.378768 6.73077 0.531087 6.1716C0.683406 5.61243 1.29263 5.61243 1.29263 5.61243L5.55728 5.21302L7.23268 1.13905C7.23268 1.13905 7.46113 0.5 7.99422 0.5C8.52731 0.5 8.75576 1.13905 8.75576 1.13905L10.4312 5.21302L14.8481 5.61243C14.8481 5.61243 15.305 5.69231 15.4574 6.1716C15.6097 6.65089 15.305 6.97041 15.305 6.97041L11.9543 10.0858L12.8681 14.5592C12.8681 14.5592 13.0204 15.0385 12.6396 15.358C12.2589 15.6775 11.6496 15.358 11.6496 15.358L7.99422 13.0414L4.41496 15.358C4.41496 15.358 3.88189 15.6775 3.42495 15.358C2.96802 15.0385 3.12034 14.3994 3.12034 14.3994Z"
+                                                                                stroke="#CFCFCF"
+                                                                                stroke-width="0.9375"
+                                                                            ></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="items-comment-right"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="items-comment">
+                                                        <div class="items-comment-top">
+                                                            <div class="items-comment-name">Vương Vũ</div>
+                                                            <div class="items-comment-date">3-10-2023</div>
+                                                        </div>
+                                                        <div class="items-comment-bottom">
+                                                            <div class="items-comment-left">
+                                                                <div class="items-comment-star">
+                                                                    <div class="items-star active" data-star="1">
+                                                                        <svg
+                                                                            width="16"
+                                                                            height="16"
+                                                                            viewBox="0 0 16 16"
+                                                                            fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                        >
+                                                                            <path
+                                                                                d="M3.12034 14.3994L4.03419 10.0858L0.835704 7.13018C0.835704 7.13018 0.378768 6.73077 0.531087 6.1716C0.683406 5.61243 1.29263 5.61243 1.29263 5.61243L5.55728 5.21302L7.23268 1.13905C7.23268 1.13905 7.46113 0.5 7.99422 0.5C8.52731 0.5 8.75576 1.13905 8.75576 1.13905L10.4312 5.21302L14.8481 5.61243C14.8481 5.61243 15.305 5.69231 15.4574 6.1716C15.6097 6.65089 15.305 6.97041 15.305 6.97041L11.9543 10.0858L12.8681 14.5592C12.8681 14.5592 13.0204 15.0385 12.6396 15.358C12.2589 15.6775 11.6496 15.358 11.6496 15.358L7.99422 13.0414L4.41496 15.358C4.41496 15.358 3.88189 15.6775 3.42495 15.358C2.96802 15.0385 3.12034 14.3994 3.12034 14.3994Z"
+                                                                                stroke="#CFCFCF"
+                                                                                stroke-width="0.9375"
+                                                                            ></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="items-star active" data-star="2">
+                                                                        <svg
+                                                                            width="16"
+                                                                            height="16"
+                                                                            viewBox="0 0 16 16"
+                                                                            fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                        >
+                                                                            <path
+                                                                                d="M3.12034 14.3994L4.03419 10.0858L0.835704 7.13018C0.835704 7.13018 0.378768 6.73077 0.531087 6.1716C0.683406 5.61243 1.29263 5.61243 1.29263 5.61243L5.55728 5.21302L7.23268 1.13905C7.23268 1.13905 7.46113 0.5 7.99422 0.5C8.52731 0.5 8.75576 1.13905 8.75576 1.13905L10.4312 5.21302L14.8481 5.61243C14.8481 5.61243 15.305 5.69231 15.4574 6.1716C15.6097 6.65089 15.305 6.97041 15.305 6.97041L11.9543 10.0858L12.8681 14.5592C12.8681 14.5592 13.0204 15.0385 12.6396 15.358C12.2589 15.6775 11.6496 15.358 11.6496 15.358L7.99422 13.0414L4.41496 15.358C4.41496 15.358 3.88189 15.6775 3.42495 15.358C2.96802 15.0385 3.12034 14.3994 3.12034 14.3994Z"
+                                                                                stroke="#CFCFCF"
+                                                                                stroke-width="0.9375"
+                                                                            ></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="items-star active" data-star="3">
+                                                                        <svg
+                                                                            width="16"
+                                                                            height="16"
+                                                                            viewBox="0 0 16 16"
+                                                                            fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                        >
+                                                                            <path
+                                                                                d="M3.12034 14.3994L4.03419 10.0858L0.835704 7.13018C0.835704 7.13018 0.378768 6.73077 0.531087 6.1716C0.683406 5.61243 1.29263 5.61243 1.29263 5.61243L5.55728 5.21302L7.23268 1.13905C7.23268 1.13905 7.46113 0.5 7.99422 0.5C8.52731 0.5 8.75576 1.13905 8.75576 1.13905L10.4312 5.21302L14.8481 5.61243C14.8481 5.61243 15.305 5.69231 15.4574 6.1716C15.6097 6.65089 15.305 6.97041 15.305 6.97041L11.9543 10.0858L12.8681 14.5592C12.8681 14.5592 13.0204 15.0385 12.6396 15.358C12.2589 15.6775 11.6496 15.358 11.6496 15.358L7.99422 13.0414L4.41496 15.358C4.41496 15.358 3.88189 15.6775 3.42495 15.358C2.96802 15.0385 3.12034 14.3994 3.12034 14.3994Z"
+                                                                                stroke="#CFCFCF"
+                                                                                stroke-width="0.9375"
+                                                                            ></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="items-star active" data-star="4">
+                                                                        <svg
+                                                                            width="16"
+                                                                            height="16"
+                                                                            viewBox="0 0 16 16"
+                                                                            fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                        >
+                                                                            <path
+                                                                                d="M3.12034 14.3994L4.03419 10.0858L0.835704 7.13018C0.835704 7.13018 0.378768 6.73077 0.531087 6.1716C0.683406 5.61243 1.29263 5.61243 1.29263 5.61243L5.55728 5.21302L7.23268 1.13905C7.23268 1.13905 7.46113 0.5 7.99422 0.5C8.52731 0.5 8.75576 1.13905 8.75576 1.13905L10.4312 5.21302L14.8481 5.61243C14.8481 5.61243 15.305 5.69231 15.4574 6.1716C15.6097 6.65089 15.305 6.97041 15.305 6.97041L11.9543 10.0858L12.8681 14.5592C12.8681 14.5592 13.0204 15.0385 12.6396 15.358C12.2589 15.6775 11.6496 15.358 11.6496 15.358L7.99422 13.0414L4.41496 15.358C4.41496 15.358 3.88189 15.6775 3.42495 15.358C2.96802 15.0385 3.12034 14.3994 3.12034 14.3994Z"
+                                                                                stroke="#CFCFCF"
+                                                                                stroke-width="0.9375"
+                                                                            ></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="items-star active" data-star="5">
+                                                                        <svg
+                                                                            width="16"
+                                                                            height="16"
+                                                                            viewBox="0 0 16 16"
+                                                                            fill="none"
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                        >
+                                                                            <path
+                                                                                d="M3.12034 14.3994L4.03419 10.0858L0.835704 7.13018C0.835704 7.13018 0.378768 6.73077 0.531087 6.1716C0.683406 5.61243 1.29263 5.61243 1.29263 5.61243L5.55728 5.21302L7.23268 1.13905C7.23268 1.13905 7.46113 0.5 7.99422 0.5C8.52731 0.5 8.75576 1.13905 8.75576 1.13905L10.4312 5.21302L14.8481 5.61243C14.8481 5.61243 15.305 5.69231 15.4574 6.1716C15.6097 6.65089 15.305 6.97041 15.305 6.97041L11.9543 10.0858L12.8681 14.5592C12.8681 14.5592 13.0204 15.0385 12.6396 15.358C12.2589 15.6775 11.6496 15.358 11.6496 15.358L7.99422 13.0414L4.41496 15.358C4.41496 15.358 3.88189 15.6775 3.42495 15.358C2.96802 15.0385 3.12034 14.3994 3.12034 14.3994Z"
+                                                                                stroke="#CFCFCF"
+                                                                                stroke-width="0.9375"
+                                                                            ></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="items-comment-right"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-reviews--pagi"></div>
+                                            </div>
+                                            <div class="product-reviews--footer">
+                                                <div class="product-reviews--btn">
+                                                    <a href="javascript:void(0);" class="btn-reviews--edit button">
+                                                        <svg
+                                                            viewBox="0 0 18 18"
+                                                            fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <path
+                                                                d="M9 1L11.2142 2.53226H13.9459L14.7858 5L17 6.53226L16.1601 9L17 11.4677L14.7858 13L13.9459 15.4677H11.2142L9 17L6.78579 15.4677H4.05408L3.21421 13L1 11.4677L1.83987 9L1 6.53226L3.21421 5L4.05408 2.53226H6.78579L9 1Z"
+                                                                fill="white"
+                                                                stroke="white"
+                                                                stroke-width="2"
+                                                                stroke-miterlimit="10"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                            ></path>
+                                                            <path
+                                                                d="M5.96393 12.3153L6.53255 9.63125L4.54238 7.79219C4.54238 7.79219 4.25806 7.54367 4.35284 7.19574C4.44762 6.84781 4.82669 6.84781 4.82669 6.84781L7.48025 6.59929L8.52272 4.06438C8.52272 4.06438 8.66487 3.66675 8.99657 3.66675C9.32827 3.66675 9.47042 4.06438 9.47042 4.06438L10.5129 6.59929L13.2612 6.84781C13.2612 6.84781 13.5455 6.89752 13.6403 7.19574C13.7351 7.49397 13.5455 7.69278 13.5455 7.69278L11.4606 9.63125L12.0292 12.4147C12.0292 12.4147 12.124 12.7129 11.887 12.9117C11.6501 13.1105 11.271 12.9117 11.271 12.9117L8.99657 11.4703L6.76947 12.9117C6.76947 12.9117 6.43778 13.1105 6.15347 12.9117C5.86915 12.7129 5.96393 12.3153 5.96393 12.3153Z"
+                                                                fill="#1982F9"
+                                                            ></path>
+                                                        </svg>
+                                                        <span>Gửi đánh giá của bạn</span>
+                                                    </a>
+                                                    <a
+                                                        href="javascript:void(0);"
+                                                        class="btn-reviews--more button d-none"
+                                                        >Xem thêm <strong>0</strong> đánh giá</a
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-linkcopy d-none">
+                <input
+                    class="linkToCopy"
+                    readonly="readonly"
+                    value="https://gearvn.com/products/ban-phim-monsgeek-m1-qmk-silver-akko-switch-v3-cream-yellow-pro"
+                    id="myInput"
+                />
+            </div>
+        </div>
+
+        <footer id="footer" class="w-full min-h-[500px] bg-white text-[#444] border-t">
+            <div class="h-auto mx-auto max-w-[1200px] xl:px-0 px-2 py-2">
+                <!-- Member Container -->
+                <div
+                    class="w-full py-4 grid xl:grid-flow-col lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-items-center gap-4"
+                >
+                    <!-- About us -->
+                    <ul class="text-sm">
+                        <li class="font-medium text-base uppercase text-black">Về SHOPPC.VN</li>
+                        <li class="hover:underline"><a href="#about">Giới thiệu</a></li>
+                        <li class="hover:underline"><a href="#work">Tuyển dụng</a></li>
+                    </ul>
+
+                    <!-- Privacy & Policy -->
+                    <ul class="text-sm">
+                        <li class="font-medium text-base uppercase text-black">Các chính sách</li>
+                        <li class="hover:underline">
+                            <a href="#WarrantyPolicy">Chính sách bảo hành</a>
+                        </li>
+                        <li class="hover:underline">
+                            <a href="#PaymentPolicy">Chính sách thanh toán</a>
+                        </li>
+                        <li class="hover:underline">
+                            <a href="#DeliveryPolicy">Chính sách giao hàng</a>
+                        </li>
+                        <li class="hover:underline"><a href="#PrivacyPolicy">Chính sách bảo mật</a></li>
+                    </ul>
+
+                    <!-- Info -->
+                    <ul class="text-sm">
+                        <li class="font-medium text-base uppercase text-black">Thông tin</li>
+                        <li class="hover:underline">
+                            <a href="#WarrantyPolicy">Hệ thống cửa hàng</a>
+                        </li>
+                        <li class="hover:underline">
+                            <a href="#Service Center">Trung tâm bảo hành</a>
+                        </li>
+                    </ul>
+
+                    <!-- Support info -->
+                    <ul class="text-sm">
+                        <li class="font-medium text-base uppercase text-black">Tổng đài hỗ trợ</li>
+                        <li class="flex gap-3">
+                            Gọi mua:
+                            <a href="tel:+1800.xxxx" class="text-blue-600 hover:underline text-base font-medium"
+                                >1800.xxxx</a
+                            >
+                            (8:00 - 21:00)
+                        </li>
+                        <li class="flex gap-3">
+                            CSKH:
+                            <a href="tel:+1800.xxxx" class="text-blue-600 hover:underline text-base font-medium"
+                                >1800.xxxx</a
+                            >
+                            (8:00 - 21:00)
+                        </li>
+                        <li class="flex gap-3">
+                            Email:
+                            <a href="mailto:cskh@shoppc.vn" class="text-blue-600 hover:underline text-base font-medium"
+                                >cskh@shoppc.vn</a
+                            >
+                        </li>
+                    </ul>
+
+                    <!-- Payment Info & Delivery Info -->
+                    <div class="">
+                        <!-- Delivery Info -->
+                        <ul class="text-sm mb-4">
+                            <li class="font-medium text-base uppercase text-black">Đơn vị vận chuyển</li>
+                            <ul class="flex gap-2">
+                                <li>
+                                    <img class="h-8" src="/assets/img/theme-icon/ship_1.webp" alt="Ship info" />
+                                </li>
+                                <li>
+                                    <img class="h-8" src="/assets/img/theme-icon/ship_2.webp" alt="Ship info" />
+                                </li>
+                                <li>
+                                    <img class="h-8" src="/assets/img/theme-icon/ship_3.webp" alt="Ship info" />
+                                </li>
+                                <li>
+                                    <img class="h-8" src="/assets/img/theme-icon/ship_4.webp" alt="Ship info" />
+                                </li>
+                            </ul>
+                        </ul>
+                        <!-- Payment Info -->
+                        <ul class="text-sm">
+                            <li class="font-medium text-base uppercase text-black">Phương thức thanh toán</li>
+                            <ul class="flex gap-2 flex-wrap mb-2">
+                                <li>
+                                    <img
+                                        class="h-10"
+                                        src="/assets/img/theme-icon/online-bank.jpg"
+                                        alt="Online Banking"
+                                    />
+                                </li>
+                                <li>
+                                    <img class="h-10" src="/assets/img/theme-icon/jcb.svg" alt="Pay with JCB" />
+                                </li>
+                                <li>
+                                    <img class="h-10" src="/assets/img/theme-icon/visa.png" alt="Pay with visa" />
+                                </li>
+                                <li>
+                                    <img
+                                        class="h-10"
+                                        src="/assets/img/theme-icon/mastercard.png"
+                                        alt="Pay with Mastercard"
+                                    />
+                                </li>
+                            </ul>
+                            <ul class="flex gap-2 flex-wrap">
+                                <li>
+                                    <img class="h-10" src="/assets/img/theme-icon/cash-only.png" alt="Cash only" />
+                                </li>
+                                <li>
+                                    <img class="h-10" src="/assets/img/theme-icon/tra-gop-0.png" alt="Trả góp 0%" />
+                                </li>
+                                <li>
+                                    <img class="h-10" src="/assets/img/theme-icon/momo.svg" alt="Pay with Momo" />
+                                </li>
+                                <li>
+                                    <img class="h-10" src="/assets/img/theme-icon/zalopay.png" alt="pay with ZaloPay" />
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Bottom Footer Container -->
+                <div class="w-full border-t py-4 flex justify-between items-center md:flex-row flex-col">
+                    <!-- Contact Container -->
+                    <div class="">
+                        <h1 class="uppercase font-medium text-center">Kết nối với SHOPPC.VN</h1>
+                        <!-- Social -->
+                        <div class="flex gap-2">
+                            <a href="#fb" class="p-1">
+                                <img
+                                    class="w-9 h-9 p-1"
+                                    src="/assets/img/theme-icon/facebook.png"
+                                    alt="SHOPPC.VN Facebook"
+                                />
+                            </a>
+                            <a href="#gmail" class="p-1">
+                                <img class="w-9 h-9" src="/assets/img/theme-icon/gmail.svg" alt="SHOPPC.VN Gmail" />
+                            </a>
+                            <a href="#messenger" class="p-1">
+                                <img
+                                    class="w-9 h-9"
+                                    src="/assets/img/theme-icon/messenger.svg"
+                                    alt="SHOPPC.VN Youtube"
+                                />
+                            </a>
+                            <a href="#youtube" class="p-1">
+                                <img class="w-9 h-9" src="/assets/img/theme-icon/youtube.svg" alt="SHOPPC.VN Youtube" />
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Certification Container -->
+                    <div class="flex flex-wrap gap-2">
+                        <a href="#BoCongThuong">
+                            <img
+                                class="h-16"
+                                src="/assets/img/theme-icon/logo-bct.webp"
+                                alt="SHOPPC.VN Bộ Công Thương"
+                            />
+                        </a>
+                    </div>
+                </div>
+                <!-- Credit -->
+                <div class="w-full">
+                    <h1 class="text-[#444] font-medium text-sm text-center leading-none">
+                        2023 &copy; Bản quyền thuộc về SHOPPC.VN
+                    </h1>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/slider.js"></script>
+</html>
