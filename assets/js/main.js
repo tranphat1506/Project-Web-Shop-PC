@@ -2537,6 +2537,29 @@ class DropDownMenu {
     }
 }
 
+class Cart {
+    #cartElement;
+    #cartState;
+    constructor({ id = '', cartLocalStorage = '' }) {
+        this.#setCartElement = `#${id}`;
+        this.#setCartState = JSON.parse(cartLocalStorage || '{}');
+    }
+
+    set #setCartState(newState = {}) {
+        this.#cartState = { ...this.#cartState, ...newState };
+        return this.#cartState;
+    }
+
+    set #setCartElement(query = '') {
+        this.#cartElement = document.querySelector(query) || undefined;
+        return this.#cartElement;
+    }
+
+    get getCartState() {
+        return this.#cartState;
+    }
+}
+
 const renderCategoryMenu = (contEl, menuArr = [], type = 'default') => {
     if (!contEl || contEl === '') throw new Error('Container element invalid!');
     switch (type) {
