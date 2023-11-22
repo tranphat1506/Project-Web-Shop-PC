@@ -31,6 +31,13 @@
         <title>SHOPPC.VN</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            #myText {
+                overflow: hidden;
+                max-height: 0px;
+                transition: max-height 0.5s ease-out;
+            }
+        </style>
     </head>
     <body class="bg-white">
         <header id="header" class="w-full bg-[#d72c2c]">
@@ -507,7 +514,7 @@
                             <div class="product-heading text-2xl font-semibold my-2"><h2>Mô tả sản phẩm</h2></div>
                             <div class="product-wrap">
                                 <div class="product-desc--content expandable-toggle opened">
-                                    <div class="desc-content" >
+                                    <div class="desc-content">
                                         <p></p>
                                         <p class="text-18 font-semibold mb-2">Thông số kĩ thuật:</p>
                                         <div class="scroll-table">
@@ -573,126 +580,140 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="desc-btn">
-                                        <button class="expandable-btn button" onclick="toggleExpand()">
-                                            <span class="expandable-toggle--text more">Đọc tiếp bài viết</span>
-                                            <span class="expandable-toggle--text less">Thu gọn bài viết</span>
-                                            <span class="expandable-toggle--icon">
-                                                <svg
-                                                    width="10"
-                                                    height="10"
-                                                    viewBox="0 0 8 8"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
+                                    <div id="myText">
+                                        <!-- Nội dung văn bản của bạn ở đây -->
+                                        <div
+                                            class="overflow-hidden max-h-100 transition-max-h duration-500 ease-in-out"
+                                            id="cc"
+                                        >
+                                            <!-- Nội dung cần được thu gọn/mở rộ -->
+                                            <p class="text-center mb-2">
+                                                <img
+                                                    class="mb-2"
+                                                    src="//file.hstatic.net/200000722513/file/arvn-ban-phim-monsgeek-m1-qmk-silver-akko-switch-v3-cream-yellow-pro-1_23a6d6a76b2d4e92bd18f9380c191cd4_1024x1024.jpg"
+                                                    alt="GEARVN Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro"
+                                                />
+                                            </p>
+                                            <h3 class="text-justify font-bold text-20 mb-2">
+                                                Ngoại hình chất như nước cất
+                                            </h3>
+                                            <p class="text-justify mb-2">
+                                                <span class="text-18 mb-2"
+                                                    >MonsGeek M1 QMK Silver sở hữu ngoại hình với lớp vỏ full nhôm cứng
+                                                    cáp. Lấy màu xám làm chủ đạo để làm tôn thêm vẻ đẹp sang trọng. Tạo
+                                                    hiệu ứng từ đậm đến nhạt dựa vào việc sắp xếp màu sắc của keycaps
+                                                    hồng biến chiếc
+                                                    <a
+                                                        target="_blank"
+                                                        href="https://gearvn.com/collections/ban-phim-may-tinh"
+                                                        >bàn phím máy tính</a
+                                                    >
+                                                    MonsGeek thu hút ngay từ ánh nhìn đầu tiên.</span
                                                 >
-                                                    <path
-                                                        d="M6.5 2.5L4 5.5L1.5 2.5"
-                                                        stroke="#1982F9"
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                    ></path>
-                                                </svg>
-                                            </span>
-                                        </button>
+                                            </p>
+                                            <!-- Các đoạn văn khác -->
+                                            <p class="text-center mb-2">
+                                                <img
+                                                    class="mb-2"
+                                                    src="//file.hstatic.net/200000722513/file/arvn-ban-phim-monsgeek-m1-qmk-silver-akko-switch-v3-cream-yellow-pro-5_e7aec467be2144779f3e15a84fb6ecd3_1024x1024.jpg"
+                                                    alt="GEARVN Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro"
+                                                />
+                                            </p>
+                                            <h3 class="text-justify font-bold text-20 mb-2">Thiết kế TKL tiện lợi</h3>
+                                            <p class="text-justifymb-2">
+                                                <span class="text-18 mb-2"
+                                                    >MonsGeek M1 QMK Silver sở hữu bố cục
+                                                    <a
+                                                        target="_blank"
+                                                        href="https://gearvn.com/collections/ban-phim-tkl"
+                                                        >bàn phím TKL</a
+                                                    >
+                                                    75%. Thích hợp cho việc chơi game và đánh máy hằng ngày của bạn. Đi
+                                                    kèm là núm xoay tiện lợi để bạn điều chỉnh âm lượng một cách nhanh
+                                                    chóng khi cần.</span
+                                                >
+                                            </p>
+                                            <p class="text-center mb-2">
+                                                <img
+                                                    class="mb-2"
+                                                    src="//file.hstatic.net/200000722513/file/arvn-ban-phim-monsgeek-m1-qmk-silver-akko-switch-v3-cream-yellow-pro-4_62509f2ed03943288a08077e5d372799_1024x1024.jpg"
+                                                    alt="GEARVN Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro"
+                                                />
+                                            </p>
+                                            <h3 class="text-justify font-bold text-20 mb-2">
+                                                Rực rỡ với không gian RGB
+                                            </h3>
+                                            <p class="text-justify mb-2">
+                                                <span class="text-18 mb-2"
+                                                    >MonsGeek M1 QMK Silver là chiếc
+                                                    <a
+                                                        target="_blank"
+                                                        href="https://gearvn.com/collections/ban-phim-2-den-3-trieu"
+                                                        >bàn phím 2 đến 3 triệu</a
+                                                    >
+                                                    sở hữu đèn LED RGB rực rỡ. Tạo một không gian chiến game đắm chìm
+                                                    hay khơi nguồn cảm hứng cho việc sáng tạo nội dung. Biến không gian
+                                                    làm việc và giải trí thành của riêng bạn.</span
+                                                >
+                                            </p>
+                                            <p class="text-center mb-2">
+                                                <img
+                                                    class="mb-2"
+                                                    src="//file.hstatic.net/200000722513/file/arvn-ban-phim-monsgeek-m1-qmk-silver-akko-switch-v3-cream-yellow-pro-3_df0ffcbe3b1a4efea353190ccb0aa8e7_1024x1024.jpg"
+                                                    alt="GEARVN Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro"
+                                                />
+                                            </p>
+                                            <h3 class="text-justify font-bold text-20 mb-2">Hỗ trợ phần mềm VIA</h3>
+                                            <p class="text-justify mb-2">
+                                                <span class="text-18 mb-2"
+                                                    >MonsGeek M1 QMK Silver hỗ trợ VIA để tương thích khi sử dụng cùng
+                                                    các hệ điều hành như LINUX, MAC, WINDOWS. Bạn có thể tùy chỉnh các
+                                                    phím chức năng theo nhu cầu sử dụng để các thao tác trở nên nhanh và
+                                                    tiện lợi hơn.</span
+                                                >
+                                            </p>
+                                            <p class="text-center mb-2">
+                                                <img
+                                                    class="mb-2"
+                                                    src="//file.hstatic.net/200000722513/file/arvn-ban-phim-monsgeek-m1-qmk-silver-akko-switch-v3-cream-yellow-pro-2_42f4e752d39345c6a9bf7b05a3500983_1024x1024.jpg"
+                                                    alt="GEARVN Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro"
+                                                />
+                                            </p>
+                                        </div>
                                     </div>
 
-                                    <div class="overflow-hidden max-h-100 transition-max-h duration-500 ease-in-out">
-                                        <!-- Nội dung cần được thu gọn/mở rộ -->
-                                        <p class="text-center mb-2">
-                                            <img
-                                                class="mb-2"
-                                                src="//file.hstatic.net/200000722513/file/arvn-ban-phim-monsgeek-m1-qmk-silver-akko-switch-v3-cream-yellow-pro-1_23a6d6a76b2d4e92bd18f9380c191cd4_1024x1024.jpg"
-                                                alt="GEARVN Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro"
-                                            />
-                                        </p>
-                                        <h3 class="text-justify font-bold text-20 mb-2">
-                                            Ngoại hình chất như nước cất
-                                        </h3>
-                                        <p class="text-justify mb-2">
-                                            <span class="text-18 mb-2"
-                                                >MonsGeek M1 QMK Silver sở hữu ngoại hình với lớp vỏ full nhôm cứng cáp.
-                                                Lấy màu xám làm chủ đạo để làm tôn thêm vẻ đẹp sang trọng. Tạo hiệu ứng
-                                                từ đậm đến nhạt dựa vào việc sắp xếp màu sắc của keycaps hồng biến chiếc
-                                                <a
-                                                    target="_blank"
-                                                    href="https://gearvn.com/collections/ban-phim-may-tinh"
-                                                    >bàn phím máy tính</a
-                                                >
-                                                MonsGeek thu hút ngay từ ánh nhìn đầu tiên.</span
+                                    <button class="expandable-btn button flex" onclick="toggleText()">
+                                        <span class="expandable-toggle--text more text-blue-700"
+                                            >Đọc tiếp bài viết</span
+                                        >
+                                        <span class="expandable-toggle--text less text-blue-700 hidden"
+                                            >Thu gọn bài viết</span
+                                        >
+                                        <span class="expandable-toggle--icon mt-2 ml-2">
+                                            <svg
+                                                width="10"
+                                                height="10"
+                                                viewBox="0 0 8 8"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
                                             >
-                                        </p>
-                                        <!-- Các đoạn văn khác -->
-                                        <p class="text-center mb-2">
-                                            <img
-                                                class="mb-2"
-                                                src="//file.hstatic.net/200000722513/file/arvn-ban-phim-monsgeek-m1-qmk-silver-akko-switch-v3-cream-yellow-pro-5_e7aec467be2144779f3e15a84fb6ecd3_1024x1024.jpg"
-                                                alt="GEARVN Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro"
-                                            />
-                                        </p>
-                                        <h3 class="text-justify font-bold text-20 mb-2">Thiết kế TKL tiện lợi</h3>
-                                        <p class="text-justifymb-2">
-                                            <span class="text-18 mb-2"
-                                                >MonsGeek M1 QMK Silver sở hữu bố cục
-                                                <a target="_blank" href="https://gearvn.com/collections/ban-phim-tkl"
-                                                    >bàn phím TKL</a
-                                                >
-                                                75%. Thích hợp cho việc chơi game và đánh máy hằng ngày của bạn. Đi kèm
-                                                là núm xoay tiện lợi để bạn điều chỉnh âm lượng một cách nhanh chóng khi
-                                                cần.</span
-                                            >
-                                        </p>
-                                        <p class="text-center mb-2">
-                                            <img
-                                                class="mb-2"
-                                                src="//file.hstatic.net/200000722513/file/arvn-ban-phim-monsgeek-m1-qmk-silver-akko-switch-v3-cream-yellow-pro-4_62509f2ed03943288a08077e5d372799_1024x1024.jpg"
-                                                alt="GEARVN Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro"
-                                            />
-                                        </p>
-                                        <h3 class="text-justify font-bold text-20 mb-2">Rực rỡ với không gian RGB</h3>
-                                        <p class="text-justify mb-2">
-                                            <span class="text-18 mb-2"
-                                                >MonsGeek M1 QMK Silver là chiếc
-                                                <a
-                                                    target="_blank"
-                                                    href="https://gearvn.com/collections/ban-phim-2-den-3-trieu"
-                                                    >bàn phím 2 đến 3 triệu</a
-                                                >
-                                                sở hữu đèn LED RGB rực rỡ. Tạo một không gian chiến game đắm chìm hay
-                                                khơi nguồn cảm hứng cho việc sáng tạo nội dung. Biến không gian làm việc
-                                                và giải trí thành của riêng bạn.</span
-                                            >
-                                        </p>
-                                        <p class="text-center mb-2">
-                                            <img
-                                                class="mb-2"
-                                                src="//file.hstatic.net/200000722513/file/arvn-ban-phim-monsgeek-m1-qmk-silver-akko-switch-v3-cream-yellow-pro-3_df0ffcbe3b1a4efea353190ccb0aa8e7_1024x1024.jpg"
-                                                alt="GEARVN Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro"
-                                            />
-                                        </p>
-                                        <h3 class="text-justify font-bold text-20 mb-2">Hỗ trợ phần mềm VIA</h3>
-                                        <p class="text-justify mb-2">
-                                            <span class="text-18 mb-2"
-                                                >MonsGeek M1 QMK Silver hỗ trợ VIA để tương thích khi sử dụng cùng các
-                                                hệ điều hành như LINUX, MAC, WINDOWS. Bạn có thể tùy chỉnh các phím chức
-                                                năng theo nhu cầu sử dụng để các thao tác trở nên nhanh và tiện lợi
-                                                hơn.</span
-                                            >
-                                        </p>
-                                        <p class="text-center mb-2">
-                                            <img
-                                                class="mb-2"
-                                                src="//file.hstatic.net/200000722513/file/arvn-ban-phim-monsgeek-m1-qmk-silver-akko-switch-v3-cream-yellow-pro-2_42f4e752d39345c6a9bf7b05a3500983_1024x1024.jpg"
-                                                alt="GEARVN Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro"
-                                            />
-                                        </p>
-                                    </div>
+                                                <path
+                                                    id="arrow"
+                                                    d="M6.5 2.5L4 5.5L1.5 2.5"
+                                                    stroke="#1982F9"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                ></path>
+                                            </svg>
+                                        </span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Tin tức sp -->
                     <div
-                        class="news max-[1200px]:w-full max-[1024px]:mt-3 max-[1200px]: max-[991px]:-mx-0.5 w-2/5 border border-white rounded-lg bg-white h-fit ml-4"
+                        class="news max-[1200px]:w-full max-[1024px]:mt-3 max-[1200px]: max-[991px]:-mx-0.5 w-2/5 border border-white rounded-lg bg-white h-fit ml-4 py-10"
                     >
                         <div class="product-inner">
                             <div class="product-block product-posts">
