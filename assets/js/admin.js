@@ -1,4 +1,9 @@
 renderCategoryMenu('.admin-sidebar', CategoryMenuApi);
+
+const chartResize = (chart) => () => {
+    if (!chart) return false;
+    chart.resize(50, 50);
+};
 const visitorsChartEle = document.getElementById('visitors__chart');
 const revenuesChartEle = document.getElementById('revenues__chart');
 const bestSellCategoryChartEle = document.getElementById('bestSellCategory__chart');

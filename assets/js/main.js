@@ -2463,7 +2463,7 @@ class DropDownMenu {
                 ? `<i class="${this.icon.value} text-xl ddmenu__title__icon"></i>`
                 : this.icon.value
             : '';
-        return `<a href="${this.href || '#'}" class="ddmenu__title inline-flex gap-4 items-center w-full">
+        return `<a href="${this.href || '#'}" class="ddmenu__title inline-flex gap-4 items-center">
             ${iconEl}
             <p class="ddmenu__title__text leading-none text-sm">${this.title}</p>
         </a>`;
@@ -2478,7 +2478,7 @@ class DropDownMenu {
         return `<div data-ddmenuId="${this.#idMenu}" ${
             this.id ? `id="${this.id}"` : ''
         } class="${ddmenuContainerClassname}">
-            <div class="ddmenu__titleContainer flex items-center justify-between ${this.titleContainerClassName}">
+            <div class="ddmenu__titleContainer flex items-center gap-4 justify-between ${this.titleContainerClassName}">
                 ${this.#createTitleComponent()}
                 ${
                     !this.hideCaretIcon
