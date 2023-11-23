@@ -1,4 +1,229 @@
-renderCategoryMenu('.admin-sidebar', CategoryMenuApi);
+const SidebarApi = [
+    {
+        title: 'Dashboard',
+        icon: {
+            isFontIcon: true,
+            value: 'bi bi-house-fill text-xl',
+        },
+        className: 'py-2 border-b px-5 text-[#444]',
+        dropMenu: {
+            isOtherDDMenu: false,
+            value: [
+                {
+                    title: 'Tổng quan',
+                    href: '/admin/dashboard/overview',
+                    icon: {
+                        isFontIcon: true,
+                        value: 'bi bi-bar-chart-line text-xl',
+                    },
+                },
+                {
+                    title: 'Thống kê các đơn hàng',
+                    href: '/admin/dashboard/orders',
+                    icon: {
+                        isFontIcon: true,
+                        value: 'bi bi-shop text-xl',
+                    },
+                },
+                {
+                    title: 'Thống kê người dùng',
+                    href: '/admin/dashboard/visitors',
+                    icon: {
+                        isFontIcon: true,
+                        value: 'bi bi-people text-xl',
+                    },
+                },
+            ],
+        },
+    },
+    {
+        title: 'Quản lý đơn hàng',
+        icon: {
+            isFontIcon: true,
+            value: 'bi bi-cart text-xl',
+        },
+        className: 'py-2 border-b px-5 text-[#444]',
+        dropMenu: {
+            isOtherDDMenu: false,
+            value: [
+                {
+                    title: 'Đơn hàng chờ xác nhận',
+                    href: '/admin/order/pending',
+                    icon: {
+                        isFontIcon: true,
+                        value: 'bi bi-cart-plus text-xl',
+                    },
+                },
+                {
+                    title: 'Đơn hàng bị hủy',
+                    href: '/admin/order/fail',
+                    icon: {
+                        isFontIcon: true,
+                        value: 'bi bi-cart-x text-xl',
+                    },
+                },
+                {
+                    title: 'Đơn thành công',
+                    href: '/admin/order/success',
+                    icon: {
+                        isFontIcon: true,
+                        value: 'bi bi-cart-check text-xl',
+                    },
+                },
+            ],
+        },
+    },
+    {
+        title: 'Quản lý kho hàng',
+        icon: {
+            isFontIcon: true,
+            value: 'bi bi-database text-xl',
+        },
+        className: 'py-2 border-b px-5 text-[#444]',
+        dropMenu: {
+            isOtherDDMenu: false,
+            value: [
+                {
+                    title: 'Các sản phẩm đang bán',
+                    href: '/admin/products/sell',
+                    icon: {
+                        isFontIcon: true,
+                        value: 'bi bi-cart-plus text-xl',
+                    },
+                },
+                {
+                    title: 'Các sản phẩm hết hàng',
+                    href: '/admin/order/outstock',
+                    icon: {
+                        isFontIcon: true,
+                        value: 'bi bi-cart-x text-xl',
+                    },
+                },
+                {
+                    title: 'Thêm/sửa/xóa sản phẩm',
+                    href: '/admin/order/success',
+                    icon: {
+                        isFontIcon: true,
+                        value: 'bi bi-database-gear text-xl',
+                    },
+                },
+            ],
+        },
+    },
+    {
+        title: 'Quản lý nhân viên',
+        icon: {
+            isFontIcon: true,
+            value: 'bi bi-person-workspace text-xl',
+        },
+        className: 'py-2 border-b px-5 text-[#444]',
+        dropMenu: {
+            isOtherDDMenu: false,
+            value: [
+                {
+                    title: 'Thống kê nhân viên',
+                    href: '/admin/products/sell',
+                    icon: {
+                        isFontIcon: true,
+                        value: 'bi bi-person-lines-fill text-xl',
+                    },
+                },
+                {
+                    title: 'Phiếu nghỉ',
+                    href: '/admin/order/outstock',
+                    icon: {
+                        isFontIcon: true,
+                        value: 'bi bi-person-exclamation text-2xl',
+                    },
+                },
+                {
+                    title: 'Nhắn tin',
+                    href: '/admin/order/success',
+                    icon: {
+                        isFontIcon: true,
+                        value: 'bi bi-chat-left-text-fill text-lg',
+                    },
+                },
+            ],
+        },
+    },
+    {
+        title: 'Lịch trình/ Event',
+        icon: {
+            isFontIcon: true,
+            value: 'bi bi-calendar-week text-xl',
+        },
+        className: 'py-2 border-b px-5 text-[#444]',
+        dropMenu: {
+            isOtherDDMenu: false,
+            value: [
+                {
+                    title: 'Lịch/event',
+                    href: '/admin/order/outstock',
+                    icon: {
+                        isFontIcon: true,
+                        value: 'bi bi-calendar3 text-xl',
+                    },
+                },
+                {
+                    title: 'Thêm/sửa/xóa lịch',
+                    href: '/admin/products/sell',
+                    icon: {
+                        isFontIcon: true,
+                        value: 'bi bi-calendar2-plus text-xl',
+                    },
+                },
+                {
+                    title: 'Lịch sử lịch trình',
+                    href: '/admin/order/success',
+                    icon: {
+                        isFontIcon: true,
+                        value: 'bi bi-clock-history text-xl',
+                    },
+                },
+            ],
+        },
+    },
+    {
+        title: 'Thông tin liên lạc các nhân sự',
+        icon: {
+            isFontIcon: true,
+            value: 'bi bi-person-rolodex text-xl',
+        },
+        className: 'py-2 border-b px-5 text-[#444]',
+        dropMenu: {
+            isOtherDDMenu: false,
+            value: [
+                {
+                    title: 'Số điện thoại/ Hotline',
+                    href: '/admin/order/outstock',
+                    icon: {
+                        isFontIcon: true,
+                        value: 'bi bi-telephone-fill text-xl',
+                    },
+                },
+                {
+                    title: 'Thông tin liên lạc khác',
+                    href: '/admin/products/sell',
+                    icon: {
+                        isFontIcon: true,
+                        value: 'bi bi-telephone-fill text-xl',
+                    },
+                },
+                {
+                    title: 'Thông tin liên lạc kho hàng',
+                    href: '/admin/order/success',
+                    icon: {
+                        isFontIcon: true,
+                        value: 'bi bi-telephone-fill text-xl',
+                    },
+                },
+            ],
+        },
+    },
+];
+
+renderCategoryMenu('.admin-sidebar', SidebarApi);
 
 const chartResize = (chart) => () => {
     if (!chart) return false;
