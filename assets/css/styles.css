@@ -153,3 +153,9 @@ body {
 .ddmenu__container.ddmenu--card-menu:hover > .ddmenu__titleContainer .ddmenu__titleContainer__right-caret {
     color: #fff;
 }
+
+@media (max-width: 1024px) {
+    .admin-sidebar > .ddmenu__container > .ddmenu__titleContainer .ddmenu__title .ddmenu__title__text {
+        display: none;
+    }
+}

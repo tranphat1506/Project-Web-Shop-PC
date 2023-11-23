@@ -2441,20 +2441,32 @@ class DropDownMenu {
                 newDDMenu.setContainerClassName = `.${this.#getMenuIdCSS('cont')} .ddmenu__drop-menu`;
                 newDDMenu.appendMenu();
             });
-        } else
+        } else {
+            const iconEl = this.icon
+                ? this.icon.isFontIcon
+                    ? `<i class="${this.icon.value} text-xl ddmenu__title__icon"></i>`
+                    : this.icon.value
+                : '';
             return document.querySelector(`.${this.#getMenuIdCSS('cont')}`).insertAdjacentHTML(
                 'beforeend',
                 `<ul class="ddmenu__drop-menu my-2 ml-4 hidden flex-col justify-between">
             
             ${this.dropMenu.value
                 .map((menu, index) => {
-                    return `<a aria-label="${index}" href="${
-                        menu.href || '#'
-                    }" class="ddmenu__item ml-4 leading-none py-2 text-sm">${menu.title}</a>`;
+                    const iconEl = menu.icon
+                        ? menu.icon.isFontIcon
+                            ? `<i class="${menu.icon.value} text-xl"></i>`
+                            : menu.icon.value
+                        : '';
+                    return `<a href="${menu.href || '#'}" class="inline-flex gap-4 items-center">
+                            ${iconEl}
+                            <p class="leading-none text-sm py-2">${menu.title}</p>
+                        </a>`;
                 })
                 .join('')}
-        </ul>`,
+                        </ul>`,
             );
+        }
     }
 
     #createTitleComponent() {
@@ -2463,7 +2475,7 @@ class DropDownMenu {
                 ? `<i class="${this.icon.value} text-xl ddmenu__title__icon"></i>`
                 : this.icon.value
             : '';
-        return `<a href="${this.href || '#'}" class="ddmenu__title inline-flex gap-4 items-center w-full">
+        return `<a href="${this.href || '#'}" class="ddmenu__title inline-flex gap-4 items-center">
             ${iconEl}
             <p class="ddmenu__title__text leading-none text-sm">${this.title}</p>
         </a>`;
@@ -2478,7 +2490,7 @@ class DropDownMenu {
         return `<div data-ddmenuId="${this.#idMenu}" ${
             this.id ? `id="${this.id}"` : ''
         } class="${ddmenuContainerClassname}">
-            <div class="ddmenu__titleContainer flex items-center justify-between ${this.titleContainerClassName}">
+            <div class="ddmenu__titleContainer flex items-center gap-4 justify-between ${this.titleContainerClassName}">
                 ${this.#createTitleComponent()}
                 ${
                     !this.hideCaretIcon
@@ -2534,6 +2546,29 @@ class DropDownMenu {
 
     appendDropMenu() {
         this.#createDDMenu();
+    }
+}
+
+class Cart {
+    #cartElement;
+    #cartState;
+    constructor({ id = '', cartLocalStorage = '' }) {
+        this.#setCartElement = `#${id}`;
+        this.#setCartState = JSON.parse(cartLocalStorage || '{}');
+    }
+
+    set #setCartState(newState = {}) {
+        this.#cartState = { ...this.#cartState, ...newState };
+        return this.#cartState;
+    }
+
+    set #setCartElement(query = '') {
+        this.#cartElement = document.querySelector(query) || undefined;
+        return this.#cartElement;
+    }
+
+    get getCartState() {
+        return this.#cartState;
     }
 }
 
