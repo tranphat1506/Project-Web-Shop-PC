@@ -222,7 +222,14 @@ const SidebarApi = [
         },
     },
 ];
-
+const handleOpenAdminSidebar = () => {
+    const sidebar = document.querySelector('#sidebar-container') || undefined;
+    if (!sidebar) return -1;
+    Object.keys(Chart.instances).map((chartId) => {
+        chartResize(Chart.instances[chartId])();
+    });
+    return sidebar.classList.toggle('sidebar--open');
+};
 renderCategoryMenu('.admin-sidebar', SidebarApi);
 
 const chartResize = (chart) => () => {
@@ -298,6 +305,7 @@ const visitorsChart = new Chart(visitorsChartEle, {
                 beginAtZero: true,
             },
         },
+        resizeDelay: 200,
     },
 });
 
@@ -310,6 +318,7 @@ const revenuesChart = new Chart(revenuesChartEle, {
                 beginAtZero: true,
             },
         },
+        resizeDelay: 200,
     },
 });
 
@@ -322,5 +331,6 @@ const bestSellCategoryChart = new Chart(bestSellCategoryChartEle, {
                 beginAtZero: true,
             },
         },
+        resizeDelay: 200,
     },
 });

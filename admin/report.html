@@ -42,31 +42,11 @@
                     <!-- main menu btn -->
                     <button
                         title="Menu"
-                        onclick="handleOpenMainMenu()"
+                        onclick="handleOpenAdminSidebar()"
                         class="inline-flex items-center gap-2 w-min hover:bg-[#00000068] active:bg-[#00000030] p-2 rounded-xl"
                     >
                         <i class="leading-none bi bi-list text-white text-xl"></i>
                     </button>
-                    <div
-                        class="top-menu__container invisible opacity-0 transition-all duration-300 overflow-x-hidden absolute top-0 left-0 w-full h-screen overflow-auto bg-[#00000049] z-50"
-                    >
-                        <div
-                            class="max-[480px]:w-full w-[320px] min-h-full bg-white float-right translate-x-full transition-transform duration-300"
-                        >
-                            <div class="">
-                                <div class="bg-[#d72c2c] text-white flex items-center px-3 py-3 justify-between">
-                                    <h1 class="uppercase font-medium">Danh mục sản phẩm</h1>
-                                    <button
-                                        onclick="handleOpenMainMenu()"
-                                        class="inline-flex items-center justify-center px-2 py-1"
-                                    >
-                                        <span class="font-black leading-none">&#x2715;</span>
-                                    </button>
-                                </div>
-                                <div class="category-container flex flex-col"></div>
-                            </div>
-                        </div>
-                    </div>
                     <!-- logo icon -->
                     <a href="/" class="min-[400px]:inline-flex hidden px-2 items-center gap-1">
                         <!-- logo -->
@@ -167,7 +147,10 @@
         <div id="main" class="h-auto w-full overflow-x-hidden">
             <div class="h-auto mx-auto max-w-screen-2xl bg-white flex">
                 <!-- Section Left (Sidebar) -->
-                <div class="border-r lg:min-w-[250px] w-max min-h-full bg-white transition-transform duration-300">
+                <div
+                    id="sidebar-container"
+                    class="sidebar--open hidden border-r lg:min-w-[250px] w-max min-h-full bg-white transition-transform duration-300"
+                >
                     <div class="admin-sidebar"></div>
                 </div>
                 <!-- Main -->
