@@ -1,6 +1,7 @@
 // JSON Sp best-seller
 let MostSale = {
     1: {
+        href: '/sanpham.html',
         name: 'Cổng chuyển HyperDrive PRO 8-in-2 Hub for USB-C MacBook Pro - GN28D GREY',
         img: '/assets/img/img_sp/sp1.webp',
         origin_price: 3000000,
@@ -8,6 +9,7 @@ let MostSale = {
         selling: 1,
     },
     2: {
+        href: '/sanpham.html',
         name: 'Laptop gaming MSI GF63 12UC 887VN',
         img: '/assets/img/img_sp/sp2.webp',
         origin_price: 20990000,
@@ -15,6 +17,7 @@ let MostSale = {
         selling: 20,
     },
     3: {
+        href: '/sanpham.html',
         name: 'PC GVN Gaming Intel i3-12100F/ VGA GTX 1650',
         img: '/assets/img/img_sp/sp_3.png',
         origin_price: 11390000,
@@ -22,6 +25,7 @@ let MostSale = {
         selling: 15,
     },
     4: {
+        href: '/sanpham.html',
         name: 'Bàn phím cơ AKKO 3084B Plus Wireless Black Pink Akko CS Jelly Pink switch',
         img: '/assets/img/img_sp/sp_4.jpg',
         origin_price: 2089000,
@@ -29,6 +33,7 @@ let MostSale = {
         selling: 45,
     },
     5: {
+        href: '/sanpham.html',
         name: 'Laptop gaming Acer Predator Helios 300 PH315 55 76KG',
         img: '/assets/img/img_sp/sp_5.webp',
         origin_price: 48490000,
@@ -36,6 +41,7 @@ let MostSale = {
         selling: 105,
     },
     6: {
+        href: '/sanpham.html',
         name: 'Bàn phím DareU EK87V2 White Red Switch',
         img: '/assets/img/img_sp/sp_6.webp',
         origin_price: 699000,
@@ -43,6 +49,7 @@ let MostSale = {
         selling: 14,
     },
     7: {
+        href: '/sanpham.html',
         name: 'Cổng chuyển USB 8 in 1 HDMI 4K 60Hz',
         img: '/assets/img/img_sp/sp_7.jpg',
         origin_price: 3199000,
@@ -50,6 +57,7 @@ let MostSale = {
         selling: 27,
     },
     8: {
+        href: '/sanpham.html',
         name: 'Laptop Asus VivoBook 14 OLED M1405YA KM047W',
         img: '/assets/img/img_sp/sp_8.webp',
         origin_price: 17990000,
@@ -57,6 +65,7 @@ let MostSale = {
         selling: 13,
     },
     9: {
+        href: '/sanpham.html',
         name: 'PC GVN AMD R5-5600X/ VGA RTX 3050',
         img: '/assets/img/img_sp/sp_9.webp',
         origin_price: 13820000,
@@ -68,6 +77,7 @@ let MostSale = {
 // JSON màn hình gaming lenovo giảm 38%
 let LenovoScreenSale = {
     1: {
+        href: '/sanpham.html',
         name: 'Màn hình cong Lenovo G27C-30 27 165Hz chuyên game',
         img: '/assets/img/img_sp/sp_10.webp',
         origin_price: 5490000,
@@ -75,6 +85,7 @@ let LenovoScreenSale = {
         selling: 1,
     },
     2: {
+        href: '/sanpham.html',
         name: 'Màn hình Lenovo Q24i-20 24 IPS 75Hz loa kép 3W',
         img: '/assets/img/img_sp/sp_11.jpg',
         origin_price: 4690000,
@@ -82,6 +93,7 @@ let LenovoScreenSale = {
         selling: 2,
     },
     3: {
+        href: '/sanpham.html',
         name: ' Màn hình di động Lenovo L15 16 IPS FHD USBC',
         img: '/assets/img/img_sp/sp_12.jpg',
         origin_price: 4690000,
@@ -89,6 +101,7 @@ let LenovoScreenSale = {
         selling: 5,
     },
     4: {
+        href: '/sanpham.html',
         name: 'Màn hình Lenovo L24q-35 24 IPS 2K 75Hz loa kép 2W',
         img: '/assets/img/img_sp/sp_13.jpg',
         origin_price: 6790000,
@@ -96,6 +109,7 @@ let LenovoScreenSale = {
         selling: 38,
     },
     5: {
+        href: '/sanpham.html',
         name: 'Màn hình di động Lenovo ThinkVision M15 16 IPS FHD USBC',
         img: '/assets/img/img_sp/sp_14.webp',
         origin_price: 4590000,
@@ -103,6 +117,7 @@ let LenovoScreenSale = {
         selling: 12,
     },
     6: {
+        href: '/sanpham.html',
         name: 'Màn hình Lenovo Legion Y27-30 27 IPS 165Hz chuyên game',
         img: '/assets/img/img_sp/sp_15.webp',
         origin_price: 6790000,
@@ -110,6 +125,7 @@ let LenovoScreenSale = {
         selling: 45,
     },
     7: {
+        href: '/sanpham.html',
         name: 'Màn hình Lenovo L24i-30 24 IPS 75Hz Freesync',
         img: '/assets/img/img_sp/sp_16.jpg',
         origin_price: 4190000,
@@ -117,6 +133,7 @@ let LenovoScreenSale = {
         selling: 21,
     },
     8: {
+        href: '/sanpham.html',
         name: 'Màn hình Lenovo G24-20 24 IPS 144Hz Gsync compatible',
         img: '/assets/img/img_sp/sp_17.webp',
         origin_price: 4790000,
@@ -128,6 +145,7 @@ let LenovoScreenSale = {
 // JSON PC best-seller
 let PCMostSale = {
     1: {
+        href: '/sanpham.html',
         name: 'PC GVN x ASUS EVANGELION 2',
         img: '/assets/img/img_PC_banchay/pc_1.webp',
         gift: [
@@ -148,6 +166,7 @@ let PCMostSale = {
         rate: 1,
     },
     2: {
+        href: '/sanpham.html',
         name: 'PC GVN Gaming Intel i7-13700F/ VGA RTX 4060 Ti',
         img: '/assets/img/img_PC_banchay/pc_2.png',
         gift: ['Tản nhiệt nước Corsair H100i ELITE CAPELLIX XT WHITE (CW-9060072-WW)', 'Áo khoác (Premium 2 mặt)'],
@@ -164,6 +183,7 @@ let PCMostSale = {
         rate: 2,
     },
     3: {
+        href: '/sanpham.html',
         name: 'PC GVN Gaming Intel i5-13600KF/ VGA RTX 3060',
         img: '/assets/img/img_PC_banchay/pc_3.webp',
         gift: ['Áo khoác (bomber)'],
@@ -180,6 +200,7 @@ let PCMostSale = {
         rate: 1,
     },
     4: {
+        href: '/sanpham.html',
         name: 'PC GVN Gaming Intel i7-13700F/ VGA RTX 4070',
         img: '/assets/img/img_PC_banchay/pc_4.webp',
         gift: ['Áo khoác (Premium 2 mặt)'],
@@ -196,6 +217,7 @@ let PCMostSale = {
         rate: 1,
     },
     5: {
+        href: '/sanpham.html',
         name: 'PC GVN Gaming Intel i5-12400F/ VGA RTX 4060',
         img: '/assets/img/img_PC_banchay/pc_5.webp',
         gift: ['Áo khoác (Premium 2 mặt)', 'ản nước AIO Deepcool LT520 Black'],
@@ -212,6 +234,7 @@ let PCMostSale = {
         rate: 9,
     },
     6: {
+        href: '/sanpham.html',
         name: 'PC GVN Gaming Intel i7-13700K/ VGA RTX 4070 Ti',
         img: '/assets/img/img_PC_banchay/pc_6.webp',
         gift: ['Tản nhiệt nước Corsair H150i ELITE CAPELLIX XT Black', 'Áo khoác (Premium 2 mặt)'],
@@ -228,6 +251,7 @@ let PCMostSale = {
         rate: 1,
     },
     7: {
+        href: '/sanpham.html',
         name: 'PC GVN Gaming Intel i3-12100F/ VGA GTX 1650',
         img: '/assets/img/img_PC_banchay/pc_7.webp',
         gift: ['Chuột DAREU LM103 (USB)', 'Bàn phím Gaming DareU LK185'],
@@ -244,6 +268,7 @@ let PCMostSale = {
         rate: 1,
     },
     8: {
+        href: '/sanpham.html',
         name: 'PC GVN Homework R3',
         img: '/assets/img/img_PC_banchay/pc_8.webp',
         gift: ['Áo khoác (bomber)'],
@@ -260,6 +285,7 @@ let PCMostSale = {
         rate: 5,
     },
     9: {
+        href: '/sanpham.html',
         name: 'PC GVN AMD R5-7600/ VGA RTX 4060',
         img: '/assets/img/img_PC_banchay/pc_9.webp',
         gift: [
@@ -280,6 +306,7 @@ let PCMostSale = {
         rate: 8,
     },
     10: {
+        href: '/sanpham.html',
         name: 'PC GVN AMD R5-5600X/ VGA RTX 3050',
         img: '/assets/img/img_PC_banchay/pc_10.webp',
         gift: ['Giá đỡ VGA ASUS ROG Herculx EVA-02 Edition GRAPHICS CARD HOLDER'],
@@ -296,6 +323,7 @@ let PCMostSale = {
         rate: 7,
     },
     11: {
+        href: '/sanpham.html',
         name: 'PC GVN Gaming Intel i9-14900KF/ VGA RTX 4060 Ti',
         img: '/assets/img/img_PC_banchay/pc_11.webp',
         gift: ['Tản nhiệt nước Corsair H150i ELITE CAPELLIX XT Black'],
@@ -312,6 +340,7 @@ let PCMostSale = {
         rate: 1,
     },
     12: {
+        href: '/sanpham.html',
         name: 'PC GVN Gaming Intel i5-13600KF/ VGA RTX 4060',
         img: '/assets/img/img_PC_banchay/pc_12.webp',
         gift: ['Bàn phím Gaming DareU LK185'],
@@ -328,6 +357,7 @@ let PCMostSale = {
         rate: 1,
     },
     13: {
+        href: '/sanpham.html',
         name: 'PC GVN Gaming Intel i5-12400F/ VGA GTX 1660 Super (H610)',
         img: '/assets/img/img_PC_banchay/pc_13.webp',
         gift: ['Áo khoác (bomber)'],
@@ -344,6 +374,7 @@ let PCMostSale = {
         rate: 1,
     },
     14: {
+        href: '/sanpham.html',
         name: 'PC GVN Gaming Intel i5-13400F/ VGA RTX 4060 Ti',
         img: '/assets/img/img_PC_banchay/pc_14.webp',
         gift: ['Áo khoác (bomber)'],
@@ -360,6 +391,7 @@ let PCMostSale = {
         rate: 7,
     },
     15: {
+        href: '/sanpham.html',
         name: 'PC GVN AMD R5-7600/ VGA RTX 4060',
         img: '/assets/img/img_PC_banchay/pc_15.webp',
         gift: ['Áo khoác (bomber)'],
@@ -380,6 +412,7 @@ let PCMostSale = {
 // JSON laptopgaming best-seller
 let LaptopGamingMostSale = {
     1: {
+        href: '/sanpham.html',
         name: 'Laptop gaming Lenovo Legion 9 16IRX8 83AG0047VN',
         deal: 'pre-order',
         gift: ['Móc khóa Keycap GearVN'],
@@ -398,6 +431,7 @@ let LaptopGamingMostSale = {
         rate: 1,
     },
     2: {
+        href: '/sanpham.html',
         name: 'Laptop gaming Acer Predator Helios Neo PHN16 71 779X',
         gift: ['Móc khóa Keycap GearVN'],
         deal: '',
@@ -416,6 +450,7 @@ let LaptopGamingMostSale = {
         rate: 1,
     },
     3: {
+        href: '/sanpham.html',
         name: 'Laptop gaming Acer Predator Helios Neo PHN16 71 547E',
         gift: ['Đế Tản Nhiệt Cooler Master X-Slim II', 'Móc khóa Keycap GearVN'],
         deal: '',
@@ -434,6 +469,7 @@ let LaptopGamingMostSale = {
         rate: 4,
     },
     4: {
+        href: '/sanpham.html',
         name: 'Laptop gaming Lenovo LOQ 15IRH8 82XV00QPVN',
         gift: ['Móc khóa Keycap GearVN'],
         deal: '',
@@ -452,6 +488,7 @@ let LaptopGamingMostSale = {
         rate: 1,
     },
     5: {
+        href: '/sanpham.html',
         name: 'Laptop gaming ASUS TUF Gaming A15 FA507NU LP034W',
         gift: ['Móc khóa Keycap GearVN'],
         deal: '',
@@ -470,6 +507,7 @@ let LaptopGamingMostSale = {
         rate: 1,
     },
     6: {
+        href: '/sanpham.html',
         name: 'Laptop gaming Lenovo LOQ 15IRH8 82XV00QQVN',
         gift: ['Móc khóa Keycap GearVN'],
         deal: '',
@@ -488,6 +526,7 @@ let LaptopGamingMostSale = {
         rate: 1,
     },
     7: {
+        href: '/sanpham.html',
         name: 'Laptop gaming Acer Predator Helios 300 PH315 55 76KG',
         gift: ['Móc khóa Keycap GearVN'],
         deal: 'tra-gop-0%',
@@ -506,6 +545,7 @@ let LaptopGamingMostSale = {
         rate: 1,
     },
     8: {
+        href: '/sanpham.html',
         name: 'Laptop gaming MSI GF63 12UC 887VN',
         gift: ['Móc khóa Keycap GearVN'],
         deal: 'tra-gop-0%',
@@ -524,6 +564,7 @@ let LaptopGamingMostSale = {
         rate: 1,
     },
     9: {
+        href: '/sanpham.html',
         name: 'Laptop gaming MSI GF63 12UCX 841VN',
         gift: ['Móc khóa Keycap GearVN'],
         deal: 'tra-gop-0%',
@@ -542,6 +583,7 @@ let LaptopGamingMostSale = {
         rate: 1,
     },
     10: {
+        href: '/sanpham.html',
         name: 'Laptop gaming ASUS TUF A15 FA507NU LP031W',
         gift: ['Móc khóa Keycap GearVN'],
         deal: '',
@@ -560,6 +602,7 @@ let LaptopGamingMostSale = {
         rate: 5,
     },
     11: {
+        href: '/sanpham.html',
         name: 'Laptop gaming MSI Stealth GS77 12UHS 250VN',
         gift: ['Móc khóa Keycap GearVN', 'Đế Tản Nhiệt Cooler Master X-Slim II'],
         deal: '',
@@ -578,6 +621,7 @@ let LaptopGamingMostSale = {
         rate: 1,
     },
     12: {
+        href: '/sanpham.html',
         name: 'Laptop gaming Acer Predator Helios Neo 16 PHN16 71 53M7',
         gift: ['Móc khóa Keycap GearVN'],
         deal: '',
@@ -596,6 +640,7 @@ let LaptopGamingMostSale = {
         rate: 6,
     },
     13: {
+        href: '/sanpham.html',
         name: 'Laptop gaming ASUS ROG Zephyrus G15 GA503RS LN892W',
         gift: ['Móc khóa Keycap GearVN'],
         deal: '',
@@ -614,6 +659,7 @@ let LaptopGamingMostSale = {
         rate: 0,
     },
     14: {
+        href: '/sanpham.html',
         name: 'Laptop gaming ASUS TUF Gaming F15 FX507VV4 LP382W',
         gift: ['Móc khóa Keycap GearVN'],
         deal: '',
@@ -632,6 +678,7 @@ let LaptopGamingMostSale = {
         rate: 0,
     },
     15: {
+        href: '/sanpham.html',
         name: 'Laptop gaming MSI GF63 Thin 12VE 460VN',
         gift: ['Móc khóa Keycap GearVN'],
         deal: 'tra-gop-0%',
@@ -654,6 +701,7 @@ let LaptopGamingMostSale = {
 // JSON laptop văn phòng best-seller
 let LaptopVPMostSale = {
     1: {
+        href: '/sanpham.html',
         name: 'Laptop Asus Vivobook 15 OLED A1505VA L1114W',
         deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
@@ -672,6 +720,7 @@ let LaptopVPMostSale = {
         rate: 1,
     },
     2: {
+        href: '/sanpham.html',
         name: 'Laptop LG Gram Style 14Z90RS GAH54A5',
         deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
@@ -690,6 +739,7 @@ let LaptopVPMostSale = {
         rate: 0,
     },
     3: {
+        href: '/sanpham.html',
         name: 'Laptop Asus VivoBook 14 OLED M1405YA KM047W',
         deal: 'tra-gop-0%',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
@@ -708,6 +758,7 @@ let LaptopVPMostSale = {
         rate: 1,
     },
     4: {
+        href: '/sanpham.html',
         name: 'Laptop Lenovo Yoga Slim 6 14IRH8 83E0000VVN',
         deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
@@ -726,6 +777,7 @@ let LaptopVPMostSale = {
         rate: 5,
     },
     5: {
+        href: '/sanpham.html',
         name: 'Laptop ASUS Zenbook 14 OLED UX3402VA KM068W',
         deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
@@ -744,6 +796,7 @@ let LaptopVPMostSale = {
         rate: 1,
     },
     6: {
+        href: '/sanpham.html',
         name: 'Laptop ASUS Vivobook 15 OLED A1505ZA L1245W',
         deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
@@ -762,6 +815,7 @@ let LaptopVPMostSale = {
         rate: 0,
     },
     7: {
+        href: '/sanpham.html',
         name: 'Laptop ASUS Vivobook 14 OLED A1405VA KM095W',
         deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
@@ -780,6 +834,7 @@ let LaptopVPMostSale = {
         rate: 0,
     },
     8: {
+        href: '/sanpham.html',
         name: 'Laptop Asus ZenBook Flip OLED UP3404VA KN038W',
         deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
@@ -798,6 +853,7 @@ let LaptopVPMostSale = {
         rate: 1,
     },
     9: {
+        href: '/sanpham.html',
         name: 'Laptop ASUS Zenbook 14 OLED UX3402VA KM203W',
         deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
@@ -816,6 +872,7 @@ let LaptopVPMostSale = {
         rate: 13,
     },
     10: {
+        href: '/sanpham.html',
         name: 'Laptop Asus VivoBook 15X OLED S3504VA L1226W',
         deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
@@ -834,6 +891,7 @@ let LaptopVPMostSale = {
         rate: 0,
     },
     11: {
+        href: '/sanpham.html',
         name: 'Laptop MSI Modern 14 C11M 011VN',
         deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
@@ -852,6 +910,7 @@ let LaptopVPMostSale = {
         rate: 0,
     },
     12: {
+        href: '/sanpham.html',
         name: 'Laptop Asus Vivobook 14X OLED K3405ZF KM086W',
         deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
@@ -870,6 +929,7 @@ let LaptopVPMostSale = {
         rate: 1,
     },
     13: {
+        href: '/sanpham.html',
         name: 'Laptop Dell Vostro 13 5320 V3I7005W Gray',
         deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
@@ -888,6 +948,7 @@ let LaptopVPMostSale = {
         rate: 5,
     },
     14: {
+        href: '/sanpham.html',
         name: 'Laptop LG Gram 2023 14Z90R GAH53A5',
         deal: '',
         gift: ['Chuột Không Dây Rapoo M21 Silent', 'Móc khóa Keycap GearVN'],
@@ -910,6 +971,7 @@ let LaptopVPMostSale = {
 // JSON Chuột best-seller
 let MouseMostSale = {
     1: {
+        href: '/sanpham.html',
         name: 'Chuột Pulsar X2 Super Clear Edition',
         img: '/assets/img/img_chuot_banchay/chuot_1.webp',
         status: 'best-seller',
@@ -923,6 +985,7 @@ let MouseMostSale = {
         rate: 0,
     },
     2: {
+        href: '/sanpham.html',
         name: 'Chuột Asus TUF Gaming M3 Gen II',
         img: '/assets/img/img_chuot_banchay/chuot_2.webp',
         status: 'best-seller',
@@ -936,6 +999,7 @@ let MouseMostSale = {
         rate: 1,
     },
     3: {
+        href: '/sanpham.html',
         name: 'Chuột Logitech G102 LightSync White',
         img: '/assets/img/img_chuot_banchay/chuot_3.webp',
         status: 'best-seller',
@@ -949,6 +1013,7 @@ let MouseMostSale = {
         rate: 1,
     },
     4: {
+        href: '/sanpham.html',
         name: 'Chuột Logitech G102 LightSync Black',
         img: '/assets/img/img_chuot_banchay/chuot_4.webp',
         status: 'best-seller',
@@ -962,6 +1027,7 @@ let MouseMostSale = {
         rate: 9,
     },
     5: {
+        href: '/sanpham.html',
         name: 'Chuột Razer DeathAdder Essential (RZ01-03850100-R3M1)',
         img: '/assets/img/img_chuot_banchay/chuot_5.webp',
         status: 'best-seller',
@@ -975,6 +1041,7 @@ let MouseMostSale = {
         rate: 1,
     },
     6: {
+        href: '/sanpham.html',
         name: 'Chuột Razer Deathadder Essential White',
         img: '/assets/img/img_chuot_banchay/chuot_6.webp',
         status: 'best-seller',
@@ -988,6 +1055,7 @@ let MouseMostSale = {
         rate: 1,
     },
     7: {
+        href: '/sanpham.html',
         name: 'Chuột DareU EM901X RGB Superlight Wireless White Blue',
         img: '/assets/img/img_chuot_banchay/chuot_7.webp',
         status: 'best-seller',
@@ -1001,6 +1069,7 @@ let MouseMostSale = {
         rate: 1,
     },
     8: {
+        href: '/sanpham.html',
         name: 'Chuột DareU EM901X RGB Superlight Wireless Black',
         img: '/assets/img/img_chuot_banchay/chuot_8.webp',
         status: 'best-seller',
@@ -1014,6 +1083,7 @@ let MouseMostSale = {
         rate: 0,
     },
     9: {
+        href: '/sanpham.html',
         name: 'Chuột DareU EM901X RGB Superlight Wireless Pink',
         img: '/assets/img/img_chuot_banchay/chuot_9.webp',
         status: 'best-seller',
@@ -1027,6 +1097,7 @@ let MouseMostSale = {
         rate: 1,
     },
     10: {
+        href: '/sanpham.html',
         name: 'Chuột Logitech G502 Hero Gaming',
         img: '/assets/img/img_chuot_banchay/chuot_10.webp',
         status: 'best-seller',
@@ -1040,6 +1111,7 @@ let MouseMostSale = {
         rate: 1,
     },
     11: {
+        href: '/sanpham.html',
         name: 'Chuột gaming Rapoo VT200 Wireless',
         img: '/assets/img/img_chuot_banchay/chuot_11.webp',
         status: 'best-seller',
@@ -1053,6 +1125,7 @@ let MouseMostSale = {
         rate: 1,
     },
     12: {
+        href: '/sanpham.html',
         name: 'Chuột Logitech G502 X Plus LightSpeed White',
         img: '/assets/img/img_chuot_banchay/chuot_12.webp',
         status: 'best-seller',
@@ -1066,6 +1139,7 @@ let MouseMostSale = {
         rate: 1,
     },
     13: {
+        href: '/sanpham.html',
         name: 'Chuột Gaming Havit MS878',
         img: '/assets/img/img_chuot_banchay/chuot_13.webp',
         status: 'best-seller',
@@ -1079,6 +1153,7 @@ let MouseMostSale = {
         rate: 1,
     },
     14: {
+        href: '/sanpham.html',
         name: '',
         img: '/assets/img/img_chuot_banchay/chuot_14.webp',
         status: 'best-seller',
@@ -1092,6 +1167,7 @@ let MouseMostSale = {
         rate: 0,
     },
     15: {
+        href: '/sanpham.html',
         name: 'Chuột Steelseries Prime Wireless',
         img: '/assets/img/img_chuot_banchay/chuot_15.webp',
         status: 'best-seller',
@@ -1109,6 +1185,7 @@ let MouseMostSale = {
 // JSON bàn phím best-seller
 let KeyboardMostSale = {
     1: {
+        href: '/sanpham.html',
         name: 'Bàn phím cơ DareU EK75 Pro Triple Mode Black Firefly switch',
         img: '/assets/img/img_banphim_banchay/banphim_1.webp',
         status: '',
@@ -1122,6 +1199,7 @@ let KeyboardMostSale = {
         rate: 1,
     },
     2: {
+        href: '/sanpham.html',
         name: 'Bàn phím MonsGeek M1 QMK Black AKKO Switch v3 Cream Yellow Pro',
         img: '/assets/img/img_banphim_banchay/banphim_2.webp',
         status: 'new-product',
@@ -1135,6 +1213,7 @@ let KeyboardMostSale = {
         rate: 0,
     },
     3: {
+        href: '/sanpham.html',
         name: 'Bàn phím MonsGeek M1 QMK Silver AKKO Switch v3 Cream Yellow Pro',
         img: '/assets/img/img_banphim_banchay/banphim_3.webp',
         status: 'new-product',
@@ -1148,6 +1227,7 @@ let KeyboardMostSale = {
         rate: 4,
     },
     4: {
+        href: '/sanpham.html',
         name: 'Bàn phím E-Dra EK387L RGB Red Switch',
         img: '/assets/img/img_banphim_banchay/banphim_4.webp',
         status: '',
@@ -1161,6 +1241,7 @@ let KeyboardMostSale = {
         rate: 4,
     },
     5: {
+        href: '/sanpham.html',
         name: 'Bàn phím E-Dra EK387L RGB Blue Switch',
         img: '/assets/img/img_banphim_banchay/banphim_5.webp',
         status: 'new-product',
@@ -1174,6 +1255,7 @@ let KeyboardMostSale = {
         rate: 0,
     },
     6: {
+        href: '/sanpham.html',
         name: 'Bàn phím E-Dra EK387L RGB Brown Switch',
         img: '/assets/img/img_banphim_banchay/banphim_6.webp',
         status: 'new-product',
@@ -1187,6 +1269,7 @@ let KeyboardMostSale = {
         rate: 0,
     },
     7: {
+        href: '/sanpham.html',
         name: 'Bàn phím cơ DareU EK75 Pro Triple Mode Black Golden Dream switch',
         img: '/assets/img/img_banphim_banchay/banphim_7.webp',
         status: 'new-product',
@@ -1201,6 +1284,7 @@ let KeyboardMostSale = {
     },
 
     8: {
+        href: '/sanpham.html',
         name: 'Bàn phím cơ DareU EK75 Pro Triple Mode Black Golden',
         img: '/assets/img/img_banphim_banchay/banphim_8.webp',
         status: 'new-product',
@@ -1214,6 +1298,7 @@ let KeyboardMostSale = {
         rate: 2,
     },
     9: {
+        href: '/sanpham.html',
         name: 'Bàn phím DareU EK87V2 Black Brown Switch',
         img: '/assets/img/img_banphim_banchay/banphim_9.webp',
         status: 'new-product',
@@ -1227,6 +1312,7 @@ let KeyboardMostSale = {
         rate: 10,
     },
     10: {
+        href: '/sanpham.html',
         name: 'Bàn phím DareU EK87V2 White Red Switch',
         img: '/assets/img/img_banphim_banchay/banphim_10.webp',
         status: 'best-seller',
@@ -1240,6 +1326,7 @@ let KeyboardMostSale = {
         rate: 0,
     },
     11: {
+        href: '/sanpham.html',
         name: 'Bàn phím DareU EK87V2 White Blue Switch',
         img: '/assets/img/img_banphim_banchay/banphim_11.webp',
         status: 'best-seller',
@@ -1253,6 +1340,7 @@ let KeyboardMostSale = {
         rate: 0,
     },
     12: {
+        href: '/sanpham.html',
         name: 'Bàn phím DareU EK87V2 White Brown Switch',
         img: '/assets/img/img_banphim_banchay/banphim_12.webp',
         status: 'best-seller',
@@ -1266,6 +1354,7 @@ let KeyboardMostSale = {
         rate: 0,
     },
     13: {
+        href: '/sanpham.html',
         name: 'Bàn phím cơ DareU EK1280 V2 RGB Blue Switch',
         img: '/assets/img/img_banphim_banchay/banphim_13.webp',
         status: 'best-seller',
@@ -1283,6 +1372,7 @@ let KeyboardMostSale = {
 // JSON màn hình best-seller
 let ScreenMostSale = {
     1: {
+        href: '/sanpham.html',
         name: 'Màn hình ViewSonic VX2428J 24" Fast IPS 180Hz Gsync chuyên game',
         img: '/assets/img/img_manhinh_banchay/man_1.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1294,6 +1384,7 @@ let ScreenMostSale = {
         rate: 1,
     },
     2: {
+        href: '/sanpham.html',
         name: 'Màn hình ViewSonic VX2479-HD-PRO 24" IPS 165Hz chuyên game',
         img: '/assets/img/img_manhinh_banchay/man_2.webp',
         screenResolution: '',
@@ -1305,6 +1396,7 @@ let ScreenMostSale = {
         rate: 5,
     },
     3: {
+        href: '/sanpham.html',
         name: 'Màn hình HKC MB27V9-U 27" IPS 100Hz',
         img: '/assets/img/img_manhinh_banchay/man_3.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1316,6 +1408,7 @@ let ScreenMostSale = {
         rate: 10,
     },
     4: {
+        href: '/sanpham.html',
         name: 'Màn hình HKC MB24V9-U 24" IPS 100Hz',
         img: '/assets/img/img_manhinh_banchay/man_4.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1327,6 +1420,7 @@ let ScreenMostSale = {
         rate: 1,
     },
     5: {
+        href: '/sanpham.html',
         name: 'Màn hình ACER KG270 M5 27" IPS 180Hz chuyên game',
         img: '/assets/img/img_manhinh_banchay/man_5.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1338,6 +1432,7 @@ let ScreenMostSale = {
         rate: 1,
     },
     6: {
+        href: '/sanpham.html',
         name: 'Màn hình ACER KG240Y M5 24" IPS 180Hz chuyên game',
         img: '/assets/img/img_manhinh_banchay/man_6.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1349,6 +1444,7 @@ let ScreenMostSale = {
         rate: 1,
     },
     7: {
+        href: '/sanpham.html',
         name: 'Màn hình ACER EK221Q E3 22" IPS 100Hz',
         img: '/assets/img/img_manhinh_banchay/man_7.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1360,6 +1456,7 @@ let ScreenMostSale = {
         rate: 1,
     },
     8: {
+        href: '/sanpham.html',
         name: 'Màn hình ASUS VZ27EHF 27" IPS 100Hz viền mỏng',
         img: '/assets/img/img_manhinh_banchay/man_8.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1371,6 +1468,7 @@ let ScreenMostSale = {
         rate: 0,
     },
     9: {
+        href: '/sanpham.html',
         name: 'Màn hình ASUS VZ24EHF 24" IPS 100Hz viền mỏng',
         img: '/assets/img/img_manhinh_banchay/man_9.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1382,6 +1480,7 @@ let ScreenMostSale = {
         rate: 1,
     },
     10: {
+        href: '/sanpham.html',
         name: 'Màn hình HKC MB27V9 27" IPS 75Hz',
         img: '/assets/img/img_manhinh_banchay/man_10.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1393,6 +1492,7 @@ let ScreenMostSale = {
         rate: 0,
     },
     11: {
+        href: '/sanpham.html',
         name: 'Màn hình LG 24MP400-B 24" IPS 75Hz Freesync chuyên game',
         img: '/assets/img/img_manhinh_banchay/man_11.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1404,6 +1504,7 @@ let ScreenMostSale = {
         rate: 10,
     },
     12: {
+        href: '/sanpham.html',
         name: 'Màn hình Viewsonic VA2732-H 27" IPS 100Hz viền mỏng',
         img: '/assets/img/img_manhinh_banchay/man_12.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1415,6 +1516,7 @@ let ScreenMostSale = {
         rate: 1,
     },
     13: {
+        href: '/sanpham.html',
         name: 'Màn hình Viewsonic VA2432-H 24" IPS 100Hz viền mỏng',
         img: '/assets/img/img_manhinh_banchay/man_13.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1426,6 +1528,7 @@ let ScreenMostSale = {
         rate: 10,
     },
     14: {
+        href: '/sanpham.html',
         name: 'Màn hình GIGABYTE G24F 2 24" IPS 180Hz chuyên game',
         img: '/assets/img/img_manhinh_banchay/man_14.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1437,6 +1540,7 @@ let ScreenMostSale = {
         rate: 1,
     },
     15: {
+        href: '/sanpham.html',
         name: 'Màn hình ASUS VZ27EHE 27" IPS 75Hz viền mỏng',
         img: '/assets/img/img_manhinh_banchay/man_15.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1448,6 +1552,7 @@ let ScreenMostSale = {
         rate: 1,
     },
     16: {
+        href: '/sanpham.html',
         name: 'Màn hình LG 24GN65R-B 24" IPS 144Hz HDR10 Freesync chuyên game',
         img: '/assets/img/img_manhinh_banchay/man_16.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1459,6 +1564,7 @@ let ScreenMostSale = {
         rate: 0,
     },
     17: {
+        href: '/sanpham.html',
         name: 'Màn hình AOC Q24G2 24" IPS 2K 165Hz G-Sync chuyên game',
         img: '/assets/img/img_manhinh_banchay/man_17.webp',
         screenResolution: '2K (2560 x 1440)',
@@ -1470,6 +1576,7 @@ let ScreenMostSale = {
         rate: 1,
     },
     18: {
+        href: '/sanpham.html',
         name: 'Màn hình cong ViewSonic VX2718-2KPC-MHD 27" 2K',
         img: '/assets/img/img_manhinh_banchay/man_18.webp',
         screenResolution: '2K (2560 x 1440)',
@@ -1481,6 +1588,7 @@ let ScreenMostSale = {
         rate: 1,
     },
     19: {
+        href: '/sanpham.html',
         name: 'Màn hình Viewsonic VA2736-H 27" IPS 100Hz viền mỏng',
         img: '/assets/img/img_manhinh_banchay/man_19.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1492,6 +1600,7 @@ let ScreenMostSale = {
         rate: 1,
     },
     20: {
+        href: '/sanpham.html',
         name: 'Màn hình Philips 27M1N3200Z 27" IPS 165Hz G-Sync',
         img: '/assets/img/img_manhinh_banchay/man_20.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1503,6 +1612,7 @@ let ScreenMostSale = {
         rate: 10,
     },
     21: {
+        href: '/sanpham.html',
         name: 'Màn hình AOC 24B2H2 24" IPS 100Hz viền mỏng',
         img: '/assets/img/img_manhinh_banchay/man_21.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1514,6 +1624,7 @@ let ScreenMostSale = {
         rate: 0,
     },
     22: {
+        href: '/sanpham.html',
         name: 'Màn hình Asus TUF GAMING VG279Q3A 27" Fast IPS 180Hz',
         img: '/assets/img/img_manhinh_banchay/man_22.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1525,6 +1636,7 @@ let ScreenMostSale = {
         rate: 1,
     },
     23: {
+        href: '/sanpham.html',
         name: 'Màn hình Asus TUF GAMING VG249Q3A 24" Fast IPS 180Hz',
         img: '/assets/img/img_manhinh_banchay/man_23.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1536,6 +1648,7 @@ let ScreenMostSale = {
         rate: 0,
     },
     24: {
+        href: '/sanpham.html',
         name: 'Màn hình Lenovo Legion Y27-30 27" IPS 165Hz chuyên game',
         img: '/assets/img/img_manhinh_banchay/man_24.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1547,6 +1660,7 @@ let ScreenMostSale = {
         rate: 1,
     },
     25: {
+        href: '/sanpham.html',
         name: 'Màn hình Cooler Master GM27-FFS 27" IPS 165Hz Gsync',
         img: '/assets/img/img_manhinh_banchay/man_25.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1558,6 +1672,7 @@ let ScreenMostSale = {
         rate: 1,
     },
     26: {
+        href: '/sanpham.html',
         name: 'Màn hình Cooler Master GM238-FFS 24" IPS 144Hz',
         img: '/assets/img/img_manhinh_banchay/man_26.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1569,6 +1684,7 @@ let ScreenMostSale = {
         rate: 0,
     },
     27: {
+        href: '/sanpham.html',
         name: 'Màn hình MSI PRO MP223 22" 100Hz',
         img: '/assets/img/img_manhinh_banchay/man_27.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1580,6 +1696,7 @@ let ScreenMostSale = {
         rate: 0,
     },
     28: {
+        href: '/sanpham.html',
         name: 'Màn hình MSI PRO MP273 27" IPS 75Hz',
         img: '/assets/img/img_manhinh_banchay/man_28.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1591,6 +1708,7 @@ let ScreenMostSale = {
         rate: 0,
     },
     29: {
+        href: '/sanpham.html',
         name: 'Màn hình cong MSI PRO MP272C 27" 75Hz',
         img: '/assets/img/img_manhinh_banchay/man_29.webp',
         screenResolution: 'Full HD (1920 x 1080)',
@@ -1602,6 +1720,7 @@ let ScreenMostSale = {
         rate: 10,
     },
     30: {
+        href: '/sanpham.html',
         name: 'Màn hình Viewsonic VA2436-H 24" IPS 100Hz viền mỏng',
         img: '/assets/img/img_manhinh_banchay/man_30.webp',
         screenResolution: 'Full HD (1920 x 1080)',
